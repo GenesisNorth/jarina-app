@@ -538,5 +538,219 @@
   },
   "noHoldings": "You don''t hold any yet",
   "noResults": "No results",
-  "priceUpdated": "Price updated. Check the new total and confirm."
+  "priceUpdated": "Price updated. Check the new total and confirm.",
+  "popularPairs": "Popular pairs",
+  "slideToSwap": "Slide to swap",
+  "swapNote": "Rates refresh every 15 seconds. Nothing moves until you slide to swap and confirm with your PIN.",
+  "memoTag": "Memo / tag",
+  "memoRequiredNote": "Include this memo/tag or your deposit can''t be credited.",
+  "sendOnlyOn": "Send only {coin} on {network} to this address. Deposits are credited after network confirmations.",
+  "@sendOnlyOn": {
+    "placeholders": {
+      "coin": {
+        "type": "String"
+      },
+      "network": {
+        "type": "String"
+      }
+    }
+  },
+  "addressCopied": "Address copied",
+  "errInvalidAddress": "This isn''t a valid {network} address",
+  "@errInvalidAddress": {
+    "placeholders": {
+      "network": {
+        "type": "String"
+      }
+    }
+  },
+  "errUserNotFound": "No Jarina user with that @username",
+  "errAmountBelowFee": "Amount must be more than the network fee",
+  "errMinCashOut": "Minimum cash out is {amount}",
+  "@errMinCashOut": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "availableAmount": "Available {amount}",
+  "@availableAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "free": "Free · instant",
+  "transferFee": "Transfer fee",
+  "withdrawCoin": "Withdraw {coin}",
+  "@withdrawCoin": {
+    "placeholders": {
+      "coin": {
+        "type": "String"
+      }
+    }
+  },
+  "withdrawalSent": "Withdrawal submitted. It''ll be broadcast shortly.",
+  "sentToUser": "Sent to @{user}",
+  "@sentToUser": {
+    "placeholders": {
+      "user": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmationsOf": "{n} of {m} network confirmations",
+  "@confirmationsOf": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "percentFilled": "{pct}% filled",
+  "@percentFilled": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "partiallyFilled": "Partially filled",
+  "orderCancelled": "Order cancelled",
+  "withdrawalCancelled": "Withdrawal cancelled · funds returned",
+  "buyCoin": "Buy {coin}",
+  "@buyCoin": {
+    "placeholders": {
+      "coin": {
+        "type": "String"
+      }
+    }
+  },
+  "sellCoin": "Sell {coin}",
+  "@sellCoin": {
+    "placeholders": {
+      "coin": {
+        "type": "String"
+      }
+    }
+  },
+  "yourCoinWallet": "Your {coin} wallet",
+  "@yourCoinWallet": {
+    "placeholders": {
+      "coin": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseLimits": "Limits {min} – {max} per purchase",
+  "@purchaseLimits": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "oneTimeAccount": "Pay into this one-time account",
+  "oneTimeAccountNote": "You''ll get a one-time account to pay into. Crypto is credited as soon as your transfer lands.",
+  "simulatePayment": "Simulate payment · test build",
+  "cashOutIntro": "Sell crypto and receive Naira in any Nigerian bank account, usually within minutes.",
+  "bankLabel": "Bank",
+  "accountVerified": "Account name: {name}",
+  "@accountVerified": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "loanIntro": "Get Naira without selling your crypto. Your coins are held as collateral and returned when you repay.",
+  "perMonth": "{rate} per month",
+  "@perMonth": {
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "daysCount": "{n} days",
+  "@daysCount": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "autoSwapIntro": "Automatically convert crypto you receive, so volatile coins become stable value the moment they land.",
+  "autoSwapNote": "Conversions use the instant-swap rate at the moment each deposit confirms. Each one gets its own receipt.",
+  "convertTo": "Convert to",
+  "cryptoPortfolioChange": "{change} today",
+  "@cryptoPortfolioChange": {
+    "placeholders": {
+      "change": {
+        "type": "String"
+      }
+    }
+  },
+  "pendingCount": "{n} pending",
+  "@pendingCount": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "newCount": "{n} new",
+  "@newCount": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "offLabel": "Off",
+  "coinsCount": "{n} coins",
+  "@coinsCount": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "candles": "{n} candles",
+  "@candles": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "dragToInspect": "Drag across the chart to inspect · tap a price in the book to use it",
+  "buyCoinShort": "Buy {coin}",
+  "@buyCoinShort": {
+    "placeholders": {
+      "coin": {
+        "type": "String"
+      }
+    }
+  },
+  "orderPlacedShort": "Order placed",
+  "orderFilled": "Order filled",
+  "volume": "Vol",
+  "loanTaken": "Loan sent to your Naira wallet",
+  "autoSwapOn": "Auto-swap on · to {target}",
+  "@autoSwapOn": {
+    "placeholders": {
+      "target": {
+        "type": "String"
+      }
+    }
+  }
 }

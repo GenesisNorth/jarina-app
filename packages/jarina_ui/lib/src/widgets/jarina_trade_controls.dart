@@ -31,9 +31,11 @@ class _JSlideToConfirmState extends State<JSlideToConfirm> with SingleTickerProv
     ..addListener(() => setState(() => _drag = _resetFrom * (1 - _reset.value)));
   double _drag = 0;
   double _resetFrom = 0;
+  Timer? _snapBack;
 
   @override
   void dispose() {
+    _snapBack?.cancel();
     _reset.dispose();
     super.dispose();
   }
@@ -44,7 +46,7 @@ class _JSlideToConfirmState extends State<JSlideToConfirm> with SingleTickerProv
       setState(() => _drag = travel);
       widget.onConfirm?.call();
       // Snap back after the action so the control is reusable if it fails.
-      Future<void>.delayed(const Duration(milliseconds: 600), () {
+      _snapBack = Timer(const Duration(milliseconds: 600), () {
         if (mounted) _animateBack();
       });
     } else {

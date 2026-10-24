@@ -597,11 +597,11 @@ abstract class AppLocalizations {
   /// **'Amount (CFA)'**
   String get amountCfa;
 
-  /// No description provided for @candles.
+  /// No description provided for @candles2.
   ///
   /// In en, this message translates to:
   /// **'Candles'**
-  String get candles;
+  String get candles2;
 
   /// No description provided for @line.
   ///
@@ -1497,11 +1497,11 @@ abstract class AppLocalizations {
   /// **'Cancel'**
   String get cancel;
 
-  /// No description provided for @orderCancelled.
+  /// No description provided for @orderCancelled2.
   ///
   /// In en, this message translates to:
   /// **'Order cancelled'**
-  String get orderCancelled;
+  String get orderCancelled2;
 
   /// No description provided for @marketDataShownIsSampleData2.
   ///
@@ -1689,11 +1689,11 @@ abstract class AppLocalizations {
   /// **'Copy'**
   String get copy;
 
-  /// No description provided for @addressCopied.
+  /// No description provided for @addressCopied2.
   ///
   /// In en, this message translates to:
   /// **'Address copied'**
-  String get addressCopied;
+  String get addressCopied2;
 
   /// No description provided for @newAddress.
   ///
@@ -1803,11 +1803,11 @@ abstract class AppLocalizations {
   /// **'Cancelled'**
   String get cancelled;
 
-  /// No description provided for @partiallyFilled.
+  /// No description provided for @partiallyFilled2.
   ///
   /// In en, this message translates to:
   /// **'Partially filled'**
-  String get partiallyFilled;
+  String get partiallyFilled2;
 
   /// No description provided for @active.
   ///
@@ -1845,11 +1845,11 @@ abstract class AppLocalizations {
   /// **'Cancel withdrawal'**
   String get cancelWithdrawal;
 
-  /// No description provided for @withdrawalCancelled.
+  /// No description provided for @withdrawalCancelled2.
   ///
   /// In en, this message translates to:
   /// **'Withdrawal cancelled'**
-  String get withdrawalCancelled;
+  String get withdrawalCancelled2;
 
   /// No description provided for @cancelledByYouFundsReturnedTo.
   ///
@@ -1893,11 +1893,11 @@ abstract class AppLocalizations {
   /// **'Address pasted'**
   String get addressPasted;
 
-  /// No description provided for @memoTag.
+  /// No description provided for @memoTag2.
   ///
   /// In en, this message translates to:
   /// **'Memo / tag'**
-  String get memoTag;
+  String get memoTag2;
 
   /// No description provided for @requiredByMostExchanges.
   ///
@@ -1911,11 +1911,11 @@ abstract class AppLocalizations {
   /// **'Username or phone'**
   String get usernameOrPhone;
 
-  /// No description provided for @transferFee.
+  /// No description provided for @transferFee2.
   ///
   /// In en, this message translates to:
   /// **'Transfer fee'**
-  String get transferFee;
+  String get transferFee2;
 
   /// No description provided for @freeInstant.
   ///
@@ -2205,11 +2205,11 @@ abstract class AppLocalizations {
   /// **'Convert new deposits automatically'**
   String get convertNewDepositsAutomatically;
 
-  /// No description provided for @convertTo.
+  /// No description provided for @convertTo2.
   ///
   /// In en, this message translates to:
   /// **'Convert to'**
-  String get convertTo;
+  String get convertTo2;
 
   /// No description provided for @coinsToConvert.
   ///
@@ -2403,11 +2403,11 @@ abstract class AppLocalizations {
   /// **'Swap completed'**
   String get swapCompleted;
 
-  /// No description provided for @orderFilled.
+  /// No description provided for @orderFilled2.
   ///
   /// In en, this message translates to:
   /// **'Order filled'**
-  String get orderFilled;
+  String get orderFilled2;
 
   /// No description provided for @buy120UsdtAt1549.
   ///
@@ -2697,11 +2697,11 @@ abstract class AppLocalizations {
   /// **'Jarina (internal)'**
   String get jarinaInternal;
 
-  /// No description provided for @free.
+  /// No description provided for @free2.
   ///
   /// In en, this message translates to:
   /// **'Free'**
-  String get free;
+  String get free2;
 
   /// No description provided for @pair.
   ///
@@ -5685,11 +5685,11 @@ abstract class AppLocalizations {
   /// **'fee ₦300'**
   String get fee300;
 
-  /// No description provided for @free2.
+  /// No description provided for @free22.
   ///
   /// In en, this message translates to:
   /// **'free'**
-  String get free2;
+  String get free22;
 
   /// No description provided for @halimaGetsXof1950.
   ///
@@ -7688,6 +7688,312 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Price updated. Check the new total and confirm.'**
   String get priceUpdated;
+
+  /// No description provided for @popularPairs.
+  ///
+  /// In en, this message translates to:
+  /// **'Popular pairs'**
+  String get popularPairs;
+
+  /// No description provided for @slideToSwap.
+  ///
+  /// In en, this message translates to:
+  /// **'Slide to swap'**
+  String get slideToSwap;
+
+  /// No description provided for @swapNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Rates refresh every 15 seconds. Nothing moves until you slide to swap and confirm with your PIN.'**
+  String get swapNote;
+
+  /// No description provided for @memoTag.
+  ///
+  /// In en, this message translates to:
+  /// **'Memo / tag'**
+  String get memoTag;
+
+  /// No description provided for @memoRequiredNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Include this memo/tag or your deposit can\'\'t be credited.'**
+  String get memoRequiredNote;
+
+  /// No description provided for @sendOnlyOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Send only {coin} on {network} to this address. Deposits are credited after network confirmations.'**
+  String sendOnlyOn(String coin, String network);
+
+  /// No description provided for @addressCopied.
+  ///
+  /// In en, this message translates to:
+  /// **'Address copied'**
+  String get addressCopied;
+
+  /// No description provided for @errInvalidAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'This isn\'\'t a valid {network} address'**
+  String errInvalidAddress(String network);
+
+  /// No description provided for @errUserNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No Jarina user with that @username'**
+  String get errUserNotFound;
+
+  /// No description provided for @errAmountBelowFee.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount must be more than the network fee'**
+  String get errAmountBelowFee;
+
+  /// No description provided for @errMinCashOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Minimum cash out is {amount}'**
+  String errMinCashOut(String amount);
+
+  /// No description provided for @availableAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Available {amount}'**
+  String availableAmount(String amount);
+
+  /// No description provided for @free.
+  ///
+  /// In en, this message translates to:
+  /// **'Free · instant'**
+  String get free;
+
+  /// No description provided for @transferFee.
+  ///
+  /// In en, this message translates to:
+  /// **'Transfer fee'**
+  String get transferFee;
+
+  /// No description provided for @withdrawCoin.
+  ///
+  /// In en, this message translates to:
+  /// **'Withdraw {coin}'**
+  String withdrawCoin(String coin);
+
+  /// No description provided for @withdrawalSent.
+  ///
+  /// In en, this message translates to:
+  /// **'Withdrawal submitted. It\'\'ll be broadcast shortly.'**
+  String get withdrawalSent;
+
+  /// No description provided for @sentToUser.
+  ///
+  /// In en, this message translates to:
+  /// **'Sent to @{user}'**
+  String sentToUser(String user);
+
+  /// No description provided for @confirmationsOf.
+  ///
+  /// In en, this message translates to:
+  /// **'{n} of {m} network confirmations'**
+  String confirmationsOf(String n, String m);
+
+  /// No description provided for @percentFilled.
+  ///
+  /// In en, this message translates to:
+  /// **'{pct}% filled'**
+  String percentFilled(String pct);
+
+  /// No description provided for @partiallyFilled.
+  ///
+  /// In en, this message translates to:
+  /// **'Partially filled'**
+  String get partiallyFilled;
+
+  /// No description provided for @orderCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Order cancelled'**
+  String get orderCancelled;
+
+  /// No description provided for @withdrawalCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Withdrawal cancelled · funds returned'**
+  String get withdrawalCancelled;
+
+  /// No description provided for @buyCoin.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy {coin}'**
+  String buyCoin(String coin);
+
+  /// No description provided for @sellCoin.
+  ///
+  /// In en, this message translates to:
+  /// **'Sell {coin}'**
+  String sellCoin(String coin);
+
+  /// No description provided for @yourCoinWallet.
+  ///
+  /// In en, this message translates to:
+  /// **'Your {coin} wallet'**
+  String yourCoinWallet(String coin);
+
+  /// No description provided for @purchaseLimits.
+  ///
+  /// In en, this message translates to:
+  /// **'Limits {min} – {max} per purchase'**
+  String purchaseLimits(String min, String max);
+
+  /// No description provided for @oneTimeAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Pay into this one-time account'**
+  String get oneTimeAccount;
+
+  /// No description provided for @oneTimeAccountNote.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'\'ll get a one-time account to pay into. Crypto is credited as soon as your transfer lands.'**
+  String get oneTimeAccountNote;
+
+  /// No description provided for @simulatePayment.
+  ///
+  /// In en, this message translates to:
+  /// **'Simulate payment · test build'**
+  String get simulatePayment;
+
+  /// No description provided for @cashOutIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Sell crypto and receive Naira in any Nigerian bank account, usually within minutes.'**
+  String get cashOutIntro;
+
+  /// No description provided for @bankLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank'**
+  String get bankLabel;
+
+  /// No description provided for @accountVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Account name: {name}'**
+  String accountVerified(String name);
+
+  /// No description provided for @loanIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Naira without selling your crypto. Your coins are held as collateral and returned when you repay.'**
+  String get loanIntro;
+
+  /// No description provided for @perMonth.
+  ///
+  /// In en, this message translates to:
+  /// **'{rate} per month'**
+  String perMonth(String rate);
+
+  /// No description provided for @daysCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{n} days'**
+  String daysCount(String n);
+
+  /// No description provided for @autoSwapIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Automatically convert crypto you receive, so volatile coins become stable value the moment they land.'**
+  String get autoSwapIntro;
+
+  /// No description provided for @autoSwapNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Conversions use the instant-swap rate at the moment each deposit confirms. Each one gets its own receipt.'**
+  String get autoSwapNote;
+
+  /// No description provided for @convertTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Convert to'**
+  String get convertTo;
+
+  /// No description provided for @cryptoPortfolioChange.
+  ///
+  /// In en, this message translates to:
+  /// **'{change} today'**
+  String cryptoPortfolioChange(String change);
+
+  /// No description provided for @pendingCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{n} pending'**
+  String pendingCount(String n);
+
+  /// No description provided for @newCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{n} new'**
+  String newCount(String n);
+
+  /// No description provided for @offLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Off'**
+  String get offLabel;
+
+  /// No description provided for @coinsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{n} coins'**
+  String coinsCount(String n);
+
+  /// No description provided for @candles.
+  ///
+  /// In en, this message translates to:
+  /// **'{n} candles'**
+  String candles(String n);
+
+  /// No description provided for @dragToInspect.
+  ///
+  /// In en, this message translates to:
+  /// **'Drag across the chart to inspect · tap a price in the book to use it'**
+  String get dragToInspect;
+
+  /// No description provided for @buyCoinShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy {coin}'**
+  String buyCoinShort(String coin);
+
+  /// No description provided for @orderPlacedShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Order placed'**
+  String get orderPlacedShort;
+
+  /// No description provided for @orderFilled.
+  ///
+  /// In en, this message translates to:
+  /// **'Order filled'**
+  String get orderFilled;
+
+  /// No description provided for @volume.
+  ///
+  /// In en, this message translates to:
+  /// **'Vol'**
+  String get volume;
+
+  /// No description provided for @loanTaken.
+  ///
+  /// In en, this message translates to:
+  /// **'Loan sent to your Naira wallet'**
+  String get loanTaken;
+
+  /// No description provided for @autoSwapOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto-swap on · to {target}'**
+  String autoSwapOn(String target);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -45,6 +45,19 @@ const badgeFor = (a) => a.type === 'crypto'
       return { color: k.c, ring: badge.mixHex(k.c, '#FFFFFF', 0.84), ink: k.t, label: badge.stockMono(a) };
     })();
 
+// Crypto networks per coin: [id, name, withdrawal fee, memo required?].
+const qStart = app.findIndex((l) => l.startsWith('const QNETS'));
+const qEnd = app.findIndex((l, i) => i > qStart && l.startsWith('};'));
+const netCtx = {};
+vm.createContext(netCtx);
+vm.runInContext(app.slice(qStart, qEnd + 1).join('\n') + '\n;globalThis.__n = QNETS;', netCtx);
+const networks = Object.fromEntries(
+  Object.entries(netCtx.__n).map(([coin, list]) => [
+    coin,
+    list.map(([id, name, fee, memo]) => ({ id, name, withdrawFee: String(fee), memo: Boolean(memo) })),
+  ]),
+);
+
 const assets = [...d.STOCKS, ...d.COINS].map(({ seed, bg, fg, ...a }) => ({
   ...a,
   badge: badgeFor({ ...a, bg, fg }),
@@ -53,6 +66,7 @@ const assets = [...d.STOCKS, ...d.COINS].map(({ seed, bg, fg, ...a }) => ({
   about: d.ABOUT[a.id] ?? null,
 }));
 write('assets.json', assets);
+write('networks.json', networks);
 write('recipients.json', d.RECIPIENTS);
 write('me.json', d.ME);
 write('countries.json', d.COUNTRIES.map((c) => ({

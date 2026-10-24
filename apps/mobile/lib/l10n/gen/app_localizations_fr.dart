@@ -274,7 +274,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get amountCfa => 'Montant (CFA)';
 
   @override
-  String get candles => 'Bougies';
+  String get candles2 => 'Bougies';
 
   @override
   String get line => 'Ligne';
@@ -731,7 +731,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get cancel => 'Annuler';
 
   @override
-  String get orderCancelled => 'Ordre annulé';
+  String get orderCancelled2 => 'Ordre annulé';
 
   @override
   String get marketDataShownIsSampleData2 =>
@@ -830,7 +830,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get copy => 'Copier';
 
   @override
-  String get addressCopied => 'Adresse copiée';
+  String get addressCopied2 => 'Adresse copiée';
 
   @override
   String get newAddress => 'Nouvelle adresse';
@@ -888,7 +888,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get cancelled => 'Annulé';
 
   @override
-  String get partiallyFilled => 'Partiellement exécuté';
+  String get partiallyFilled2 => 'Partiellement exécuté';
 
   @override
   String get active => 'Actif';
@@ -911,7 +911,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get cancelWithdrawal => 'Annuler le retrait';
 
   @override
-  String get withdrawalCancelled => 'Retrait annulé';
+  String get withdrawalCancelled2 => 'Retrait annulé';
 
   @override
   String get cancelledByYouFundsReturnedTo => 'Annulé par vous. Fonds restitués dans votre portefeuille.';
@@ -935,7 +935,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get addressPasted => 'Adresse collée';
 
   @override
-  String get memoTag => 'Mémo / tag';
+  String get memoTag2 => 'Mémo / tag';
 
   @override
   String get requiredByMostExchanges => 'Exigé par la plupart des plateformes';
@@ -944,7 +944,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get usernameOrPhone => 'Nom d\'utilisateur ou téléphone';
 
   @override
-  String get transferFee => 'Frais de transfert';
+  String get transferFee2 => 'Frais de transfert';
 
   @override
   String get freeInstant => 'Gratuit · instantané';
@@ -1098,7 +1098,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get convertNewDepositsAutomatically => 'Convertir automatiquement les nouveaux dépôts';
 
   @override
-  String get convertTo => 'Convertir en';
+  String get convertTo2 => 'Convertir en';
 
   @override
   String get coinsToConvert => 'Cryptos à convertir';
@@ -1200,7 +1200,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get swapCompleted => 'Échange terminé';
 
   @override
-  String get orderFilled => 'Ordre exécuté';
+  String get orderFilled2 => 'Ordre exécuté';
 
   @override
   String get buy120UsdtAt1549 => 'Achat de 120 USDT à ₦1,549';
@@ -1350,7 +1350,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get jarinaInternal => 'Jarina (interne)';
 
   @override
-  String get free => 'Gratuit';
+  String get free2 => 'Gratuit';
 
   @override
   String get pair => 'Paire';
@@ -2886,7 +2886,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get fee300 => 'frais ₦300';
 
   @override
-  String get free2 => 'gratuit';
+  String get free22 => 'gratuit';
 
   @override
   String get halimaGetsXof1950 => 'Halima reçoit XOF 1,950';
@@ -3997,4 +3997,206 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get priceUpdated => 'Prix mis à jour. Vérifiez le nouveau total et confirmez.';
+
+  @override
+  String get popularPairs => 'Paires populaires';
+
+  @override
+  String get slideToSwap => 'Glisser pour échanger';
+
+  @override
+  String get swapNote =>
+      'Les taux se mettent à jour toutes les 15 secondes. Rien ne bouge avant que vous glissiez et confirmiez avec votre PIN.';
+
+  @override
+  String get memoTag => 'Mémo / tag';
+
+  @override
+  String get memoRequiredNote => 'Indiquez ce mémo/tag, sinon votre dépôt ne pourra pas être crédité.';
+
+  @override
+  String sendOnlyOn(String coin, String network) {
+    return 'Envoyez uniquement des $coin sur $network à cette adresse. Les dépôts sont crédités après confirmation du réseau.';
+  }
+
+  @override
+  String get addressCopied => 'Adresse copiée';
+
+  @override
+  String errInvalidAddress(String network) {
+    return 'Adresse $network invalide';
+  }
+
+  @override
+  String get errUserNotFound => 'Aucun utilisateur Jarina avec ce @username';
+
+  @override
+  String get errAmountBelowFee => 'Le montant doit dépasser les frais de réseau';
+
+  @override
+  String errMinCashOut(String amount) {
+    return 'Retrait minimum : $amount';
+  }
+
+  @override
+  String availableAmount(String amount) {
+    return 'Disponible $amount';
+  }
+
+  @override
+  String get free => 'Gratuit · instantané';
+
+  @override
+  String get transferFee => 'Frais de transfert';
+
+  @override
+  String withdrawCoin(String coin) {
+    return 'Retirer $coin';
+  }
+
+  @override
+  String get withdrawalSent => 'Retrait soumis. Il sera diffusé sous peu.';
+
+  @override
+  String sentToUser(String user) {
+    return 'Envoyé à @$user';
+  }
+
+  @override
+  String confirmationsOf(String n, String m) {
+    return '$n confirmations réseau sur $m';
+  }
+
+  @override
+  String percentFilled(String pct) {
+    return '$pct% exécuté';
+  }
+
+  @override
+  String get partiallyFilled => 'Partiellement exécuté';
+
+  @override
+  String get orderCancelled => 'Ordre annulé';
+
+  @override
+  String get withdrawalCancelled => 'Retrait annulé · fonds restitués';
+
+  @override
+  String buyCoin(String coin) {
+    return 'Acheter $coin';
+  }
+
+  @override
+  String sellCoin(String coin) {
+    return 'Vendre $coin';
+  }
+
+  @override
+  String yourCoinWallet(String coin) {
+    return 'Votre portefeuille $coin';
+  }
+
+  @override
+  String purchaseLimits(String min, String max) {
+    return 'Limites $min – $max par achat';
+  }
+
+  @override
+  String get oneTimeAccount => 'Payez sur ce compte à usage unique';
+
+  @override
+  String get oneTimeAccountNote =>
+      'Vous recevrez un compte à usage unique. La crypto est créditée dès réception de votre virement.';
+
+  @override
+  String get simulatePayment => 'Simuler le paiement · test';
+
+  @override
+  String get cashOutIntro =>
+      'Vendez de la crypto et recevez des nairas sur n\'importe quel compte bancaire nigérian, en quelques minutes.';
+
+  @override
+  String get bankLabel => 'Banque';
+
+  @override
+  String accountVerified(String name) {
+    return 'Titulaire : $name';
+  }
+
+  @override
+  String get loanIntro =>
+      'Obtenez des nairas sans vendre votre crypto. Vos cryptos servent de garantie et vous sont rendues au remboursement.';
+
+  @override
+  String perMonth(String rate) {
+    return '$rate par mois';
+  }
+
+  @override
+  String daysCount(String n) {
+    return '$n jours';
+  }
+
+  @override
+  String get autoSwapIntro => 'Convertissez automatiquement la crypto reçue en valeur stable dès son arrivée.';
+
+  @override
+  String get autoSwapNote =>
+      'Les conversions utilisent le taux d\'échange instantané au moment de chaque dépôt. Chacune a son reçu.';
+
+  @override
+  String get convertTo => 'Convertir en';
+
+  @override
+  String cryptoPortfolioChange(String change) {
+    return '$change aujourd\'hui';
+  }
+
+  @override
+  String pendingCount(String n) {
+    return '$n en attente';
+  }
+
+  @override
+  String newCount(String n) {
+    return '$n nouveaux';
+  }
+
+  @override
+  String get offLabel => 'Désactivé';
+
+  @override
+  String coinsCount(String n) {
+    return '$n cryptos';
+  }
+
+  @override
+  String candles(String n) {
+    return '$n bougies';
+  }
+
+  @override
+  String get dragToInspect => 'Glissez sur le graphique pour l\'inspecter · touchez un prix du carnet pour l\'utiliser';
+
+  @override
+  String buyCoinShort(String coin) {
+    return 'Acheter $coin';
+  }
+
+  @override
+  String get orderPlacedShort => 'Ordre passé';
+
+  @override
+  String get orderFilled => 'Ordre exécuté';
+
+  @override
+  String get volume => 'Vol';
+
+  @override
+  String get loanTaken => 'Prêt versé sur votre portefeuille Naira';
+
+  @override
+  String autoSwapOn(String target) {
+    return 'Échange auto activé · vers $target';
+  }
 }

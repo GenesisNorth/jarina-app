@@ -241,6 +241,14 @@ class FakeBackend implements AuthRepository, KycRepository, SecurityRepository, 
     _wrongPins = 0;
     return Ok('pin-token-${_id()}');
   }
+
+  @override
+  Future<Result<String>> verify2fa(String code) async {
+    await _wait();
+    final secret = _totpSecret;
+    final ok = code == demoCode || (secret != null && Totp.verify(secret, code, _now()));
+    return ok ? Ok('2fa-token-${_id()}') : const Err(WrongCodeFailure());
+  }
 }
 
 class _Challenge {

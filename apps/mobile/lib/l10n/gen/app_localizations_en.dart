@@ -274,7 +274,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get amountCfa => 'Amount (CFA)';
 
   @override
-  String get candles => 'Candles';
+  String get candles2 => 'Candles';
 
   @override
   String get line => 'Line';
@@ -730,7 +730,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cancel => 'Cancel';
 
   @override
-  String get orderCancelled => 'Order cancelled';
+  String get orderCancelled2 => 'Order cancelled';
 
   @override
   String get marketDataShownIsSampleData2 =>
@@ -829,7 +829,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get copy => 'Copy';
 
   @override
-  String get addressCopied => 'Address copied';
+  String get addressCopied2 => 'Address copied';
 
   @override
   String get newAddress => 'New address';
@@ -887,7 +887,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cancelled => 'Cancelled';
 
   @override
-  String get partiallyFilled => 'Partially filled';
+  String get partiallyFilled2 => 'Partially filled';
 
   @override
   String get active => 'Active';
@@ -909,7 +909,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cancelWithdrawal => 'Cancel withdrawal';
 
   @override
-  String get withdrawalCancelled => 'Withdrawal cancelled';
+  String get withdrawalCancelled2 => 'Withdrawal cancelled';
 
   @override
   String get cancelledByYouFundsReturnedTo => 'Cancelled by you. Funds returned to your wallet.';
@@ -933,7 +933,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get addressPasted => 'Address pasted';
 
   @override
-  String get memoTag => 'Memo / tag';
+  String get memoTag2 => 'Memo / tag';
 
   @override
   String get requiredByMostExchanges => 'Required by most exchanges';
@@ -942,7 +942,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get usernameOrPhone => 'Username or phone';
 
   @override
-  String get transferFee => 'Transfer fee';
+  String get transferFee2 => 'Transfer fee';
 
   @override
   String get freeInstant => 'Free · instant';
@@ -1096,7 +1096,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get convertNewDepositsAutomatically => 'Convert new deposits automatically';
 
   @override
-  String get convertTo => 'Convert to';
+  String get convertTo2 => 'Convert to';
 
   @override
   String get coinsToConvert => 'Coins to convert';
@@ -1198,7 +1198,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get swapCompleted => 'Swap completed';
 
   @override
-  String get orderFilled => 'Order filled';
+  String get orderFilled2 => 'Order filled';
 
   @override
   String get buy120UsdtAt1549 => 'Buy 120 USDT at ₦1,549';
@@ -1347,7 +1347,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get jarinaInternal => 'Jarina (internal)';
 
   @override
-  String get free => 'Free';
+  String get free2 => 'Free';
 
   @override
   String get pair => 'Pair';
@@ -2875,7 +2875,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get fee300 => 'fee ₦300';
 
   @override
-  String get free2 => 'free';
+  String get free22 => 'free';
 
   @override
   String get halimaGetsXof1950 => 'Halima gets XOF 1,950';
@@ -3981,4 +3981,206 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get priceUpdated => 'Price updated. Check the new total and confirm.';
+
+  @override
+  String get popularPairs => 'Popular pairs';
+
+  @override
+  String get slideToSwap => 'Slide to swap';
+
+  @override
+  String get swapNote =>
+      'Rates refresh every 15 seconds. Nothing moves until you slide to swap and confirm with your PIN.';
+
+  @override
+  String get memoTag => 'Memo / tag';
+
+  @override
+  String get memoRequiredNote => 'Include this memo/tag or your deposit can\'t be credited.';
+
+  @override
+  String sendOnlyOn(String coin, String network) {
+    return 'Send only $coin on $network to this address. Deposits are credited after network confirmations.';
+  }
+
+  @override
+  String get addressCopied => 'Address copied';
+
+  @override
+  String errInvalidAddress(String network) {
+    return 'This isn\'t a valid $network address';
+  }
+
+  @override
+  String get errUserNotFound => 'No Jarina user with that @username';
+
+  @override
+  String get errAmountBelowFee => 'Amount must be more than the network fee';
+
+  @override
+  String errMinCashOut(String amount) {
+    return 'Minimum cash out is $amount';
+  }
+
+  @override
+  String availableAmount(String amount) {
+    return 'Available $amount';
+  }
+
+  @override
+  String get free => 'Free · instant';
+
+  @override
+  String get transferFee => 'Transfer fee';
+
+  @override
+  String withdrawCoin(String coin) {
+    return 'Withdraw $coin';
+  }
+
+  @override
+  String get withdrawalSent => 'Withdrawal submitted. It\'ll be broadcast shortly.';
+
+  @override
+  String sentToUser(String user) {
+    return 'Sent to @$user';
+  }
+
+  @override
+  String confirmationsOf(String n, String m) {
+    return '$n of $m network confirmations';
+  }
+
+  @override
+  String percentFilled(String pct) {
+    return '$pct% filled';
+  }
+
+  @override
+  String get partiallyFilled => 'Partially filled';
+
+  @override
+  String get orderCancelled => 'Order cancelled';
+
+  @override
+  String get withdrawalCancelled => 'Withdrawal cancelled · funds returned';
+
+  @override
+  String buyCoin(String coin) {
+    return 'Buy $coin';
+  }
+
+  @override
+  String sellCoin(String coin) {
+    return 'Sell $coin';
+  }
+
+  @override
+  String yourCoinWallet(String coin) {
+    return 'Your $coin wallet';
+  }
+
+  @override
+  String purchaseLimits(String min, String max) {
+    return 'Limits $min – $max per purchase';
+  }
+
+  @override
+  String get oneTimeAccount => 'Pay into this one-time account';
+
+  @override
+  String get oneTimeAccountNote =>
+      'You\'ll get a one-time account to pay into. Crypto is credited as soon as your transfer lands.';
+
+  @override
+  String get simulatePayment => 'Simulate payment · test build';
+
+  @override
+  String get cashOutIntro => 'Sell crypto and receive Naira in any Nigerian bank account, usually within minutes.';
+
+  @override
+  String get bankLabel => 'Bank';
+
+  @override
+  String accountVerified(String name) {
+    return 'Account name: $name';
+  }
+
+  @override
+  String get loanIntro =>
+      'Get Naira without selling your crypto. Your coins are held as collateral and returned when you repay.';
+
+  @override
+  String perMonth(String rate) {
+    return '$rate per month';
+  }
+
+  @override
+  String daysCount(String n) {
+    return '$n days';
+  }
+
+  @override
+  String get autoSwapIntro =>
+      'Automatically convert crypto you receive, so volatile coins become stable value the moment they land.';
+
+  @override
+  String get autoSwapNote =>
+      'Conversions use the instant-swap rate at the moment each deposit confirms. Each one gets its own receipt.';
+
+  @override
+  String get convertTo => 'Convert to';
+
+  @override
+  String cryptoPortfolioChange(String change) {
+    return '$change today';
+  }
+
+  @override
+  String pendingCount(String n) {
+    return '$n pending';
+  }
+
+  @override
+  String newCount(String n) {
+    return '$n new';
+  }
+
+  @override
+  String get offLabel => 'Off';
+
+  @override
+  String coinsCount(String n) {
+    return '$n coins';
+  }
+
+  @override
+  String candles(String n) {
+    return '$n candles';
+  }
+
+  @override
+  String get dragToInspect => 'Drag across the chart to inspect · tap a price in the book to use it';
+
+  @override
+  String buyCoinShort(String coin) {
+    return 'Buy $coin';
+  }
+
+  @override
+  String get orderPlacedShort => 'Order placed';
+
+  @override
+  String get orderFilled => 'Order filled';
+
+  @override
+  String get volume => 'Vol';
+
+  @override
+  String get loanTaken => 'Loan sent to your Naira wallet';
+
+  @override
+  String autoSwapOn(String target) {
+    return 'Auto-swap on · to $target';
+  }
 }

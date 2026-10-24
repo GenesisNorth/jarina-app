@@ -14,4 +14,7 @@ abstract interface class SecurityRepository {
   /// Returns a short-lived token the money-moving call must present.
   /// The server counts wrong attempts and locks the PIN after 5.
   Future<Result<String>> verifyPin(String pin);
+
+  /// Second factor for withdrawals, sells to bank and cross-border sends.
+  Future<Result<String>> verify2fa(String code);
 }

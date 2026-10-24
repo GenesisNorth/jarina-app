@@ -61,7 +61,7 @@ class AssetInfo {
   bool get isStock => kind == AssetKind.stock;
 
   /// Unit used for holdings: shares for stocks, the coin itself for crypto.
-  Currency get unit => Currency.crypto(id, decimals: isStock ? 0 : 8);
+  Currency get unit => Currency.crypto(id, decimals: isStock ? 0 : (id == 'USDT' || id == 'USDC' ? 2 : 8));
 }
 
 /// Live price of one asset, in NGN.

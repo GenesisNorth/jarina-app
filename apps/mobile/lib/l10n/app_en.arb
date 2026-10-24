@@ -84,7 +84,7 @@
   "amountUsdt": "Amount (USDT)",
   "amountGh": "Amount (GH₵)",
   "amountCfa": "Amount (CFA)",
-  "candles": "Candles",
+  "candles2": "Candles",
   "line": "Line",
   "area": "Area",
   "zoomIn": "Zoom in",
@@ -234,7 +234,7 @@
   "btcNgnLimit": "BTC/NGN · Limit",
   "btcNgnMarket": "BTC/NGN · Market",
   "cancel": "Cancel",
-  "orderCancelled": "Order cancelled",
+  "orderCancelled2": "Order cancelled",
   "marketDataShownIsSampleData2": "Market data shown is sample data. Live tickers, k-line, order book and trades come from the Quidax API.",
   "fillsNowAtTheBestAvailable": "Fills now at the best available price ≈ ₦98,000,000",
   "buyBtc": "Buy BTC",
@@ -266,7 +266,7 @@
   "trade": "Trade",
   "depositAddress": "Deposit address",
   "copy": "Copy",
-  "addressCopied": "Address copied",
+  "addressCopied2": "Address copied",
   "newAddress": "New address",
   "newUsdtAddressGenerated": "New USDT address generated",
   "newWalletAddressGenerated": "New wallet address generated",
@@ -285,14 +285,14 @@
   "onHold": "On hold",
   "filled": "Filled",
   "cancelled": "Cancelled",
-  "partiallyFilled": "Partially filled",
+  "partiallyFilled2": "Partially filled",
   "active": "Active",
   "repaid": "Repaid",
   "s1Of3NetworkConfirmations": "1 of 3 network confirmations",
   "failedTheAmlScreeningContactSupport": "Failed the AML screening. Contact support to arrange a return.",
   "heldForARoutineComplianceReview": "Held for a routine compliance review. Usually cleared within 24 hours.",
   "cancelWithdrawal": "Cancel withdrawal",
-  "withdrawalCancelled": "Withdrawal cancelled",
+  "withdrawalCancelled2": "Withdrawal cancelled",
   "cancelledByYouFundsReturnedTo": "Cancelled by you. Funds returned to your wallet.",
   "cashOutToGtbank": "Cash out to GTBank",
   "withdrawUsdt": "Withdraw USDT",
@@ -300,10 +300,10 @@
   "jarinaUser": "Jarina user",
   "paste": "Paste",
   "addressPasted": "Address pasted",
-  "memoTag": "Memo / tag",
+  "memoTag2": "Memo / tag",
   "requiredByMostExchanges": "Required by most exchanges",
   "usernameOrPhone": "Username or phone",
-  "transferFee": "Transfer fee",
+  "transferFee2": "Transfer fee",
   "freeInstant": "Free · instant",
   "networkFee": "Network fee",
   "amountIsMoreThanYourBalance": "Amount is more than your balance.",
@@ -352,7 +352,7 @@
   "automaticallyConvertCryptoYouReceiveSo": "Automatically convert crypto you receive, so volatile coins become stable value the moment they land.",
   "autoSwap": "Auto-swap",
   "convertNewDepositsAutomatically": "Convert new deposits automatically",
-  "convertTo": "Convert to",
+  "convertTo2": "Convert to",
   "coinsToConvert": "Coins to convert",
   "conversionsUseTheInstantSwapRate": "Conversions use the instant-swap rate at the moment each deposit confirms. Each one gets its own receipt.",
   "getNairaWithoutSellingYourCrypto": "Get Naira without selling your crypto. Your coins are held as collateral and returned when you repay.",
@@ -385,7 +385,7 @@
   "depositConfirming": "Deposit confirming",
   "s00012Btc1Of3": "0.0012 BTC · 1 of 3 confirmations",
   "swapCompleted": "Swap completed",
-  "orderFilled": "Order filled",
+  "orderFilled2": "Order filled",
   "buy120UsdtAt1549": "Buy 120 USDT at ₦1,549",
   "sell0001000BtcAt98": "Sell 0.001000 BTC at ₦98,000,000",
   "depositSuccessful": "Deposit successful",
@@ -434,7 +434,7 @@
   "pay": "Pay",
   "sold": "Sold",
   "jarinaInternal": "Jarina (internal)",
-  "free": "Free",
+  "free2": "Free",
   "pair": "Pair",
   "orderType": "Order type",
   "status": "Status",
@@ -932,7 +932,7 @@
   "request5000": "Request ₦5,000",
   "maradi": "Maradi",
   "fee300": "fee ₦300",
-  "free2": "free",
+  "free22": "free",
   "halimaGetsXof1950": "Halima gets XOF 1,950",
   "rate1Ngn039Xof": "rate 1 NGN = 0.39 XOF",
   "whatSItFor": "What''s it for?",
@@ -1637,5 +1637,219 @@
   },
   "noHoldings": "You don''t hold any yet",
   "noResults": "No results",
-  "priceUpdated": "Price updated. Check the new total and confirm."
+  "priceUpdated": "Price updated. Check the new total and confirm.",
+  "popularPairs": "Popular pairs",
+  "slideToSwap": "Slide to swap",
+  "swapNote": "Rates refresh every 15 seconds. Nothing moves until you slide to swap and confirm with your PIN.",
+  "memoTag": "Memo / tag",
+  "memoRequiredNote": "Include this memo/tag or your deposit can''t be credited.",
+  "sendOnlyOn": "Send only {coin} on {network} to this address. Deposits are credited after network confirmations.",
+  "@sendOnlyOn": {
+    "placeholders": {
+      "coin": {
+        "type": "String"
+      },
+      "network": {
+        "type": "String"
+      }
+    }
+  },
+  "addressCopied": "Address copied",
+  "errInvalidAddress": "This isn''t a valid {network} address",
+  "@errInvalidAddress": {
+    "placeholders": {
+      "network": {
+        "type": "String"
+      }
+    }
+  },
+  "errUserNotFound": "No Jarina user with that @username",
+  "errAmountBelowFee": "Amount must be more than the network fee",
+  "errMinCashOut": "Minimum cash out is {amount}",
+  "@errMinCashOut": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "availableAmount": "Available {amount}",
+  "@availableAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "free": "Free · instant",
+  "transferFee": "Transfer fee",
+  "withdrawCoin": "Withdraw {coin}",
+  "@withdrawCoin": {
+    "placeholders": {
+      "coin": {
+        "type": "String"
+      }
+    }
+  },
+  "withdrawalSent": "Withdrawal submitted. It''ll be broadcast shortly.",
+  "sentToUser": "Sent to @{user}",
+  "@sentToUser": {
+    "placeholders": {
+      "user": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmationsOf": "{n} of {m} network confirmations",
+  "@confirmationsOf": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "percentFilled": "{pct}% filled",
+  "@percentFilled": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "partiallyFilled": "Partially filled",
+  "orderCancelled": "Order cancelled",
+  "withdrawalCancelled": "Withdrawal cancelled · funds returned",
+  "buyCoin": "Buy {coin}",
+  "@buyCoin": {
+    "placeholders": {
+      "coin": {
+        "type": "String"
+      }
+    }
+  },
+  "sellCoin": "Sell {coin}",
+  "@sellCoin": {
+    "placeholders": {
+      "coin": {
+        "type": "String"
+      }
+    }
+  },
+  "yourCoinWallet": "Your {coin} wallet",
+  "@yourCoinWallet": {
+    "placeholders": {
+      "coin": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseLimits": "Limits {min} – {max} per purchase",
+  "@purchaseLimits": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "oneTimeAccount": "Pay into this one-time account",
+  "oneTimeAccountNote": "You''ll get a one-time account to pay into. Crypto is credited as soon as your transfer lands.",
+  "simulatePayment": "Simulate payment · test build",
+  "cashOutIntro": "Sell crypto and receive Naira in any Nigerian bank account, usually within minutes.",
+  "bankLabel": "Bank",
+  "accountVerified": "Account name: {name}",
+  "@accountVerified": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "loanIntro": "Get Naira without selling your crypto. Your coins are held as collateral and returned when you repay.",
+  "perMonth": "{rate} per month",
+  "@perMonth": {
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "daysCount": "{n} days",
+  "@daysCount": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "autoSwapIntro": "Automatically convert crypto you receive, so volatile coins become stable value the moment they land.",
+  "autoSwapNote": "Conversions use the instant-swap rate at the moment each deposit confirms. Each one gets its own receipt.",
+  "convertTo": "Convert to",
+  "cryptoPortfolioChange": "{change} today",
+  "@cryptoPortfolioChange": {
+    "placeholders": {
+      "change": {
+        "type": "String"
+      }
+    }
+  },
+  "pendingCount": "{n} pending",
+  "@pendingCount": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "newCount": "{n} new",
+  "@newCount": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "offLabel": "Off",
+  "coinsCount": "{n} coins",
+  "@coinsCount": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "candles": "{n} candles",
+  "@candles": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "dragToInspect": "Drag across the chart to inspect · tap a price in the book to use it",
+  "buyCoinShort": "Buy {coin}",
+  "@buyCoinShort": {
+    "placeholders": {
+      "coin": {
+        "type": "String"
+      }
+    }
+  },
+  "orderPlacedShort": "Order placed",
+  "orderFilled": "Order filled",
+  "volume": "Vol",
+  "loanTaken": "Loan sent to your Naira wallet",
+  "autoSwapOn": "Auto-swap on · to {target}",
+  "@autoSwapOn": {
+    "placeholders": {
+      "target": {
+        "type": "String"
+      }
+    }
+  }
 }

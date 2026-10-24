@@ -371,11 +371,20 @@ class _Box extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text(
-                label.toUpperCase(),
-                style: t.caption.copyWith(color: c.muted, fontWeight: FontWeight.w700, letterSpacing: 1, fontSize: 11),
+              Expanded(
+                child: Text(
+                  label.toUpperCase(),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: t.caption.copyWith(
+                    color: c.muted,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 1,
+                    fontSize: 11,
+                  ),
+                ),
               ),
-              const Spacer(),
+              const SizedBox(width: 8),
               Flexible(
                 child: GestureDetector(
                   onTap: onAside,

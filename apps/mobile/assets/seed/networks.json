@@ -1,0 +1,194 @@
+{
+  "BTC": [
+    {
+      "id": "BTC",
+      "name": "Bitcoin",
+      "withdrawFee": "0.00005",
+      "memo": false
+    }
+  ],
+  "ETH": [
+    {
+      "id": "ERC-20",
+      "name": "Ethereum",
+      "withdrawFee": "0.0015",
+      "memo": false
+    },
+    {
+      "id": "Arbitrum",
+      "name": "Arbitrum One",
+      "withdrawFee": "0.0002",
+      "memo": false
+    }
+  ],
+  "USDT": [
+    {
+      "id": "TRC-20",
+      "name": "TRON",
+      "withdrawFee": "1",
+      "memo": false
+    },
+    {
+      "id": "BEP-20",
+      "name": "BNB Smart Chain",
+      "withdrawFee": "0.3",
+      "memo": false
+    },
+    {
+      "id": "ERC-20",
+      "name": "Ethereum",
+      "withdrawFee": "3",
+      "memo": false
+    },
+    {
+      "id": "SPL",
+      "name": "Solana",
+      "withdrawFee": "0.5",
+      "memo": false
+    },
+    {
+      "id": "Polygon",
+      "name": "Polygon",
+      "withdrawFee": "0.5",
+      "memo": false
+    }
+  ],
+  "USDC": [
+    {
+      "id": "ERC-20",
+      "name": "Ethereum",
+      "withdrawFee": "3",
+      "memo": false
+    },
+    {
+      "id": "BEP-20",
+      "name": "BNB Smart Chain",
+      "withdrawFee": "0.3",
+      "memo": false
+    },
+    {
+      "id": "SPL",
+      "name": "Solana",
+      "withdrawFee": "0.5",
+      "memo": false
+    },
+    {
+      "id": "Base",
+      "name": "Base",
+      "withdrawFee": "0.3",
+      "memo": false
+    }
+  ],
+  "BNB": [
+    {
+      "id": "BEP-20",
+      "name": "BNB Smart Chain",
+      "withdrawFee": "0.0005",
+      "memo": false
+    }
+  ],
+  "SOL": [
+    {
+      "id": "SPL",
+      "name": "Solana",
+      "withdrawFee": "0.005",
+      "memo": false
+    }
+  ],
+  "TRX": [
+    {
+      "id": "TRC-20",
+      "name": "TRON",
+      "withdrawFee": "1",
+      "memo": false
+    }
+  ],
+  "XRP": [
+    {
+      "id": "XRP",
+      "name": "XRP Ledger",
+      "withdrawFee": "0.2",
+      "memo": true
+    }
+  ],
+  "XLM": [
+    {
+      "id": "XLM",
+      "name": "Stellar",
+      "withdrawFee": "0.01",
+      "memo": true
+    }
+  ],
+  "TON": [
+    {
+      "id": "TON",
+      "name": "TON",
+      "withdrawFee": "0.05",
+      "memo": true
+    }
+  ],
+  "DOGE": [
+    {
+      "id": "DOGE",
+      "name": "Dogecoin",
+      "withdrawFee": "5",
+      "memo": false
+    }
+  ],
+  "LTC": [
+    {
+      "id": "LTC",
+      "name": "Litecoin",
+      "withdrawFee": "0.001",
+      "memo": false
+    }
+  ],
+  "ADA": [
+    {
+      "id": "ADA",
+      "name": "Cardano",
+      "withdrawFee": "1",
+      "memo": false
+    }
+  ],
+  "DOT": [
+    {
+      "id": "DOT",
+      "name": "Polkadot",
+      "withdrawFee": "0.1",
+      "memo": false
+    }
+  ],
+  "LINK": [
+    {
+      "id": "ERC-20",
+      "name": "Ethereum",
+      "withdrawFee": "0.5",
+      "memo": false
+    }
+  ],
+  "AVAX": [
+    {
+      "id": "C-Chain",
+      "name": "Avalanche",
+      "withdrawFee": "0.01",
+      "memo": false
+    }
+  ],
+  "SUI": [
+    {
+      "id": "SUI",
+      "name": "Sui",
+      "withdrawFee": "0.01",
+      "memo": false
+    }
+  ],
+  "HYPE": [
+    {
+      "id": "HyperEVM",
+      "name": "Hyperliquid",
+      "withdrawFee": "0.05",
+      "memo": false
+    }
+  ]
+}

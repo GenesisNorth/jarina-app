@@ -456,3 +456,42 @@ final class TradingRepositoryProvider
 }
 
 String _$tradingRepositoryHash() => r'0864b3a190dc934ec628b3b99ce110aa7c616719';
+
+@ProviderFor(cryptoRepository)
+final cryptoRepositoryProvider = CryptoRepositoryProvider._();
+
+final class CryptoRepositoryProvider extends $FunctionalProvider<CryptoRepository, CryptoRepository, CryptoRepository>
+    with $Provider<CryptoRepository> {
+  CryptoRepositoryProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'cryptoRepositoryProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$cryptoRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<CryptoRepository> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+
+  @override
+  CryptoRepository create(Ref ref) {
+    return cryptoRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(CryptoRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<CryptoRepository>(value),
+    );
+  }
+}
+
+String _$cryptoRepositoryHash() => r'e7e2f90c5ecfd2637b03bc7911976f6f26f462b2';

@@ -3,6 +3,7 @@ library;
 
 export 'package:decimal/decimal.dart' show Decimal, RationalExt;
 
+export 'src/crypto/address_rules.dart';
 export 'src/failure.dart';
 export 'src/markets/ngx_schedule.dart';
 export 'src/money/currency.dart';

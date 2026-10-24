@@ -4,6 +4,7 @@ import 'package:jarina/core/providers.dart';
 import 'package:jarina/features/account/domain/profile.dart';
 import 'package:jarina/features/activity/domain/transaction.dart';
 import 'package:jarina/features/auth/domain/auth_repository.dart';
+import 'package:jarina/features/crypto/domain/crypto.dart';
 import 'package:jarina/features/kyc/domain/kyc_repository.dart';
 import 'package:jarina/features/markets/domain/market.dart';
 import 'package:jarina/features/security/domain/security_repository.dart';
@@ -60,5 +61,9 @@ Future<UserProfile> profile(Ref ref) => ref.watch(profileRepositoryProvider).me(
 @Riverpod(keepAlive: true)
 TradingRepository tradingRepository(Ref ref) =>
     ref.watch(envProvider).useFakeData ? ref.watch(fakeLedgerProvider) : throw _notYet('TradingRepository');
+
+@Riverpod(keepAlive: true)
+CryptoRepository cryptoRepository(Ref ref) =>
+    ref.watch(envProvider).useFakeData ? ref.watch(fakeLedgerProvider) : throw _notYet('CryptoRepository');
 
 StateError _notYet(String name) => StateError('$name has no API implementation yet (backend phase).');

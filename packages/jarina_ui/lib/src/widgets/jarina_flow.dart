@@ -70,8 +70,14 @@ class JFlowScaffold extends StatelessWidget {
                       children: [
                         if (onBack != null)
                           JCircleButton(icon: JIcon.arrowLeft, onPressed: onBack, semanticLabel: backLabel),
-                        const Spacer(),
-                        ?trailing,
+                        const SizedBox(width: 12),
+                        // Scales down rather than overflowing with long titles or large text.
+                        Expanded(
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: FittedBox(fit: BoxFit.scaleDown, child: trailing),
+                          ),
+                        ),
                       ],
                     ),
                   ),

@@ -3,6 +3,14 @@ import 'package:go_router/go_router.dart';
 import 'package:jarina/app/router/routes.dart';
 import 'package:jarina/features/activity/presentation/activity_screen.dart';
 import 'package:jarina/features/activity/presentation/receipt_screen.dart';
+import 'package:jarina/features/crypto/presentation/coin_screen.dart';
+import 'package:jarina/features/crypto/presentation/crypto_lists_screens.dart';
+import 'package:jarina/features/crypto/presentation/crypto_money_screens.dart';
+import 'package:jarina/features/crypto/presentation/crypto_screen.dart';
+import 'package:jarina/features/crypto/presentation/notifications_screen.dart';
+import 'package:jarina/features/crypto/presentation/pro_trade_screen.dart';
+import 'package:jarina/features/crypto/presentation/swap_screen.dart';
+import 'package:jarina/features/crypto/presentation/withdraw_screen.dart';
 import 'package:jarina/features/dev/dev_index_screen.dart';
 import 'package:jarina/features/home/presentation/home_screen.dart';
 import 'package:jarina/features/kyc/presentation/address_screen.dart';
@@ -36,6 +44,10 @@ import 'package:jarina/features/wallets/presentation/wallets_screen.dart';
 import 'package:jarina_core/jarina_core.dart';
 
 /// The built screen for [route], or null while it is still a placeholder.
+///
+/// Screens with parameters are keyed by their URI so moving between, say,
+/// /qcoin/USDT and /qcoin/XRP never carries state (like a deposit address)
+/// from one to the other.
 Widget? screenFor(AppRoute route, GoRouterState state) => switch (route) {
   AppRoute.welcome => const WelcomeScreen(),
   AppRoute.country => const CountryScreen(),
@@ -56,14 +68,21 @@ Widget? screenFor(AppRoute route, GoRouterState state) => switch (route) {
   AppRoute.home => const HomeScreen(),
   AppRoute.wallets => const WalletsScreen(),
   AppRoute.activity => const ActivityScreen(),
-  AppRoute.fiat => FiatWalletScreen(currency: _homeCurrency(state.pathParameters['currency'])),
-  AppRoute.fiatadd => AddMoneyScreen(currency: _homeCurrency(state.pathParameters['currency'])),
+  AppRoute.fiat => FiatWalletScreen(
+    key: ValueKey(state.uri),
+    currency: _homeCurrency(state.pathParameters['currency']),
+  ),
+  AppRoute.fiatadd => AddMoneyScreen(
+    key: ValueKey(state.uri),
+    currency: _homeCurrency(state.pathParameters['currency']),
+  ),
   AppRoute.convert => ConvertScreen(from: _homeCurrency(state.uri.queryParameters['from'])),
   AppRoute.receive => const ReceiveScreen(),
-  AppRoute.receipt => ReceiptScreen(id: state.pathParameters['id'] ?? ''),
+  AppRoute.receipt => ReceiptScreen(key: ValueKey(state.uri), id: state.pathParameters['id'] ?? ''),
   AppRoute.stocks => const StocksScreen(),
-  AppRoute.asset => AssetScreen(assetId: state.pathParameters['id'] ?? ''),
+  AppRoute.asset => AssetScreen(key: ValueKey(state.uri), assetId: state.pathParameters['id'] ?? ''),
   AppRoute.entry => TradeScreen(
+    key: ValueKey(state.uri),
     assetId: state.uri.queryParameters['asset'] ?? 'MTNN',
     side: state.uri.queryParameters['side'] == 'sell' ? TradeSide.sell : TradeSide.buy,
   ),
@@ -77,6 +96,24 @@ Widget? screenFor(AppRoute route, GoRouterState state) => switch (route) {
   ),
   AppRoute.review => const ReviewScreen(),
   AppRoute.done => const OrderDoneScreen(),
+  AppRoute.crypto => const CryptoScreen(),
+  AppRoute.qcoin => CoinScreen(key: ValueKey(state.uri), coin: state.pathParameters['coin'] ?? 'USDT'),
+  AppRoute.usdt => const CoinScreen(coin: 'USDT'),
+  AppRoute.qwallets => const CryptoWalletsScreen(),
+  AppRoute.qswap => SwapScreen(
+    key: ValueKey(state.uri),
+    from: state.uri.queryParameters['from'] ?? 'USDT',
+    to: state.uri.queryParameters['to'] ?? 'BTC',
+  ),
+  AppRoute.qwd => WithdrawScreen(key: ValueKey(state.uri), coin: state.uri.queryParameters['coin'] ?? 'USDT'),
+  AppRoute.qhist => const CryptoHistoryScreen(),
+  AppRoute.qorders => const OrdersScreen(),
+  AppRoute.qpro => ProTradeScreen(key: ValueKey(state.uri), coin: state.uri.queryParameters['coin'] ?? 'BTC'),
+  AppRoute.qbuy => const BuyCryptoScreen(),
+  AppRoute.qcashout => const CashOutScreen(),
+  AppRoute.qauto => const AutoSwapScreen(),
+  AppRoute.qloan => const LoanScreen(),
+  AppRoute.qnotif => const NotificationsScreen(),
   _ => null,
 };
 

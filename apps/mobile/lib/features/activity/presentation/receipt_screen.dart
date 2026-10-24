@@ -124,6 +124,8 @@ class _ReceiptCard extends StatelessWidget {
       TxKind.deposit => l.deposit,
       TxKind.conversion => l.currencyConversion,
       TxKind.bill => l.billPayment,
+      TxKind.withdrawal => l.withdrawal,
+      TxKind.loan => l.borrow,
     };
 
     Widget section(String title) => Padding(

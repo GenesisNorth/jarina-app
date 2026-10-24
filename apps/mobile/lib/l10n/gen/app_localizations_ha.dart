@@ -274,7 +274,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get amountCfa => 'Adadi (CFA)';
 
   @override
-  String get candles => 'Kyandir';
+  String get candles2 => 'Kyandir';
 
   @override
   String get line => 'Layi';
@@ -732,7 +732,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get cancel => 'Soke';
 
   @override
-  String get orderCancelled => 'An soke oda';
+  String get orderCancelled2 => 'An soke oda';
 
   @override
   String get marketDataShownIsSampleData2 =>
@@ -831,7 +831,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get copy => 'Kwafi';
 
   @override
-  String get addressCopied => 'An kwafi adireshi';
+  String get addressCopied2 => 'An kwafi adireshi';
 
   @override
   String get newAddress => 'Sabon adireshi';
@@ -889,7 +889,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get cancelled => 'An soke';
 
   @override
-  String get partiallyFilled => 'An cika wani ɓangare';
+  String get partiallyFilled2 => 'An cika wani ɓangare';
 
   @override
   String get active => 'Mai aiki';
@@ -911,7 +911,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get cancelWithdrawal => 'Soke cirewa';
 
   @override
-  String get withdrawalCancelled => 'An soke cirewa';
+  String get withdrawalCancelled2 => 'An soke cirewa';
 
   @override
   String get cancelledByYouFundsReturnedTo => 'Kai ne ka soke. An mayar da kuɗin cikin walat ɗinka.';
@@ -935,7 +935,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get addressPasted => 'An liƙa adireshi';
 
   @override
-  String get memoTag => 'Memo / alama';
+  String get memoTag2 => 'Memo / alama';
 
   @override
   String get requiredByMostExchanges => 'Yawancin dandali suna buƙata';
@@ -944,7 +944,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get usernameOrPhone => 'Sunan mai amfani ko waya';
 
   @override
-  String get transferFee => 'Kuɗin tura';
+  String get transferFee2 => 'Kuɗin tura';
 
   @override
   String get freeInstant => 'Kyauta · nan take';
@@ -1097,7 +1097,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get convertNewDepositsAutomatically => 'Mayar da sababbin ajiya ta atomatik';
 
   @override
-  String get convertTo => 'Mayar zuwa';
+  String get convertTo2 => 'Mayar zuwa';
 
   @override
   String get coinsToConvert => 'Kuɗaɗen da za a mayar';
@@ -1199,7 +1199,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get swapCompleted => 'An kammala musanya';
 
   @override
-  String get orderFilled => 'An cika oda';
+  String get orderFilled2 => 'An cika oda';
 
   @override
   String get buy120UsdtAt1549 => 'Saya 120 USDT a ₦1,549';
@@ -1348,7 +1348,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get jarinaInternal => 'Jarina (na ciki)';
 
   @override
-  String get free => 'Kyauta';
+  String get free2 => 'Kyauta';
 
   @override
   String get pair => 'Biyu';
@@ -2881,7 +2881,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get fee300 => 'kuɗin aiki ₦300';
 
   @override
-  String get free2 => 'kyauta';
+  String get free22 => 'kyauta';
 
   @override
   String get halimaGetsXof1950 => 'Halima za ta samu XOF 1,950';
@@ -3989,4 +3989,207 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get priceUpdated => 'An sabunta farashi. Duba sabon jimillar ka tabbatar.';
+
+  @override
+  String get popularPairs => 'Shahararrun nau\'i-nau\'i';
+
+  @override
+  String get slideToSwap => 'Ja don musanya';
+
+  @override
+  String get swapNote =>
+      'Farashi yana sabunta duk daƙiƙa 15. Babu abin da zai motsa har sai ka ja ka tabbatar da PIN ɗinka.';
+
+  @override
+  String get memoTag => 'Memo / alama';
+
+  @override
+  String get memoRequiredNote => 'Haɗa wannan memo/alama ko ba za a iya saka ajiyarka ba.';
+
+  @override
+  String sendOnlyOn(String coin, String network) {
+    return 'Aika $coin kawai ta $network zuwa wannan adireshi. Ana saka ajiya bayan tabbatarwar hanyar sadarwa.';
+  }
+
+  @override
+  String get addressCopied => 'An kwafi adireshi';
+
+  @override
+  String errInvalidAddress(String network) {
+    return 'Wannan ba ingantaccen adireshin $network ba ne';
+  }
+
+  @override
+  String get errUserNotFound => 'Babu mai amfani da Jarina mai wannan @username';
+
+  @override
+  String get errAmountBelowFee => 'Adadi dole ne ya fi kuɗin hanyar sadarwa';
+
+  @override
+  String errMinCashOut(String amount) {
+    return 'Mafi ƙarancin fitar da kuɗi shi ne $amount';
+  }
+
+  @override
+  String availableAmount(String amount) {
+    return 'Akwai $amount';
+  }
+
+  @override
+  String get free => 'Kyauta · nan take';
+
+  @override
+  String get transferFee => 'Kuɗin tura';
+
+  @override
+  String withdrawCoin(String coin) {
+    return 'Cire $coin';
+  }
+
+  @override
+  String get withdrawalSent => 'An gabatar da cirewa. Za a aika ba da jimawa ba.';
+
+  @override
+  String sentToUser(String user) {
+    return 'An aika zuwa @$user';
+  }
+
+  @override
+  String confirmationsOf(String n, String m) {
+    return '$n cikin $m tabbatarwar hanyar sadarwa';
+  }
+
+  @override
+  String percentFilled(String pct) {
+    return '$pct% ya cika';
+  }
+
+  @override
+  String get partiallyFilled => 'An cika wani ɓangare';
+
+  @override
+  String get orderCancelled => 'An soke oda';
+
+  @override
+  String get withdrawalCancelled => 'An soke cirewa · an mayar da kuɗi';
+
+  @override
+  String buyCoin(String coin) {
+    return 'Saya $coin';
+  }
+
+  @override
+  String sellCoin(String coin) {
+    return 'Sayar da $coin';
+  }
+
+  @override
+  String yourCoinWallet(String coin) {
+    return 'Walat ɗin $coin naka';
+  }
+
+  @override
+  String purchaseLimits(String min, String max) {
+    return 'Iyaka $min – $max kowane saye';
+  }
+
+  @override
+  String get oneTimeAccount => 'Biya cikin wannan asusun na lokaci ɗaya';
+
+  @override
+  String get oneTimeAccountNote =>
+      'Za ka sami asusun na lokaci ɗaya don biya. Ana saka kirifto da zarar kuɗinka ya iso.';
+
+  @override
+  String get simulatePayment => 'Kwaikwayi biya · gwaji';
+
+  @override
+  String get cashOutIntro =>
+      'Sayar da kirifto ka karɓi Naira a kowane asusun banki na Najeriya, yawanci cikin mintuna.';
+
+  @override
+  String get bankLabel => 'Banki';
+
+  @override
+  String accountVerified(String name) {
+    return 'Sunan asusu: $name';
+  }
+
+  @override
+  String get loanIntro =>
+      'Sami Naira ba tare da sayar da kirifto ba. Ana riƙe kuɗinka a matsayin jingina kuma a mayar idan ka biya.';
+
+  @override
+  String perMonth(String rate) {
+    return '$rate kowane wata';
+  }
+
+  @override
+  String daysCount(String n) {
+    return 'kwana $n';
+  }
+
+  @override
+  String get autoSwapIntro =>
+      'Canza kirifto da ka karɓa kai tsaye, don kuɗi masu sauyawa su zama masu daidaito da zarar sun iso.';
+
+  @override
+  String get autoSwapNote =>
+      'Canjin yana amfani da farashin musanya nan take lokacin da kowace ajiya ta tabbata. Kowanne yana da rasit.';
+
+  @override
+  String get convertTo => 'Canza zuwa';
+
+  @override
+  String cryptoPortfolioChange(String change) {
+    return '$change yau';
+  }
+
+  @override
+  String pendingCount(String n) {
+    return '$n ana jira';
+  }
+
+  @override
+  String newCount(String n) {
+    return '$n sababbi';
+  }
+
+  @override
+  String get offLabel => 'A kashe';
+
+  @override
+  String coinsCount(String n) {
+    return 'kirifto $n';
+  }
+
+  @override
+  String candles(String n) {
+    return 'kyandir $n';
+  }
+
+  @override
+  String get dragToInspect => 'Ja a kan zane don dubawa · taɓa farashi don amfani da shi';
+
+  @override
+  String buyCoinShort(String coin) {
+    return 'Saya $coin';
+  }
+
+  @override
+  String get orderPlacedShort => 'An sanya oda';
+
+  @override
+  String get orderFilled => 'Oda ta cika';
+
+  @override
+  String get volume => 'Yawa';
+
+  @override
+  String get loanTaken => 'An tura rance zuwa walat ɗin Naira';
+
+  @override
+  String autoSwapOn(String target) {
+    return 'Musanya kai tsaye a kunne · zuwa $target';
+  }
 }
