@@ -4,6 +4,7 @@ library;
 export 'package:decimal/decimal.dart' show Decimal, RationalExt;
 
 export 'src/failure.dart';
+export 'src/markets/ngx_schedule.dart';
 export 'src/money/currency.dart';
 export 'src/money/money.dart';
 export 'src/money/money_format.dart';

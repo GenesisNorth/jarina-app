@@ -63,11 +63,17 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
     final r = await ref.read(authRepositoryProvider).verifyOtp(challengeId: challenge.id, code: _code);
     if (!mounted) return;
     await r.when(
-      ok: (session) async {
-        final notifier = ref.read(sessionProvider.notifier);
-        await notifier.setKycStep(AppRoute.kyc1.name);
-        await notifier.signIn(session);
-        // The router guard moves a newly signed-in user on to KYC.
+      ok: (outcome) async {
+        switch (outcome) {
+          case SignedIn(:final session):
+            final notifier = ref.read(sessionProvider.notifier);
+            if (!session.onboarded) await notifier.setKycStep(AppRoute.kyc1.name);
+            await notifier.signIn(session);
+          // The router guard moves the user on (KYC or Home).
+          case TwofaRequired(:final ticket):
+            ref.read(onboardingProvider.notifier).setLoginTicket(ticket);
+            if (mounted) context.go(AppRoute.twofa.path);
+        }
       },
       err: (f) async {
         unawaited(HapticFeedback.heavyImpact());
@@ -85,7 +91,9 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
     final challenge = ref.read(onboardingProvider).challenge;
     if (challenge == null) return;
     final l = AppLocalizations.of(context);
-    final r = await ref.read(authRepositoryProvider).sendOtp(phoneE164: challenge.phoneE164, channel: channel);
+    final r = await ref
+        .read(authRepositoryProvider)
+        .sendOtp(phoneE164: challenge.phoneE164, channel: channel, purpose: challenge.purpose);
     if (!mounted) return;
     r.when(
       ok: (c) {
@@ -109,7 +117,7 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
       });
       return const SizedBox.shrink();
     }
-    final wait = challenge.resendAvailableAt.difference(DateTime.now());
+    final wait = challenge.resendAvailableAt.difference(ref.watch(clockProvider)());
     final canResend = wait <= Duration.zero;
     final showDemo = ref.watch(envProvider).useFakeData;
     final country = ref.watch(selectedCountryProvider).value;
@@ -117,11 +125,14 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
         ? challenge.phoneE164
         : PhoneRules.display(challenge.phoneE164, dialCode: country.dialCode, sample: country.sample);
 
+    final login = challenge.purpose == OtpPurpose.login;
+    final phonePath = login ? '${AppRoute.phone.path}?mode=login' : AppRoute.phone.path;
+
     return JFlowScaffold(
-      onBack: () => context.go(AppRoute.phone.path),
+      onBack: () => context.go(phonePath),
       backLabel: l.back,
       bottomPadded: false,
-      trailing: JPillButton(label: phone, onPressed: () => context.go(AppRoute.phone.path)),
+      trailing: JPillButton(label: phone, onPressed: () => context.go(phonePath)),
       bottom: JKeypad(
         enabled: !_busy,
         onDigit: _digit,
@@ -131,13 +142,12 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
       ),
       children: [
         JStepHeader(
-          eyebrow: stepEyebrow(l, 4, l.verifyLabel),
-          progress: 4 / onboardingSteps,
-          title: l.verifyYourWhatsappNumber,
+          eyebrow: login ? l.welcomeBackVerify : stepEyebrow(l, 4, l.verifyLabel),
+          progress: login ? null : 4 / onboardingSteps,
+          title: login ? l.logInToJarina : l.verifyYourWhatsappNumber,
           subtitle: challenge.channel == OtpChannel.sms ? l.otpSentBySms(phone) : l.otpSentTo(phone),
         ),
-        const SizedBox(height: 12),
-        accountTracker(l, 4),
+        if (!login) ...[const SizedBox(height: 12), accountTracker(l, 4)],
         const SizedBox(height: 18),
         JCard(
           child: Column(

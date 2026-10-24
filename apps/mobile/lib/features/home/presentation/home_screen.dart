@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:jarina/app/router/routes.dart';
 import 'package:jarina/app/widgets/asset_widgets.dart';
+import 'package:jarina/app/widgets/chart_widgets.dart';
 import 'package:jarina/app/widgets/money_widgets.dart';
 import 'package:jarina/core/repositories.dart';
 import 'package:jarina/features/home/presentation/app_drawer.dart';
@@ -207,13 +208,6 @@ class _BalanceCard extends ConsumerStatefulWidget {
 class _BalanceCardState extends ConsumerState<_BalanceCard> {
   ChartRange _range = ChartRange.month;
 
-  static const Map<ChartRange, String> _rangeLabels = {
-    ChartRange.day: '1D',
-    ChartRange.week: '1W',
-    ChartRange.month: '1M',
-    ChartRange.year: '1Y',
-  };
-
   Money _show(Money ngn, Currency to, FxRates? fx) => fx == null || to == Currency.ngn ? ngn : fx.convert(ngn, to);
 
   Future<void> _pickCurrency() async {
@@ -333,7 +327,7 @@ class _BalanceCardState extends ConsumerState<_BalanceCard> {
               ),
               const Spacer(),
               chip(
-                _rangeLabels[_range]!,
+                rangeLabel(AppLocalizations.of(context), _range),
                 gold: true,
                 onTap: () => setState(() => _range = ChartRange.values[(_range.index + 1) % ChartRange.values.length]),
               ),

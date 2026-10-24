@@ -74,10 +74,10 @@ class AppLocalizationsHa extends AppLocalizations {
       'Bayananka a ɓoye suke kuma ana amfani da su ne kawai don tantance shaidarka, kamar yadda doka ta tanada.';
 
   @override
-  String get pinCreateStep => '1 · Ƙirƙira';
+  String get s1Create => '1 · Ƙirƙira';
 
   @override
-  String get pinConfirmStep => '2 · Tabbatar';
+  String get s2Confirm => '2 · Tabbatar';
 
   @override
   String get tier2AllSet => 'Mataki na 2 · An gama';
@@ -117,7 +117,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get whatsapp => 'WhatsApp';
 
   @override
-  String get verifyLabel => 'Tabbatarwa';
+  String get verify => 'Tabbatar';
 
   @override
   String get balancesAndAddressesUpdateInReal => 'Ma\'auni da adireshi suna sabuntawa kai tsaye.';
@@ -172,7 +172,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get proceedsGoTo => 'Kuɗin sayarwa zai shiga';
 
   @override
-  String get yourCountry => 'Ƙasarka';
+  String get yourCountry2 => 'Ƙasarka';
 
   @override
   String get nairaWallet => 'Walat ɗin Naira';
@@ -391,17 +391,17 @@ class AppLocalizationsHa extends AppLocalizations {
   String get selectState => 'Zaɓi jiha';
 
   @override
-  String get selectRegion => 'Zaɓi yanki';
+  String get selectRegion2 => 'Zaɓi yanki';
 
   @override
-  String get selectDepartment => 'Zaɓi sashe';
+  String get selectDepartment2 => 'Zaɓi sashe';
 
   @override
   String get s2faIsOptionalDuringSignUp =>
       '2FA zaɓi ne lokacin rajista, amma asusunka zai kasance a kashe har sai ka kunna ta. Za ka iya duba manhajar.';
 
   @override
-  String get skipForNow => 'Tsallake yanzu';
+  String get skipForNow2 => 'Tsallake yanzu';
 
   @override
   String get almostThere => 'Kusan an gama';
@@ -496,7 +496,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get stockTrade => 'Cinikin hannun jari';
 
   @override
-  String get billPayment => 'Biyan kuɗin sabis';
+  String get billPayment2 => 'Biyan kuɗaɗe';
 
   @override
   String get crossBorderTransfer => 'Tura kuɗi zuwa ƙetare';
@@ -575,7 +575,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get proTrade => 'Ciniki na ƙwararru';
 
   @override
-  String get deposit => 'Ajiya';
+  String get deposit2 => 'Ajiya';
 
   @override
   String get withdraw => 'Cire kuɗi';
@@ -660,7 +660,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get completed => 'An kammala';
 
   @override
-  String get failed => 'Ya gaza';
+  String get failed2 => 'Ya gaza';
 
   @override
   String get swapNow => 'Musanya yanzu';
@@ -996,7 +996,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get enterA10DigitAccountNumber => 'Shigar da lambar asusu mai lambobi 10';
 
   @override
-  String get youReceive => 'Za ka karɓa';
+  String get youReceive2 => 'Za ka karɓa';
 
   @override
   String get belowTheMinimumForThisCoin => 'Ƙasa da mafi ƙanƙanta na wannan kuɗi.';
@@ -1324,7 +1324,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get due => 'Ranar biya';
 
   @override
-  String get paid => 'An biya';
+  String get paid2 => 'An biya';
 
   @override
   String get method => 'Hanya';
@@ -1418,10 +1418,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get jarinaIsAvailableInEnglishIn => 'Jarina tana cikin Turanci a ƙasarka.';
 
   @override
-  String get countryBJ => 'Jamhuriyar Benin';
+  String get beninRepublic => 'Jamhuriyar Benin';
 
   @override
-  String get countryTG => 'Togo';
+  String get togo => 'Togo';
 
   @override
   String get hausa => 'Hausa';
@@ -1458,7 +1458,7 @@ class AppLocalizationsHa extends AppLocalizations {
       'An fassara kowane shafi. Ya kamata masu jin Hausa da Faransanci su sake duba rubutun kafin a fitar da manhajar.';
 
   @override
-  String get rotatingHeadline => 'Hannun jari, kirifto da kuɗin ƙetare iyaka — a wuri ɗaya.';
+  String get stocksCryptoAndCrossBorderMoney => 'Hannun jari, kirifto da aika kuɗi zuwa ƙetare — a wuri ɗaya.';
 
   @override
   String get ngxShares => 'Hannun jarin NGX';
@@ -1577,7 +1577,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get email => 'Imel';
 
   @override
-  String get dobHint => 'DD / MM / YYYY';
+  String get ddMmYyyy => 'RR / WW / SSSS';
 
   @override
   String get youExampleCom => 'kai@misali.com';
@@ -1603,10 +1603,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get s11Digits => 'Lambobi 11';
 
   @override
-  String get nationalIdNumber => 'Lambar Shaidar Ƙasa (NIN)';
+  String get nationalIdentificationNumberNin => 'Lambar Shaidar Ɗan Ƙasa (NIN)';
 
   @override
-  String get passportNumber => 'Lambar fasfo';
+  String get passportNumber2 => 'Lambar fasfo';
 
   @override
   String get frontOfId => 'Gaban katin shaida';
@@ -1723,7 +1723,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get copyKey => 'Kwafi maɓalli';
 
   @override
-  String get keyCopied => 'An kwafi maɓalli';
+  String get keyCopied2 => 'An kwafi maɓalli';
 
   @override
   String get enterThe6DigitCodeFrom => 'Shigar da lamba 6 daga manhajarka';
@@ -1863,7 +1863,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get requestedFromZainabYusuf => 'An nema daga Zainab Yusuf';
 
   @override
-  String get pending => 'Ana jira';
+  String get pending2 => 'ana jira';
 
   @override
   String get s27Sep => '27 Satumba';
@@ -1896,13 +1896,13 @@ class AppLocalizationsHa extends AppLocalizations {
   String get chartRange => 'Tsawon lokacin jadawali';
 
   @override
-  String get displayCurrency => 'Nuna ma\'auni a';
+  String get displayCurrency2 => 'Kuɗin nunawa';
 
   @override
   String get mainMenu => 'Babban menu';
 
   @override
-  String get ngxOpen => 'NGX a buɗe';
+  String get ngxOpen2 => 'NGX a buɗe';
 
   @override
   String get delayed15Min => 'jinkiri na minti 15';
@@ -1996,7 +1996,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get searchCompanyOrTicker => 'Nemi kamfani ko alama';
 
   @override
-  String get search => 'Nema';
+  String get search2 => 'Nema';
 
   @override
   String get trading247 => 'Ciniki dare da rana';
@@ -2114,10 +2114,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get helpSupport => 'Taimako';
 
   @override
-  String get logOut => 'Fita';
+  String get logOut2 => 'Fita';
 
   @override
-  String get logOut2 => 'FITA';
+  String get logOut3 => 'FITA';
 
   @override
   String get jarinaPrototype => 'Samfurin Jarina';
@@ -2226,7 +2226,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get solanaIsADigitalAssetAvailable => 'Solana kadarar intanet ce da ake iya ciniki a Jarina.';
 
   @override
-  String get addToWatchlist => 'Ƙara cikin jerin kallo';
+  String get addToWatchlist2 => 'Ƙara cikin jerin kallo';
 
   @override
   String get buyMtnn => 'Saya MTNN';
@@ -2696,7 +2696,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get nigerianNaira => 'Nairar Najeriya';
 
   @override
-  String get countryNG => 'Najeriya';
+  String get nigeria => 'Najeriya';
 
   @override
   String get receive => 'Karɓa';
@@ -2705,9 +2705,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get usedIn => 'Ana amfani a';
 
   @override
-  String fundWith(String rails) {
-    return 'Saka kuɗi ta: $rails';
-  }
+  String get fundWith2 => 'Saka kuɗi ta:';
 
   @override
   String get bankTransferNip => 'Tura ta banki (NIP)';
@@ -2740,10 +2738,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get exchangeRatesAreSampleValues => 'Farashin canji misali ne.';
 
   @override
-  String get countryGH => 'Ghana';
+  String get ghana => 'Gana';
 
   @override
-  String get countryNE => 'Nijar';
+  String get niger => 'Nijar';
 
   @override
   String get mali => 'Mali';
@@ -2755,7 +2753,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get cTeDIvoire => 'Kodibuwa';
 
   @override
-  String get countryCM => 'Kamaru';
+  String get cameroon => 'Kamaru';
 
   @override
   String get chad => 'Cadi';
@@ -2838,7 +2836,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get sampleRates => 'farashin misali';
 
   @override
-  String get exceedsBalance => 'Ya wuce ma\'auninka';
+  String get exceedsBalance2 => 'ya wuce kuɗinka';
 
   @override
   String get convertedNgnGhs => 'An canja NGN → GHS';
@@ -3171,7 +3169,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get transactionSuccessful => 'Hada-hada ta yi nasara';
 
   @override
-  String get pending2 => 'Ana jira';
+  String get pending3 => 'Ana jira';
 
   @override
   String get transactionId => 'Lambar hada-hada';
@@ -3210,7 +3208,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get reportAnIssue => 'Kai rahoton matsala';
 
   @override
-  String get shareReceipt => 'Raba rasit';
+  String get shareReceipt2 => 'Raba rasit';
 
   @override
   String get receiptShared => 'An raba rasit';
@@ -3252,7 +3250,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get sellMarket => 'Sayar (farashin kasuwa)';
 
   @override
-  String get quantity => 'Adadi';
+  String get quantity2 => 'Adadi';
 
   @override
   String get sendReceive2 => 'Aika da Karɓa';
@@ -3404,7 +3402,13 @@ class AppLocalizationsHa extends AppLocalizations {
   }
 
   @override
+  String get yourCountry => 'Ƙasarka';
+
+  @override
   String get yourAccount => 'Asusunka';
+
+  @override
+  String get verifyLabel => 'Tabbatarwa';
 
   @override
   String otpSentTo(String phone) {
@@ -3527,10 +3531,16 @@ class AppLocalizationsHa extends AppLocalizations {
   }
 
   @override
+  String get keyCopied => 'An kwafi maɓalli';
+
+  @override
   String get copyCodes => 'Kwafi lambobi';
 
   @override
   String get codesCopied => 'An kwafi lambobin ajiya';
+
+  @override
+  String get skipForNow => 'Tsallake yanzu';
 
   @override
   String get skip2faWarning => '2FA zaɓi ne lokacin rajista, amma asusunka zai kasance a kashe har sai ka kunna shi.';
@@ -3558,12 +3568,21 @@ class AppLocalizationsHa extends AppLocalizations {
       'Tabbatar da katin shaidar ƙasa, fasfo ko katin zaɓe. Ana duba bayananka da rajistar hukuma.';
 
   @override
+  String get nationalIdNumber => 'Lambar Shaidar Ƙasa (NIN)';
+
+  @override
+  String get passportNumber => 'Lambar fasfo';
+
+  @override
   String get cardNumber => 'Lambar kati';
 
   @override
   String digitsCount(String count) {
     return 'lambobi $count';
   }
+
+  @override
+  String get dobHint => 'DD / MM / YYYY';
 
   @override
   String regionsCount(String count) {
@@ -3581,9 +3600,42 @@ class AppLocalizationsHa extends AppLocalizations {
   }
 
   @override
+  String get selectRegion => 'Zaɓi yanki';
+
+  @override
+  String get selectDepartment => 'Zaɓi sashe';
+
+  @override
+  String get search => 'Nema';
+
+  @override
+  String get countryNG => 'Najeriya';
+
+  @override
+  String get countryNE => 'Nijar';
+
+  @override
+  String get countryGH => 'Ghana';
+
+  @override
+  String get countryCM => 'Kamaru';
+
+  @override
+  String get countryBJ => 'Jamhuriyar Benin';
+
+  @override
+  String get countryTG => 'Togo';
+
+  @override
   String demoCodeHint(String code) {
     return 'Gwaji: yi amfani da lamba $code';
   }
+
+  @override
+  String get pinCreateStep => '1 · Ƙirƙira';
+
+  @override
+  String get pinConfirmStep => '2 · Tabbatar';
 
   @override
   String get enterCode => 'Shigar da lambar mai haruffa 6';
@@ -3595,6 +3647,9 @@ class AppLocalizationsHa extends AppLocalizations {
   String get useAuthenticatorInstead => 'Yi amfani da lambar authenticator';
 
   @override
+  String get logOut => 'Fita';
+
+  @override
   String get passwordHint => 'Kalmar sirrinka';
 
   @override
@@ -3602,6 +3657,9 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get helpSoon => 'Taɗin taimako yana buɗewa bayan rajista.';
+
+  @override
+  String get rotatingHeadline => 'Hannun jari, kirifto da kuɗin ƙetare iyaka — a wuri ɗaya.';
 
   @override
   String get welcomeTagline => 'Hannun jarin NGX · Bitcoin da stablecoin · Walat ɗin Naira, Cedi da CFA';
@@ -3649,6 +3707,11 @@ class AppLocalizationsHa extends AppLocalizations {
   String get copied => 'An kwafa';
 
   @override
+  String fundWith(String rails) {
+    return 'Saka kuɗi ta: $rails';
+  }
+
+  @override
   String lastLoggedIn(String time) {
     return 'Shiga na ƙarshe $time';
   }
@@ -3670,9 +3733,15 @@ class AppLocalizationsHa extends AppLocalizations {
   String get errPinLocked => 'PIN ba daidai ba sau da yawa. Sake gwadawa bayan minti 15.';
 
   @override
+  String get exceedsBalance => 'Ya wuce ma\'auninka';
+
+  @override
   String convertRateLine(String from, String rate, String to, String fee) {
     return 'Farashi 1 $from = $rate $to · kuɗin sabis $fee';
   }
+
+  @override
+  String get youReceive => 'Za ka karɓa';
 
   @override
   String fromBalance(String balance) {
@@ -3693,6 +3762,9 @@ class AppLocalizationsHa extends AppLocalizations {
   String payTagText(String link) {
     return 'Biya ni a Jarina: $link';
   }
+
+  @override
+  String get shareReceipt => 'Raba rasit';
 
   @override
   String get depositSimulated => 'An ƙara ajiyar gwaji';
@@ -3730,13 +3802,31 @@ class AppLocalizationsHa extends AppLocalizations {
   String get showBalances => 'Nuna ma\'auni';
 
   @override
+  String get displayCurrency => 'Nuna ma\'auni a';
+
+  @override
   String get comingSoon => 'Yana zuwa nan ba da jimawa ba';
+
+  @override
+  String get paid => 'An biya';
 
   @override
   String get declined => 'An ƙi';
 
   @override
+  String get pending => 'Ana jira';
+
+  @override
+  String get failed => 'Ya gaza';
+
+  @override
   String get currencyConversion => 'Canjin kuɗi';
+
+  @override
+  String get deposit => 'Ajiya';
+
+  @override
+  String get billPayment => 'Biyan kuɗin sabis';
 
   @override
   String get cryptoTrade => 'Cinikin kirifto';
@@ -3746,4 +3836,157 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get receiptNotFound => 'Ba a sami rasit ba';
+
+  @override
+  String get youGet => 'Za ka samu';
+
+  @override
+  String get youSell => 'Za ka sayar';
+
+  @override
+  String get livePrice => 'Farashi kai tsaye';
+
+  @override
+  String balanceOf(String amount) {
+    return 'Ma\'auni $amount';
+  }
+
+  @override
+  String youHold(String amount) {
+    return 'Kana da $amount';
+  }
+
+  @override
+  String get slideToBuy => 'Ja don saya';
+
+  @override
+  String get slideToSell => 'Ja don sayarwa';
+
+  @override
+  String get enterAnAmount => 'Shigar da adadi';
+
+  @override
+  String get ngxOpen => 'NGX a buɗe · jinkiri na minti 15';
+
+  @override
+  String ngxClosed(String when) {
+    return 'NGX a rufe · zai buɗe $when';
+  }
+
+  @override
+  String ngxClosedOrderNote(String when) {
+    return 'Kasuwa a rufe take. Za a aika odarka idan NGX ya buɗe ($when) a farashin lokacin.';
+  }
+
+  @override
+  String get walletLabel => 'Walat';
+
+  @override
+  String get notEnoughBalance => 'Ma\'auni bai isa ba';
+
+  @override
+  String get notEnoughShares => 'Ba ka da hannun jari da yawa haka';
+
+  @override
+  String minOneShare(String price) {
+    return 'Isasshe don aƙalla hannun jari 1 ($price)';
+  }
+
+  @override
+  String sharesCount(String count) {
+    return 'hannun jari $count';
+  }
+
+  @override
+  String feeAmount(String amount) {
+    return 'kuɗin sabis $amount';
+  }
+
+  @override
+  String pricePerUnit(String asset, String price) {
+    return '1 $asset = $price';
+  }
+
+  @override
+  String pricePerShare(String price) {
+    return '$price kowane hannun jari';
+  }
+
+  @override
+  String buyAsset(String asset) {
+    return 'Saya $asset';
+  }
+
+  @override
+  String sellAsset(String asset) {
+    return 'Sayar da $asset';
+  }
+
+  @override
+  String boughtAsset(String asset) {
+    return 'An saya $asset';
+  }
+
+  @override
+  String soldAsset(String asset) {
+    return 'An sayar da $asset';
+  }
+
+  @override
+  String get orderQueued => 'An jera oda';
+
+  @override
+  String get orderQueuedBody =>
+      'NGX a rufe yake. Za mu aika odarka idan kasuwa ta buɗe kuma mu sanar da kai idan ta cika.';
+
+  @override
+  String get quantity => 'Adadi';
+
+  @override
+  String get youReceiveEst => 'Za ka karɓa (kimanin)';
+
+  @override
+  String stocksCount(String count) {
+    return 'hannun jari $count';
+  }
+
+  @override
+  String activeCount(String count) {
+    return '$count suna aiki';
+  }
+
+  @override
+  String get addToWatchlist => 'Ƙara cikin jerin kallo';
+
+  @override
+  String get removeFromWatchlist => 'Cire daga jerin kallo';
+
+  @override
+  String get rangeDay => '1D';
+
+  @override
+  String get rangeWeek => '1W';
+
+  @override
+  String get rangeMonth => '1M';
+
+  @override
+  String get rangeYear => '1Y';
+
+  @override
+  String get rangeAll => 'Duka';
+
+  @override
+  String todaySuffix(String change) {
+    return '$change · yau';
+  }
+
+  @override
+  String get noHoldings => 'Ba ka da ko ɗaya tukuna';
+
+  @override
+  String get noResults => 'Babu sakamako';
+
+  @override
+  String get priceUpdated => 'An sabunta farashi. Duba sabon jimillar ka tabbatar.';
 }

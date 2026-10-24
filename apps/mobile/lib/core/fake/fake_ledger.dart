@@ -5,13 +5,14 @@ import 'dart:math';
 import 'package:flutter/services.dart';
 import 'package:jarina/features/activity/domain/transaction.dart';
 import 'package:jarina/features/markets/domain/market.dart';
+import 'package:jarina/features/trading/domain/trading.dart';
 import 'package:jarina/features/wallets/domain/wallets.dart';
 import 'package:jarina_core/jarina_core.dart';
 
 /// In-memory ledger, market feed and activity for the demo account, seeded
 /// from the prototype's sample data. Writes (convert, pay, deposit) move money
 /// between wallets and record transactions, so flows can be tested end to end.
-class FakeLedger implements MarketRepository, WalletRepository, ActivityRepository {
+class FakeLedger implements MarketRepository, WalletRepository, ActivityRepository, TradingRepository {
   FakeLedger({
     AssetBundle? bundle,
     this.latency = const Duration(milliseconds: 350),
@@ -24,6 +25,9 @@ class FakeLedger implements MarketRepository, WalletRepository, ActivityReposito
 
   /// Fee charged on currency conversion (prototype: 0.5%).
   static final Decimal convertFee = Decimal.parse('0.005');
+
+  /// Fee on every stock and crypto trade (prototype: 2.5%).
+  static final Decimal tradeFee = Decimal.parse('0.025');
 
   final AssetBundle _bundle;
   final Duration latency;
@@ -243,13 +247,19 @@ class FakeLedger implements MarketRepository, WalletRepository, ActivityReposito
       ChartRange.week => 7 * 8,
       ChartRange.month => 30,
       ChartRange.year => 52,
+      ChartRange.all => 60,
     };
     if (range == ChartRange.day) return _intraday[assetId]!;
     // Walk backwards from today's price so the line ends where the quote is.
     final r = Random(assetId.hashCode ^ range.index);
     final out = <double>[_prices[assetId]!];
     for (var i = 1; i < n; i++) {
-      out.add(out.last / (1 + (r.nextDouble() - 0.48) * (range == ChartRange.year ? 0.05 : 0.02)));
+      final step = switch (range) {
+        ChartRange.year => 0.05,
+        ChartRange.all => 0.08,
+        _ => 0.02,
+      };
+      out.add(out.last / (1 + (r.nextDouble() - 0.48) * step));
     }
     return out.reversed.toList();
   }
@@ -378,6 +388,98 @@ class FakeLedger implements MarketRepository, WalletRepository, ActivityReposito
       subtitle: 'From your account',
       amount: amount,
       createdAt: _now(),
+    );
+    _record(t);
+    return Ok(t);
+  }
+
+  // ── Trading ─────────────────────────────────────────────────────────────
+
+  @override
+  Decimal get feeRate => tradeFee;
+
+  AssetInfo? _asset(String id) => _catalog.where((a) => a.id == id).firstOrNull;
+
+  Decimal _livePrice(String id) => Decimal.parse(_prices[id]!.toStringAsFixed(2));
+
+  bool _isOpen(AssetInfo a) => !a.isStock || NgxSchedule.isOpen(_now());
+
+  TradeQuote _quote(AssetInfo a, TradeSide side, Decimal qty, Decimal price) {
+    final gross = Money(qty * price, Currency.ngn).rounded();
+    return TradeQuote(
+      id: _txId(),
+      asset: a,
+      side: side,
+      price: price,
+      quantity: qty,
+      gross: gross,
+      fee: gross.times(tradeFee).rounded(),
+      marketOpen: _isOpen(a),
+      expiresAt: _now().add(const Duration(seconds: 30)),
+    );
+  }
+
+  @override
+  Future<Result<TradeQuote>> quoteBuy(String assetId, Money spend) async {
+    await _ready;
+    await _wait();
+    final a = _asset(assetId);
+    if (a == null || !spend.isPositive) return const Err(ValidationFailure('Invalid order'));
+    final price = _livePrice(assetId);
+    // NGX trades whole shares; crypto to 8 decimals. Never round up.
+    final raw = (spend.amount / price).toDecimal(scaleOnInfinitePrecision: 12);
+    final qty = a.isStock ? raw.floor() : raw.floor(scale: 8);
+    if (qty <= Decimal.zero) return const Err(BelowMinimumFailure());
+    final q = _quote(a, TradeSide.buy, qty, price);
+    if (q.total > _balances.value.fiatOf(Currency.ngn)) return const Err(InsufficientFundsFailure());
+    return Ok(q);
+  }
+
+  @override
+  Future<Result<TradeQuote>> quoteSell(String assetId, Decimal quantity) async {
+    await _ready;
+    await _wait();
+    final a = _asset(assetId);
+    if (a == null || quantity <= Decimal.zero) return const Err(ValidationFailure('Invalid order'));
+    if (a.isStock && quantity != quantity.floor()) return const Err(ValidationFailure('Whole shares only'));
+    if (quantity > _balances.value.qtyOf(assetId)) return const Err(InsufficientFundsFailure());
+    return Ok(_quote(a, TradeSide.sell, quantity, _livePrice(assetId)));
+  }
+
+  @override
+  Future<Result<Transaction>> placeOrder(TradeQuote q, {required String pinToken}) async {
+    await _wait();
+    if (_now().isAfter(q.expiresAt)) return const Err(QuoteExpiredFailure());
+    final b = _balances.value;
+    final cash = b.fiatOf(Currency.ngn);
+    final held = b.qtyOf(q.asset.id);
+    if (q.isBuy && q.total > cash) return const Err(InsufficientFundsFailure());
+    if (!q.isBuy && q.quantity > held) return const Err(InsufficientFundsFailure());
+
+    // Out of hours, a buy reserves the cash and a sell reserves the shares;
+    // the other leg settles when the order fills at the open.
+    final open = q.marketOpen;
+    _balances.value = Balances(
+      fiat: {
+        ...b.fiat,
+        Currency.ngn: q.isBuy ? cash - q.total : (open ? cash + q.total : cash),
+      },
+      holdings: {
+        ...b.holdings,
+        q.asset.id: q.isBuy ? (open ? held + q.quantity : held) : held - q.quantity,
+      },
+    );
+    final qtyText = q.asset.isStock ? '${q.quantity} shares' : MoneyFormat.format(Money(q.quantity, q.asset.unit));
+    final t = Transaction(
+      id: _txId(),
+      category: q.asset.isStock ? TxCategory.stocks : TxCategory.crypto,
+      kind: q.asset.isStock ? TxKind.stockTrade : TxKind.cryptoTrade,
+      title: '${q.isBuy ? 'Bought' : 'Sold'} ${q.asset.id}',
+      subtitle: qtyText,
+      amount: q.isBuy ? -q.total : q.total,
+      createdAt: _now(),
+      status: open ? TxStatus.successful : TxStatus.pending,
+      description: '$qtyText @ ${MoneyFormat.format(Money(q.price, Currency.ngn))} · fee ${MoneyFormat.format(q.fee)}',
     );
     _record(t);
     return Ok(t);

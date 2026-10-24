@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:jarina/app/router/routes.dart';
 import 'package:jarina/app/widgets/money_widgets.dart';
+import 'package:jarina/core/providers.dart';
 import 'package:jarina/core/repositories.dart';
 import 'package:jarina/features/activity/domain/transaction.dart';
 import 'package:jarina/features/wallets/application/portfolio.dart';
@@ -88,6 +89,7 @@ class _ReceiptScreenState extends ConsumerState<ReceiptScreen> {
                   child: _ReceiptCard(
                     tx: tx,
                     holder: profile == null ? null : '${profile.fullName} · @${profile.username}',
+                    now: ref.watch(clockProvider)(),
                   ),
                 ),
               ],
@@ -97,10 +99,11 @@ class _ReceiptScreenState extends ConsumerState<ReceiptScreen> {
 }
 
 class _ReceiptCard extends StatelessWidget {
-  const _ReceiptCard({required this.tx, required this.holder});
+  const _ReceiptCard({required this.tx, required this.holder, required this.now});
 
   final Transaction tx;
   final String? holder;
+  final DateTime now;
 
   @override
   Widget build(BuildContext context) {
@@ -158,7 +161,7 @@ class _ReceiptCard extends StatelessWidget {
         ],
       ),
     );
-    final when = activityDate(l, tx.createdAt);
+    final when = activityDate(l, tx.createdAt, now: now);
 
     return Semantics(
       container: true,

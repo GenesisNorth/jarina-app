@@ -3,6 +3,9 @@ import 'package:jarina_core/jarina_core.dart';
 
 enum OtpChannel { whatsapp, sms }
 
+/// Why the code was sent: creating an account, or logging in to an existing one.
+enum OtpPurpose { signup, login }
+
 /// A pending phone verification.
 @immutable
 class OtpChallenge {
@@ -12,11 +15,13 @@ class OtpChallenge {
     required this.channel,
     required this.resendAvailableAt,
     required this.expiresAt,
+    this.purpose = OtpPurpose.signup,
   });
 
   final String id;
   final String phoneE164;
   final OtpChannel channel;
+  final OtpPurpose purpose;
   final DateTime resendAvailableAt;
   final DateTime expiresAt;
 }
@@ -39,10 +44,20 @@ class AuthSession {
   final bool twofaEnabled;
 }
 
-/// Password accepted on a new device; a 2FA code is still needed.
-@immutable
-class LoginChallenge {
-  const LoginChallenge({required this.ticket});
+/// Result of a correct OTP.
+sealed class OtpOutcome {
+  const OtpOutcome();
+}
+
+/// New account created, or login on a device that needs no further check.
+final class SignedIn extends OtpOutcome {
+  const SignedIn(this.session);
+  final AuthSession session;
+}
+
+/// Login with 2FA on: the authenticator (or a backup code) is still needed.
+final class TwofaRequired extends OtpOutcome {
+  const TwofaRequired(this.ticket);
   final String ticket;
 }
 
@@ -61,17 +76,17 @@ final class CodeExpiredFailure extends Failure {
   const CodeExpiredFailure() : super('Code expired');
 }
 
-final class InvalidCredentialsFailure extends Failure {
-  const InvalidCredentialsFailure() : super('Invalid credentials');
-}
-
 abstract interface class AuthRepository {
   /// Sends a one-time code. Server enforces resend cooldown and daily caps.
-  Future<Result<OtpChallenge>> sendOtp({required String phoneE164, required OtpChannel channel});
+  /// Login has no password: the WhatsApp code proves the phone, the
+  /// authenticator proves the person (2FA is mandatory to transact).
+  Future<Result<OtpChallenge>> sendOtp({
+    required String phoneE164,
+    required OtpChannel channel,
+    OtpPurpose purpose = OtpPurpose.signup,
+  });
 
-  Future<Result<AuthSession>> verifyOtp({required String challengeId, required String code});
-
-  Future<Result<LoginChallenge>> login({required String phoneE164, required String password});
+  Future<Result<OtpOutcome>> verifyOtp({required String challengeId, required String code});
 
   /// [code] is a TOTP code or, when [isBackupCode], a one-time backup code.
   Future<Result<AuthSession>> completeLogin({required String ticket, required String code, bool isBackupCode = false});

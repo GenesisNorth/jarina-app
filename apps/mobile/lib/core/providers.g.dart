@@ -51,6 +51,55 @@ final class EnvProvider extends $FunctionalProvider<Env, Env, Env> with $Provide
 
 String _$envHash() => r'be1af9d8e3a609df83d05a3a99a75618063a8830';
 
+/// The app's notion of "now". One source for market hours, quote expiry
+/// hints and relative dates; in production it is corrected by server time.
+
+@ProviderFor(clock)
+final clockProvider = ClockProvider._();
+
+/// The app's notion of "now". One source for market hours, quote expiry
+/// hints and relative dates; in production it is corrected by server time.
+
+final class ClockProvider extends $FunctionalProvider<DateTime Function(), DateTime Function(), DateTime Function()>
+    with $Provider<DateTime Function()> {
+  /// The app's notion of "now". One source for market hours, quote expiry
+  /// hints and relative dates; in production it is corrected by server time.
+  ClockProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'clockProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$clockHash();
+
+  @$internal
+  @override
+  $ProviderElement<DateTime Function()> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  DateTime Function() create(Ref ref) {
+    return clock(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(DateTime Function() value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<DateTime Function()>(value),
+    );
+  }
+}
+
+String _$clockHash() => r'3f65ad34ac6fcd532de9004042bdf2ed2bd85b13';
+
 /// Overridden in `bootstrap()` after the instance is loaded.
 
 @ProviderFor(sharedPreferences)

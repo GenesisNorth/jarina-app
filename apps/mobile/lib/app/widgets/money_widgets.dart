@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:jarina/app/router/routes.dart';
+import 'package:jarina/core/providers.dart';
 import 'package:jarina/features/activity/domain/transaction.dart';
 import 'package:jarina/features/wallets/application/portfolio.dart';
 import 'package:jarina/l10n/gen/app_localizations.dart';
@@ -54,13 +55,14 @@ String activityDate(AppLocalizations l, DateTime t, {DateTime? now, bool withTim
 }
 
 /// One activity row: direction arrow, title, date · detail, signed amount.
-class ActivityRow extends StatelessWidget {
+class ActivityRow extends ConsumerWidget {
   const ActivityRow({required this.tx, super.key});
 
   final Transaction tx;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final now = ref.watch(clockProvider)();
     final l = AppLocalizations.of(context);
     final c = context.colors;
     final t = context.text;
@@ -87,7 +89,7 @@ class ActivityRow extends StatelessWidget {
                   Text(tx.title, style: t.body.copyWith(fontWeight: FontWeight.w600)),
                   const SizedBox(height: 2),
                   Text(
-                    '${activityDate(l, tx.createdAt, withTime: false)} · ${tx.subtitle}',
+                    '${activityDate(l, tx.createdAt, now: now, withTime: false)} · ${tx.subtitle}',
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: t.caption.copyWith(color: c.muted, fontSize: 13),

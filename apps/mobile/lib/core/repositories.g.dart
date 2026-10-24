@@ -46,7 +46,7 @@ final class FakeBackendProvider extends $FunctionalProvider<FakeBackend, FakeBac
   }
 }
 
-String _$fakeBackendHash() => r'e0459b271b7955f2d2d30ce8d90cb65c40859e24';
+String _$fakeBackendHash() => r'db2c29af9dca9993ff07c362ab343c827a0a1358';
 
 @ProviderFor(fakeLedger)
 final fakeLedgerProvider = FakeLedgerProvider._();
@@ -85,7 +85,7 @@ final class FakeLedgerProvider extends $FunctionalProvider<FakeLedger, FakeLedge
   }
 }
 
-String _$fakeLedgerHash() => r'8adde82e7eaa1313bf3e681d21597839adc5dbe3';
+String _$fakeLedgerHash() => r'b7a27769a396a838764d7f0200f01af2583839c6';
 
 /// Every repository is chosen here, so swapping fakes for the real API in the
 /// backend phase is a change to this file only.
@@ -414,3 +414,45 @@ final class ProfileProvider extends $FunctionalProvider<AsyncValue<UserProfile>,
 }
 
 String _$profileHash() => r'3f743d9ee253ea585b14ab199993bcd74f1e4b5c';
+
+@ProviderFor(tradingRepository)
+final tradingRepositoryProvider = TradingRepositoryProvider._();
+
+final class TradingRepositoryProvider
+    extends $FunctionalProvider<TradingRepository, TradingRepository, TradingRepository>
+    with $Provider<TradingRepository> {
+  TradingRepositoryProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'tradingRepositoryProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$tradingRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<TradingRepository> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  TradingRepository create(Ref ref) {
+    return tradingRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(TradingRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<TradingRepository>(value),
+    );
+  }
+}
+
+String _$tradingRepositoryHash() => r'0864b3a190dc934ec628b3b99ce110aa7c616719';

@@ -21,8 +21,8 @@
   "welcomeBackVerify": "Welcome back · Verify",
   "step4Of5Verify": "Step 4 of 5 · Verify",
   "yourDetailsAreEncryptedAndOnly": "Your details are encrypted and only used to verify your identity, as required by regulation.",
-  "pinCreateStep": "1 · Create",
-  "pinConfirmStep": "2 · Confirm",
+  "s1Create": "1 · Create",
+  "s2Confirm": "2 · Confirm",
   "tier2AllSet": "Tier 2 · All set",
   "oneStepLeft": "One step left",
   "step3Of5YourAccount": "Step 3 of 5 · Your account",
@@ -35,7 +35,7 @@
   "orContinueWith": "or continue with",
   "bankGradeEncryptionYourNumberIs": "Bank-grade encryption · Your number is only used to verify you and secure your account.",
   "whatsapp": "WhatsApp",
-  "verifyLabel": "Verify",
+  "verify": "Verify",
   "balancesAndAddressesUpdateInReal": "Balances and addresses update in real time.",
   "marketDataShownIsSampleData": "Market data shown is sample data. A live market feed is needed for production.",
   "cryptoCustodyAccount": "Crypto custody account",
@@ -52,7 +52,7 @@
   "fromCediWallet": "From Cedi wallet",
   "sourceOfFunds": "Source of funds",
   "proceedsGoTo": "Proceeds go to",
-  "yourCountry": "Your country",
+  "yourCountry2": "Your country",
   "nairaWallet": "Naira wallet",
   "cediWallet": "Cedi wallet",
   "cfaXofWallet": "CFA · XOF wallet",
@@ -122,10 +122,10 @@
   "region": "Region",
   "department": "Department",
   "selectState": "Select state",
-  "selectRegion": "Select region",
-  "selectDepartment": "Select department",
+  "selectRegion2": "Select region",
+  "selectDepartment2": "Select department",
   "s2faIsOptionalDuringSignUp": "2FA is optional during sign-up, but your account stays disabled until you turn it on. You can still look around.",
-  "skipForNow": "Skip for now",
+  "skipForNow2": "Skip for now",
   "almostThere": "Almost there",
   "identityConfirmedYourAccountIsDisabled": "Identity confirmed. Your account is disabled until you turn on two-factor authentication.",
   "phoneBvn": "Phone + BVN",
@@ -156,7 +156,7 @@
   "transactionReceipt": "Transaction receipt",
   "transactionDetails": "Transaction details",
   "stockTrade": "Stock trade",
-  "billPayment": "Bill payment",
+  "billPayment2": "Bill payment",
   "crossBorderTransfer": "Cross-border transfer",
   "parties": "Parties",
   "accountHolder": "Account holder",
@@ -182,7 +182,7 @@
   "cryptoServices": "Crypto services",
   "swap": "Swap",
   "proTrade": "Pro trade",
-  "deposit": "Deposit",
+  "deposit2": "Deposit",
   "withdraw": "Withdraw",
   "cashOut": "Cash out",
   "wallets": "Wallets",
@@ -210,7 +210,7 @@
   "theRateIsLockedFor15": "The rate is locked for 15 seconds once you confirm. If it expires, we fetch a fresh quote — nothing moves until you confirm with your PIN.",
   "recentSwaps": "Recent swaps",
   "completed": "Completed",
-  "failed": "Failed",
+  "failed2": "Failed",
   "swapNow": "Swap now",
   "amountToSwap": "Amount to swap",
   "switchLabel": "Switch",
@@ -320,7 +320,7 @@
   "available32000UsdtLimits10": "Available 320.00 USDT · limits 10.00 USDT to ₦10,000,000 per transaction",
   "savedGtbank4821": "Saved: GTBank ••4821",
   "enterA10DigitAccountNumber": "Enter a 10-digit account number",
-  "youReceive": "You receive",
+  "youReceive2": "You receive",
   "belowTheMinimumForThisCoin": "Below the minimum for this coin.",
   "aboveThe10000000Limit": "Above the ₦10,000,000 limit per transaction.",
   "payoutsGoOnlyToBankAccounts": "Payouts go only to bank accounts in your name. You''ll confirm with your PIN and a 2FA code.",
@@ -426,7 +426,7 @@
   "withdrewUsdt": "Withdrew USDT",
   "boughtUsdt": "Bought USDT",
   "due": "Due",
-  "paid": "Paid",
+  "paid2": "Paid",
   "method": "Method",
   "into": "Into",
   "s30Minutes": "30 minutes",
@@ -457,8 +457,8 @@
   "chooseYourLanguage": "Choose your language",
   "jarinaWillUseThisLanguageOn": "Jarina will use this language on every screen. You can change it later in More.",
   "jarinaIsAvailableInEnglishIn": "Jarina is available in English in your country.",
-  "countryBJ": "Benin Republic",
-  "countryTG": "Togo",
+  "beninRepublic": "Benin Republic",
+  "togo": "Togo",
   "hausa": "Hausa",
   "french": "French",
   "harshenHausa": "Harshen Hausa",
@@ -470,7 +470,7 @@
   "languagesInTogo": "Languages in Togo",
   "otherLanguages": "Other languages",
   "everyScreenIsTranslatedTheHausa": "Every screen is translated. The Hausa and French text should be reviewed by native speakers before launch.",
-  "rotatingHeadline": "Stocks, crypto and cross-border money — in one place.",
+  "stocksCryptoAndCrossBorderMoney": "Stocks, crypto and cross-border money — in one place.",
   "ngxShares": "NGX shares",
   "bitcoinStablecoins": "Bitcoin & stablecoins",
   "nairaCediCfaWallets": "Naira, Cedi & CFA wallets",
@@ -509,7 +509,7 @@
   "lastName": "Last name",
   "dateOfBirth": "Date of birth",
   "email": "Email",
-  "dobHint": "DD / MM / YYYY",
+  "ddMmYyyy": "DD / MM / YYYY",
   "youExampleCom": "you@example.com",
   "verifyYourIdentity": "Verify your identity",
   "nigerianResidentsVerifyWithBvnOr": "Nigerian residents verify with BVN or NIN. Your details are checked against the official registry.",
@@ -517,8 +517,8 @@
   "bankVerificationNumberBvn": "Bank Verification Number (BVN)",
   "dial5650OnYourRegistered": "Dial *565*0# on your registered line to get your BVN. We never see your bank balance.",
   "s11Digits": "11 digits",
-  "nationalIdNumber": "National Identification Number (NIN)",
-  "passportNumber": "Passport number",
+  "nationalIdentificationNumberNin": "National Identification Number (NIN)",
+  "passportNumber2": "Passport number",
   "frontOfId": "Front of ID",
   "useYourCameraAvoidGlare": "Use your camera — avoid glare",
   "backOfId": "Back of ID",
@@ -555,7 +555,7 @@
   "s2faProtectsLoginsOnNewDevices": "2FA protects logins on new devices and every withdrawal. Jarina uses an authenticator app only — SMS codes can be stolen through SIM-swap.",
   "scanWithGoogleAuthenticatorMicrosoftAuthenticator": "Scan with Google Authenticator, Microsoft Authenticator, Authy or 1Password — or enter this key:",
   "copyKey": "Copy key",
-  "keyCopied": "Key copied",
+  "keyCopied2": "Key copied",
   "enterThe6DigitCodeFrom": "Enter the 6-digit code from your app",
   "backupCodes": "Backup codes",
   "saveThese8OneTimeCodes": "Save these 8 one-time codes somewhere safe. You''ll need one if you lose your phone.",
@@ -601,7 +601,7 @@
   "sentToHalimaIssoufou": "Sent to Halima Issoufou",
   "receivedFromKwameMensah": "Received from Kwame Mensah",
   "requestedFromZainabYusuf": "Requested from Zainab Yusuf",
-  "pending": "Pending",
+  "pending2": "pending",
   "s27Sep": "27 Sep",
   "home": "Home",
   "sendReceive": "Send/Receive",
@@ -612,9 +612,9 @@
   "priceChartSampleData": "Price chart, sample data",
   "hideBalance": "Hide balance",
   "chartRange": "Chart range",
-  "displayCurrency": "Show balances in",
+  "displayCurrency2": "Display currency",
   "mainMenu": "Main menu",
-  "ngxOpen": "NGX open",
+  "ngxOpen2": "NGX open",
   "delayed15Min": "delayed 15 min",
   "stockPortfolioValue": "Stock portfolio value",
   "s441009Today": "−₦441 (-0.09%) today",
@@ -645,7 +645,7 @@
   "services": "Services",
   "pricesNgxDailyOfficialListClose": "Prices: NGX Daily Official List, close of 25 Sep 2026. A live NGX data feed is needed for production.",
   "searchCompanyOrTicker": "Search company or ticker",
-  "search": "Search",
+  "search2": "Search",
   "trading247": "Trading 24/7",
   "cryptoPortfolioValue": "Crypto portfolio value",
   "allCrypto": "All crypto",
@@ -684,8 +684,8 @@
   "darkMode": "Dark mode",
   "lightMode": "Light mode",
   "helpSupport": "Help & support",
-  "logOut": "Log out",
-  "logOut2": "LOG OUT",
+  "logOut2": "Log out",
+  "logOut3": "LOG OUT",
   "jarinaPrototype": "Jarina prototype",
   "allFiguresAreSampleData": "all figures are sample data",
   "sampleData": "sample data",
@@ -719,7 +719,7 @@
   "tetherUsdtIsAStablecoinDesigned": "Tether (USDT) is a stablecoin designed to track the US dollar. Jarina uses stablecoins to settle cross-border transfers.",
   "seplatEnergyIsListedOnThe": "Seplat Energy is listed on the Nigerian Exchange (NGX) in the oil & gas sector.",
   "solanaIsADigitalAssetAvailable": "Solana is a digital asset available to trade on Jarina.",
-  "addToWatchlist": "Add to watchlist",
+  "addToWatchlist2": "Add to watchlist",
   "buyMtnn": "Buy MTNN",
   "sellMtnn": "Sell MTNN",
   "s86190PerShare": "₦861.90 per share",
@@ -872,10 +872,10 @@
   "showing60SearchToFindOthers": "Showing 60 — search to find others",
   "searchTickerOrCompany": "Search ticker or company",
   "nigerianNaira": "Nigerian naira",
-  "countryNG": "Nigeria",
+  "nigeria": "Nigeria",
   "receive": "Receive",
   "usedIn": "Used in",
-  "fundWith": "Fund with: {rails}",
+  "fundWith2": "Fund with:",
   "bankTransferNip": "Bank transfer (NIP)",
   "ussd": "USSD",
   "agentCashIn": "Agent cash-in",
@@ -886,12 +886,12 @@
   "westAfricanCfaFranc": "West African CFA franc",
   "centralAfricanCfaFranc": "Central African CFA franc",
   "exchangeRatesAreSampleValues": "Exchange rates are sample values.",
-  "countryGH": "Ghana",
-  "countryNE": "Niger",
+  "ghana": "Ghana",
+  "niger": "Niger",
   "mali": "Mali",
   "senegal": "Senegal",
   "cTeDIvoire": "Côte d’Ivoire",
-  "countryCM": "Cameroon",
+  "cameroon": "Cameroon",
   "chad": "Chad",
   "addGhs": "Add GHS",
   "addNgn": "Add NGN",
@@ -917,7 +917,7 @@
   "rate1Ngn00074Ghs": "Rate 1 NGN = 0.0074 GHS",
   "fee05": "fee 0.5%",
   "sampleRates": "sample rates",
-  "exceedsBalance": "Exceeds your balance",
+  "exceedsBalance2": "exceeds balance",
   "convertedNgnGhs": "Converted NGN → GHS",
   "convertedToGh10000": "Converted to GH₵100.00",
   "send5000": "Send ₦5,000",
@@ -1026,7 +1026,7 @@
   "weLlLetYouKnowWhen": "We''ll let you know when Zainab pays.",
   "receipt": "Receipt",
   "transactionSuccessful": "Transaction successful",
-  "pending2": "Pending",
+  "pending3": "Pending",
   "transactionId": "Transaction ID",
   "dateTime": "Date & time",
   "typeLabel": "Type",
@@ -1039,7 +1039,7 @@
   "download": "Download",
   "share": "Share",
   "reportAnIssue": "Report an issue",
-  "shareReceipt": "Share receipt",
+  "shareReceipt2": "Share receipt",
   "receiptShared": "Receipt shared",
   "pdfReceiptSaved": "PDF receipt saved",
   "supportTicketOpenedFor261004352978025": "Support ticket opened for 261004352978025",
@@ -1053,7 +1053,7 @@
   "side": "Side",
   "buyMarket": "Buy (market)",
   "sellMarket": "Sell (market)",
-  "quantity": "Quantity",
+  "quantity2": "Quantity",
   "sendReceive2": "Send & Receive",
   "lastLoggedInToday941": "Last logged in today, 9:41",
   "closeMenu": "Close menu",
@@ -1124,7 +1124,9 @@
       }
     }
   },
+  "yourCountry": "Your country",
   "yourAccount": "Your account",
+  "verifyLabel": "Verify",
   "otpSentTo": "Enter the 6-digit code we sent to your WhatsApp on {phone}.",
   "@otpSentTo": {
     "placeholders": {
@@ -1225,8 +1227,10 @@
       }
     }
   },
+  "keyCopied": "Key copied",
   "copyCodes": "Copy codes",
   "codesCopied": "Backup codes copied",
+  "skipForNow": "Skip for now",
   "skip2faWarning": "2FA is optional during sign-up, but your account stays disabled until you turn it on.",
   "livenessHold": "Hold still…",
   "livenessDone": "Selfie captured",
@@ -1235,6 +1239,8 @@
   "idHintPassport": "Passport number as printed on the photo page.",
   "idHintNationalId": "Number as printed on your card.",
   "idOtherCountries": "Verify with your national ID, passport or voter card. Your details are checked against the official registry.",
+  "nationalIdNumber": "National Identification Number (NIN)",
+  "passportNumber": "Passport number",
   "cardNumber": "Card number",
   "digitsCount": "{count} digits",
   "@digitsCount": {
@@ -1244,6 +1250,7 @@
       }
     }
   },
+  "dobHint": "DD / MM / YYYY",
   "regionsCount": "{count} regions",
   "@regionsCount": {
     "placeholders": {
@@ -1268,6 +1275,15 @@
       }
     }
   },
+  "selectRegion": "Select region",
+  "selectDepartment": "Select department",
+  "search": "Search",
+  "countryNG": "Nigeria",
+  "countryNE": "Niger",
+  "countryGH": "Ghana",
+  "countryCM": "Cameroon",
+  "countryBJ": "Benin Republic",
+  "countryTG": "Togo",
   "demoCodeHint": "Test build: use code {code}",
   "@demoCodeHint": {
     "placeholders": {
@@ -1276,12 +1292,16 @@
       }
     }
   },
+  "pinCreateStep": "1 · Create",
+  "pinConfirmStep": "2 · Confirm",
   "enterCode": "Enter the 6-digit code",
   "backupCodeHint": "Backup code",
   "useAuthenticatorInstead": "Use authenticator code instead",
+  "logOut": "Log out",
   "passwordHint": "Your password",
   "forgotPasswordSoon": "Password reset is coming soon. Contact support for help.",
   "helpSoon": "Support chat opens after sign-up.",
+  "rotatingHeadline": "Stocks, crypto and cross-border money — in one place.",
   "welcomeTagline": "NGX shares · Bitcoin & stablecoins · Naira, Cedi & CFA wallets",
   "tier3": "Tier 3",
   "btcUsdt": "BTC, USDT…",
@@ -1316,6 +1336,7 @@
   "p2pTransfer": "P2P transfer",
   "p2pTransferSub": "Send any wallet to a Jarina user by @username — free",
   "copied": "Copied",
+  "fundWith": "Fund with: {rails}",
   "@fundWith": {
     "placeholders": {
       "rails": {
@@ -1349,6 +1370,7 @@
     }
   },
   "errPinLocked": "Too many wrong PINs. Try again in 15 minutes.",
+  "exceedsBalance": "Exceeds your balance",
   "convertRateLine": "Rate 1 {from} = {rate} {to} · fee {fee}",
   "@convertRateLine": {
     "placeholders": {
@@ -1366,6 +1388,7 @@
       }
     }
   },
+  "youReceive": "You receive",
   "fromBalance": "From · balance {balance}",
   "@fromBalance": {
     "placeholders": {
@@ -1404,6 +1427,7 @@
       }
     }
   },
+  "shareReceipt": "Share receipt",
   "depositSimulated": "Test deposit added",
   "testBuildOnly": "Test build only",
   "fundingNote": "Deposits from accounts in your own name only. Money usually lands within minutes.",
@@ -1447,10 +1471,171 @@
   },
   "hideBalances": "Hide balances",
   "showBalances": "Show balances",
+  "displayCurrency": "Show balances in",
   "comingSoon": "Coming soon",
+  "paid": "Paid",
   "declined": "Declined",
+  "pending": "Pending",
+  "failed": "Failed",
   "currencyConversion": "Currency conversion",
+  "deposit": "Deposit",
+  "billPayment": "Bill payment",
   "cryptoTrade": "Crypto trade",
   "p2pPayment": "P2P payment",
-  "receiptNotFound": "Receipt not found"
+  "receiptNotFound": "Receipt not found",
+  "youGet": "You get",
+  "youSell": "You sell",
+  "livePrice": "Live price",
+  "balanceOf": "Balance {amount}",
+  "@balanceOf": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "youHold": "You hold {amount}",
+  "@youHold": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "slideToBuy": "Slide to buy",
+  "slideToSell": "Slide to sell",
+  "enterAnAmount": "Enter an amount",
+  "ngxOpen": "NGX open · delayed 15 min",
+  "ngxClosed": "NGX closed · opens {when}",
+  "@ngxClosed": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "ngxClosedOrderNote": "The market is closed. Your order will be sent when NGX opens ({when}) at the price then.",
+  "@ngxClosedOrderNote": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "walletLabel": "Wallet",
+  "notEnoughBalance": "Not enough balance",
+  "notEnoughShares": "You don''t hold that many shares",
+  "minOneShare": "Enough for at least 1 share ({price})",
+  "@minOneShare": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "sharesCount": "{count} shares",
+  "@sharesCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "feeAmount": "fee {amount}",
+  "@feeAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "pricePerUnit": "1 {asset} = {price}",
+  "@pricePerUnit": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "pricePerShare": "{price} per share",
+  "@pricePerShare": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "buyAsset": "Buy {asset}",
+  "@buyAsset": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      }
+    }
+  },
+  "sellAsset": "Sell {asset}",
+  "@sellAsset": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      }
+    }
+  },
+  "boughtAsset": "Bought {asset}",
+  "@boughtAsset": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      }
+    }
+  },
+  "soldAsset": "Sold {asset}",
+  "@soldAsset": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      }
+    }
+  },
+  "orderQueued": "Order queued",
+  "orderQueuedBody": "NGX is closed. We''ll send your order when the market opens and notify you when it fills.",
+  "quantity": "Quantity",
+  "youReceiveEst": "You receive (est.)",
+  "stocksCount": "{count} stocks",
+  "@stocksCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "activeCount": "{count} active",
+  "@activeCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "addToWatchlist": "Add to watchlist",
+  "removeFromWatchlist": "Remove from watchlist",
+  "rangeDay": "1D",
+  "rangeWeek": "1W",
+  "rangeMonth": "1M",
+  "rangeYear": "1Y",
+  "rangeAll": "All",
+  "todaySuffix": "{change} · today",
+  "@todaySuffix": {
+    "placeholders": {
+      "change": {
+        "type": "String"
+      }
+    }
+  },
+  "noHoldings": "You don''t hold any yet",
+  "noResults": "No results",
+  "priceUpdated": "Price updated. Check the new total and confirm."
 }

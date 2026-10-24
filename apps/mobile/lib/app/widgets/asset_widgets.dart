@@ -95,3 +95,81 @@ class HoldingRow extends StatelessWidget {
     );
   }
 }
+
+/// Market list row: badge, ticker + name · sector, sparkline, price, change.
+class MarketRow extends StatelessWidget {
+  const MarketRow({required this.asset, required this.quote, super.key, this.onTap});
+
+  final AssetInfo asset;
+  final Quote? quote;
+
+  /// Defaults to opening the asset detail.
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = context.colors;
+    final t = context.text;
+    final q = quote;
+    final up = (q?.changePct ?? 0) >= 0;
+    final pct = q?.changePct ?? 0;
+    return InkWell(
+      onTap: onTap ?? () => context.pushNamed(AppRoute.asset.name, pathParameters: {'id': asset.id}),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 12),
+        child: Row(
+          children: [
+            AssetBadge(asset),
+            const SizedBox(width: 10),
+            Expanded(
+              flex: 3,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    asset.id,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: t.body.copyWith(fontWeight: FontWeight.w600),
+                  ),
+                  Text(
+                    asset.sector == null ? asset.name : '${asset.name} · ${asset.sector}',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: t.caption.copyWith(color: c.muted, fontSize: 13),
+                  ),
+                ],
+              ),
+            ),
+            if (q != null &&
+                MediaQuery.sizeOf(context).width >= 340 &&
+                MediaQuery.textScalerOf(context).scale(1) <= 1.3)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: JSparkline(values: q.intraday, color: up ? c.goldDeep : c.down, width: 56),
+              ),
+            RowAmount(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  if (q != null)
+                    Text(
+                      MoneyFormat.format(Money(q.price, Currency.ngn), decimals: 2),
+                      style: t.num.copyWith(fontSize: 15),
+                    ),
+                  Text(
+                    '${pct > 0 ? '+' : ''}${pct.toStringAsFixed(2)}%',
+                    style: t.caption.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: pct.abs() < 0.005 ? c.muted : (up ? c.up : c.down),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

@@ -112,7 +112,7 @@ class JButton extends StatelessWidget {
                 : null,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              child: Center(widthFactor: expand ? null : 1, child: content),
+              child: Center(widthFactor: expand ? null : 1, heightFactor: 1, child: content),
             ),
           ),
         ),

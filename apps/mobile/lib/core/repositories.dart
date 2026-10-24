@@ -7,17 +7,18 @@ import 'package:jarina/features/auth/domain/auth_repository.dart';
 import 'package:jarina/features/kyc/domain/kyc_repository.dart';
 import 'package:jarina/features/markets/domain/market.dart';
 import 'package:jarina/features/security/domain/security_repository.dart';
+import 'package:jarina/features/trading/domain/trading.dart';
 import 'package:jarina/features/wallets/domain/wallets.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'repositories.g.dart';
 
 @Riverpod(keepAlive: true)
-FakeBackend fakeBackend(Ref ref) => FakeBackend();
+FakeBackend fakeBackend(Ref ref) => FakeBackend(clock: ref.watch(clockProvider));
 
 @Riverpod(keepAlive: true)
 FakeLedger fakeLedger(Ref ref) {
-  final ledger = FakeLedger();
+  final ledger = FakeLedger(clock: ref.watch(clockProvider));
   ref.onDispose(ledger.dispose);
   return ledger;
 }
@@ -55,5 +56,9 @@ ProfileRepository profileRepository(Ref ref) =>
 /// Refreshed after onboarding / account edits via `ref.invalidate(profileProvider)`.
 @Riverpod(keepAlive: true)
 Future<UserProfile> profile(Ref ref) => ref.watch(profileRepositoryProvider).me();
+
+@Riverpod(keepAlive: true)
+TradingRepository tradingRepository(Ref ref) =>
+    ref.watch(envProvider).useFakeData ? ref.watch(fakeLedgerProvider) : throw _notYet('TradingRepository');
 
 StateError _notYet(String name) => StateError('$name has no API implementation yet (backend phase).');

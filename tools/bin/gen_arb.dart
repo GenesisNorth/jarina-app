@@ -29,18 +29,26 @@ void main(List<String> args) {
       l: (jsonDecode(File(p.join(inDir, '$l.json')).readAsStringSync()) as Map).cast<String, String>(),
   };
 
+  // Ids defined in the extra ARBs must never be reused for prototype strings,
+  // even when the English text is the same ("Stocks", "All").
+  final extraEn = File(p.join(extraDir, 'extra_en.arb'));
+  final extraIds = extraEn.existsSync()
+      ? (jsonDecode(extraEn.readAsStringSync()) as Map<String, dynamic>).keys.toSet()
+      : <String>{};
+
   // Reuse ids from an existing English ARB (text → id) so manual renames stick.
   final existing = <String, String>{};
   final enArb = File(p.join(outDir, 'app_en.arb'));
   if (enArb.existsSync()) {
     final m = jsonDecode(enArb.readAsStringSync()) as Map<String, dynamic>;
     for (final e in m.entries) {
-      if (!e.key.startsWith('@') && e.value is String) existing[e.value as String] = e.key;
+      if (e.key.startsWith('@') || extraIds.contains(e.key) || e.value is! String) continue;
+      existing.putIfAbsent(e.value as String, () => e.key);
     }
   }
 
   final ids = <String, String>{}; // english text -> id
-  final used = <String>{};
+  final used = <String>{...extraIds};
   for (final text in sources['en']!.keys) {
     var id = existing[_escape(text)] ?? _idFor(text);
     final base = id;

@@ -14,12 +14,20 @@ import 'package:jarina/features/kyc/presentation/pin_screen.dart';
 import 'package:jarina/features/kyc/presentation/twofa_setup_screen.dart';
 import 'package:jarina/features/kyc/presentation/username_screen.dart';
 import 'package:jarina/features/kyc/presentation/verified_screen.dart';
+import 'package:jarina/features/markets/domain/market.dart';
 import 'package:jarina/features/onboarding/presentation/country_screen.dart';
 import 'package:jarina/features/onboarding/presentation/language_screen.dart';
 import 'package:jarina/features/onboarding/presentation/login_twofa_screen.dart';
 import 'package:jarina/features/onboarding/presentation/otp_screen.dart';
 import 'package:jarina/features/onboarding/presentation/phone_screen.dart';
 import 'package:jarina/features/onboarding/presentation/welcome_screen.dart';
+import 'package:jarina/features/trading/domain/trading.dart';
+import 'package:jarina/features/trading/presentation/asset_screen.dart';
+import 'package:jarina/features/trading/presentation/order_done_screen.dart';
+import 'package:jarina/features/trading/presentation/picker_screen.dart';
+import 'package:jarina/features/trading/presentation/review_screen.dart';
+import 'package:jarina/features/trading/presentation/stocks_screen.dart';
+import 'package:jarina/features/trading/presentation/trade_screen.dart';
 import 'package:jarina/features/wallets/presentation/add_money_screen.dart';
 import 'package:jarina/features/wallets/presentation/convert_screen.dart';
 import 'package:jarina/features/wallets/presentation/fiat_wallet_screen.dart';
@@ -53,6 +61,22 @@ Widget? screenFor(AppRoute route, GoRouterState state) => switch (route) {
   AppRoute.convert => ConvertScreen(from: _homeCurrency(state.uri.queryParameters['from'])),
   AppRoute.receive => const ReceiveScreen(),
   AppRoute.receipt => ReceiptScreen(id: state.pathParameters['id'] ?? ''),
+  AppRoute.stocks => const StocksScreen(),
+  AppRoute.asset => AssetScreen(assetId: state.pathParameters['id'] ?? ''),
+  AppRoute.entry => TradeScreen(
+    assetId: state.uri.queryParameters['asset'] ?? 'MTNN',
+    side: state.uri.queryParameters['side'] == 'sell' ? TradeSide.sell : TradeSide.buy,
+  ),
+  AppRoute.picker => PickerScreen(
+    kind: switch (state.uri.queryParameters['kind']) {
+      'stocks' => AssetKind.stock,
+      'crypto' => AssetKind.crypto,
+      _ => null,
+    },
+    side: state.uri.queryParameters['side'] == 'sell' ? TradeSide.sell : TradeSide.buy,
+  ),
+  AppRoute.review => const ReviewScreen(),
+  AppRoute.done => const OrderDoneScreen(),
   _ => null,
 };
 

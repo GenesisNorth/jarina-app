@@ -17,6 +17,7 @@ import 'package:jarina_core/jarina_core.dart';
 import 'package:jarina_ui/jarina_ui.dart';
 
 /// Step 3 · Create your account (WhatsApp number), or log in (`?mode=login`).
+/// Both send a WhatsApp code; login then asks for the 2FA code. No passwords.
 class PhoneScreen extends ConsumerStatefulWidget {
   const PhoneScreen({super.key, this.login = false});
 
@@ -28,18 +29,13 @@ class PhoneScreen extends ConsumerStatefulWidget {
 
 class _PhoneScreenState extends ConsumerState<PhoneScreen> {
   final _phone = TextEditingController();
-  final _password = TextEditingController();
-  final _passwordFocus = FocusNode();
   String? _phoneError;
   String? _formError;
   bool _busy = false;
-  bool _showPassword = false;
 
   @override
   void dispose() {
     _phone.dispose();
-    _password.dispose();
-    _passwordFocus.dispose();
     super.dispose();
   }
 
@@ -56,37 +52,23 @@ class _PhoneScreenState extends ConsumerState<PhoneScreen> {
       _formError = null;
     });
     if (err != null) return;
-    if (widget.login && _password.text.isEmpty) {
-      setState(() => _formError = l.errRequired);
-      return;
-    }
-
     setState(() => _busy = true);
-    final repo = ref.read(authRepositoryProvider);
-    final e164 = PhoneRules.toE164(country.dialCode, _phone.text);
-    if (widget.login) {
-      final r = await repo.login(phoneE164: e164, password: _password.text);
-      if (!mounted) return;
-      setState(() => _busy = false);
-      r.when(
-        ok: (ticket) {
-          ref.read(onboardingProvider.notifier).setLoginTicket(ticket.ticket);
-          context.go(AppRoute.twofa.path);
-        },
-        err: (f) => setState(() => _formError = l.failure(f)),
-      );
-    } else {
-      final r = await repo.sendOtp(phoneE164: e164, channel: OtpChannel.whatsapp);
-      if (!mounted) return;
-      setState(() => _busy = false);
-      r.when(
-        ok: (challenge) {
-          ref.read(onboardingProvider.notifier).setChallenge(challenge);
-          context.go(AppRoute.otp.path);
-        },
-        err: (f) => setState(() => _formError = l.failure(f)),
-      );
-    }
+    final r = await ref
+        .read(authRepositoryProvider)
+        .sendOtp(
+          phoneE164: PhoneRules.toE164(country.dialCode, _phone.text),
+          channel: OtpChannel.whatsapp,
+          purpose: widget.login ? OtpPurpose.login : OtpPurpose.signup,
+        );
+    if (!mounted) return;
+    setState(() => _busy = false);
+    r.when(
+      ok: (challenge) {
+        ref.read(onboardingProvider.notifier).setChallenge(challenge);
+        context.go(AppRoute.otp.path);
+      },
+      err: (f) => setState(() => _formError = l.failure(f)),
+    );
   }
 
   @override
@@ -146,12 +128,12 @@ class _PhoneScreenState extends ConsumerState<PhoneScreen> {
                   hint: country.sample,
                   large: true,
                   keyboardType: TextInputType.phone,
-                  textInputAction: widget.login ? TextInputAction.next : TextInputAction.done,
+                  textInputAction: TextInputAction.done,
                   autofillHints: const [AutofillHints.telephoneNumberNational],
                   inputFormatters: [_PhoneFormatter(country)],
                   errorText: _phoneError,
                   onChanged: (_) => setState(() => _phoneError = null),
-                  onSubmitted: (_) => widget.login ? _passwordFocus.requestFocus() : _submit(country),
+                  onSubmitted: (_) => _submit(country),
                   prefix: Padding(
                     padding: const EdgeInsets.fromLTRB(6, 6, 10, 6),
                     child: Container(
@@ -188,38 +170,13 @@ class _PhoneScreenState extends ConsumerState<PhoneScreen> {
                     ),
                   ],
                 ),
-                if (widget.login) ...[
-                  const SizedBox(height: 16),
-                  JTextField(
-                    label: l.password,
-                    controller: _password,
-                    focusNode: _passwordFocus,
-                    hint: l.passwordHint,
-                    obscureText: !_showPassword,
-                    autofillHints: const [AutofillHints.password],
-                    textInputAction: TextInputAction.done,
-                    onSubmitted: (_) => _submit(country),
-                    suffix: IconButton(
-                      tooltip: l.password,
-                      onPressed: () => setState(() => _showPassword = !_showPassword),
-                      icon: JarinaIcon(JIcon.eye, size: 20, color: _showPassword ? c.ink : c.muted),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: TextButton(
-                      onPressed: () => showToast(context, l.forgotPasswordSoon),
-                      child: Text(l.forgotPassword, style: t.body.copyWith(fontSize: 14)),
-                    ),
-                  ),
-                ],
                 if (_formError != null) ...[
                   const SizedBox(height: 8),
                   Text(_formError!, style: t.caption.copyWith(color: c.down)),
                 ],
                 const SizedBox(height: 16),
                 JButton(
-                  label: widget.login ? l.continueLabel : l.sendWhatsappCode,
+                  label: l.sendWhatsappCode,
                   trailingArrow: true,
                   loading: _busy,
                   onPressed: digits == 0 ? null : () => _submit(country),

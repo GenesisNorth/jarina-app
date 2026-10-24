@@ -79,7 +79,7 @@ class Quote {
   final List<double> intraday;
 }
 
-enum ChartRange { day, week, month, year }
+enum ChartRange { day, week, month, year, all }
 
 abstract interface class MarketRepository {
   Future<List<AssetInfo>> catalog();

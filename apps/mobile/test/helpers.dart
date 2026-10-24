@@ -17,6 +17,7 @@ Future<ProviderContainer> pumpApp(
   SessionState session = const SessionState(),
   Map<String, Object> prefs = const {},
   Size size = const Size(390, 844),
+  DateTime Function()? clock,
 }) async {
   // Phone-sized surface (iPhone 14/15) unless a test asks for another.
   tester.view.physicalSize = size * 3;
@@ -34,12 +35,13 @@ Future<ProviderContainer> pumpApp(
   final container = ProviderContainer(
     overrides: [
       envProvider.overrideWithValue(Env.dev),
+      if (clock != null) clockProvider.overrideWithValue(clock),
       sharedPreferencesProvider.overrideWithValue(await SharedPreferences.getInstance()),
       sessionStoreProvider.overrideWithValue(SessionStore()),
       initialSessionProvider.overrideWithValue(session),
       fakeBackendProvider.overrideWithValue(FakeBackend(latency: Duration.zero)),
       fakeLedgerProvider.overrideWith((ref) {
-        final ledger = FakeLedger(latency: Duration.zero, tick: Duration.zero);
+        final ledger = FakeLedger(latency: Duration.zero, tick: Duration.zero, clock: ref.watch(clockProvider));
         ref.onDispose(ledger.dispose);
         return ledger;
       }),

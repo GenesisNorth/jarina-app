@@ -171,22 +171,29 @@ void main() {
     expect(find.text('Skip for now'), findsNothing, reason: 'no skipping once onboarded');
   });
 
-  testWidgets('login on a new device requires 2FA', (tester) async {
+  testWidgets('login is WhatsApp code then 2FA, with no password', (tester) async {
     final c = await pumpApp(tester);
     String loc() => c.read(routerProvider).routerDelegate.currentConfiguration.uri.path;
 
     await tapButton(tester, 'Log in');
     expect(find.text('Log in to Jarina'), findsOneWidget);
-    final fields = find.byType(TextField);
-    await tester.enterText(fields.at(0), '08012345678');
+    expect(find.byType(TextField), findsOneWidget, reason: 'phone only, no password');
+    await tester.enterText(find.byType(TextField), '08012345678');
     await tester.pump();
-    await tester.enterText(fields.at(1), 'secret12');
-    await tester.pump();
-    await tapButton(tester, 'Continue');
-    expect(loc(), AppRoute.twofa.path);
+    await tapButton(tester, 'Send WhatsApp code');
+    expect(loc(), AppRoute.otp.path);
+    expect(find.text('WELCOME BACK · VERIFY'), findsOneWidget);
+    expect(find.text('Country'), findsNothing, reason: 'no sign-up tracker on login');
 
     await keypad(tester, FakeBackend.demoCode);
+    expect(loc(), AppRoute.twofa.path);
+    expect(c.read(sessionProvider).signedIn, isFalse, reason: 'not signed in before 2FA');
+
+    await keypad(tester, '000000');
+    expect(find.text("That code isn't right. Try again."), findsOneWidget);
+    await keypad(tester, FakeBackend.demoCode);
     expect(loc(), AppRoute.home.path);
+    expect(c.read(sessionProvider).twofaEnabled, isTrue);
   });
 
   testWidgets('fits a small phone with large text without overflow', (tester) async {

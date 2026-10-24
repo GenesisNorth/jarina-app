@@ -219,17 +219,17 @@ abstract class AppLocalizations {
   /// **'Your details are encrypted and only used to verify your identity, as required by regulation.'**
   String get yourDetailsAreEncryptedAndOnly;
 
-  /// No description provided for @pinCreateStep.
+  /// No description provided for @s1Create.
   ///
   /// In en, this message translates to:
   /// **'1 · Create'**
-  String get pinCreateStep;
+  String get s1Create;
 
-  /// No description provided for @pinConfirmStep.
+  /// No description provided for @s2Confirm.
   ///
   /// In en, this message translates to:
   /// **'2 · Confirm'**
-  String get pinConfirmStep;
+  String get s2Confirm;
 
   /// No description provided for @tier2AllSet.
   ///
@@ -303,11 +303,11 @@ abstract class AppLocalizations {
   /// **'WhatsApp'**
   String get whatsapp;
 
-  /// No description provided for @verifyLabel.
+  /// No description provided for @verify.
   ///
   /// In en, this message translates to:
   /// **'Verify'**
-  String get verifyLabel;
+  String get verify;
 
   /// No description provided for @balancesAndAddressesUpdateInReal.
   ///
@@ -405,11 +405,11 @@ abstract class AppLocalizations {
   /// **'Proceeds go to'**
   String get proceedsGoTo;
 
-  /// No description provided for @yourCountry.
+  /// No description provided for @yourCountry2.
   ///
   /// In en, this message translates to:
   /// **'Your country'**
-  String get yourCountry;
+  String get yourCountry2;
 
   /// No description provided for @nairaWallet.
   ///
@@ -825,17 +825,17 @@ abstract class AppLocalizations {
   /// **'Select state'**
   String get selectState;
 
-  /// No description provided for @selectRegion.
+  /// No description provided for @selectRegion2.
   ///
   /// In en, this message translates to:
   /// **'Select region'**
-  String get selectRegion;
+  String get selectRegion2;
 
-  /// No description provided for @selectDepartment.
+  /// No description provided for @selectDepartment2.
   ///
   /// In en, this message translates to:
   /// **'Select department'**
-  String get selectDepartment;
+  String get selectDepartment2;
 
   /// No description provided for @s2faIsOptionalDuringSignUp.
   ///
@@ -843,11 +843,11 @@ abstract class AppLocalizations {
   /// **'2FA is optional during sign-up, but your account stays disabled until you turn it on. You can still look around.'**
   String get s2faIsOptionalDuringSignUp;
 
-  /// No description provided for @skipForNow.
+  /// No description provided for @skipForNow2.
   ///
   /// In en, this message translates to:
   /// **'Skip for now'**
-  String get skipForNow;
+  String get skipForNow2;
 
   /// No description provided for @almostThere.
   ///
@@ -1029,11 +1029,11 @@ abstract class AppLocalizations {
   /// **'Stock trade'**
   String get stockTrade;
 
-  /// No description provided for @billPayment.
+  /// No description provided for @billPayment2.
   ///
   /// In en, this message translates to:
   /// **'Bill payment'**
-  String get billPayment;
+  String get billPayment2;
 
   /// No description provided for @crossBorderTransfer.
   ///
@@ -1185,11 +1185,11 @@ abstract class AppLocalizations {
   /// **'Pro trade'**
   String get proTrade;
 
-  /// No description provided for @deposit.
+  /// No description provided for @deposit2.
   ///
   /// In en, this message translates to:
   /// **'Deposit'**
-  String get deposit;
+  String get deposit2;
 
   /// No description provided for @withdraw.
   ///
@@ -1353,11 +1353,11 @@ abstract class AppLocalizations {
   /// **'Completed'**
   String get completed;
 
-  /// No description provided for @failed.
+  /// No description provided for @failed2.
   ///
   /// In en, this message translates to:
   /// **'Failed'**
-  String get failed;
+  String get failed2;
 
   /// No description provided for @swapNow.
   ///
@@ -2013,11 +2013,11 @@ abstract class AppLocalizations {
   /// **'Enter a 10-digit account number'**
   String get enterA10DigitAccountNumber;
 
-  /// No description provided for @youReceive.
+  /// No description provided for @youReceive2.
   ///
   /// In en, this message translates to:
   /// **'You receive'**
-  String get youReceive;
+  String get youReceive2;
 
   /// No description provided for @belowTheMinimumForThisCoin.
   ///
@@ -2649,11 +2649,11 @@ abstract class AppLocalizations {
   /// **'Due'**
   String get due;
 
-  /// No description provided for @paid.
+  /// No description provided for @paid2.
   ///
   /// In en, this message translates to:
   /// **'Paid'**
-  String get paid;
+  String get paid2;
 
   /// No description provided for @method.
   ///
@@ -2835,17 +2835,17 @@ abstract class AppLocalizations {
   /// **'Jarina is available in English in your country.'**
   String get jarinaIsAvailableInEnglishIn;
 
-  /// No description provided for @countryBJ.
+  /// No description provided for @beninRepublic.
   ///
   /// In en, this message translates to:
   /// **'Benin Republic'**
-  String get countryBJ;
+  String get beninRepublic;
 
-  /// No description provided for @countryTG.
+  /// No description provided for @togo.
   ///
   /// In en, this message translates to:
   /// **'Togo'**
-  String get countryTG;
+  String get togo;
 
   /// No description provided for @hausa.
   ///
@@ -2913,11 +2913,11 @@ abstract class AppLocalizations {
   /// **'Every screen is translated. The Hausa and French text should be reviewed by native speakers before launch.'**
   String get everyScreenIsTranslatedTheHausa;
 
-  /// No description provided for @rotatingHeadline.
+  /// No description provided for @stocksCryptoAndCrossBorderMoney.
   ///
   /// In en, this message translates to:
   /// **'Stocks, crypto and cross-border money — in one place.'**
-  String get rotatingHeadline;
+  String get stocksCryptoAndCrossBorderMoney;
 
   /// No description provided for @ngxShares.
   ///
@@ -3147,11 +3147,11 @@ abstract class AppLocalizations {
   /// **'Email'**
   String get email;
 
-  /// No description provided for @dobHint.
+  /// No description provided for @ddMmYyyy.
   ///
   /// In en, this message translates to:
   /// **'DD / MM / YYYY'**
-  String get dobHint;
+  String get ddMmYyyy;
 
   /// No description provided for @youExampleCom.
   ///
@@ -3195,17 +3195,17 @@ abstract class AppLocalizations {
   /// **'11 digits'**
   String get s11Digits;
 
-  /// No description provided for @nationalIdNumber.
+  /// No description provided for @nationalIdentificationNumberNin.
   ///
   /// In en, this message translates to:
   /// **'National Identification Number (NIN)'**
-  String get nationalIdNumber;
+  String get nationalIdentificationNumberNin;
 
-  /// No description provided for @passportNumber.
+  /// No description provided for @passportNumber2.
   ///
   /// In en, this message translates to:
   /// **'Passport number'**
-  String get passportNumber;
+  String get passportNumber2;
 
   /// No description provided for @frontOfId.
   ///
@@ -3423,11 +3423,11 @@ abstract class AppLocalizations {
   /// **'Copy key'**
   String get copyKey;
 
-  /// No description provided for @keyCopied.
+  /// No description provided for @keyCopied2.
   ///
   /// In en, this message translates to:
   /// **'Key copied'**
-  String get keyCopied;
+  String get keyCopied2;
 
   /// No description provided for @enterThe6DigitCodeFrom.
   ///
@@ -3699,11 +3699,11 @@ abstract class AppLocalizations {
   /// **'Requested from Zainab Yusuf'**
   String get requestedFromZainabYusuf;
 
-  /// No description provided for @pending.
+  /// No description provided for @pending2.
   ///
   /// In en, this message translates to:
-  /// **'Pending'**
-  String get pending;
+  /// **'pending'**
+  String get pending2;
 
   /// No description provided for @s27Sep.
   ///
@@ -3765,11 +3765,11 @@ abstract class AppLocalizations {
   /// **'Chart range'**
   String get chartRange;
 
-  /// No description provided for @displayCurrency.
+  /// No description provided for @displayCurrency2.
   ///
   /// In en, this message translates to:
-  /// **'Show balances in'**
-  String get displayCurrency;
+  /// **'Display currency'**
+  String get displayCurrency2;
 
   /// No description provided for @mainMenu.
   ///
@@ -3777,11 +3777,11 @@ abstract class AppLocalizations {
   /// **'Main menu'**
   String get mainMenu;
 
-  /// No description provided for @ngxOpen.
+  /// No description provided for @ngxOpen2.
   ///
   /// In en, this message translates to:
   /// **'NGX open'**
-  String get ngxOpen;
+  String get ngxOpen2;
 
   /// No description provided for @delayed15Min.
   ///
@@ -3963,11 +3963,11 @@ abstract class AppLocalizations {
   /// **'Search company or ticker'**
   String get searchCompanyOrTicker;
 
-  /// No description provided for @search.
+  /// No description provided for @search2.
   ///
   /// In en, this message translates to:
   /// **'Search'**
-  String get search;
+  String get search2;
 
   /// No description provided for @trading247.
   ///
@@ -4197,17 +4197,17 @@ abstract class AppLocalizations {
   /// **'Help & support'**
   String get helpSupport;
 
-  /// No description provided for @logOut.
-  ///
-  /// In en, this message translates to:
-  /// **'Log out'**
-  String get logOut;
-
   /// No description provided for @logOut2.
   ///
   /// In en, this message translates to:
-  /// **'LOG OUT'**
+  /// **'Log out'**
   String get logOut2;
+
+  /// No description provided for @logOut3.
+  ///
+  /// In en, this message translates to:
+  /// **'LOG OUT'**
+  String get logOut3;
 
   /// No description provided for @jarinaPrototype.
   ///
@@ -4407,11 +4407,11 @@ abstract class AppLocalizations {
   /// **'Solana is a digital asset available to trade on Jarina.'**
   String get solanaIsADigitalAssetAvailable;
 
-  /// No description provided for @addToWatchlist.
+  /// No description provided for @addToWatchlist2.
   ///
   /// In en, this message translates to:
   /// **'Add to watchlist'**
-  String get addToWatchlist;
+  String get addToWatchlist2;
 
   /// No description provided for @buyMtnn.
   ///
@@ -5325,11 +5325,11 @@ abstract class AppLocalizations {
   /// **'Nigerian naira'**
   String get nigerianNaira;
 
-  /// No description provided for @countryNG.
+  /// No description provided for @nigeria.
   ///
   /// In en, this message translates to:
   /// **'Nigeria'**
-  String get countryNG;
+  String get nigeria;
 
   /// No description provided for @receive.
   ///
@@ -5343,11 +5343,11 @@ abstract class AppLocalizations {
   /// **'Used in'**
   String get usedIn;
 
-  /// No description provided for @fundWith.
+  /// No description provided for @fundWith2.
   ///
   /// In en, this message translates to:
-  /// **'Fund with: {rails}'**
-  String fundWith(String rails);
+  /// **'Fund with:'**
+  String get fundWith2;
 
   /// No description provided for @bankTransferNip.
   ///
@@ -5409,17 +5409,17 @@ abstract class AppLocalizations {
   /// **'Exchange rates are sample values.'**
   String get exchangeRatesAreSampleValues;
 
-  /// No description provided for @countryGH.
+  /// No description provided for @ghana.
   ///
   /// In en, this message translates to:
   /// **'Ghana'**
-  String get countryGH;
+  String get ghana;
 
-  /// No description provided for @countryNE.
+  /// No description provided for @niger.
   ///
   /// In en, this message translates to:
   /// **'Niger'**
-  String get countryNE;
+  String get niger;
 
   /// No description provided for @mali.
   ///
@@ -5439,11 +5439,11 @@ abstract class AppLocalizations {
   /// **'Côte d’Ivoire'**
   String get cTeDIvoire;
 
-  /// No description provided for @countryCM.
+  /// No description provided for @cameroon.
   ///
   /// In en, this message translates to:
   /// **'Cameroon'**
-  String get countryCM;
+  String get cameroon;
 
   /// No description provided for @chad.
   ///
@@ -5595,11 +5595,11 @@ abstract class AppLocalizations {
   /// **'sample rates'**
   String get sampleRates;
 
-  /// No description provided for @exceedsBalance.
+  /// No description provided for @exceedsBalance2.
   ///
   /// In en, this message translates to:
-  /// **'Exceeds your balance'**
-  String get exceedsBalance;
+  /// **'exceeds balance'**
+  String get exceedsBalance2;
 
   /// No description provided for @convertedNgnGhs.
   ///
@@ -6249,11 +6249,11 @@ abstract class AppLocalizations {
   /// **'Transaction successful'**
   String get transactionSuccessful;
 
-  /// No description provided for @pending2.
+  /// No description provided for @pending3.
   ///
   /// In en, this message translates to:
   /// **'Pending'**
-  String get pending2;
+  String get pending3;
 
   /// No description provided for @transactionId.
   ///
@@ -6327,11 +6327,11 @@ abstract class AppLocalizations {
   /// **'Report an issue'**
   String get reportAnIssue;
 
-  /// No description provided for @shareReceipt.
+  /// No description provided for @shareReceipt2.
   ///
   /// In en, this message translates to:
   /// **'Share receipt'**
-  String get shareReceipt;
+  String get shareReceipt2;
 
   /// No description provided for @receiptShared.
   ///
@@ -6411,11 +6411,11 @@ abstract class AppLocalizations {
   /// **'Sell (market)'**
   String get sellMarket;
 
-  /// No description provided for @quantity.
+  /// No description provided for @quantity2.
   ///
   /// In en, this message translates to:
   /// **'Quantity'**
-  String get quantity;
+  String get quantity2;
 
   /// No description provided for @sendReceive2.
   ///
@@ -6699,11 +6699,23 @@ abstract class AppLocalizations {
   /// **'Step {step} of {total} · {section}'**
   String stepOfSection(String step, String total, String section);
 
+  /// No description provided for @yourCountry.
+  ///
+  /// In en, this message translates to:
+  /// **'Your country'**
+  String get yourCountry;
+
   /// No description provided for @yourAccount.
   ///
   /// In en, this message translates to:
   /// **'Your account'**
   String get yourAccount;
+
+  /// No description provided for @verifyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify'**
+  String get verifyLabel;
 
   /// No description provided for @otpSentTo.
   ///
@@ -6909,6 +6921,12 @@ abstract class AppLocalizations {
   /// **'{provider} sign-in is coming soon.'**
   String signInComingSoon(String provider);
 
+  /// No description provided for @keyCopied.
+  ///
+  /// In en, this message translates to:
+  /// **'Key copied'**
+  String get keyCopied;
+
   /// No description provided for @copyCodes.
   ///
   /// In en, this message translates to:
@@ -6920,6 +6938,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Backup codes copied'**
   String get codesCopied;
+
+  /// No description provided for @skipForNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip for now'**
+  String get skipForNow;
 
   /// No description provided for @skip2faWarning.
   ///
@@ -6969,6 +6993,18 @@ abstract class AppLocalizations {
   /// **'Verify with your national ID, passport or voter card. Your details are checked against the official registry.'**
   String get idOtherCountries;
 
+  /// No description provided for @nationalIdNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'National Identification Number (NIN)'**
+  String get nationalIdNumber;
+
+  /// No description provided for @passportNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Passport number'**
+  String get passportNumber;
+
   /// No description provided for @cardNumber.
   ///
   /// In en, this message translates to:
@@ -6980,6 +7016,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{count} digits'**
   String digitsCount(String count);
+
+  /// No description provided for @dobHint.
+  ///
+  /// In en, this message translates to:
+  /// **'DD / MM / YYYY'**
+  String get dobHint;
 
   /// No description provided for @regionsCount.
   ///
@@ -6999,11 +7041,77 @@ abstract class AppLocalizations {
   /// **'{count} departments'**
   String departmentsCount(String count);
 
+  /// No description provided for @selectRegion.
+  ///
+  /// In en, this message translates to:
+  /// **'Select region'**
+  String get selectRegion;
+
+  /// No description provided for @selectDepartment.
+  ///
+  /// In en, this message translates to:
+  /// **'Select department'**
+  String get selectDepartment;
+
+  /// No description provided for @search.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @countryNG.
+  ///
+  /// In en, this message translates to:
+  /// **'Nigeria'**
+  String get countryNG;
+
+  /// No description provided for @countryNE.
+  ///
+  /// In en, this message translates to:
+  /// **'Niger'**
+  String get countryNE;
+
+  /// No description provided for @countryGH.
+  ///
+  /// In en, this message translates to:
+  /// **'Ghana'**
+  String get countryGH;
+
+  /// No description provided for @countryCM.
+  ///
+  /// In en, this message translates to:
+  /// **'Cameroon'**
+  String get countryCM;
+
+  /// No description provided for @countryBJ.
+  ///
+  /// In en, this message translates to:
+  /// **'Benin Republic'**
+  String get countryBJ;
+
+  /// No description provided for @countryTG.
+  ///
+  /// In en, this message translates to:
+  /// **'Togo'**
+  String get countryTG;
+
   /// No description provided for @demoCodeHint.
   ///
   /// In en, this message translates to:
   /// **'Test build: use code {code}'**
   String demoCodeHint(String code);
+
+  /// No description provided for @pinCreateStep.
+  ///
+  /// In en, this message translates to:
+  /// **'1 · Create'**
+  String get pinCreateStep;
+
+  /// No description provided for @pinConfirmStep.
+  ///
+  /// In en, this message translates to:
+  /// **'2 · Confirm'**
+  String get pinConfirmStep;
 
   /// No description provided for @enterCode.
   ///
@@ -7023,6 +7131,12 @@ abstract class AppLocalizations {
   /// **'Use authenticator code instead'**
   String get useAuthenticatorInstead;
 
+  /// No description provided for @logOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Log out'**
+  String get logOut;
+
   /// No description provided for @passwordHint.
   ///
   /// In en, this message translates to:
@@ -7040,6 +7154,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Support chat opens after sign-up.'**
   String get helpSoon;
+
+  /// No description provided for @rotatingHeadline.
+  ///
+  /// In en, this message translates to:
+  /// **'Stocks, crypto and cross-border money — in one place.'**
+  String get rotatingHeadline;
 
   /// No description provided for @welcomeTagline.
   ///
@@ -7119,6 +7239,12 @@ abstract class AppLocalizations {
   /// **'Copied'**
   String get copied;
 
+  /// No description provided for @fundWith.
+  ///
+  /// In en, this message translates to:
+  /// **'Fund with: {rails}'**
+  String fundWith(String rails);
+
   /// No description provided for @lastLoggedIn.
   ///
   /// In en, this message translates to:
@@ -7149,11 +7275,23 @@ abstract class AppLocalizations {
   /// **'Too many wrong PINs. Try again in 15 minutes.'**
   String get errPinLocked;
 
+  /// No description provided for @exceedsBalance.
+  ///
+  /// In en, this message translates to:
+  /// **'Exceeds your balance'**
+  String get exceedsBalance;
+
   /// No description provided for @convertRateLine.
   ///
   /// In en, this message translates to:
   /// **'Rate 1 {from} = {rate} {to} · fee {fee}'**
   String convertRateLine(String from, String rate, String to, String fee);
+
+  /// No description provided for @youReceive.
+  ///
+  /// In en, this message translates to:
+  /// **'You receive'**
+  String get youReceive;
 
   /// No description provided for @fromBalance.
   ///
@@ -7178,6 +7316,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Pay me on Jarina: {link}'**
   String payTagText(String link);
+
+  /// No description provided for @shareReceipt.
+  ///
+  /// In en, this message translates to:
+  /// **'Share receipt'**
+  String get shareReceipt;
 
   /// No description provided for @depositSimulated.
   ///
@@ -7233,11 +7377,23 @@ abstract class AppLocalizations {
   /// **'Show balances'**
   String get showBalances;
 
+  /// No description provided for @displayCurrency.
+  ///
+  /// In en, this message translates to:
+  /// **'Show balances in'**
+  String get displayCurrency;
+
   /// No description provided for @comingSoon.
   ///
   /// In en, this message translates to:
   /// **'Coming soon'**
   String get comingSoon;
+
+  /// No description provided for @paid.
+  ///
+  /// In en, this message translates to:
+  /// **'Paid'**
+  String get paid;
 
   /// No description provided for @declined.
   ///
@@ -7245,11 +7401,35 @@ abstract class AppLocalizations {
   /// **'Declined'**
   String get declined;
 
+  /// No description provided for @pending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get pending;
+
+  /// No description provided for @failed.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed'**
+  String get failed;
+
   /// No description provided for @currencyConversion.
   ///
   /// In en, this message translates to:
   /// **'Currency conversion'**
   String get currencyConversion;
+
+  /// No description provided for @deposit.
+  ///
+  /// In en, this message translates to:
+  /// **'Deposit'**
+  String get deposit;
+
+  /// No description provided for @billPayment.
+  ///
+  /// In en, this message translates to:
+  /// **'Bill payment'**
+  String get billPayment;
 
   /// No description provided for @cryptoTrade.
   ///
@@ -7268,6 +7448,246 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Receipt not found'**
   String get receiptNotFound;
+
+  /// No description provided for @youGet.
+  ///
+  /// In en, this message translates to:
+  /// **'You get'**
+  String get youGet;
+
+  /// No description provided for @youSell.
+  ///
+  /// In en, this message translates to:
+  /// **'You sell'**
+  String get youSell;
+
+  /// No description provided for @livePrice.
+  ///
+  /// In en, this message translates to:
+  /// **'Live price'**
+  String get livePrice;
+
+  /// No description provided for @balanceOf.
+  ///
+  /// In en, this message translates to:
+  /// **'Balance {amount}'**
+  String balanceOf(String amount);
+
+  /// No description provided for @youHold.
+  ///
+  /// In en, this message translates to:
+  /// **'You hold {amount}'**
+  String youHold(String amount);
+
+  /// No description provided for @slideToBuy.
+  ///
+  /// In en, this message translates to:
+  /// **'Slide to buy'**
+  String get slideToBuy;
+
+  /// No description provided for @slideToSell.
+  ///
+  /// In en, this message translates to:
+  /// **'Slide to sell'**
+  String get slideToSell;
+
+  /// No description provided for @enterAnAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter an amount'**
+  String get enterAnAmount;
+
+  /// No description provided for @ngxOpen.
+  ///
+  /// In en, this message translates to:
+  /// **'NGX open · delayed 15 min'**
+  String get ngxOpen;
+
+  /// No description provided for @ngxClosed.
+  ///
+  /// In en, this message translates to:
+  /// **'NGX closed · opens {when}'**
+  String ngxClosed(String when);
+
+  /// No description provided for @ngxClosedOrderNote.
+  ///
+  /// In en, this message translates to:
+  /// **'The market is closed. Your order will be sent when NGX opens ({when}) at the price then.'**
+  String ngxClosedOrderNote(String when);
+
+  /// No description provided for @walletLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Wallet'**
+  String get walletLabel;
+
+  /// No description provided for @notEnoughBalance.
+  ///
+  /// In en, this message translates to:
+  /// **'Not enough balance'**
+  String get notEnoughBalance;
+
+  /// No description provided for @notEnoughShares.
+  ///
+  /// In en, this message translates to:
+  /// **'You don\'\'t hold that many shares'**
+  String get notEnoughShares;
+
+  /// No description provided for @minOneShare.
+  ///
+  /// In en, this message translates to:
+  /// **'Enough for at least 1 share ({price})'**
+  String minOneShare(String price);
+
+  /// No description provided for @sharesCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} shares'**
+  String sharesCount(String count);
+
+  /// No description provided for @feeAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'fee {amount}'**
+  String feeAmount(String amount);
+
+  /// No description provided for @pricePerUnit.
+  ///
+  /// In en, this message translates to:
+  /// **'1 {asset} = {price}'**
+  String pricePerUnit(String asset, String price);
+
+  /// No description provided for @pricePerShare.
+  ///
+  /// In en, this message translates to:
+  /// **'{price} per share'**
+  String pricePerShare(String price);
+
+  /// No description provided for @buyAsset.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy {asset}'**
+  String buyAsset(String asset);
+
+  /// No description provided for @sellAsset.
+  ///
+  /// In en, this message translates to:
+  /// **'Sell {asset}'**
+  String sellAsset(String asset);
+
+  /// No description provided for @boughtAsset.
+  ///
+  /// In en, this message translates to:
+  /// **'Bought {asset}'**
+  String boughtAsset(String asset);
+
+  /// No description provided for @soldAsset.
+  ///
+  /// In en, this message translates to:
+  /// **'Sold {asset}'**
+  String soldAsset(String asset);
+
+  /// No description provided for @orderQueued.
+  ///
+  /// In en, this message translates to:
+  /// **'Order queued'**
+  String get orderQueued;
+
+  /// No description provided for @orderQueuedBody.
+  ///
+  /// In en, this message translates to:
+  /// **'NGX is closed. We\'\'ll send your order when the market opens and notify you when it fills.'**
+  String get orderQueuedBody;
+
+  /// No description provided for @quantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Quantity'**
+  String get quantity;
+
+  /// No description provided for @youReceiveEst.
+  ///
+  /// In en, this message translates to:
+  /// **'You receive (est.)'**
+  String get youReceiveEst;
+
+  /// No description provided for @stocksCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} stocks'**
+  String stocksCount(String count);
+
+  /// No description provided for @activeCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} active'**
+  String activeCount(String count);
+
+  /// No description provided for @addToWatchlist.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to watchlist'**
+  String get addToWatchlist;
+
+  /// No description provided for @removeFromWatchlist.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove from watchlist'**
+  String get removeFromWatchlist;
+
+  /// No description provided for @rangeDay.
+  ///
+  /// In en, this message translates to:
+  /// **'1D'**
+  String get rangeDay;
+
+  /// No description provided for @rangeWeek.
+  ///
+  /// In en, this message translates to:
+  /// **'1W'**
+  String get rangeWeek;
+
+  /// No description provided for @rangeMonth.
+  ///
+  /// In en, this message translates to:
+  /// **'1M'**
+  String get rangeMonth;
+
+  /// No description provided for @rangeYear.
+  ///
+  /// In en, this message translates to:
+  /// **'1Y'**
+  String get rangeYear;
+
+  /// No description provided for @rangeAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get rangeAll;
+
+  /// No description provided for @todaySuffix.
+  ///
+  /// In en, this message translates to:
+  /// **'{change} · today'**
+  String todaySuffix(String change);
+
+  /// No description provided for @noHoldings.
+  ///
+  /// In en, this message translates to:
+  /// **'You don\'\'t hold any yet'**
+  String get noHoldings;
+
+  /// No description provided for @noResults.
+  ///
+  /// In en, this message translates to:
+  /// **'No results'**
+  String get noResults;
+
+  /// No description provided for @priceUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Price updated. Check the new total and confirm.'**
+  String get priceUpdated;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

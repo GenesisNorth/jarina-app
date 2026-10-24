@@ -74,10 +74,10 @@ class AppLocalizationsEn extends AppLocalizations {
       'Your details are encrypted and only used to verify your identity, as required by regulation.';
 
   @override
-  String get pinCreateStep => '1 · Create';
+  String get s1Create => '1 · Create';
 
   @override
-  String get pinConfirmStep => '2 · Confirm';
+  String get s2Confirm => '2 · Confirm';
 
   @override
   String get tier2AllSet => 'Tier 2 · All set';
@@ -117,7 +117,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get whatsapp => 'WhatsApp';
 
   @override
-  String get verifyLabel => 'Verify';
+  String get verify => 'Verify';
 
   @override
   String get balancesAndAddressesUpdateInReal => 'Balances and addresses update in real time.';
@@ -172,7 +172,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get proceedsGoTo => 'Proceeds go to';
 
   @override
-  String get yourCountry => 'Your country';
+  String get yourCountry2 => 'Your country';
 
   @override
   String get nairaWallet => 'Naira wallet';
@@ -389,17 +389,17 @@ class AppLocalizationsEn extends AppLocalizations {
   String get selectState => 'Select state';
 
   @override
-  String get selectRegion => 'Select region';
+  String get selectRegion2 => 'Select region';
 
   @override
-  String get selectDepartment => 'Select department';
+  String get selectDepartment2 => 'Select department';
 
   @override
   String get s2faIsOptionalDuringSignUp =>
       '2FA is optional during sign-up, but your account stays disabled until you turn it on. You can still look around.';
 
   @override
-  String get skipForNow => 'Skip for now';
+  String get skipForNow2 => 'Skip for now';
 
   @override
   String get almostThere => 'Almost there';
@@ -494,7 +494,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stockTrade => 'Stock trade';
 
   @override
-  String get billPayment => 'Bill payment';
+  String get billPayment2 => 'Bill payment';
 
   @override
   String get crossBorderTransfer => 'Cross-border transfer';
@@ -573,7 +573,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get proTrade => 'Pro trade';
 
   @override
-  String get deposit => 'Deposit';
+  String get deposit2 => 'Deposit';
 
   @override
   String get withdraw => 'Withdraw';
@@ -658,7 +658,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get completed => 'Completed';
 
   @override
-  String get failed => 'Failed';
+  String get failed2 => 'Failed';
 
   @override
   String get swapNow => 'Swap now';
@@ -994,7 +994,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get enterA10DigitAccountNumber => 'Enter a 10-digit account number';
 
   @override
-  String get youReceive => 'You receive';
+  String get youReceive2 => 'You receive';
 
   @override
   String get belowTheMinimumForThisCoin => 'Below the minimum for this coin.';
@@ -1323,7 +1323,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get due => 'Due';
 
   @override
-  String get paid => 'Paid';
+  String get paid2 => 'Paid';
 
   @override
   String get method => 'Method';
@@ -1417,10 +1417,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get jarinaIsAvailableInEnglishIn => 'Jarina is available in English in your country.';
 
   @override
-  String get countryBJ => 'Benin Republic';
+  String get beninRepublic => 'Benin Republic';
 
   @override
-  String get countryTG => 'Togo';
+  String get togo => 'Togo';
 
   @override
   String get hausa => 'Hausa';
@@ -1457,7 +1457,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Every screen is translated. The Hausa and French text should be reviewed by native speakers before launch.';
 
   @override
-  String get rotatingHeadline => 'Stocks, crypto and cross-border money — in one place.';
+  String get stocksCryptoAndCrossBorderMoney => 'Stocks, crypto and cross-border money — in one place.';
 
   @override
   String get ngxShares => 'NGX shares';
@@ -1575,7 +1575,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get email => 'Email';
 
   @override
-  String get dobHint => 'DD / MM / YYYY';
+  String get ddMmYyyy => 'DD / MM / YYYY';
 
   @override
   String get youExampleCom => 'you@example.com';
@@ -1601,10 +1601,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get s11Digits => '11 digits';
 
   @override
-  String get nationalIdNumber => 'National Identification Number (NIN)';
+  String get nationalIdentificationNumberNin => 'National Identification Number (NIN)';
 
   @override
-  String get passportNumber => 'Passport number';
+  String get passportNumber2 => 'Passport number';
 
   @override
   String get frontOfId => 'Front of ID';
@@ -1718,7 +1718,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get copyKey => 'Copy key';
 
   @override
-  String get keyCopied => 'Key copied';
+  String get keyCopied2 => 'Key copied';
 
   @override
   String get enterThe6DigitCodeFrom => 'Enter the 6-digit code from your app';
@@ -1858,7 +1858,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get requestedFromZainabYusuf => 'Requested from Zainab Yusuf';
 
   @override
-  String get pending => 'Pending';
+  String get pending2 => 'pending';
 
   @override
   String get s27Sep => '27 Sep';
@@ -1891,13 +1891,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get chartRange => 'Chart range';
 
   @override
-  String get displayCurrency => 'Show balances in';
+  String get displayCurrency2 => 'Display currency';
 
   @override
   String get mainMenu => 'Main menu';
 
   @override
-  String get ngxOpen => 'NGX open';
+  String get ngxOpen2 => 'NGX open';
 
   @override
   String get delayed15Min => 'delayed 15 min';
@@ -1991,7 +1991,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get searchCompanyOrTicker => 'Search company or ticker';
 
   @override
-  String get search => 'Search';
+  String get search2 => 'Search';
 
   @override
   String get trading247 => 'Trading 24/7';
@@ -2109,10 +2109,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get helpSupport => 'Help & support';
 
   @override
-  String get logOut => 'Log out';
+  String get logOut2 => 'Log out';
 
   @override
-  String get logOut2 => 'LOG OUT';
+  String get logOut3 => 'LOG OUT';
 
   @override
   String get jarinaPrototype => 'Jarina prototype';
@@ -2221,7 +2221,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get solanaIsADigitalAssetAvailable => 'Solana is a digital asset available to trade on Jarina.';
 
   @override
-  String get addToWatchlist => 'Add to watchlist';
+  String get addToWatchlist2 => 'Add to watchlist';
 
   @override
   String get buyMtnn => 'Buy MTNN';
@@ -2690,7 +2690,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get nigerianNaira => 'Nigerian naira';
 
   @override
-  String get countryNG => 'Nigeria';
+  String get nigeria => 'Nigeria';
 
   @override
   String get receive => 'Receive';
@@ -2699,9 +2699,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get usedIn => 'Used in';
 
   @override
-  String fundWith(String rails) {
-    return 'Fund with: $rails';
-  }
+  String get fundWith2 => 'Fund with:';
 
   @override
   String get bankTransferNip => 'Bank transfer (NIP)';
@@ -2734,10 +2732,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get exchangeRatesAreSampleValues => 'Exchange rates are sample values.';
 
   @override
-  String get countryGH => 'Ghana';
+  String get ghana => 'Ghana';
 
   @override
-  String get countryNE => 'Niger';
+  String get niger => 'Niger';
 
   @override
   String get mali => 'Mali';
@@ -2749,7 +2747,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cTeDIvoire => 'Côte d’Ivoire';
 
   @override
-  String get countryCM => 'Cameroon';
+  String get cameroon => 'Cameroon';
 
   @override
   String get chad => 'Chad';
@@ -2832,7 +2830,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get sampleRates => 'sample rates';
 
   @override
-  String get exceedsBalance => 'Exceeds your balance';
+  String get exceedsBalance2 => 'exceeds balance';
 
   @override
   String get convertedNgnGhs => 'Converted NGN → GHS';
@@ -3164,7 +3162,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transactionSuccessful => 'Transaction successful';
 
   @override
-  String get pending2 => 'Pending';
+  String get pending3 => 'Pending';
 
   @override
   String get transactionId => 'Transaction ID';
@@ -3203,7 +3201,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get reportAnIssue => 'Report an issue';
 
   @override
-  String get shareReceipt => 'Share receipt';
+  String get shareReceipt2 => 'Share receipt';
 
   @override
   String get receiptShared => 'Receipt shared';
@@ -3245,7 +3243,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get sellMarket => 'Sell (market)';
 
   @override
-  String get quantity => 'Quantity';
+  String get quantity2 => 'Quantity';
 
   @override
   String get sendReceive2 => 'Send & Receive';
@@ -3396,7 +3394,13 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get yourCountry => 'Your country';
+
+  @override
   String get yourAccount => 'Your account';
+
+  @override
+  String get verifyLabel => 'Verify';
 
   @override
   String otpSentTo(String phone) {
@@ -3519,10 +3523,16 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get keyCopied => 'Key copied';
+
+  @override
   String get copyCodes => 'Copy codes';
 
   @override
   String get codesCopied => 'Backup codes copied';
+
+  @override
+  String get skipForNow => 'Skip for now';
 
   @override
   String get skip2faWarning => '2FA is optional during sign-up, but your account stays disabled until you turn it on.';
@@ -3550,12 +3560,21 @@ class AppLocalizationsEn extends AppLocalizations {
       'Verify with your national ID, passport or voter card. Your details are checked against the official registry.';
 
   @override
+  String get nationalIdNumber => 'National Identification Number (NIN)';
+
+  @override
+  String get passportNumber => 'Passport number';
+
+  @override
   String get cardNumber => 'Card number';
 
   @override
   String digitsCount(String count) {
     return '$count digits';
   }
+
+  @override
+  String get dobHint => 'DD / MM / YYYY';
 
   @override
   String regionsCount(String count) {
@@ -3573,9 +3592,42 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get selectRegion => 'Select region';
+
+  @override
+  String get selectDepartment => 'Select department';
+
+  @override
+  String get search => 'Search';
+
+  @override
+  String get countryNG => 'Nigeria';
+
+  @override
+  String get countryNE => 'Niger';
+
+  @override
+  String get countryGH => 'Ghana';
+
+  @override
+  String get countryCM => 'Cameroon';
+
+  @override
+  String get countryBJ => 'Benin Republic';
+
+  @override
+  String get countryTG => 'Togo';
+
+  @override
   String demoCodeHint(String code) {
     return 'Test build: use code $code';
   }
+
+  @override
+  String get pinCreateStep => '1 · Create';
+
+  @override
+  String get pinConfirmStep => '2 · Confirm';
 
   @override
   String get enterCode => 'Enter the 6-digit code';
@@ -3587,6 +3639,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get useAuthenticatorInstead => 'Use authenticator code instead';
 
   @override
+  String get logOut => 'Log out';
+
+  @override
   String get passwordHint => 'Your password';
 
   @override
@@ -3594,6 +3649,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helpSoon => 'Support chat opens after sign-up.';
+
+  @override
+  String get rotatingHeadline => 'Stocks, crypto and cross-border money — in one place.';
 
   @override
   String get welcomeTagline => 'NGX shares · Bitcoin & stablecoins · Naira, Cedi & CFA wallets';
@@ -3641,6 +3699,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get copied => 'Copied';
 
   @override
+  String fundWith(String rails) {
+    return 'Fund with: $rails';
+  }
+
+  @override
   String lastLoggedIn(String time) {
     return 'Last logged in $time';
   }
@@ -3662,9 +3725,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get errPinLocked => 'Too many wrong PINs. Try again in 15 minutes.';
 
   @override
+  String get exceedsBalance => 'Exceeds your balance';
+
+  @override
   String convertRateLine(String from, String rate, String to, String fee) {
     return 'Rate 1 $from = $rate $to · fee $fee';
   }
+
+  @override
+  String get youReceive => 'You receive';
 
   @override
   String fromBalance(String balance) {
@@ -3685,6 +3754,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String payTagText(String link) {
     return 'Pay me on Jarina: $link';
   }
+
+  @override
+  String get shareReceipt => 'Share receipt';
 
   @override
   String get depositSimulated => 'Test deposit added';
@@ -3722,13 +3794,31 @@ class AppLocalizationsEn extends AppLocalizations {
   String get showBalances => 'Show balances';
 
   @override
+  String get displayCurrency => 'Show balances in';
+
+  @override
   String get comingSoon => 'Coming soon';
+
+  @override
+  String get paid => 'Paid';
 
   @override
   String get declined => 'Declined';
 
   @override
+  String get pending => 'Pending';
+
+  @override
+  String get failed => 'Failed';
+
+  @override
   String get currencyConversion => 'Currency conversion';
+
+  @override
+  String get deposit => 'Deposit';
+
+  @override
+  String get billPayment => 'Bill payment';
 
   @override
   String get cryptoTrade => 'Crypto trade';
@@ -3738,4 +3828,157 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get receiptNotFound => 'Receipt not found';
+
+  @override
+  String get youGet => 'You get';
+
+  @override
+  String get youSell => 'You sell';
+
+  @override
+  String get livePrice => 'Live price';
+
+  @override
+  String balanceOf(String amount) {
+    return 'Balance $amount';
+  }
+
+  @override
+  String youHold(String amount) {
+    return 'You hold $amount';
+  }
+
+  @override
+  String get slideToBuy => 'Slide to buy';
+
+  @override
+  String get slideToSell => 'Slide to sell';
+
+  @override
+  String get enterAnAmount => 'Enter an amount';
+
+  @override
+  String get ngxOpen => 'NGX open · delayed 15 min';
+
+  @override
+  String ngxClosed(String when) {
+    return 'NGX closed · opens $when';
+  }
+
+  @override
+  String ngxClosedOrderNote(String when) {
+    return 'The market is closed. Your order will be sent when NGX opens ($when) at the price then.';
+  }
+
+  @override
+  String get walletLabel => 'Wallet';
+
+  @override
+  String get notEnoughBalance => 'Not enough balance';
+
+  @override
+  String get notEnoughShares => 'You don\'t hold that many shares';
+
+  @override
+  String minOneShare(String price) {
+    return 'Enough for at least 1 share ($price)';
+  }
+
+  @override
+  String sharesCount(String count) {
+    return '$count shares';
+  }
+
+  @override
+  String feeAmount(String amount) {
+    return 'fee $amount';
+  }
+
+  @override
+  String pricePerUnit(String asset, String price) {
+    return '1 $asset = $price';
+  }
+
+  @override
+  String pricePerShare(String price) {
+    return '$price per share';
+  }
+
+  @override
+  String buyAsset(String asset) {
+    return 'Buy $asset';
+  }
+
+  @override
+  String sellAsset(String asset) {
+    return 'Sell $asset';
+  }
+
+  @override
+  String boughtAsset(String asset) {
+    return 'Bought $asset';
+  }
+
+  @override
+  String soldAsset(String asset) {
+    return 'Sold $asset';
+  }
+
+  @override
+  String get orderQueued => 'Order queued';
+
+  @override
+  String get orderQueuedBody =>
+      'NGX is closed. We\'ll send your order when the market opens and notify you when it fills.';
+
+  @override
+  String get quantity => 'Quantity';
+
+  @override
+  String get youReceiveEst => 'You receive (est.)';
+
+  @override
+  String stocksCount(String count) {
+    return '$count stocks';
+  }
+
+  @override
+  String activeCount(String count) {
+    return '$count active';
+  }
+
+  @override
+  String get addToWatchlist => 'Add to watchlist';
+
+  @override
+  String get removeFromWatchlist => 'Remove from watchlist';
+
+  @override
+  String get rangeDay => '1D';
+
+  @override
+  String get rangeWeek => '1W';
+
+  @override
+  String get rangeMonth => '1M';
+
+  @override
+  String get rangeYear => '1Y';
+
+  @override
+  String get rangeAll => 'All';
+
+  @override
+  String todaySuffix(String change) {
+    return '$change · today';
+  }
+
+  @override
+  String get noHoldings => 'You don\'t hold any yet';
+
+  @override
+  String get noResults => 'No results';
+
+  @override
+  String get priceUpdated => 'Price updated. Check the new total and confirm.';
 }

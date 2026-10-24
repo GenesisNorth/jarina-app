@@ -11,7 +11,6 @@ extension FailureMessages on AppLocalizations {
     CodeExpiredFailure() => errCodeExpired,
     RateLimitedFailure(:final retryAfter) =>
       retryAfter.inMinutes >= 1 ? errTooManyAttempts('${retryAfter.inMinutes}') : resendCodeIn(_mmss(retryAfter)),
-    InvalidCredentialsFailure() => errLogin,
     IdNotVerifiedFailure() => errIdNotVerified,
     UsernameTakenFailure() => errReserved,
     _ => errGeneric,

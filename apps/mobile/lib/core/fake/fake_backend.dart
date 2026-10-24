@@ -19,7 +19,7 @@ class FakeBackend implements AuthRepository, KycRepository, SecurityRepository, 
   }) : _now = clock ?? DateTime.now,
        _random = random ?? Random();
 
-  /// Code accepted for every WhatsApp/SMS OTP and new-device login in test builds.
+  /// Code accepted for every WhatsApp/SMS OTP and login 2FA in test builds.
   static const demoCode = '123456';
   static const otpCooldown = Duration(seconds: 30);
   static const otpTtl = Duration(minutes: 10);
@@ -60,7 +60,11 @@ class FakeBackend implements AuthRepository, KycRepository, SecurityRepository, 
   // ── Auth ────────────────────────────────────────────────────────────────
 
   @override
-  Future<Result<OtpChallenge>> sendOtp({required String phoneE164, required OtpChannel channel}) async {
+  Future<Result<OtpChallenge>> sendOtp({
+    required String phoneE164,
+    required OtpChannel channel,
+    OtpPurpose purpose = OtpPurpose.signup,
+  }) async {
     await _wait();
     final now = _now();
     final last = _lastSentAt[phoneE164];
@@ -72,6 +76,7 @@ class FakeBackend implements AuthRepository, KycRepository, SecurityRepository, 
       id: _id(),
       phoneE164: phoneE164,
       channel: channel,
+      purpose: purpose,
       resendAvailableAt: now.add(otpCooldown),
       expiresAt: now.add(otpTtl),
     );
@@ -80,7 +85,7 @@ class FakeBackend implements AuthRepository, KycRepository, SecurityRepository, 
   }
 
   @override
-  Future<Result<AuthSession>> verifyOtp({required String challengeId, required String code}) async {
+  Future<Result<OtpOutcome>> verifyOtp({required String challengeId, required String code}) async {
     await _wait();
     final ch = _challenges[challengeId];
     if (ch == null || _now().isAfter(ch.challenge.expiresAt)) return const Err(CodeExpiredFailure());
@@ -88,16 +93,11 @@ class FakeBackend implements AuthRepository, KycRepository, SecurityRepository, 
     ch.attempts++;
     if (code != demoCode) return Err(WrongCodeFailure(attemptsLeft: maxOtpAttempts - ch.attempts));
     _challenges.remove(challengeId);
-    return Ok(_session(onboarded: false));
-  }
-
-  @override
-  Future<Result<LoginChallenge>> login({required String phoneE164, required String password}) async {
-    await _wait();
-    if (password.length < 6) return const Err(InvalidCredentialsFailure());
+    if (ch.challenge.purpose == OtpPurpose.signup) return Ok(SignedIn(_session(onboarded: false)));
+    // Existing accounts in the demo all have 2FA on, as Jarina requires to transact.
     final ticket = _id();
-    _loginTickets[ticket] = phoneE164;
-    return Ok(LoginChallenge(ticket: ticket));
+    _loginTickets[ticket] = ch.challenge.phoneE164;
+    return Ok(TwofaRequired(ticket));
   }
 
   @override

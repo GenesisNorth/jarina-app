@@ -383,5 +383,160 @@
   "billPayment": "Bill payment",
   "cryptoTrade": "Crypto trade",
   "p2pPayment": "P2P payment",
-  "receiptNotFound": "Receipt not found"
+  "receiptNotFound": "Receipt not found",
+  "youGet": "You get",
+  "youSell": "You sell",
+  "livePrice": "Live price",
+  "balanceOf": "Balance {amount}",
+  "@balanceOf": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "youHold": "You hold {amount}",
+  "@youHold": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "slideToBuy": "Slide to buy",
+  "slideToSell": "Slide to sell",
+  "enterAnAmount": "Enter an amount",
+  "ngxOpen": "NGX open · delayed 15 min",
+  "ngxClosed": "NGX closed · opens {when}",
+  "@ngxClosed": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "ngxClosedOrderNote": "The market is closed. Your order will be sent when NGX opens ({when}) at the price then.",
+  "@ngxClosedOrderNote": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "walletLabel": "Wallet",
+  "notEnoughBalance": "Not enough balance",
+  "notEnoughShares": "You don''t hold that many shares",
+  "minOneShare": "Enough for at least 1 share ({price})",
+  "@minOneShare": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "sharesCount": "{count} shares",
+  "@sharesCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "feeAmount": "fee {amount}",
+  "@feeAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "pricePerUnit": "1 {asset} = {price}",
+  "@pricePerUnit": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "pricePerShare": "{price} per share",
+  "@pricePerShare": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "buyAsset": "Buy {asset}",
+  "@buyAsset": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      }
+    }
+  },
+  "sellAsset": "Sell {asset}",
+  "@sellAsset": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      }
+    }
+  },
+  "boughtAsset": "Bought {asset}",
+  "@boughtAsset": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      }
+    }
+  },
+  "soldAsset": "Sold {asset}",
+  "@soldAsset": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      }
+    }
+  },
+  "orderQueued": "Order queued",
+  "orderQueuedBody": "NGX is closed. We''ll send your order when the market opens and notify you when it fills.",
+  "quantity": "Quantity",
+  "youReceiveEst": "You receive (est.)",
+  "stocksCount": "{count} stocks",
+  "@stocksCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "activeCount": "{count} active",
+  "@activeCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "addToWatchlist": "Add to watchlist",
+  "removeFromWatchlist": "Remove from watchlist",
+  "rangeDay": "1D",
+  "rangeWeek": "1W",
+  "rangeMonth": "1M",
+  "rangeYear": "1Y",
+  "rangeAll": "All",
+  "todaySuffix": "{change} · today",
+  "@todaySuffix": {
+    "placeholders": {
+      "change": {
+        "type": "String"
+      }
+    }
+  },
+  "noHoldings": "You don''t hold any yet",
+  "noResults": "No results",
+  "priceUpdated": "Price updated. Check the new total and confirm."
 }

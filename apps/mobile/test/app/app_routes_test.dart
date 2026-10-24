@@ -31,8 +31,9 @@ void main() {
       await tester.pumpAndSettle();
       expect(tester.takeException(), isNull, reason: r.name);
 
-      // otp / twofa need a pending challenge and send the user back a step.
-      if (r == AppRoute.otp || r == AppRoute.twofa) continue;
+      // These need state from the previous step (a pending code, quote or
+      // order) and send the user back when opened directly.
+      if (const {AppRoute.otp, AppRoute.twofa, AppRoute.review, AppRoute.done}.contains(r)) continue;
       final path = router.routerDelegate.currentConfiguration.uri.path;
       expect(path, r.path.replaceAllMapped(RegExp(r':(\w+)'), (m) => r.sampleParams[m[1]]!), reason: r.name);
     }

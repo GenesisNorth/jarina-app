@@ -74,10 +74,10 @@ class AppLocalizationsFr extends AppLocalizations {
       'Vos données sont chiffrées et utilisées uniquement pour vérifier votre identité, comme l\'exige la réglementation.';
 
   @override
-  String get pinCreateStep => '1 · Créer';
+  String get s1Create => '1 · Créer';
 
   @override
-  String get pinConfirmStep => '2 · Confirmer';
+  String get s2Confirm => '2 · Confirmer';
 
   @override
   String get tier2AllSet => 'Niveau 2 · Tout est prêt';
@@ -117,7 +117,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get whatsapp => 'WhatsApp';
 
   @override
-  String get verifyLabel => 'Vérifier';
+  String get verify => 'Vérifier';
 
   @override
   String get balancesAndAddressesUpdateInReal => 'Les soldes et adresses se mettent à jour en temps réel.';
@@ -172,7 +172,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get proceedsGoTo => 'Les produits vont vers';
 
   @override
-  String get yourCountry => 'Votre pays';
+  String get yourCountry2 => 'Votre pays';
 
   @override
   String get nairaWallet => 'Portefeuille Naira';
@@ -390,17 +390,17 @@ class AppLocalizationsFr extends AppLocalizations {
   String get selectState => 'Choisir l\'État';
 
   @override
-  String get selectRegion => 'Choisir la région';
+  String get selectRegion2 => 'Choisir la région';
 
   @override
-  String get selectDepartment => 'Choisir le département';
+  String get selectDepartment2 => 'Choisir le département';
 
   @override
   String get s2faIsOptionalDuringSignUp =>
       'La 2FA est facultative à l\'inscription, mais votre compte reste désactivé tant qu\'elle n\'est pas activée. Vous pouvez quand même explorer l\'app.';
 
   @override
-  String get skipForNow => 'Passer pour l\'instant';
+  String get skipForNow2 => 'Passer pour l\'instant';
 
   @override
   String get almostThere => 'Presque terminé';
@@ -495,7 +495,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get stockTrade => 'Opération boursière';
 
   @override
-  String get billPayment => 'Paiement de facture';
+  String get billPayment2 => 'Paiement de facture';
 
   @override
   String get crossBorderTransfer => 'Transfert transfrontalier';
@@ -574,7 +574,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get proTrade => 'Trading pro';
 
   @override
-  String get deposit => 'Dépôt';
+  String get deposit2 => 'Dépôt';
 
   @override
   String get withdraw => 'Retirer';
@@ -659,7 +659,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get completed => 'Terminé';
 
   @override
-  String get failed => 'Échoué';
+  String get failed2 => 'Échoué';
 
   @override
   String get swapNow => 'Échanger maintenant';
@@ -996,7 +996,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get enterA10DigitAccountNumber => 'Saisissez un numéro de compte à 10 chiffres';
 
   @override
-  String get youReceive => 'Vous recevez';
+  String get youReceive2 => 'Vous recevez';
 
   @override
   String get belowTheMinimumForThisCoin => 'En dessous du minimum pour cette crypto.';
@@ -1326,7 +1326,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get due => 'Échéance';
 
   @override
-  String get paid => 'Payé';
+  String get paid2 => 'Payé';
 
   @override
   String get method => 'Méthode';
@@ -1420,10 +1420,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get jarinaIsAvailableInEnglishIn => 'Jarina est disponible en anglais dans votre pays.';
 
   @override
-  String get countryBJ => 'Bénin';
+  String get beninRepublic => 'République du Bénin';
 
   @override
-  String get countryTG => 'Togo';
+  String get togo => 'Togo';
 
   @override
   String get hausa => 'Haoussa';
@@ -1460,7 +1460,7 @@ class AppLocalizationsFr extends AppLocalizations {
       'Chaque écran est traduit. Les textes haoussa et français doivent être relus par des locuteurs natifs avant le lancement.';
 
   @override
-  String get rotatingHeadline => 'Actions, crypto et transferts transfrontaliers — au même endroit.';
+  String get stocksCryptoAndCrossBorderMoney => 'Actions, crypto et transferts transfrontaliers — au même endroit.';
 
   @override
   String get ngxShares => 'Actions NGX';
@@ -1580,7 +1580,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get email => 'E-mail';
 
   @override
-  String get dobHint => 'JJ / MM / AAAA';
+  String get ddMmYyyy => 'JJ / MM / AAAA';
 
   @override
   String get youExampleCom => 'vous@exemple.com';
@@ -1606,10 +1606,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get s11Digits => '11 chiffres';
 
   @override
-  String get nationalIdNumber => 'Numéro d\'identification national (NIN)';
+  String get nationalIdentificationNumberNin => 'Numéro d\'identification national (NIN)';
 
   @override
-  String get passportNumber => 'Numéro de passeport';
+  String get passportNumber2 => 'Numéro de passeport';
 
   @override
   String get frontOfId => 'Recto de la pièce d\'identité';
@@ -1727,7 +1727,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get copyKey => 'Copier la clé';
 
   @override
-  String get keyCopied => 'Clé copiée';
+  String get keyCopied2 => 'Clé copiée';
 
   @override
   String get enterThe6DigitCodeFrom => 'Entrez le code à 6 chiffres de votre application';
@@ -1867,7 +1867,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get requestedFromZainabYusuf => 'Demandé à Zainab Yusuf';
 
   @override
-  String get pending => 'En attente';
+  String get pending2 => 'en attente';
 
   @override
   String get s27Sep => '27 sept.';
@@ -1900,13 +1900,13 @@ class AppLocalizationsFr extends AppLocalizations {
   String get chartRange => 'Période du graphique';
 
   @override
-  String get displayCurrency => 'Afficher les soldes en';
+  String get displayCurrency2 => 'Devise d\'affichage';
 
   @override
   String get mainMenu => 'Menu principal';
 
   @override
-  String get ngxOpen => 'NGX ouvert';
+  String get ngxOpen2 => 'NGX ouvert';
 
   @override
   String get delayed15Min => 'différé de 15 min';
@@ -2000,7 +2000,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get searchCompanyOrTicker => 'Rechercher une société ou un symbole';
 
   @override
-  String get search => 'Rechercher';
+  String get search2 => 'Rechercher';
 
   @override
   String get trading247 => 'Négociation 24h/24, 7j/7';
@@ -2118,10 +2118,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get helpSupport => 'Aide et assistance';
 
   @override
-  String get logOut => 'Se déconnecter';
+  String get logOut2 => 'Se déconnecter';
 
   @override
-  String get logOut2 => 'DÉCONNEXION';
+  String get logOut3 => 'DÉCONNEXION';
 
   @override
   String get jarinaPrototype => 'Prototype Jarina';
@@ -2230,7 +2230,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get solanaIsADigitalAssetAvailable => 'Solana est un actif numérique négociable sur Jarina.';
 
   @override
-  String get addToWatchlist => 'Ajouter à la liste de suivi';
+  String get addToWatchlist2 => 'Ajouter à la liste de suivi';
 
   @override
   String get buyMtnn => 'Acheter MTNN';
@@ -2701,7 +2701,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get nigerianNaira => 'Naira nigérian';
 
   @override
-  String get countryNG => 'Nigeria';
+  String get nigeria => 'Nigeria';
 
   @override
   String get receive => 'Recevoir';
@@ -2710,9 +2710,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get usedIn => 'Utilisé au';
 
   @override
-  String fundWith(String rails) {
-    return 'Alimenter via : $rails';
-  }
+  String get fundWith2 => 'Alimenter par :';
 
   @override
   String get bankTransferNip => 'Virement bancaire (NIP)';
@@ -2745,10 +2743,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get exchangeRatesAreSampleValues => 'Les taux de change sont indicatifs.';
 
   @override
-  String get countryGH => 'Ghana';
+  String get ghana => 'Ghana';
 
   @override
-  String get countryNE => 'Niger';
+  String get niger => 'Niger';
 
   @override
   String get mali => 'Mali';
@@ -2760,7 +2758,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get cTeDIvoire => 'Côte d’Ivoire';
 
   @override
-  String get countryCM => 'Cameroun';
+  String get cameroon => 'Cameroun';
 
   @override
   String get chad => 'Tchad';
@@ -2843,7 +2841,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get sampleRates => 'taux indicatifs';
 
   @override
-  String get exceedsBalance => 'Dépasse votre solde';
+  String get exceedsBalance2 => 'dépasse le solde';
 
   @override
   String get convertedNgnGhs => 'Conversion NGN → GHS';
@@ -3176,7 +3174,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get transactionSuccessful => 'Transaction réussie';
 
   @override
-  String get pending2 => 'En attente';
+  String get pending3 => 'En attente';
 
   @override
   String get transactionId => 'ID de transaction';
@@ -3215,7 +3213,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get reportAnIssue => 'Signaler un problème';
 
   @override
-  String get shareReceipt => 'Partager le reçu';
+  String get shareReceipt2 => 'Partager le reçu';
 
   @override
   String get receiptShared => 'Reçu partagé';
@@ -3257,7 +3255,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get sellMarket => 'Vente (au marché)';
 
   @override
-  String get quantity => 'Quantité';
+  String get quantity2 => 'Quantité';
 
   @override
   String get sendReceive2 => 'Envoyer et recevoir';
@@ -3409,7 +3407,13 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
+  String get yourCountry => 'Votre pays';
+
+  @override
   String get yourAccount => 'Votre compte';
+
+  @override
+  String get verifyLabel => 'Vérifier';
 
   @override
   String otpSentTo(String phone) {
@@ -3532,10 +3536,16 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
+  String get keyCopied => 'Clé copiée';
+
+  @override
   String get copyCodes => 'Copier les codes';
 
   @override
   String get codesCopied => 'Codes de secours copiés';
+
+  @override
+  String get skipForNow => 'Passer pour l\'instant';
 
   @override
   String get skip2faWarning =>
@@ -3564,12 +3574,21 @@ class AppLocalizationsFr extends AppLocalizations {
       'Vérifiez avec votre carte d\'identité, passeport ou carte d\'électeur. Vos informations sont vérifiées auprès du registre officiel.';
 
   @override
+  String get nationalIdNumber => 'Numéro d\'identification national (NIN)';
+
+  @override
+  String get passportNumber => 'Numéro de passeport';
+
+  @override
   String get cardNumber => 'Numéro de carte';
 
   @override
   String digitsCount(String count) {
     return '$count chiffres';
   }
+
+  @override
+  String get dobHint => 'JJ / MM / AAAA';
 
   @override
   String regionsCount(String count) {
@@ -3587,9 +3606,42 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
+  String get selectRegion => 'Choisir la région';
+
+  @override
+  String get selectDepartment => 'Choisir le département';
+
+  @override
+  String get search => 'Rechercher';
+
+  @override
+  String get countryNG => 'Nigeria';
+
+  @override
+  String get countryNE => 'Niger';
+
+  @override
+  String get countryGH => 'Ghana';
+
+  @override
+  String get countryCM => 'Cameroun';
+
+  @override
+  String get countryBJ => 'Bénin';
+
+  @override
+  String get countryTG => 'Togo';
+
+  @override
   String demoCodeHint(String code) {
     return 'Version de test : utilisez le code $code';
   }
+
+  @override
+  String get pinCreateStep => '1 · Créer';
+
+  @override
+  String get pinConfirmStep => '2 · Confirmer';
 
   @override
   String get enterCode => 'Saisissez le code à 6 chiffres';
@@ -3601,6 +3653,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get useAuthenticatorInstead => 'Utiliser le code de l\'application';
 
   @override
+  String get logOut => 'Se déconnecter';
+
+  @override
   String get passwordHint => 'Votre mot de passe';
 
   @override
@@ -3608,6 +3663,9 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get helpSoon => 'Le chat d\'assistance s\'ouvre après l\'inscription.';
+
+  @override
+  String get rotatingHeadline => 'Actions, crypto et transferts transfrontaliers — au même endroit.';
 
   @override
   String get welcomeTagline => 'Actions NGX · Bitcoin et stablecoins · Portefeuilles Naira, Cedi et CFA';
@@ -3656,6 +3714,11 @@ class AppLocalizationsFr extends AppLocalizations {
   String get copied => 'Copié';
 
   @override
+  String fundWith(String rails) {
+    return 'Alimenter via : $rails';
+  }
+
+  @override
   String lastLoggedIn(String time) {
     return 'Dernière connexion $time';
   }
@@ -3677,9 +3740,15 @@ class AppLocalizationsFr extends AppLocalizations {
   String get errPinLocked => 'Trop de PIN incorrects. Réessayez dans 15 minutes.';
 
   @override
+  String get exceedsBalance => 'Dépasse votre solde';
+
+  @override
   String convertRateLine(String from, String rate, String to, String fee) {
     return 'Taux 1 $from = $rate $to · frais $fee';
   }
+
+  @override
+  String get youReceive => 'Vous recevez';
 
   @override
   String fromBalance(String balance) {
@@ -3700,6 +3769,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String payTagText(String link) {
     return 'Payez-moi sur Jarina : $link';
   }
+
+  @override
+  String get shareReceipt => 'Partager le reçu';
 
   @override
   String get depositSimulated => 'Dépôt de test ajouté';
@@ -3738,13 +3810,31 @@ class AppLocalizationsFr extends AppLocalizations {
   String get showBalances => 'Afficher les soldes';
 
   @override
+  String get displayCurrency => 'Afficher les soldes en';
+
+  @override
   String get comingSoon => 'Bientôt disponible';
+
+  @override
+  String get paid => 'Payé';
 
   @override
   String get declined => 'Refusé';
 
   @override
+  String get pending => 'En attente';
+
+  @override
+  String get failed => 'Échoué';
+
+  @override
   String get currencyConversion => 'Conversion de devises';
+
+  @override
+  String get deposit => 'Dépôt';
+
+  @override
+  String get billPayment => 'Paiement de facture';
 
   @override
   String get cryptoTrade => 'Transaction crypto';
@@ -3754,4 +3844,157 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get receiptNotFound => 'Reçu introuvable';
+
+  @override
+  String get youGet => 'Vous obtenez';
+
+  @override
+  String get youSell => 'Vous vendez';
+
+  @override
+  String get livePrice => 'Prix en direct';
+
+  @override
+  String balanceOf(String amount) {
+    return 'Solde $amount';
+  }
+
+  @override
+  String youHold(String amount) {
+    return 'Vous détenez $amount';
+  }
+
+  @override
+  String get slideToBuy => 'Glisser pour acheter';
+
+  @override
+  String get slideToSell => 'Glisser pour vendre';
+
+  @override
+  String get enterAnAmount => 'Saisissez un montant';
+
+  @override
+  String get ngxOpen => 'NGX ouvert · différé de 15 min';
+
+  @override
+  String ngxClosed(String when) {
+    return 'NGX fermé · ouvre $when';
+  }
+
+  @override
+  String ngxClosedOrderNote(String when) {
+    return 'Le marché est fermé. Votre ordre sera transmis à l\'ouverture de NGX ($when) au prix du moment.';
+  }
+
+  @override
+  String get walletLabel => 'Portefeuille';
+
+  @override
+  String get notEnoughBalance => 'Solde insuffisant';
+
+  @override
+  String get notEnoughShares => 'Vous ne détenez pas autant d\'actions';
+
+  @override
+  String minOneShare(String price) {
+    return 'De quoi acheter au moins 1 action ($price)';
+  }
+
+  @override
+  String sharesCount(String count) {
+    return '$count actions';
+  }
+
+  @override
+  String feeAmount(String amount) {
+    return 'frais $amount';
+  }
+
+  @override
+  String pricePerUnit(String asset, String price) {
+    return '1 $asset = $price';
+  }
+
+  @override
+  String pricePerShare(String price) {
+    return '$price par action';
+  }
+
+  @override
+  String buyAsset(String asset) {
+    return 'Acheter $asset';
+  }
+
+  @override
+  String sellAsset(String asset) {
+    return 'Vendre $asset';
+  }
+
+  @override
+  String boughtAsset(String asset) {
+    return 'Acheté $asset';
+  }
+
+  @override
+  String soldAsset(String asset) {
+    return 'Vendu $asset';
+  }
+
+  @override
+  String get orderQueued => 'Ordre en attente';
+
+  @override
+  String get orderQueuedBody =>
+      'NGX est fermé. Nous transmettrons votre ordre à l\'ouverture et vous préviendrons de son exécution.';
+
+  @override
+  String get quantity => 'Quantité';
+
+  @override
+  String get youReceiveEst => 'Vous recevez (est.)';
+
+  @override
+  String stocksCount(String count) {
+    return '$count actions';
+  }
+
+  @override
+  String activeCount(String count) {
+    return '$count actifs';
+  }
+
+  @override
+  String get addToWatchlist => 'Ajouter à la liste de suivi';
+
+  @override
+  String get removeFromWatchlist => 'Retirer de la liste de suivi';
+
+  @override
+  String get rangeDay => '1J';
+
+  @override
+  String get rangeWeek => '1S';
+
+  @override
+  String get rangeMonth => '1M';
+
+  @override
+  String get rangeYear => '1A';
+
+  @override
+  String get rangeAll => 'Tout';
+
+  @override
+  String todaySuffix(String change) {
+    return '$change · aujourd\'hui';
+  }
+
+  @override
+  String get noHoldings => 'Vous n\'en détenez pas encore';
+
+  @override
+  String get noResults => 'Aucun résultat';
+
+  @override
+  String get priceUpdated => 'Prix mis à jour. Vérifiez le nouveau total et confirmez.';
 }
