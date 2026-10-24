@@ -32,4 +32,5 @@ jobs:
       - name: Test core
         run: (cd packages/jarina_core && dart test)
       - name: Test app
-        run: (cd apps/mobile && flutter test)
+        # Goldens are rendered on macOS (`make goldens`); Linux fonts differ.
+        run: (cd apps/mobile && flutter test --exclude-tags golden)

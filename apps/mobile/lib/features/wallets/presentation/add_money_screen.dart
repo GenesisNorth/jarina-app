@@ -61,7 +61,7 @@ class _AddMoneyScreenState extends ConsumerState<AddMoneyScreen> {
                   children: [
                     Text(label, style: t.caption.copyWith(color: c.muted)),
                     const SizedBox(height: 2),
-                    SelectableText(value, style: t.body.copyWith(fontWeight: FontWeight.w700, fontSize: 16)),
+                    Text(value, style: t.body.copyWith(fontWeight: FontWeight.w700, fontSize: 16)),
                   ],
                 ),
               ),

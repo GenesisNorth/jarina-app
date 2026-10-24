@@ -49,6 +49,7 @@ class CoinChips extends StatelessWidget {
             selected: on,
             button: true,
             label: a.id,
+            onTap: () => onSelected(a.id),
             excludeSemantics: true,
             child: Material(
               color: on ? c.black : c.card,

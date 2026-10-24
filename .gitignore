@@ -14,3 +14,4 @@ build/
 *.jks
 *.keystore
 coverage/
+dist/

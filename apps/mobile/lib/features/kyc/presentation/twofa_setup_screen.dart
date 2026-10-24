@@ -95,7 +95,7 @@ class _TwofaSetupScreenState extends ConsumerState<TwofaSetupScreen> {
             JButton(
               label: l.skipForNow,
               variant: JButtonVariant.ghost,
-              height: 46,
+              height: 48,
               onPressed: _busy ? null : () => advanceKyc(context, ref, AppRoute.kycdone),
             ),
         ],
@@ -165,7 +165,7 @@ class _TwofaSetupScreenState extends ConsumerState<TwofaSetupScreen> {
                                 style: t.caption.copyWith(color: c.muted, height: 1.4),
                               ),
                               const SizedBox(height: 8),
-                              SelectableText(
+                              Text(
                                 Totp.groupSecret(setup.secret),
                                 style: t.body.copyWith(
                                   fontWeight: FontWeight.w700,
@@ -256,7 +256,7 @@ class _TwofaSetupScreenState extends ConsumerState<TwofaSetupScreen> {
                             label: l.copyCodes,
                             icon: JIcon.copy,
                             variant: JButtonVariant.outline,
-                            height: 46,
+                            height: 48,
                             onPressed: () => _copy(setup.backupCodes.join('\n'), l.codesCopied),
                           ),
                         ] else
@@ -264,7 +264,7 @@ class _TwofaSetupScreenState extends ConsumerState<TwofaSetupScreen> {
                             label: l.backupCodes,
                             icon: JIcon.eye,
                             variant: JButtonVariant.outline,
-                            height: 46,
+                            height: 48,
                             onPressed: () => setState(() => _showCodes = true),
                           ),
                       ],

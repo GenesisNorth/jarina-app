@@ -14,5 +14,6 @@ export 'src/widgets/jarina_icon.dart';
 export 'src/widgets/jarina_keypad.dart';
 export 'src/widgets/jarina_pattern.dart';
 export 'src/widgets/jarina_tab_bar.dart';
+export 'src/widgets/jarina_tap_target.dart';
 export 'src/widgets/jarina_tiles.dart';
 export 'src/widgets/jarina_trade_controls.dart';

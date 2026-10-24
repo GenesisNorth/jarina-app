@@ -93,6 +93,7 @@ class _LanguageRow extends StatelessWidget {
       inMutuallyExclusiveGroup: true,
       button: true,
       label: native,
+      onTap: onTap,
       excludeSemantics: true,
       child: InkWell(
         borderRadius: BorderRadius.circular(16),

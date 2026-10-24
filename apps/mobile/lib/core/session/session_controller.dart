@@ -44,7 +44,14 @@ class SessionState {
 
 /// Persists the session in Keychain / Android Keystore-backed storage.
 class SessionStore {
-  SessionStore([FlutterSecureStorage? storage]) : _s = storage ?? const FlutterSecureStorage();
+  SessionStore([FlutterSecureStorage? storage])
+    : _s =
+          storage ??
+          const FlutterSecureStorage(
+            // Tokens stay on this phone: not readable before first unlock and never
+            // restored onto another device from an iCloud/iTunes backup.
+            iOptions: IOSOptions(accessibility: KeychainAccessibility.first_unlock_this_device),
+          );
 
   final FlutterSecureStorage _s;
 

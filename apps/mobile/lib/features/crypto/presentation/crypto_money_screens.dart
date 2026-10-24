@@ -66,8 +66,9 @@ class _BuyCryptoScreenState extends ConsumerState<BuyCryptoScreen> {
     final testBuild = ref.read(envProvider).useFakeData;
     final paid = await showModalBottomSheet<bool>(
       context: context,
+      isScrollControlled: true,
       useSafeArea: true,
-      builder: (context) => Padding(
+      builder: (context) => SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(22, 0, 22, 22),
         child: Column(
           mainAxisSize: MainAxisSize.min,

@@ -250,6 +250,8 @@ class _AlertScreenState extends ConsumerState<AlertScreen> {
       backgroundColor: c.bg,
       appBar: jarinaAppBar(context, l.createAnAlert),
       body: GestureDetector(
+        // Dismisses the keyboard; not a control, so hidden from screen readers.
+        excludeFromSemantics: true,
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: ListView(
           padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 4, SpacingTokens.screenGutter, 24),

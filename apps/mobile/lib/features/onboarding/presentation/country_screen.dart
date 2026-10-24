@@ -90,6 +90,7 @@ class _FlagTile extends StatelessWidget {
       button: true,
       selected: selected,
       label: name,
+      onTap: () => unawaited(onTap()),
       excludeSemantics: true,
       child: GestureDetector(
         onTap: () => unawaited(onTap()),

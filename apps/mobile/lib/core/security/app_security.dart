@@ -25,8 +25,8 @@ class AppLock extends _$AppLock {
   @override
   bool build() {
     // Signing out always removes the lock.
-    ref.listen(sessionProvider.select((s) => s.signedIn), (_, signedIn) {
-      if (!signedIn) state = false;
+    ref.listen(sessionProvider, (_, next) {
+      if (!next.signedIn) state = false;
     });
     final s = ref.read(initialSessionProvider);
     return ref.watch(lockOnLaunchProvider) && s.signedIn && s.onboarded;

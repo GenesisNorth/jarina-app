@@ -327,7 +327,6 @@ class _ProTradeScreenState extends ConsumerState<ProTradeScreen> {
                     ),
                     IconButton(
                       tooltip: 'MA',
-                      visualDensity: VisualDensity.compact,
                       onPressed: () => setState(() => _ma = !_ma),
                       icon: Text(
                         'MA',
@@ -336,7 +335,6 @@ class _ProTradeScreenState extends ConsumerState<ProTradeScreen> {
                     ),
                     IconButton(
                       tooltip: _line ? 'Candles' : 'Line',
-                      visualDensity: VisualDensity.compact,
                       onPressed: () => setState(() => _line = !_line),
                       icon: Icon(
                         _line ? Icons.candlestick_chart_outlined : Icons.show_chart_rounded,

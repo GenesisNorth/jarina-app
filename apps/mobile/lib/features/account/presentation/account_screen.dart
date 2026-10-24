@@ -448,7 +448,7 @@ class _BackupCodesSheetState extends ConsumerState<_BackupCodesSheet> {
               runSpacing: 10,
               children: [
                 for (final code in codes)
-                  SelectableText(
+                  Text(
                     '${code.substring(0, 4)} ${code.substring(4)}',
                     style: t.body.copyWith(fontFeatures: const [FontFeature.tabularFigures()], letterSpacing: 1.2),
                   ),

@@ -130,6 +130,8 @@ class _PayConfirmScreenState extends ConsumerState<PayConfirmScreen> {
       backgroundColor: c.bg,
       appBar: jarinaAppBar(context, ''),
       body: GestureDetector(
+        // Dismisses the keyboard; not a control, so hidden from screen readers.
+        excludeFromSemantics: true,
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: ListView(
           padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 0, SpacingTokens.screenGutter, 24),

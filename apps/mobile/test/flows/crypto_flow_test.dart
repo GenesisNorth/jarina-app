@@ -82,14 +82,14 @@ void main() {
     final router = c.read(routerProvider)..go('/qcoin/USDT');
     await tester.pumpAndSettle();
     expect(find.textContaining('Send only USDT on TRON · TRC-20'), findsOneWidget);
-    final usdtAddress = tester.widgetList<SelectableText>(find.byType(SelectableText)).first.data!;
+    final usdtAddress = tester.widget<Text>(find.byKey(const ValueKey('deposit-address'))).data!;
     expect(usdtAddress, startsWith('T'));
 
     router.go('/qcoin/XRP');
     await tester.pumpAndSettle();
     expect(find.textContaining('Send only XRP on XRP Ledger · XRP'), findsOneWidget);
     expect(find.textContaining('TRON'), findsNothing);
-    final xrpAddress = tester.widgetList<SelectableText>(find.byType(SelectableText)).first.data!;
+    final xrpAddress = tester.widget<Text>(find.byKey(const ValueKey('deposit-address'))).data!;
     expect(xrpAddress, startsWith('r'));
     expect(AddressRules.isValid('XRP', xrpAddress), isTrue);
     expect(find.textContaining('Memo / tag'), findsOneWidget, reason: 'XRP needs a destination tag');

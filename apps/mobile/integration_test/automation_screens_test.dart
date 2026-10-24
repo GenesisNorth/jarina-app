@@ -9,8 +9,8 @@ import 'package:jarina/app/router/app_router.dart';
 import 'package:jarina/core/fake/fake_ledger.dart';
 import 'package:jarina/core/preferences/app_preferences.dart';
 import 'package:jarina/core/providers.dart';
-import 'package:jarina/core/security/app_security.dart';
 import 'package:jarina/core/repositories.dart';
+import 'package:jarina/core/security/app_security.dart';
 import 'package:jarina/core/session/session_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -84,5 +84,23 @@ void main() {
     await go('/more', 'more-dark');
     await go('/autopilot?type=stock', 'autopilot-dark');
     await container.read(themeModeSettingProvider.notifier).set(ThemeMode.light);
+  });
+
+  testWidgets('lock screen', (tester) async {
+    tester.platformDispatcher.accessibilityFeaturesTestValue = const FakeAccessibilityFeatures(disableAnimations: true);
+    SharedPreferences.setMockInitialValues({'installed': true});
+    FlutterSecureStorage.setMockInitialValues({});
+    final container = ProviderContainer(
+      overrides: [
+        envProvider.overrideWithValue(Env.staging),
+        sharedPreferencesProvider.overrideWithValue(await SharedPreferences.getInstance()),
+        initialSessionProvider.overrideWithValue(
+          const SessionState(signedIn: true, onboarded: true, twofaEnabled: true),
+        ),
+      ],
+    );
+    await tester.pumpWidget(UncontrolledProviderScope(container: container, child: const JarinaApp()));
+    await tester.pumpAndSettle();
+    await binding.takeScreenshot('a18-lock');
   });
 }

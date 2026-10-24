@@ -99,7 +99,9 @@ class _Key extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Semantics(
     button: true,
+    enabled: enabled,
     label: label,
+    onTap: enabled ? onTap : null,
     excludeSemantics: true,
     child: InkWell(
       onTap: enabled

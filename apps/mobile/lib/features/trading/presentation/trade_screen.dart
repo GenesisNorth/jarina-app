@@ -247,6 +247,7 @@ class _TradeScreenState extends ConsumerState<TradeScreen> {
               enabledBorder: InputBorder.none,
               focusedBorder: InputBorder.none,
               isDense: true,
+              constraints: const BoxConstraints(minHeight: 48),
               contentPadding: EdgeInsets.zero,
             ),
           ),
@@ -386,7 +387,7 @@ class _Box extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Flexible(
-                child: GestureDetector(
+                child: JTapTarget(
                   onTap: onAside,
                   child: Text(
                     aside,

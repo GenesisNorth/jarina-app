@@ -1,0 +1,3 @@
+tags:
+  # Pixel snapshots; rendered on macOS. CI on Linux skips them (font hinting differs).
+  golden:

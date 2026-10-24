@@ -202,8 +202,9 @@ class _CoinScreenState extends ConsumerState<CoinScreen> {
                         ),
                       ),
                       const SizedBox(height: 12),
-                      SelectableText(
+                      Text(
                         a.address,
+                        key: const ValueKey('deposit-address'),
                         textAlign: TextAlign.center,
                         style: t.body.copyWith(fontSize: 13, letterSpacing: 0.4, fontWeight: FontWeight.w600),
                       ),

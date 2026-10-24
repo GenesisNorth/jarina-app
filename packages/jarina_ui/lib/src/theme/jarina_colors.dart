@@ -24,18 +24,22 @@ class JarinaColors extends ThemeExtension<JarinaColors> {
     required this.black,
   });
 
+  /// Light theme. Text colours are darkened from the prototype tokens so they
+  /// meet WCAG AA (4.5:1) on bg, card and fill; the brand gold stays as is for
+  /// fills. Prototype values: muted 7C7870, goldDeep B8862B, green 1E9E55,
+  /// red E3364A (all 2.9–4.4:1).
   static const light = JarinaColors(
     bg: LightColors.bg,
     card: LightColors.card,
     ink: LightColors.ink,
     ink2: LightColors.ink2,
-    muted: LightColors.muted,
+    muted: Color(0xFF6B675F),
     line: LightColors.line,
     fill: LightColors.fill,
-    up: LightColors.green,
-    down: LightColors.red,
+    up: Color(0xFF167A41),
+    down: Color(0xFFC8293C),
     gold: BrandColors.gold,
-    goldDeep: BrandColors.goldDeep,
+    goldDeep: Color(0xFF8A6318),
     goldInk: BrandColors.goldInk,
     black: BrandColors.black,
   );

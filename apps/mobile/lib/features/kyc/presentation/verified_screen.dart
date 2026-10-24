@@ -131,45 +131,49 @@ class _Tile extends StatelessWidget {
         child: Container(
           color: bg,
           padding: const EdgeInsets.all(10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    width: 28,
-                    height: 28,
-                    decoration: BoxDecoration(
-                      color: style == _TileStyle.white ? c.fill : Colors.white.withValues(alpha: 0.18),
-                      borderRadius: BorderRadius.circular(8),
+          // Fixed-size tile: cap text growth (the full text is in the semantics label).
+          child: MediaQuery.withClampedTextScaling(
+            maxScaleFactor: 1.3,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      width: 28,
+                      height: 28,
+                      decoration: BoxDecoration(
+                        color: style == _TileStyle.white ? c.fill : Colors.white.withValues(alpha: 0.18),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Center(child: JarinaIcon(icon, size: 15, color: fg)),
                     ),
-                    child: Center(child: JarinaIcon(icon, size: 15, color: fg)),
-                  ),
-                  const Spacer(),
-                  if (done) JarinaIcon(JIcon.check, size: 13, color: fg.withValues(alpha: 0.8)),
-                ],
-              ),
-              const Spacer(),
-              Text(
-                title,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: t.caption.copyWith(color: fg, fontWeight: FontWeight.w700, fontSize: 13),
-              ),
-              Text(
-                subtitle,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: t.caption.copyWith(color: fg.withValues(alpha: 0.75), fontSize: 11),
-              ),
-              if (footer != null)
+                    const Spacer(),
+                    if (done) JarinaIcon(JIcon.check, size: 13, color: fg.withValues(alpha: 0.8)),
+                  ],
+                ),
+                const Spacer(),
                 Text(
-                  footer!,
+                  title,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: t.caption.copyWith(color: fg, fontWeight: FontWeight.w700, fontSize: 11),
+                  style: t.caption.copyWith(color: fg, fontWeight: FontWeight.w700, fontSize: 13),
                 ),
-            ],
+                Text(
+                  subtitle,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: t.caption.copyWith(color: fg.withValues(alpha: 0.75), fontSize: 11),
+                ),
+                if (footer != null)
+                  Text(
+                    footer!,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: t.caption.copyWith(color: fg, fontWeight: FontWeight.w700, fontSize: 11),
+                  ),
+              ],
+            ),
           ),
         ),
       ),

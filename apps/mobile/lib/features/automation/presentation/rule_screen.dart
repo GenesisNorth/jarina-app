@@ -245,6 +245,8 @@ class _RuleScreenState extends ConsumerState<RuleScreen> {
       backgroundColor: c.bg,
       appBar: jarinaAppBar(context, l.autopilotRule),
       body: GestureDetector(
+        // Dismisses the keyboard; not a control, so hidden from screen readers.
+        excludeFromSemantics: true,
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: ListView(
           padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 4, SpacingTokens.screenGutter, 24),
@@ -368,6 +370,7 @@ class _RuleScreenState extends ConsumerState<RuleScreen> {
                           decoration: InputDecoration(
                             filled: false,
                             isDense: true,
+                            constraints: const BoxConstraints(minHeight: 48),
                             border: InputBorder.none,
                             enabledBorder: InputBorder.none,
                             focusedBorder: InputBorder.none,
@@ -570,6 +573,7 @@ class _TriggerField extends StatelessWidget {
                   decoration: const InputDecoration(
                     filled: false,
                     isDense: true,
+                    constraints: BoxConstraints(minHeight: 48),
                     contentPadding: EdgeInsets.symmetric(vertical: 4),
                     border: InputBorder.none,
                     enabledBorder: InputBorder.none,

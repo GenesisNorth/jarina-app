@@ -119,7 +119,9 @@ class _PhoneScreenState extends ConsumerState<PhoneScreen> {
                       child: const Center(child: JarinaIcon(JIcon.device, size: 14, color: Colors.white)),
                     ),
                     const SizedBox(width: 8),
-                    Text(l.whatsappNumber, style: t.body.copyWith(fontWeight: FontWeight.w600)),
+                    Flexible(
+                      child: Text(l.whatsappNumber, style: t.body.copyWith(fontWeight: FontWeight.w600)),
+                    ),
                   ],
                 ),
                 const SizedBox(height: 12),
@@ -190,9 +192,16 @@ class _PhoneScreenState extends ConsumerState<PhoneScreen> {
         Row(
           children: [
             Expanded(child: Divider(color: c.line)),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: Text(l.orContinueWith, style: t.caption.copyWith(color: c.muted)),
+            Flexible(
+              flex: 3,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: Text(
+                  l.orContinueWith,
+                  textAlign: TextAlign.center,
+                  style: t.caption.copyWith(color: c.muted),
+                ),
+              ),
             ),
             Expanded(child: Divider(color: c.line)),
           ],

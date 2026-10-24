@@ -1,6 +1,6 @@
 # Jarina workspace tasks. The prototype spec lives in ../jarina-mobile.
 
-.PHONY: get gen tokens arb seed l10n codegen analyze format test run
+.PHONY: get gen tokens arb seed l10n codegen analyze format test run goldens release-android release-ios
 
 get:
 	flutter pub get
@@ -32,6 +32,17 @@ format:
 test:
 	cd packages/jarina_core && dart test
 	cd apps/mobile && flutter test
+
+# Pixel snapshots (macOS only; Linux font rendering differs).
+goldens:
+	cd apps/mobile && flutter test --tags golden --update-goldens
+
+# Store builds: obfuscated, symbols kept in build/symbols for crash reports.
+release-android:
+	cd apps/mobile && flutter build appbundle --release -t lib/main_prod.dart --obfuscate --split-debug-info=build/symbols
+
+release-ios:
+	cd apps/mobile && flutter build ipa --release -t lib/main_prod.dart --obfuscate --split-debug-info=build/symbols
 
 run:
 	cd apps/mobile && flutter run -t lib/main_dev.dart

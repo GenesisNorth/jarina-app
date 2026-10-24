@@ -145,6 +145,7 @@ InputDecoration bareAmountDecoration(TextStyle style, Color hintColor, {String? 
   filled: false,
   isDense: true,
   contentPadding: EdgeInsets.zero,
+  constraints: const BoxConstraints(minHeight: 48),
   border: InputBorder.none,
   enabledBorder: InputBorder.none,
   focusedBorder: InputBorder.none,

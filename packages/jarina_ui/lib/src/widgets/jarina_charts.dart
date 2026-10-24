@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:jarina_ui/src/theme/jarina_text.dart';
 import 'package:jarina_ui/src/theme/jarina_theme.dart';
 
 /// Tiny price line for list rows. Painted directly (no chart library) because
@@ -192,6 +193,7 @@ class JAssetBadge extends StatelessWidget {
               label,
               style: TextStyle(
                 fontFamily: 'Poppins',
+                fontFamilyFallback: JarinaText.fallbackFamilies,
                 package: 'jarina_ui',
                 color: ink,
                 fontWeight: FontWeight.w700,

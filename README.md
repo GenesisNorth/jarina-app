@@ -22,6 +22,12 @@ cd apps/mobile && flutter run -t lib/main_staging.dart
 
 In non-prod builds, the gold **DEV** chip opens the route index. There you can open any of the 63 screens, switch the session state (signed in / KYC done / 2FA) to test the router guards, and change theme and language.
 
+## Docs
+
+- [`docs/QUALITY.md`](docs/QUALITY.md): test layers, how to run them, budgets
+- [`docs/SECURITY.md`](docs/SECURITY.md): OWASP MASVS L2 status
+- [`docs/RELEASE.md`](docs/RELEASE.md): signing, store builds, privacy labels
+
 ## Generated code
 
 | What | Source | Command |

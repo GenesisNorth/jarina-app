@@ -297,24 +297,21 @@ class _PayFromSwitch extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           for (final code in _payFrom)
-            Semantics(
-              button: true,
+            JTapTarget(
               selected: code == value,
-              child: GestureDetector(
-                onTap: () => onChanged(code),
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 180),
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
-                  decoration: BoxDecoration(
-                    color: code == value ? c.gold : Colors.transparent,
-                    borderRadius: BorderRadius.circular(999),
-                  ),
-                  child: Text(
-                    labels[code]!,
-                    style: t.caption.copyWith(
-                      fontWeight: FontWeight.w700,
-                      color: code == value ? c.black : Colors.white70,
-                    ),
+              onTap: () => onChanged(code),
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 180),
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+                decoration: BoxDecoration(
+                  color: code == value ? c.gold : Colors.transparent,
+                  borderRadius: BorderRadius.circular(999),
+                ),
+                child: Text(
+                  labels[code]!,
+                  style: t.caption.copyWith(
+                    fontWeight: FontWeight.w700,
+                    color: code == value ? c.black : Colors.white70,
                   ),
                 ),
               ),

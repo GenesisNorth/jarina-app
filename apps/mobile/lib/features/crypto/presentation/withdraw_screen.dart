@@ -133,6 +133,8 @@ class _WithdrawScreenState extends ConsumerState<WithdrawScreen> {
       backgroundColor: c.bg,
       appBar: jarinaAppBar(context, l.withdrawCoin(widget.coin)),
       body: GestureDetector(
+        // Dismisses the keyboard; not a control, so hidden from screen readers.
+        excludeFromSemantics: true,
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: ListView(
           padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 8, SpacingTokens.screenGutter, 24),

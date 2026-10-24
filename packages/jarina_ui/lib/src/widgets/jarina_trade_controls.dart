@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:jarina_ui/src/theme/jarina_theme.dart';
 import 'package:jarina_ui/src/tokens/jarina_tokens.g.dart';
 import 'package:jarina_ui/src/widgets/jarina_icon.dart';
+import 'package:jarina_ui/src/widgets/jarina_tap_target.dart';
 
 /// Slide-to-confirm (prototype `.swslide`): drag the gold thumb to the end to
 /// confirm. A deliberate gesture for money-moving actions; screen-reader users
@@ -175,23 +176,32 @@ class JPercentSlider extends StatelessWidget {
             for (final (i, p) in [0.25, 0.5, 0.75, 1.0].indexed) ...[
               if (i > 0) const SizedBox(width: 6),
               Expanded(
-                child: Material(
-                  color: (value - p).abs() < 0.001 ? c.black : c.fill,
-                  borderRadius: BorderRadius.circular(10),
-                  child: InkWell(
+                // 36pt button, 48pt touch target.
+                child: JTapTarget(
+                  selected: (value - p).abs() < 0.001,
+                  onTap: () {
+                    unawaited(HapticFeedback.selectionClick());
+                    onChanged(p);
+                  },
+                  child: Material(
+                    color: (value - p).abs() < 0.001 ? c.black : c.fill,
                     borderRadius: BorderRadius.circular(10),
-                    onTap: () {
-                      unawaited(HapticFeedback.selectionClick());
-                      onChanged(p);
-                    },
-                    child: Container(
-                      constraints: const BoxConstraints(minHeight: 36),
-                      alignment: Alignment.center,
-                      child: Text(
-                        p == 1 ? maxLabel : '${(p * 100).round()}%',
-                        style: t.caption.copyWith(
-                          fontWeight: FontWeight.w600,
-                          color: (value - p).abs() < 0.001 ? Colors.white : c.ink,
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(10),
+                      excludeFromSemantics: true,
+                      onTap: () {
+                        unawaited(HapticFeedback.selectionClick());
+                        onChanged(p);
+                      },
+                      child: Container(
+                        constraints: const BoxConstraints(minHeight: 36),
+                        alignment: Alignment.center,
+                        child: Text(
+                          p == 1 ? maxLabel : '${(p * 100).round()}%',
+                          style: t.caption.copyWith(
+                            fontWeight: FontWeight.w600,
+                            color: (value - p).abs() < 0.001 ? Colors.white : c.ink,
+                          ),
                         ),
                       ),
                     ),

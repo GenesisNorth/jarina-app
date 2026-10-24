@@ -80,64 +80,6 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
       appBar: jarinaAppBar(context, ''),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 0, SpacingTokens.screenGutter, 10),
-            child: Row(
-              children: [
-                Stack(
-                  children: [
-                    const PersonAvatar(name: 'Aisha', color: 0xFFFBE9DC),
-                    Positioned(
-                      right: 0,
-                      bottom: 0,
-                      child: Container(
-                        width: 11,
-                        height: 11,
-                        decoration: BoxDecoration(
-                          color: c.up,
-                          shape: BoxShape.circle,
-                          border: Border.all(color: c.bg, width: 2),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(l.jarinaSupport, style: t.body.copyWith(fontWeight: FontWeight.w700)),
-                      Text(copy.online, style: t.caption.copyWith(color: c.muted)),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 0, SpacingTokens.screenGutter, 8),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(copy.chattingIn, style: t.caption.copyWith(color: c.muted)),
-                ),
-                for (final code in const ['en', 'ha', 'fr']) ...[
-                  const SizedBox(width: 6),
-                  JChip(
-                    label: code.toUpperCase(),
-                    selected: code == _lang,
-                    onTap: () {
-                      if (code == _lang) return;
-                      setState(() => _lang = code);
-                      repo.switchLanguage(code);
-                      _toBottom();
-                    },
-                  ),
-                ],
-              ],
-            ),
-          ),
           Expanded(
             child: StreamBuilder<List<ChatMessage>>(
               stream: _messages,
@@ -147,8 +89,66 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                   stream: _typing,
                   builder: (context, typing) => ListView(
                     controller: _scroll,
-                    padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 4, SpacingTokens.screenGutter, 16),
+                    padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 0, SpacingTokens.screenGutter, 16),
                     children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 10),
+                        child: Row(
+                          children: [
+                            Stack(
+                              children: [
+                                const PersonAvatar(name: 'Aisha', color: 0xFFFBE9DC),
+                                Positioned(
+                                  right: 0,
+                                  bottom: 0,
+                                  child: Container(
+                                    width: 11,
+                                    height: 11,
+                                    decoration: BoxDecoration(
+                                      color: c.up,
+                                      shape: BoxShape.circle,
+                                      border: Border.all(color: c.bg, width: 2),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(l.jarinaSupport, style: t.body.copyWith(fontWeight: FontWeight.w700)),
+                                  Text(copy.online, style: t.caption.copyWith(color: c.muted)),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 8),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Text(copy.chattingIn, style: t.caption.copyWith(color: c.muted)),
+                            ),
+                            for (final code in const ['en', 'ha', 'fr']) ...[
+                              const SizedBox(width: 6),
+                              JChip(
+                                label: code.toUpperCase(),
+                                selected: code == _lang,
+                                onTap: () {
+                                  if (code == _lang) return;
+                                  setState(() => _lang = code);
+                                  repo.switchLanguage(code);
+                                  _toBottom();
+                                },
+                              ),
+                            ],
+                          ],
+                        ),
+                      ),
                       Container(
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(

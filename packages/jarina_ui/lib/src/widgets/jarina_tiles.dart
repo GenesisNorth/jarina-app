@@ -17,7 +17,9 @@ class JActionButton extends StatelessWidget {
     final c = context.colors;
     return Semantics(
       button: true,
+      enabled: onTap != null,
       label: label,
+      onTap: onTap,
       excludeSemantics: true,
       child: InkWell(
         onTap: onTap,
@@ -167,6 +169,7 @@ class JIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) => IconButton(
     tooltip: semanticLabel,
+    constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
     onPressed: onPressed,
     icon: Stack(
       clipBehavior: Clip.none,

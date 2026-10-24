@@ -87,6 +87,8 @@ void main() {
     await tester.pump(const Duration(milliseconds: 500));
     await tester.pumpAndSettle();
     expect(find.text('@aminu is taken. Try a suggestion.'), findsOneWidget);
+    await tester.ensureVisible(find.text('@bello.aminu'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('@bello.aminu'));
     await tester.pump(const Duration(milliseconds: 500));
     await tester.pumpAndSettle();

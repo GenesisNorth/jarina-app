@@ -86,31 +86,26 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       for (var i = 0; i < _langs.length; i++)
-                        Semantics(
-                          button: true,
-                          label: _langs[i].toUpperCase(),
+                        JTapTarget(
                           selected: i == _shown,
-                          excludeSemantics: true,
-                          child: GestureDetector(
-                            onTap: () {
-                              setState(() => _shown = i);
-                              unawaited(ref.read(localeSettingProvider.notifier).set(Locale(_langs[i])));
-                            },
-                            child: AnimatedContainer(
-                              duration: const Duration(milliseconds: 250),
-                              margin: const EdgeInsets.symmetric(horizontal: 4),
-                              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-                              decoration: BoxDecoration(
-                                color: i == _shown ? c.goldDeep : Colors.transparent,
-                                borderRadius: BorderRadius.circular(999),
-                              ),
-                              child: Text(
-                                _langs[i].toUpperCase(),
-                                style: t.caption.copyWith(
-                                  fontWeight: FontWeight.w700,
-                                  letterSpacing: 0.8,
-                                  color: i == _shown ? Colors.white : c.muted,
-                                ),
+                          onTap: () {
+                            setState(() => _shown = i);
+                            unawaited(ref.read(localeSettingProvider.notifier).set(Locale(_langs[i])));
+                          },
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 250),
+                            margin: const EdgeInsets.symmetric(horizontal: 4),
+                            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                            decoration: BoxDecoration(
+                              color: i == _shown ? c.goldDeep : Colors.transparent,
+                              borderRadius: BorderRadius.circular(999),
+                            ),
+                            child: Text(
+                              _langs[i].toUpperCase(),
+                              style: t.caption.copyWith(
+                                fontWeight: FontWeight.w700,
+                                letterSpacing: 0.8,
+                                color: i == _shown ? Colors.white : c.muted,
                               ),
                             ),
                           ),
@@ -210,6 +205,7 @@ class _SymbolsPainter extends CustomPainter {
           text: _DriftingSymbolsState._symbols[i % _DriftingSymbolsState._symbols.length],
           style: TextStyle(
             fontFamily: TypeTokens.family,
+            fontFamilyFallback: JarinaText.fallbackFamilies,
             package: 'jarina_ui',
             fontSize: 18 + s * 30,
             fontWeight: FontWeight.w700,

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:jarina_ui/src/theme/jarina_theme.dart';
 import 'package:jarina_ui/src/widgets/jarina_icon.dart';
+import 'package:jarina_ui/src/widgets/jarina_tap_target.dart';
 
 enum JButtonVariant {
   /// Black (light) / gold (dark) — the main call to action.
@@ -141,7 +142,9 @@ class JCircleButton extends StatelessWidget {
     final c = context.colors;
     return Semantics(
       button: true,
+      enabled: onPressed != null,
       label: semanticLabel,
+      onTap: onPressed,
       excludeSemantics: true,
       // 48pt hit area around a 40pt visual (accessibility minimum is 44pt).
       child: SizedBox.square(
@@ -188,29 +191,35 @@ class JPillButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = context.colors;
-    return Material(
-      color: c.card,
-      shape: const StadiumBorder(),
-      child: InkWell(
-        customBorder: const StadiumBorder(),
-        onTap: onPressed,
-        child: Container(
-          constraints: const BoxConstraints(minHeight: 40),
-          padding: const EdgeInsets.symmetric(horizontal: 12),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(999),
-            boxShadow: [BoxShadow(color: c.black.withValues(alpha: 0.06), blurRadius: 10, offset: const Offset(0, 2))],
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              if (leading != null) ...[leading!, const SizedBox(width: 6)],
-              if (icon != null) ...[JarinaIcon(icon!, size: 16), const SizedBox(width: 6)],
-              Text(
-                label,
-                style: context.text.caption.copyWith(fontSize: 13, fontWeight: FontWeight.w600, color: c.ink),
-              ),
-            ],
+    return JTapTarget(
+      onTap: onPressed,
+      child: Material(
+        color: c.card,
+        shape: const StadiumBorder(),
+        child: InkWell(
+          customBorder: const StadiumBorder(),
+          excludeFromSemantics: true,
+          onTap: onPressed,
+          child: Container(
+            constraints: const BoxConstraints(minHeight: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(999),
+              boxShadow: [
+                BoxShadow(color: c.black.withValues(alpha: 0.06), blurRadius: 10, offset: const Offset(0, 2)),
+              ],
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (leading != null) ...[leading!, const SizedBox(width: 6)],
+                if (icon != null) ...[JarinaIcon(icon!, size: 16), const SizedBox(width: 6)],
+                Text(
+                  label,
+                  style: context.text.caption.copyWith(fontSize: 13, fontWeight: FontWeight.w600, color: c.ink),
+                ),
+              ],
+            ),
           ),
         ),
       ),

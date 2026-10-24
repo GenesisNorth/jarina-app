@@ -34,6 +34,7 @@ abstract final class JarinaTheme {
       colorScheme: scheme,
       scaffoldBackgroundColor: c.bg,
       fontFamily: TypeTokens.family,
+      fontFamilyFallback: JarinaText.fallbackFamilies,
       package: 'jarina_ui',
       extensions: [c, text],
       splashFactory: InkSparkle.splashFactory,

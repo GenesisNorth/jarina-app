@@ -102,6 +102,8 @@ class _PeopleScreenState extends ConsumerState<PeopleScreen> {
       backgroundColor: c.bg,
       appBar: jarinaAppBar(context, l.sendAmount(MoneyFormat.format(Money(amount, Currency.ngn), decimals: 0))),
       body: GestureDetector(
+        // Dismisses the keyboard; not a control, so hidden from screen readers.
+        excludeFromSemantics: true,
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: ListView(
           padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 4, SpacingTokens.screenGutter, 32),

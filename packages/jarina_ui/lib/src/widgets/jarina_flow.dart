@@ -54,6 +54,8 @@ class JFlowScaffold extends StatelessWidget {
         if (!didPop) onBack?.call();
       },
       child: GestureDetector(
+        // Dismisses the keyboard; not a control, so hidden from screen readers.
+        excludeFromSemantics: true,
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         behavior: HitTestBehavior.translucent,
         child: Scaffold(
@@ -243,15 +245,17 @@ class JStepTracker extends StatelessWidget {
                 ),
               },
               const SizedBox(width: 5),
-              Text(
-                item.label,
-                style: t.caption.copyWith(
-                  fontWeight: FontWeight.w600,
-                  color: switch (item.state) {
-                    JStepState.done => c.ink,
-                    JStepState.current => c.goldDeep,
-                    JStepState.todo => c.muted,
-                  },
+              Flexible(
+                child: Text(
+                  item.label,
+                  style: t.caption.copyWith(
+                    fontWeight: FontWeight.w600,
+                    color: switch (item.state) {
+                      JStepState.done => c.ink,
+                      JStepState.current => c.goldDeep,
+                      JStepState.todo => c.muted,
+                    },
+                  ),
                 ),
               ),
             ],

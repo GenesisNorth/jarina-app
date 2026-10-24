@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:jarina_ui/src/theme/jarina_theme.dart';
 import 'package:jarina_ui/src/tokens/jarina_tokens.g.dart';
 import 'package:jarina_ui/src/widgets/jarina_icon.dart';
+import 'package:jarina_ui/src/widgets/jarina_tap_target.dart';
 
 /// Labelled text field (prototype `.field` + `.input`): 54pt, 16pt radius,
 /// hairline border that turns gold on focus and red on error.
@@ -182,6 +183,7 @@ class JSelect<T> extends StatelessWidget {
           button: true,
           label: label,
           value: has ? labelOf(value as T) : hint,
+          onTap: () => _open(context),
           excludeSemantics: true,
           child: Material(
             color: c.bg,
@@ -324,8 +326,10 @@ class JSegmented<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     final c = context.colors;
     final t = context.text;
+    // The track's vertical padding sits inside each segment's tap area, so every
+    // segment is a full 48pt target while the pill stays 40pt.
     return Container(
-      padding: const EdgeInsets.all(4),
+      padding: const EdgeInsets.symmetric(horizontal: 4),
       decoration: BoxDecoration(color: c.fill, borderRadius: BorderRadius.circular(14)),
       child: Row(
         children: [
@@ -342,32 +346,35 @@ class JSegmented<T> extends StatelessWidget {
                       onChanged(e.key);
                     }
                   },
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 180),
-                    constraints: const BoxConstraints(minHeight: 40),
-                    alignment: Alignment.center,
-                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
-                    decoration: BoxDecoration(
-                      color: e.key == value ? c.card : Colors.transparent,
-                      borderRadius: BorderRadius.circular(11),
-                      boxShadow: e.key == value
-                          ? [
-                              BoxShadow(
-                                color: c.black.withValues(alpha: 0.08),
-                                blurRadius: 8,
-                                offset: const Offset(0, 2),
-                              ),
-                            ]
-                          : null,
-                    ),
-                    child: Text(
-                      e.value,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: t.body.copyWith(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: e.key == value ? c.ink : c.muted,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 4),
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 180),
+                      constraints: const BoxConstraints(minHeight: 40),
+                      alignment: Alignment.center,
+                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+                      decoration: BoxDecoration(
+                        color: e.key == value ? c.card : Colors.transparent,
+                        borderRadius: BorderRadius.circular(11),
+                        boxShadow: e.key == value
+                            ? [
+                                BoxShadow(
+                                  color: c.black.withValues(alpha: 0.08),
+                                  blurRadius: 8,
+                                  offset: const Offset(0, 2),
+                                ),
+                              ]
+                            : null,
+                      ),
+                      child: Text(
+                        e.value,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: t.body.copyWith(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: e.key == value ? c.ink : c.muted,
+                        ),
                       ),
                     ),
                   ),
@@ -392,9 +399,10 @@ class JChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = context.colors;
-    return Semantics(
+    // 40pt chip, 48pt touch target.
+    return JTapTarget(
       selected: selected,
-      button: true,
+      onTap: onTap,
       child: Material(
         color: selected ? c.gold : c.card,
         shape: RoundedRectangleBorder(
@@ -403,6 +411,7 @@ class JChip extends StatelessWidget {
         ),
         child: InkWell(
           borderRadius: BorderRadius.circular(12),
+          excludeFromSemantics: true,
           onTap: onTap,
           child: Container(
             constraints: const BoxConstraints(minHeight: 40),

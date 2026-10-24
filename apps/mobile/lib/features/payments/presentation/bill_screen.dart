@@ -123,6 +123,7 @@ class _BillScreenState extends ConsumerState<BillScreen> {
       context: context,
       isDismissible: false,
       enableDrag: false,
+      isScrollControlled: true,
       useSafeArea: true,
       backgroundColor: context.colors.bg,
       builder: (_) => _PaidSheet(tx: tx),
@@ -179,6 +180,8 @@ class _BillScreenState extends ConsumerState<BillScreen> {
       backgroundColor: c.bg,
       appBar: jarinaAppBar(context, title),
       body: GestureDetector(
+        // Dismisses the keyboard; not a control, so hidden from screen readers.
+        excludeFromSemantics: true,
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: ListView(
           padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 4, SpacingTokens.screenGutter, 24),
@@ -371,7 +374,7 @@ class _PaidSheet extends StatelessWidget {
     final t = context.text;
     final d = tx.description ?? '';
     final token = d.startsWith('Token ') ? d.substring(6) : null;
-    return Padding(
+    return SingleChildScrollView(
       padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 24, SpacingTokens.screenGutter, 16),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -408,7 +411,7 @@ class _PaidSheet extends StatelessWidget {
                   const SizedBox(height: 6),
                   FittedBox(
                     fit: BoxFit.scaleDown,
-                    child: SelectableText(token, style: t.h2.copyWith(letterSpacing: 1.5)),
+                    child: Text(token, style: t.h2.copyWith(letterSpacing: 1.5)),
                   ),
                   const SizedBox(height: 8),
                   TextButton.icon(

@@ -27,26 +27,22 @@ class RangeSelector extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         for (final r in ChartRange.values)
-          Semantics(
+          JTapTarget(
             selected: r == value,
-            button: true,
-            child: InkWell(
-              borderRadius: BorderRadius.circular(8),
-              onTap: () => onChanged(r),
-              child: Container(
-                constraints: const BoxConstraints(minWidth: 44, minHeight: 36),
-                alignment: Alignment.center,
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                decoration: BoxDecoration(
-                  color: r == value ? c.black : Colors.transparent,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Text(
-                  rangeLabel(l, r),
-                  style: t.caption.copyWith(
-                    fontWeight: FontWeight.w700,
-                    color: r == value ? Colors.white : c.muted,
-                  ),
+            onTap: () => onChanged(r),
+            child: Container(
+              constraints: const BoxConstraints(minWidth: 44, minHeight: 36),
+              alignment: Alignment.center,
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              decoration: BoxDecoration(
+                color: r == value ? c.black : Colors.transparent,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Text(
+                rangeLabel(l, r),
+                style: t.caption.copyWith(
+                  fontWeight: FontWeight.w700,
+                  color: r == value ? Colors.white : c.muted,
                 ),
               ),
             ),

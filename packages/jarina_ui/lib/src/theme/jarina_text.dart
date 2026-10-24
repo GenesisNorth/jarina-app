@@ -18,6 +18,9 @@ class JarinaText extends ThemeExtension<JarinaText> {
   factory JarinaText.forColor(Color ink) {
     TextStyle s(double size, FontWeight weight, double spacing, {bool tabular = false}) => TextStyle(
       fontFamily: TypeTokens.family,
+      // Poppins has no ₦, ₵ or Hausa hooked letters (ɓ ɗ ƙ ƴ); this bundled Noto
+      // subset supplies them so they look the same on every phone.
+      fontFamilyFallback: fallbackFamilies,
       package: 'jarina_ui',
       fontSize: size,
       fontWeight: weight,
@@ -37,6 +40,10 @@ class JarinaText extends ThemeExtension<JarinaText> {
       amountL: s(TypeTokens.amountLSize, TypeTokens.amountLWeight, TypeTokens.amountLLetterSpacing, tabular: true),
     );
   }
+
+  /// Bundled glyph fallbacks (Noto subsets, see `fonts/NotoSans-OFL.txt`):
+  /// currency and Hausa letters, then UI symbols (▲ ▼ ✓ ◎ …).
+  static const fallbackFamilies = ['JarinaFallback', 'JarinaSymbols'];
 
   final TextStyle largeTitle;
   final TextStyle title;

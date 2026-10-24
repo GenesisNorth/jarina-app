@@ -228,8 +228,7 @@ class _SwapScreenState extends ConsumerState<SwapScreen> {
     final chartCode = _to == 'NGN' ? _from : _to;
     final chart = quotes?[chartCode]?.intraday;
 
-    Widget assetPill(String code, {required bool pay}) => InkWell(
-      borderRadius: BorderRadius.circular(999),
+    Widget assetPill(String code, {required bool pay}) => JTapTarget(
       onTap: () => _pick(pay: pay),
       child: Container(
         padding: const EdgeInsets.fromLTRB(4, 4, 8, 4),
@@ -348,6 +347,7 @@ class _SwapScreenState extends ConsumerState<SwapScreen> {
                         enabledBorder: InputBorder.none,
                         focusedBorder: InputBorder.none,
                         isDense: true,
+                        constraints: const BoxConstraints(minHeight: 48),
                         contentPadding: EdgeInsets.zero,
                       ),
                     ),

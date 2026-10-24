@@ -44,30 +44,34 @@ class WalletCard extends StatelessWidget {
         tone: tone,
         padding: const EdgeInsets.all(14),
         onTap: () => context.pushNamed(AppRoute.fiat.name, pathParameters: {'currency': info.currency.code}),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    walletShortName(l, info.currency),
-                    style: t.body.copyWith(color: ink, fontWeight: FontWeight.w700, fontSize: 14),
+        // Fixed-height carousel card: cap text growth so large text can't spill out.
+        child: MediaQuery.withClampedTextScaling(
+          maxScaleFactor: 1.3,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      walletShortName(l, info.currency),
+                      style: t.body.copyWith(color: ink, fontWeight: FontWeight.w700, fontSize: 14),
+                    ),
                   ),
-                ),
-                JarinaIcon(JIcon.wallet, size: 16, color: ink.withValues(alpha: 0.8)),
-              ],
-            ),
-            const Spacer(),
-            MoneyText(balance, style: t.title.copyWith(color: ink, fontSize: 21)),
-            const SizedBox(height: 2),
-            Text(
-              '${info.currency.code} · ${l.countryName(info.countryIso)}',
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: t.caption.copyWith(color: ink.withValues(alpha: 0.7)),
-            ),
-          ],
+                  JarinaIcon(JIcon.wallet, size: 16, color: ink.withValues(alpha: 0.8)),
+                ],
+              ),
+              const Spacer(),
+              MoneyText(balance, style: t.title.copyWith(color: ink, fontSize: 21)),
+              const SizedBox(height: 2),
+              Text(
+                '${info.currency.code} · ${l.countryName(info.countryIso)}',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: t.caption.copyWith(color: ink.withValues(alpha: 0.7)),
+              ),
+            ],
+          ),
         ),
       ),
     );

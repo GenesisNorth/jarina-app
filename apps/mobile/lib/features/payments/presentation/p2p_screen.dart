@@ -187,6 +187,8 @@ class _P2pScreenState extends ConsumerState<P2pScreen> {
       backgroundColor: c.bg,
       appBar: jarinaAppBar(context, l.sendToJarinaUser),
       body: GestureDetector(
+        // Dismisses the keyboard; not a control, so hidden from screen readers.
+        excludeFromSemantics: true,
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: ListView(
           padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 4, SpacingTokens.screenGutter, 24),

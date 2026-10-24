@@ -7,8 +7,8 @@ import 'package:jarina/app/env.dart';
 import 'package:jarina/core/fake/fake_backend.dart';
 import 'package:jarina/core/fake/fake_ledger.dart';
 import 'package:jarina/core/providers.dart';
-import 'package:jarina/core/security/app_security.dart';
 import 'package:jarina/core/repositories.dart';
+import 'package:jarina/core/security/app_security.dart';
 import 'package:jarina/core/session/session_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -19,6 +19,7 @@ Future<ProviderContainer> pumpApp(
   Map<String, Object> prefs = const {},
   Size size = const Size(390, 844),
   DateTime Function()? clock,
+  bool lockOnLaunch = false,
 }) async {
   // Phone-sized surface (iPhone 14/15) unless a test asks for another.
   tester.view.physicalSize = size * 3;
@@ -36,7 +37,7 @@ Future<ProviderContainer> pumpApp(
   final container = ProviderContainer(
     overrides: [
       envProvider.overrideWithValue(Env.dev),
-      lockOnLaunchProvider.overrideWithValue(false),
+      lockOnLaunchProvider.overrideWithValue(lockOnLaunch),
       if (clock != null) clockProvider.overrideWithValue(clock),
       sharedPreferencesProvider.overrideWithValue(await SharedPreferences.getInstance()),
       sessionStoreProvider.overrideWithValue(SessionStore()),

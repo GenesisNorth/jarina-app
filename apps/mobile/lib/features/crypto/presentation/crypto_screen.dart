@@ -112,7 +112,9 @@ class CryptoScreen extends ConsumerWidget {
                   decoration: BoxDecoration(color: c.up, shape: BoxShape.circle),
                 ),
                 const SizedBox(width: 6),
-                Text(l.trading247, style: t.caption.copyWith(color: c.muted, fontSize: 13)),
+                Flexible(
+                  child: Text(l.trading247, style: t.caption.copyWith(color: c.muted, fontSize: 13)),
+                ),
               ],
             ),
             const SizedBox(height: 14),
@@ -177,12 +179,16 @@ class CryptoScreen extends ConsumerWidget {
             JSectionHeader(title: l.cryptoServices),
             JCard(
               padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 6),
-              child: GridView.count(
-                crossAxisCount: 4,
+              child: GridView(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
-                mainAxisSpacing: 8,
-                childAspectRatio: MediaQuery.textScalerOf(context).scale(1) > 1.3 ? 0.62 : 0.82,
+                // Fixed height (circle + label, growing with the text size) so
+                // narrow phones don't squeeze the cells.
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4,
+                  mainAxisSpacing: 8,
+                  mainAxisExtent: 74 + MediaQuery.textScalerOf(context).scale(13) * 1.4 * 2,
+                ),
                 children: [
                   for (final (icon, label, onTap) in services) JActionButton(icon: icon, label: label, onTap: onTap),
                 ],

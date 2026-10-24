@@ -215,24 +215,27 @@ class _BalanceCardState extends ConsumerState<_BalanceCard> {
     final current = ref.read(displayCurrencyProvider);
     final picked = await showModalBottomSheet<Currency>(
       context: context,
+      isScrollControlled: true,
       builder: (context) => SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(22, 0, 22, 8),
-              child: Text(l.displayCurrency, style: context.text.h2),
-            ),
-            for (final cur in Currency.fiats)
-              ListTile(
-                contentPadding: const EdgeInsets.symmetric(horizontal: 22),
-                title: Text(cur.code, style: context.text.body.copyWith(fontWeight: FontWeight.w600)),
-                trailing: cur == current ? JarinaIcon(JIcon.check, color: context.colors.goldDeep) : null,
-                onTap: () => Navigator.of(context).pop(cur),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(22, 0, 22, 8),
+                child: Text(l.displayCurrency, style: context.text.h2),
               ),
-            const SizedBox(height: 8),
-          ],
+              for (final cur in Currency.fiats)
+                ListTile(
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 22),
+                  title: Text(cur.code, style: context.text.body.copyWith(fontWeight: FontWeight.w600)),
+                  trailing: cur == current ? JarinaIcon(JIcon.check, color: context.colors.goldDeep) : null,
+                  onTap: () => Navigator.of(context).pop(cur),
+                ),
+              const SizedBox(height: 8),
+            ],
+          ),
         ),
       ),
     );
@@ -254,22 +257,19 @@ class _BalanceCardState extends ConsumerState<_BalanceCard> {
     const white = Colors.white;
     final muted = white.withValues(alpha: 0.65);
 
-    Widget chip(String label, {required VoidCallback onTap, bool gold = false}) => Semantics(
-      button: true,
-      child: GestureDetector(
-        onTap: onTap,
-        child: Container(
-          constraints: const BoxConstraints(minHeight: 32, minWidth: 40),
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: gold ? BrandColors.gold : white.withValues(alpha: 0.14),
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Text(
-            label,
-            style: t.caption.copyWith(color: gold ? BrandColors.black : white, fontWeight: FontWeight.w700),
-          ),
+    Widget chip(String label, {required VoidCallback onTap, bool gold = false}) => JTapTarget(
+      onTap: onTap,
+      child: Container(
+        constraints: const BoxConstraints(minHeight: 32, minWidth: 40),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: gold ? BrandColors.gold : white.withValues(alpha: 0.14),
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Text(
+          label,
+          style: t.caption.copyWith(color: gold ? BrandColors.black : white, fontWeight: FontWeight.w700),
         ),
       ),
     );
@@ -321,7 +321,6 @@ class _BalanceCardState extends ConsumerState<_BalanceCard> {
               ),
               IconButton(
                 tooltip: hidden ? l.showBalances : l.hideBalances,
-                visualDensity: VisualDensity.compact,
                 onPressed: () => unawaited(ref.read(hideBalancesProvider.notifier).toggle()),
                 icon: JarinaIcon(JIcon.eye, size: 16, color: muted),
               ),
