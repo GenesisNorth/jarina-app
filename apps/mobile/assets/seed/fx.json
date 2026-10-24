@@ -1,0 +1,27 @@
+{
+  "NGN": {
+    "symbol": "₦",
+    "decimals": 0,
+    "perNgn": "1"
+  },
+  "GHS": {
+    "symbol": "GH₵",
+    "decimals": 2,
+    "perNgn": "0.007407407407407408"
+  },
+  "XOF": {
+    "symbol": "CFA",
+    "decimals": 0,
+    "perNgn": "0.39"
+  },
+  "XAF": {
+    "symbol": "FCFA",
+    "decimals": 0,
+    "perNgn": "0.39"
+  },
+  "USD": {
+    "symbol": "$",
+    "decimals": 2,
+    "perNgn": "0.0006451612903225806"
+  }
+}

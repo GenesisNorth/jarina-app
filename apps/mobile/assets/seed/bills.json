@@ -1,0 +1,96 @@
+{
+  "airtime": {
+    "title": "Airtime",
+    "providers": [
+      "MTN",
+      "Airtel",
+      "Glo",
+      "9mobile"
+    ],
+    "field": "Phone number",
+    "ph": "0801 234 5678",
+    "amounts": [
+      200,
+      500,
+      1000,
+      2000
+    ]
+  },
+  "data": {
+    "title": "Data",
+    "providers": [
+      "MTN",
+      "Airtel",
+      "Glo",
+      "9mobile"
+    ],
+    "field": "Phone number",
+    "ph": "0801 234 5678",
+    "plans": [
+      [
+        "1.5 GB · 30 days",
+        1000
+      ],
+      [
+        "3 GB · 30 days",
+        1500
+      ],
+      [
+        "10 GB · 30 days",
+        3500
+      ],
+      [
+        "25 GB · 30 days",
+        6500
+      ]
+    ]
+  },
+  "cable": {
+    "title": "Cable TV",
+    "providers": [
+      "DStv",
+      "GOtv",
+      "StarTimes"
+    ],
+    "field": "Smartcard / IUC number",
+    "ph": "7023 4567 89",
+    "plans": [
+      [
+        "Basic",
+        4500
+      ],
+      [
+        "Family",
+        7800
+      ],
+      [
+        "Compact",
+        15700
+      ],
+      [
+        "Premium",
+        37000
+      ]
+    ]
+  },
+  "electricity": {
+    "title": "Electricity",
+    "providers": [
+      "KEDCO",
+      "KAEDCO",
+      "AEDC",
+      "JED",
+      "IKEDC",
+      "EKEDC"
+    ],
+    "field": "Meter number",
+    "ph": "0123 4567 890",
+    "amounts": [
+      2000,
+      5000,
+      10000,
+      20000
+    ],
+    "meterType": true
+  }
+}

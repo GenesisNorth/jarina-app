@@ -1,0 +1,387 @@
+{
+  "@@locale": "en",
+  "stepOf": "Step {step} of {total}",
+  "@stepOf": {
+    "placeholders": {
+      "step": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "stepOfSection": "Step {step} of {total} · {section}",
+  "@stepOfSection": {
+    "placeholders": {
+      "step": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "section": {
+        "type": "String"
+      }
+    }
+  },
+  "yourCountry": "Your country",
+  "yourAccount": "Your account",
+  "verifyLabel": "Verify",
+  "otpSentTo": "Enter the 6-digit code we sent to your WhatsApp on {phone}.",
+  "@otpSentTo": {
+    "placeholders": {
+      "phone": {
+        "type": "String"
+      }
+    }
+  },
+  "otpSentBySms": "Enter the 6-digit code sent by SMS to {phone}.",
+  "@otpSentBySms": {
+    "placeholders": {
+      "phone": {
+        "type": "String"
+      }
+    }
+  },
+  "resendCodeIn": "Resend code in {time}",
+  "@resendCodeIn": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "resendCode": "Resend code",
+  "codeResent": "New code sent",
+  "phoneHint": "Enter your {digits}-digit WhatsApp number, e.g. {sample}",
+  "@phoneHint": {
+    "placeholders": {
+      "digits": {
+        "type": "String"
+      },
+      "sample": {
+        "type": "String"
+      }
+    }
+  },
+  "usernameAvailable": "@{handle} is available",
+  "@usernameAvailable": {
+    "placeholders": {
+      "handle": {
+        "type": "String"
+      }
+    }
+  },
+  "usernameTaken": "@{handle} is taken. Try a suggestion.",
+  "@usernameTaken": {
+    "placeholders": {
+      "handle": {
+        "type": "String"
+      }
+    }
+  },
+  "usernameChecking": "Checking…",
+  "claimHandle": "Claim @{handle}",
+  "@claimHandle": {
+    "placeholders": {
+      "handle": {
+        "type": "String"
+      }
+    }
+  },
+  "yourName": "yourname",
+  "errRequired": "This field is required",
+  "errTooShort": "Too short",
+  "errTooLong": "Too long",
+  "errPhoneShort": "Number is too short",
+  "errPhoneLong": "Number is too long",
+  "errInvalidFormat": "Check this and try again",
+  "errNameChars": "Use letters only, as on your ID",
+  "errEmail": "Enter a valid email address",
+  "errUsernameStart": "Must start with a letter",
+  "errUsernameChars": "Use only letters, numbers, _ or .",
+  "errReserved": "This username is reserved",
+  "errUnderage": "You must be 18 or older",
+  "errInvalidDate": "Enter a real date as DD / MM / YYYY",
+  "errWeakPin": "Too easy to guess. Avoid birthdays and repeated digits.",
+  "errPinMismatch": "PINs don''t match. Create it again.",
+  "errWrongCode": "That code isn''t right. Try again.",
+  "errCodeExpired": "Code expired. Request a new one.",
+  "errNetwork": "No connection. Check your internet and try again.",
+  "errGeneric": "Something went wrong. Please try again.",
+  "errTooManyAttempts": "Too many attempts. Try again in {minutes} min.",
+  "@errTooManyAttempts": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "errIdNotVerified": "We couldn''t verify this number. Check it and try again.",
+  "errLogin": "Wrong number or password.",
+  "signInComingSoon": "{provider} sign-in is coming soon.",
+  "@signInComingSoon": {
+    "placeholders": {
+      "provider": {
+        "type": "String"
+      }
+    }
+  },
+  "keyCopied": "Key copied",
+  "copyCodes": "Copy codes",
+  "codesCopied": "Backup codes copied",
+  "skipForNow": "Skip for now",
+  "skip2faWarning": "2FA is optional during sign-up, but your account stays disabled until you turn it on.",
+  "livenessHold": "Hold still…",
+  "livenessDone": "Selfie captured",
+  "retake": "Retake",
+  "idHintNin": "Your 11-digit National Identification Number.",
+  "idHintPassport": "Passport number as printed on the photo page.",
+  "idHintNationalId": "Number as printed on your card.",
+  "idOtherCountries": "Verify with your national ID, passport or voter card. Your details are checked against the official registry.",
+  "nationalIdNumber": "National Identification Number (NIN)",
+  "passportNumber": "Passport number",
+  "cardNumber": "Card number",
+  "digitsCount": "{count} digits",
+  "@digitsCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "dobHint": "DD / MM / YYYY",
+  "regionsCount": "{count} regions",
+  "@regionsCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "statesCount": "{count} states",
+  "@statesCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "departmentsCount": "{count} departments",
+  "@departmentsCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "selectRegion": "Select region",
+  "selectDepartment": "Select department",
+  "search": "Search",
+  "countryNG": "Nigeria",
+  "countryNE": "Niger",
+  "countryGH": "Ghana",
+  "countryCM": "Cameroon",
+  "countryBJ": "Benin Republic",
+  "countryTG": "Togo",
+  "demoCodeHint": "Test build: use code {code}",
+  "@demoCodeHint": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "pinCreateStep": "1 · Create",
+  "pinConfirmStep": "2 · Confirm",
+  "enterCode": "Enter the 6-digit code",
+  "backupCodeHint": "Backup code",
+  "useAuthenticatorInstead": "Use authenticator code instead",
+  "logOut": "Log out",
+  "passwordHint": "Your password",
+  "forgotPasswordSoon": "Password reset is coming soon. Contact support for help.",
+  "helpSoon": "Support chat opens after sign-up.",
+  "rotatingHeadline": "Stocks, crypto and cross-border money — in one place.",
+  "welcomeTagline": "NGX shares · Bitcoin & stablecoins · Naira, Cedi & CFA wallets",
+  "tier3": "Tier 3",
+  "btcUsdt": "BTC, USDT…",
+  "tryAgain": "Try again",
+  "selfieCaptured": "Selfie captured. We''ll match it to your ID.",
+  "continueLabelShort": "Next",
+  "greetingMorning": "Good morning, {name}",
+  "@greetingMorning": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingAfternoon": "Good afternoon, {name}",
+  "@greetingAfternoon": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingEvening": "Good evening, {name}",
+  "@greetingEvening": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "currencyLabel": "Currency",
+  "p2pTransfer": "P2P transfer",
+  "p2pTransferSub": "Send any wallet to a Jarina user by @username — free",
+  "copied": "Copied",
+  "fundWith": "Fund with: {rails}",
+  "@fundWith": {
+    "placeholders": {
+      "rails": {
+        "type": "String"
+      }
+    }
+  },
+  "lastLoggedIn": "Last logged in {time}",
+  "@lastLoggedIn": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "enterYourPin": "Enter your transaction PIN",
+  "pinToApprove": "Approve {action}",
+  "@pinToApprove": {
+    "placeholders": {
+      "action": {
+        "type": "String"
+      }
+    }
+  },
+  "errWrongPin": "Wrong PIN. {left} attempts left.",
+  "@errWrongPin": {
+    "placeholders": {
+      "left": {
+        "type": "String"
+      }
+    }
+  },
+  "errPinLocked": "Too many wrong PINs. Try again in 15 minutes.",
+  "exceedsBalance": "Exceeds your balance",
+  "convertRateLine": "Rate 1 {from} = {rate} {to} · fee {fee}",
+  "@convertRateLine": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "rate": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      },
+      "fee": {
+        "type": "String"
+      }
+    }
+  },
+  "youReceive": "You receive",
+  "fromBalance": "From · balance {balance}",
+  "@fromBalance": {
+    "placeholders": {
+      "balance": {
+        "type": "String"
+      }
+    }
+  },
+  "convertedTitle": "Converted {from} to {to}",
+  "@convertedTitle": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "requestedAmount": "{name} requested {amount}",
+  "@requestedAmount": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "payTagText": "Pay me on Jarina: {link}",
+  "@payTagText": {
+    "placeholders": {
+      "link": {
+        "type": "String"
+      }
+    }
+  },
+  "shareReceipt": "Share receipt",
+  "depositSimulated": "Test deposit added",
+  "testBuildOnly": "Test build only",
+  "fundingNote": "Deposits from accounts in your own name only. Money usually lands within minutes.",
+  "addCurrency": "Add {currency}",
+  "@addCurrency": {
+    "placeholders": {
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "fundCurrencyFrom": "Fund your {wallet} from {country} using {rails}.",
+  "@fundCurrencyFrom": {
+    "placeholders": {
+      "wallet": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      },
+      "rails": {
+        "type": "String"
+      }
+    }
+  },
+  "walletOf": "{name} wallet",
+  "@walletOf": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "nWallets": "{count} wallets",
+  "@nWallets": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "hideBalances": "Hide balances",
+  "showBalances": "Show balances",
+  "displayCurrency": "Show balances in",
+  "comingSoon": "Coming soon",
+  "paid": "Paid",
+  "declined": "Declined",
+  "pending": "Pending",
+  "failed": "Failed",
+  "currencyConversion": "Currency conversion",
+  "deposit": "Deposit",
+  "billPayment": "Bill payment",
+  "cryptoTrade": "Crypto trade",
+  "p2pPayment": "P2P payment",
+  "receiptNotFound": "Receipt not found"
+}

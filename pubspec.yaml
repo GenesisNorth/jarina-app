@@ -1,0 +1,14 @@
+name: jarina_workspace
+publish_to: none
+
+environment:
+  sdk: ^3.13.2
+
+workspace:
+  - apps/mobile
+  - packages/jarina_core
+  - packages/jarina_ui
+  - tools
+
+dev_dependencies:
+  very_good_analysis: ^9.0.0

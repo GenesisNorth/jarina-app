@@ -1,0 +1,2234 @@
+[
+  {
+    "id": "MTNN",
+    "name": "MTN Nigeria Communications",
+    "sector": "ICT & Telecoms",
+    "price": "861.9",
+    "chg": -0.13,
+    "type": "stock",
+    "badge": {
+      "color": "#E2AE00",
+      "ring": "#faf2d6",
+      "ink": "#17181C",
+      "label": "MTN"
+    },
+    "about": "MTN Nigeria Communications Plc is a mobile telecommunications operator listed on the Nigerian Exchange (NGX)."
+  },
+  {
+    "id": "AIRTELAFRI",
+    "name": "Airtel Africa",
+    "sector": "ICT & Telecoms",
+    "price": "6176",
+    "chg": -1.97,
+    "type": "stock",
+    "badge": {
+      "color": "#D7141A",
+      "ring": "#f9d9da",
+      "ink": "#FFFFFF",
+      "label": "AA"
+    },
+    "about": null
+  },
+  {
+    "id": "DANGCEM",
+    "name": "Dangote Cement",
+    "sector": "Industrial",
+    "price": "1067",
+    "chg": 0.03,
+    "type": "stock",
+    "badge": {
+      "color": "#9C2A2E",
+      "ring": "#efddde",
+      "ink": "#FFFFFF",
+      "label": "DC"
+    },
+    "about": "Dangote Cement Plc is a cement manufacturer with operations across Africa, listed on the NGX."
+  },
+  {
+    "id": "SEPLAT",
+    "name": "Seplat Energy",
+    "sector": "Oil & Gas",
+    "price": "16000.8",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#0E7C61",
+      "ring": "#d8eae6",
+      "ink": "#FFFFFF",
+      "label": "SE"
+    },
+    "about": null
+  },
+  {
+    "id": "BUAFOODS",
+    "name": "BUA Foods",
+    "sector": "Consumer",
+    "price": "700",
+    "chg": -7.97,
+    "type": "stock",
+    "badge": {
+      "color": "#2E7D32",
+      "ring": "#deeade",
+      "ink": "#FFFFFF",
+      "label": "BUA"
+    },
+    "about": null
+  },
+  {
+    "id": "ARADEL",
+    "name": "Aradel Holdings",
+    "sector": "Oil & Gas",
+    "price": "1480",
+    "chg": -3.27,
+    "type": "stock",
+    "badge": {
+      "color": "#0B6E8C",
+      "ring": "#d8e8ed",
+      "ink": "#FFFFFF",
+      "label": "AR"
+    },
+    "about": null
+  },
+  {
+    "id": "GTCO",
+    "name": "Guaranty Trust Holding Co.",
+    "sector": "Banking",
+    "price": "137",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#E35205",
+      "ring": "#fbe3d7",
+      "ink": "#FFFFFF",
+      "label": "GT"
+    },
+    "about": "Guaranty Trust Holding Company Plc is a financial services group listed on the NGX."
+  },
+  {
+    "id": "ZENITHBANK",
+    "name": "Zenith Bank",
+    "sector": "Banking",
+    "price": "134.9",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#C8102E",
+      "ring": "#f6d9de",
+      "ink": "#FFFFFF",
+      "label": "ZE"
+    },
+    "about": "Zenith Bank Plc is a Nigerian commercial bank listed on the NGX."
+  },
+  {
+    "id": "FIRSTHOLDCO",
+    "name": "First HoldCo",
+    "sector": "Financial",
+    "price": "156.65",
+    "chg": 0.03,
+    "type": "stock",
+    "badge": {
+      "color": "#0B3A68",
+      "ring": "#d8dfe7",
+      "ink": "#FFFFFF",
+      "label": "FH"
+    },
+    "about": null
+  },
+  {
+    "id": "UBA",
+    "name": "United Bank for Africa",
+    "sector": "Banking",
+    "price": "45.2",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#C8161D",
+      "ring": "#f6dadb",
+      "ink": "#FFFFFF",
+      "label": "UBA"
+    },
+    "about": null
+  },
+  {
+    "id": "ACCESSCORP",
+    "name": "Access Holdings",
+    "sector": "Financial",
+    "price": "31.55",
+    "chg": 3.44,
+    "type": "stock",
+    "badge": {
+      "color": "#E8761C",
+      "ring": "#fbe9db",
+      "ink": "#FFFFFF",
+      "label": "AC"
+    },
+    "about": null
+  },
+  {
+    "id": "NESTLE",
+    "name": "Nestle Nigeria",
+    "sector": "Consumer",
+    "price": "2824",
+    "chg": -2.62,
+    "type": "stock",
+    "badge": {
+      "color": "#5A6B7A",
+      "ring": "#e5e7ea",
+      "ink": "#FFFFFF",
+      "label": "NE"
+    },
+    "about": null
+  },
+  {
+    "id": "GEREGU",
+    "name": "Geregu Power",
+    "sector": "Utilities",
+    "price": "743.2",
+    "chg": -9.99,
+    "type": "stock",
+    "badge": {
+      "color": "#1E6091",
+      "ring": "#dbe6ed",
+      "ink": "#FFFFFF",
+      "label": "GP"
+    },
+    "about": null
+  },
+  {
+    "id": "BUACEMENT",
+    "name": "BUA Cement",
+    "sector": "Industrial",
+    "price": "284.1",
+    "chg": -4.34,
+    "type": "stock",
+    "badge": {
+      "color": "#B2402B",
+      "ring": "#f3e0dd",
+      "ink": "#FFFFFF",
+      "label": "BUA"
+    },
+    "about": null
+  },
+  {
+    "id": "STANBIC",
+    "name": "Stanbic IBTC Holdings",
+    "sector": "Financial",
+    "price": "162.7",
+    "chg": -0.79,
+    "type": "stock",
+    "badge": {
+      "color": "#1035A0",
+      "ring": "#d9dff0",
+      "ink": "#FFFFFF",
+      "label": "SI"
+    },
+    "about": null
+  },
+  {
+    "id": "HBMNG",
+    "name": "HBM Nigeria",
+    "sector": "Industrial",
+    "price": "361",
+    "chg": 0.14,
+    "type": "stock",
+    "badge": {
+      "color": "#893c24",
+      "ring": "#ece0dc",
+      "ink": "#FFFFFF",
+      "label": "HBM"
+    },
+    "about": null
+  },
+  {
+    "id": "TRANSPOWER",
+    "name": "Transcorp Power",
+    "sector": "Utilities",
+    "price": "160.2",
+    "chg": -10,
+    "type": "stock",
+    "badge": {
+      "color": "#0F5E9C",
+      "ring": "#d9e5ef",
+      "ink": "#FFFFFF",
+      "label": "TP"
+    },
+    "about": null
+  },
+  {
+    "id": "PRESCO",
+    "name": "Presco",
+    "sector": "Agriculture",
+    "price": "1840.8",
+    "chg": -10,
+    "type": "stock",
+    "badge": {
+      "color": "#3B7A2A",
+      "ring": "#e0eadd",
+      "ink": "#FFFFFF",
+      "label": "PR"
+    },
+    "about": null
+  },
+  {
+    "id": "OKOMUOIL",
+    "name": "Okomu Oil Palm",
+    "sector": "Agriculture",
+    "price": "1150",
+    "chg": -9.89,
+    "type": "stock",
+    "badge": {
+      "color": "#5B7F1F",
+      "ring": "#e5ebdb",
+      "ink": "#FFFFFF",
+      "label": "OO"
+    },
+    "about": null
+  },
+  {
+    "id": "FCMB",
+    "name": "FCMB Group",
+    "sector": "Financial",
+    "price": "11.3",
+    "chg": 1.35,
+    "type": "stock",
+    "badge": {
+      "color": "#5B2C83",
+      "ring": "#e5ddeb",
+      "ink": "#FFFFFF",
+      "label": "FCM"
+    },
+    "about": null
+  },
+  {
+    "id": "ABBEYBANK",
+    "name": "Abbey Bank",
+    "sector": "Financial",
+    "price": "7.1",
+    "chg": 2.16,
+    "type": "stock",
+    "badge": {
+      "color": "#245089",
+      "ring": "#dce3ec",
+      "ink": "#FFFFFF",
+      "label": "AB"
+    },
+    "about": null
+  },
+  {
+    "id": "ABCTRANS",
+    "name": "ABC Transport",
+    "sector": "Services",
+    "price": "4.95",
+    "chg": -2.94,
+    "type": "stock",
+    "badge": {
+      "color": "#702489",
+      "ring": "#e8dcec",
+      "ink": "#FFFFFF",
+      "label": "ABC"
+    },
+    "about": null
+  },
+  {
+    "id": "ACADEMY",
+    "name": "Academy Press",
+    "sector": "Services",
+    "price": "5.3",
+    "chg": 3.92,
+    "type": "stock",
+    "badge": {
+      "color": "#892470",
+      "ring": "#ecdce8",
+      "ink": "#FFFFFF",
+      "label": "AP"
+    },
+    "about": null
+  },
+  {
+    "id": "AFRINSURE",
+    "name": "African Alliance Insurance",
+    "sector": "Insurance",
+    "price": "0.2",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#892824",
+      "ring": "#ecdddc",
+      "ink": "#FFFFFF",
+      "label": "AA"
+    },
+    "about": null
+  },
+  {
+    "id": "AFRIPRUD",
+    "name": "Africa Prudential",
+    "sector": "Financial",
+    "price": "10.7",
+    "chg": 1.42,
+    "type": "stock",
+    "badge": {
+      "color": "#245789",
+      "ring": "#dce4ec",
+      "ink": "#FFFFFF",
+      "label": "AP"
+    },
+    "about": null
+  },
+  {
+    "id": "AFROMEDIA",
+    "name": "Afromedia",
+    "sector": "Services",
+    "price": "0.24",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#6c2489",
+      "ring": "#e7dcec",
+      "ink": "#FFFFFF",
+      "label": "AF"
+    },
+    "about": null
+  },
+  {
+    "id": "AIICO",
+    "name": "AIICO Insurance",
+    "sector": "Insurance",
+    "price": "3.9",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#C3002F",
+      "ring": "#f5d6de",
+      "ink": "#FFFFFF",
+      "label": "AI"
+    },
+    "about": null
+  },
+  {
+    "id": "ALEX",
+    "name": "Aluminium Extrusion Industries",
+    "sector": "Natural resources",
+    "price": "9.7",
+    "chg": -2.02,
+    "type": "stock",
+    "badge": {
+      "color": "#895324",
+      "ring": "#ece3dc",
+      "ink": "#FFFFFF",
+      "label": "AE"
+    },
+    "about": null
+  },
+  {
+    "id": "AUSTINLAZ",
+    "name": "Austin Laz & Company",
+    "sector": "Industrial",
+    "price": "2.21",
+    "chg": 0.45,
+    "type": "stock",
+    "badge": {
+      "color": "#896624",
+      "ring": "#ece7dc",
+      "ink": "#FFFFFF",
+      "label": "AL"
+    },
+    "about": null
+  },
+  {
+    "id": "AVACAP",
+    "name": "AVA Capital",
+    "sector": "Financial",
+    "price": "5.65",
+    "chg": 2.73,
+    "type": "stock",
+    "badge": {
+      "color": "#245289",
+      "ring": "#dce3ec",
+      "ink": "#FFFFFF",
+      "label": "AVA"
+    },
+    "about": null
+  },
+  {
+    "id": "BERGER",
+    "name": "Berger Paints",
+    "sector": "Industrial",
+    "price": "132.85",
+    "chg": -9.99,
+    "type": "stock",
+    "badge": {
+      "color": "#892426",
+      "ring": "#ecdcdc",
+      "ink": "#FFFFFF",
+      "label": "BP"
+    },
+    "about": null
+  },
+  {
+    "id": "BETAGLAS",
+    "name": "Beta Glass",
+    "sector": "Industrial",
+    "price": "487",
+    "chg": -4.79,
+    "type": "stock",
+    "badge": {
+      "color": "#895524",
+      "ring": "#ece4dc",
+      "ink": "#FFFFFF",
+      "label": "BG"
+    },
+    "about": null
+  },
+  {
+    "id": "CADBURY",
+    "name": "Cadbury Nigeria",
+    "sector": "Consumer",
+    "price": "59.9",
+    "chg": 0.67,
+    "type": "stock",
+    "badge": {
+      "color": "#4B1E78",
+      "ring": "#e2dbe9",
+      "ink": "#FFFFFF",
+      "label": "CA"
+    },
+    "about": null
+  },
+  {
+    "id": "CAP",
+    "name": "Chemical and Allied Products",
+    "sector": "Industrial",
+    "price": "101.95",
+    "chg": 1.95,
+    "type": "stock",
+    "badge": {
+      "color": "#895a24",
+      "ring": "#ece5dc",
+      "ink": "#FFFFFF",
+      "label": "CAP"
+    },
+    "about": null
+  },
+  {
+    "id": "CAVERTON",
+    "name": "Caverton Offshore Support Group",
+    "sector": "Services",
+    "price": "4.2",
+    "chg": 5,
+    "type": "stock",
+    "badge": {
+      "color": "#14467A",
+      "ring": "#d9e1ea",
+      "ink": "#FFFFFF",
+      "label": "CO"
+    },
+    "about": null
+  },
+  {
+    "id": "CHAMPION",
+    "name": "Champion Breweries",
+    "sector": "Consumer",
+    "price": "9.8",
+    "chg": 1.55,
+    "type": "stock",
+    "badge": {
+      "color": "#8C1D18",
+      "ring": "#eddbda",
+      "ink": "#FFFFFF",
+      "label": "CB"
+    },
+    "about": null
+  },
+  {
+    "id": "CHAMS",
+    "name": "Chams Holding Company",
+    "sector": "ICT & Telecoms",
+    "price": "3.47",
+    "chg": -0.29,
+    "type": "stock",
+    "badge": {
+      "color": "#552489",
+      "ring": "#e4dcec",
+      "ink": "#FFFFFF",
+      "label": "CH"
+    },
+    "about": null
+  },
+  {
+    "id": "CILEASING",
+    "name": "C & I Leasing",
+    "sector": "Services",
+    "price": "5.5",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#892467",
+      "ring": "#ecdce7",
+      "ink": "#FFFFFF",
+      "label": "CI"
+    },
+    "about": null
+  },
+  {
+    "id": "CMFC",
+    "name": "Critical Minerals Financing Corp",
+    "sector": "Financial",
+    "price": "3.26",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#245d89",
+      "ring": "#dce5ec",
+      "ink": "#FFFFFF",
+      "label": "CM"
+    },
+    "about": null
+  },
+  {
+    "id": "CONHALLPLC",
+    "name": "Consolidated Hallmark Holdings",
+    "sector": "Insurance",
+    "price": "7.4",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#893724",
+      "ring": "#ecdfdc",
+      "ink": "#FFFFFF",
+      "label": "CH"
+    },
+    "about": null
+  },
+  {
+    "id": "CONOIL",
+    "name": "Conoil",
+    "sector": "Oil & Gas",
+    "price": "189",
+    "chg": -10,
+    "type": "stock",
+    "badge": {
+      "color": "#2B5DAA",
+      "ring": "#dde5f1",
+      "ink": "#FFFFFF",
+      "label": "CO"
+    },
+    "about": null
+  },
+  {
+    "id": "CORNERST",
+    "name": "Cornerstone Insurance",
+    "sector": "Insurance",
+    "price": "5.1",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#893324",
+      "ring": "#ecdedc",
+      "ink": "#FFFFFF",
+      "label": "CO"
+    },
+    "about": null
+  },
+  {
+    "id": "CUSTODIAN",
+    "name": "Custodian Investment",
+    "sector": "Conglomerate",
+    "price": "68.75",
+    "chg": -1.79,
+    "type": "stock",
+    "badge": {
+      "color": "#00508F",
+      "ring": "#d6e3ed",
+      "ink": "#FFFFFF",
+      "label": "CI"
+    },
+    "about": null
+  },
+  {
+    "id": "CUTIX",
+    "name": "Cutix",
+    "sector": "Industrial",
+    "price": "2.48",
+    "chg": 0.81,
+    "type": "stock",
+    "badge": {
+      "color": "#896224",
+      "ring": "#ece6dc",
+      "ink": "#FFFFFF",
+      "label": "CU"
+    },
+    "about": null
+  },
+  {
+    "id": "CWG",
+    "name": "CWG",
+    "sector": "ICT & Telecoms",
+    "price": "18.2",
+    "chg": 1.11,
+    "type": "stock",
+    "badge": {
+      "color": "#672489",
+      "ring": "#e7dcec",
+      "ink": "#FFFFFF",
+      "label": "CWG"
+    },
+    "about": null
+  },
+  {
+    "id": "DAARCOMM",
+    "name": "DAAR Communications",
+    "sector": "Services",
+    "price": "1.48",
+    "chg": 2.78,
+    "type": "stock",
+    "badge": {
+      "color": "#702489",
+      "ring": "#e8dcec",
+      "ink": "#FFFFFF",
+      "label": "DAA"
+    },
+    "about": null
+  },
+  {
+    "id": "DANGSUGAR",
+    "name": "Dangote Sugar Refinery",
+    "sector": "Consumer",
+    "price": "70.9",
+    "chg": -0.14,
+    "type": "stock",
+    "badge": {
+      "color": "#8A1C3B",
+      "ring": "#ecdbe0",
+      "ink": "#FFFFFF",
+      "label": "DS"
+    },
+    "about": null
+  },
+  {
+    "id": "EKOCORP",
+    "name": "Ekocorp",
+    "sector": "Healthcare",
+    "price": "5.22",
+    "chg": -10,
+    "type": "stock",
+    "badge": {
+      "color": "#248789",
+      "ring": "#dcecec",
+      "ink": "#FFFFFF",
+      "label": "EK"
+    },
+    "about": null
+  },
+  {
+    "id": "ELLAHLAKES",
+    "name": "Ellah Lakes",
+    "sector": "Agriculture",
+    "price": "8",
+    "chg": -3.03,
+    "type": "stock",
+    "badge": {
+      "color": "#5d8924",
+      "ring": "#e5ecdc",
+      "ink": "#FFFFFF",
+      "label": "EL"
+    },
+    "about": null
+  },
+  {
+    "id": "ENAMELWA",
+    "name": "Nigerian Enamelware",
+    "sector": "Consumer",
+    "price": "36.65",
+    "chg": -9.95,
+    "type": "stock",
+    "badge": {
+      "color": "#248958",
+      "ring": "#dcece4",
+      "ink": "#FFFFFF",
+      "label": "NE"
+    },
+    "about": null
+  },
+  {
+    "id": "ETERNA",
+    "name": "Eterna",
+    "sector": "Oil & Gas",
+    "price": "38.3",
+    "chg": -1.79,
+    "type": "stock",
+    "badge": {
+      "color": "#247589",
+      "ring": "#dce9ec",
+      "ink": "#FFFFFF",
+      "label": "ET"
+    },
+    "about": null
+  },
+  {
+    "id": "ETI",
+    "name": "Ecobank Transnational",
+    "sector": "Banking",
+    "price": "69",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#0B5FA5",
+      "ring": "#d8e5f1",
+      "ink": "#FFFFFF",
+      "label": "ETI"
+    },
+    "about": null
+  },
+  {
+    "id": "ETRANZACT",
+    "name": "E-Tranzact International",
+    "sector": "ICT & Telecoms",
+    "price": "13.35",
+    "chg": 6.8,
+    "type": "stock",
+    "badge": {
+      "color": "#662489",
+      "ring": "#e7dcec",
+      "ink": "#FFFFFF",
+      "label": "ET"
+    },
+    "about": null
+  },
+  {
+    "id": "EUNISELL",
+    "name": "Eunisell Interlinked",
+    "sector": "Services",
+    "price": "170.1",
+    "chg": -10,
+    "type": "stock",
+    "badge": {
+      "color": "#6e2489",
+      "ring": "#e8dcec",
+      "ink": "#FFFFFF",
+      "label": "EI"
+    },
+    "about": null
+  },
+  {
+    "id": "FIDELITYBK",
+    "name": "Fidelity Bank",
+    "sector": "Banking",
+    "price": "21.6",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#1D3C8F",
+      "ring": "#dbe0ed",
+      "ink": "#FFFFFF",
+      "label": "FI"
+    },
+    "about": null
+  },
+  {
+    "id": "FIDSON",
+    "name": "Fidson Healthcare",
+    "sector": "Healthcare",
+    "price": "84",
+    "chg": -0.06,
+    "type": "stock",
+    "badge": {
+      "color": "#248789",
+      "ring": "#dcecec",
+      "ink": "#FFFFFF",
+      "label": "FH"
+    },
+    "about": null
+  },
+  {
+    "id": "FTGINSURE",
+    "name": "Fortis Global Insurance",
+    "sector": "Insurance",
+    "price": "1.86",
+    "chg": -7,
+    "type": "stock",
+    "badge": {
+      "color": "#892435",
+      "ring": "#ecdcdf",
+      "ink": "#FFFFFF",
+      "label": "FG"
+    },
+    "about": null
+  },
+  {
+    "id": "FTNCOCOA",
+    "name": "FTN Cocoa Processors",
+    "sector": "Agriculture",
+    "price": "8",
+    "chg": -3.5,
+    "type": "stock",
+    "badge": {
+      "color": "#378924",
+      "ring": "#dfecdc",
+      "ink": "#FFFFFF",
+      "label": "FTN"
+    },
+    "about": null
+  },
+  {
+    "id": "GOLDBREW",
+    "name": "Golden Guinea Breweries",
+    "sector": "Consumer",
+    "price": "6.4",
+    "chg": -9.86,
+    "type": "stock",
+    "badge": {
+      "color": "#24896c",
+      "ring": "#dcece7",
+      "ink": "#FFFFFF",
+      "label": "GG"
+    },
+    "about": null
+  },
+  {
+    "id": "GUINEAINS",
+    "name": "Guinea Insurance",
+    "sector": "Insurance",
+    "price": "0.75",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#892457",
+      "ring": "#ecdce4",
+      "ink": "#FFFFFF",
+      "label": "GU"
+    },
+    "about": null
+  },
+  {
+    "id": "GUINNESS",
+    "name": "Guinness Nigeria",
+    "sector": "Consumer",
+    "price": "384.8",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#3A2E26",
+      "ring": "#dfdedc",
+      "ink": "#FFFFFF",
+      "label": "GU"
+    },
+    "about": null
+  },
+  {
+    "id": "HMCALL",
+    "name": "Haldane McCall",
+    "sector": "Real estate",
+    "price": "3.28",
+    "chg": 9.33,
+    "type": "stock",
+    "badge": {
+      "color": "#896c24",
+      "ring": "#ece7dc",
+      "ink": "#FFFFFF",
+      "label": "HM"
+    },
+    "about": null
+  },
+  {
+    "id": "HONYFLOUR",
+    "name": "Honeywell Flour Mill",
+    "sector": "Consumer",
+    "price": "16.8",
+    "chg": -0.3,
+    "type": "stock",
+    "badge": {
+      "color": "#C2861B",
+      "ring": "#f5ecdb",
+      "ink": "#FFFFFF",
+      "label": "HF"
+    },
+    "about": null
+  },
+  {
+    "id": "IKEJAHOTEL",
+    "name": "Ikeja Hotel",
+    "sector": "Services",
+    "price": "44.6",
+    "chg": 0.22,
+    "type": "stock",
+    "badge": {
+      "color": "#892487",
+      "ring": "#ecdcec",
+      "ink": "#FFFFFF",
+      "label": "IH"
+    },
+    "about": null
+  },
+  {
+    "id": "IMG",
+    "name": "Industrial & Medical Gases Nigeria",
+    "sector": "Natural resources",
+    "price": "29",
+    "chg": 3.57,
+    "type": "stock",
+    "badge": {
+      "color": "#894824",
+      "ring": "#ece2dc",
+      "ink": "#FFFFFF",
+      "label": "IMG"
+    },
+    "about": null
+  },
+  {
+    "id": "INFINITY",
+    "name": "Infinity Trust Mortgage Bank",
+    "sector": "Financial",
+    "price": "12",
+    "chg": 6.67,
+    "type": "stock",
+    "badge": {
+      "color": "#246289",
+      "ring": "#dce6ec",
+      "ink": "#FFFFFF",
+      "label": "IT"
+    },
+    "about": null
+  },
+  {
+    "id": "INTBREW",
+    "name": "International Breweries",
+    "sector": "Consumer",
+    "price": "9.95",
+    "chg": -1.49,
+    "type": "stock",
+    "badge": {
+      "color": "#B8862B",
+      "ring": "#f4ecdd",
+      "ink": "#FFFFFF",
+      "label": "IB"
+    },
+    "about": null
+  },
+  {
+    "id": "INTENEGINS",
+    "name": "International Energy Insurance",
+    "sector": "Insurance",
+    "price": "2.38",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#892433",
+      "ring": "#ecdcde",
+      "ink": "#FFFFFF",
+      "label": "IE"
+    },
+    "about": null
+  },
+  {
+    "id": "JAPAULGOLD",
+    "name": "Japaul Gold & Ventures",
+    "sector": "Oil & Gas",
+    "price": "2.6",
+    "chg": -1.89,
+    "type": "stock",
+    "badge": {
+      "color": "#B8862B",
+      "ring": "#f4ecdd",
+      "ink": "#FFFFFF",
+      "label": "JG"
+    },
+    "about": null
+  },
+  {
+    "id": "JBERGER",
+    "name": "Julius Berger Nigeria",
+    "sector": "Real estate",
+    "price": "279.8",
+    "chg": -9.97,
+    "type": "stock",
+    "badge": {
+      "color": "#E2001A",
+      "ring": "#fad6da",
+      "ink": "#FFFFFF",
+      "label": "JB"
+    },
+    "about": null
+  },
+  {
+    "id": "JOHNHOLT",
+    "name": "John Holt",
+    "sector": "Conglomerate",
+    "price": "8.3",
+    "chg": 7.1,
+    "type": "stock",
+    "badge": {
+      "color": "#244889",
+      "ring": "#dce2ec",
+      "ink": "#FFFFFF",
+      "label": "JH"
+    },
+    "about": null
+  },
+  {
+    "id": "LASACO",
+    "name": "Lasaco Assurance",
+    "sector": "Insurance",
+    "price": "1.74",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#892457",
+      "ring": "#ecdce4",
+      "ink": "#FFFFFF",
+      "label": "LA"
+    },
+    "about": null
+  },
+  {
+    "id": "LEARNAFRCA",
+    "name": "Learn Africa",
+    "sector": "Services",
+    "price": "8.1",
+    "chg": -5.81,
+    "type": "stock",
+    "badge": {
+      "color": "#7f2489",
+      "ring": "#ebdcec",
+      "ink": "#FFFFFF",
+      "label": "LA"
+    },
+    "about": null
+  },
+  {
+    "id": "LEGENDINT",
+    "name": "Legend Internet",
+    "sector": "ICT & Telecoms",
+    "price": "3.7",
+    "chg": 5.71,
+    "type": "stock",
+    "badge": {
+      "color": "#372489",
+      "ring": "#dfdcec",
+      "ink": "#FFFFFF",
+      "label": "LI"
+    },
+    "about": null
+  },
+  {
+    "id": "LINKASSURE",
+    "name": "Linkage Assurance",
+    "sector": "Insurance",
+    "price": "1.7",
+    "chg": -2.86,
+    "type": "stock",
+    "badge": {
+      "color": "#892b24",
+      "ring": "#ecdddc",
+      "ink": "#FFFFFF",
+      "label": "LI"
+    },
+    "about": null
+  },
+  {
+    "id": "LIVESTOCK",
+    "name": "Livestock Feeds",
+    "sector": "Agriculture",
+    "price": "7.4",
+    "chg": -9.2,
+    "type": "stock",
+    "badge": {
+      "color": "#538924",
+      "ring": "#e3ecdc",
+      "ink": "#FFFFFF",
+      "label": "LF"
+    },
+    "about": null
+  },
+  {
+    "id": "MANSARD",
+    "name": "AXA Mansard Insurance",
+    "sector": "Insurance",
+    "price": "11.35",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#1B4F9C",
+      "ring": "#dbe3ef",
+      "ink": "#FFFFFF",
+      "label": "AXA"
+    },
+    "about": null
+  },
+  {
+    "id": "MAYBAKER",
+    "name": "May & Baker Nigeria",
+    "sector": "Healthcare",
+    "price": "40",
+    "chg": -3.15,
+    "type": "stock",
+    "badge": {
+      "color": "#248975",
+      "ring": "#dcece9",
+      "ink": "#FFFFFF",
+      "label": "MB"
+    },
+    "about": null
+  },
+  {
+    "id": "MBENEFIT",
+    "name": "Mutual Benefits Assurance",
+    "sector": "Insurance",
+    "price": "3.34",
+    "chg": 0.91,
+    "type": "stock",
+    "badge": {
+      "color": "#892455",
+      "ring": "#ecdce4",
+      "ink": "#FFFFFF",
+      "label": "MB"
+    },
+    "about": null
+  },
+  {
+    "id": "MEYER",
+    "name": "Meyer",
+    "sector": "Industrial",
+    "price": "14.7",
+    "chg": -7.84,
+    "type": "stock",
+    "badge": {
+      "color": "#89242b",
+      "ring": "#ecdcdd",
+      "ink": "#FFFFFF",
+      "label": "ME"
+    },
+    "about": null
+  },
+  {
+    "id": "MORISON",
+    "name": "Morison Industries",
+    "sector": "Healthcare",
+    "price": "9.4",
+    "chg": -9.62,
+    "type": "stock",
+    "badge": {
+      "color": "#248958",
+      "ring": "#dcece4",
+      "ink": "#FFFFFF",
+      "label": "MI"
+    },
+    "about": null
+  },
+  {
+    "id": "MULTITREX",
+    "name": "Multi-Trex Integrated Foods",
+    "sector": "Consumer",
+    "price": "0.33",
+    "chg": -8.33,
+    "type": "stock",
+    "badge": {
+      "color": "#248929",
+      "ring": "#dcecdd",
+      "ink": "#FFFFFF",
+      "label": "MT"
+    },
+    "about": null
+  },
+  {
+    "id": "MULTIVERSE",
+    "name": "Multiverse Mining and Exploration",
+    "sector": "Natural resources",
+    "price": "17.3",
+    "chg": -9.9,
+    "type": "stock",
+    "badge": {
+      "color": "#896e24",
+      "ring": "#ece8dc",
+      "ink": "#FFFFFF",
+      "label": "MM"
+    },
+    "about": null
+  },
+  {
+    "id": "NAHCO",
+    "name": "Nigerian Aviation Handling Company",
+    "sector": "Services",
+    "price": "151",
+    "chg": -0.66,
+    "type": "stock",
+    "badge": {
+      "color": "#1F5A3A",
+      "ring": "#dbe5df",
+      "ink": "#FFFFFF",
+      "label": "NA"
+    },
+    "about": null
+  },
+  {
+    "id": "NASCON",
+    "name": "NASCON Allied Industries",
+    "sector": "Consumer",
+    "price": "188.7",
+    "chg": 0.11,
+    "type": "stock",
+    "badge": {
+      "color": "#1B6CA8",
+      "ring": "#dbe7f1",
+      "ink": "#FFFFFF",
+      "label": "NA"
+    },
+    "about": null
+  },
+  {
+    "id": "NB",
+    "name": "Nigerian Breweries",
+    "sector": "Consumer",
+    "price": "76",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#1F6E43",
+      "ring": "#dbe8e1",
+      "ink": "#FFFFFF",
+      "label": "NB"
+    },
+    "about": null
+  },
+  {
+    "id": "NCR",
+    "name": "NCR (Nigeria)",
+    "sector": "ICT & Telecoms",
+    "price": "145.1",
+    "chg": -9.99,
+    "type": "stock",
+    "badge": {
+      "color": "#492489",
+      "ring": "#e2dcec",
+      "ink": "#FFFFFF",
+      "label": "NCR"
+    },
+    "about": null
+  },
+  {
+    "id": "NEIMETH",
+    "name": "Neimeth International Pharmaceuticals",
+    "sector": "Healthcare",
+    "price": "7.9",
+    "chg": 0.64,
+    "type": "stock",
+    "badge": {
+      "color": "#248949",
+      "ring": "#dcece2",
+      "ink": "#FFFFFF",
+      "label": "NI"
+    },
+    "about": null
+  },
+  {
+    "id": "NEM",
+    "name": "NEM Insurance",
+    "sector": "Insurance",
+    "price": "28.7",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#892426",
+      "ring": "#ecdcdc",
+      "ink": "#FFFFFF",
+      "label": "NEM"
+    },
+    "about": null
+  },
+  {
+    "id": "NGXGROUP",
+    "name": "Nigerian Exchange Group",
+    "sector": "Financial",
+    "price": "182.6",
+    "chg": -1.3,
+    "type": "stock",
+    "badge": {
+      "color": "#0B6B3A",
+      "ring": "#d8e7df",
+      "ink": "#FFFFFF",
+      "label": "NE"
+    },
+    "about": null
+  },
+  {
+    "id": "NNFM",
+    "name": "Northern Nigeria Flour Mills",
+    "sector": "Consumer",
+    "price": "71.5",
+    "chg": -9.95,
+    "type": "stock",
+    "badge": {
+      "color": "#248932",
+      "ring": "#dcecde",
+      "ink": "#FFFFFF",
+      "label": "NF"
+    },
+    "about": null
+  },
+  {
+    "id": "NPFMCRFBK",
+    "name": "NPF Microfinance Bank",
+    "sector": "Financial",
+    "price": "4.2",
+    "chg": 2.44,
+    "type": "stock",
+    "badge": {
+      "color": "#246789",
+      "ring": "#dce7ec",
+      "ink": "#FFFFFF",
+      "label": "NPF"
+    },
+    "about": null
+  },
+  {
+    "id": "NREIT",
+    "name": "Nigeria Real Estate Investment Trust",
+    "sector": "Real estate",
+    "price": "113",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#897224",
+      "ring": "#ece8dc",
+      "ink": "#FFFFFF",
+      "label": "RE"
+    },
+    "about": null
+  },
+  {
+    "id": "NSLTECH",
+    "name": "Secure Electronic Technology",
+    "sector": "Services",
+    "price": "0.73",
+    "chg": 5.8,
+    "type": "stock",
+    "badge": {
+      "color": "#892461",
+      "ring": "#ecdce6",
+      "ink": "#FFFFFF",
+      "label": "SE"
+    },
+    "about": null
+  },
+  {
+    "id": "OANDO",
+    "name": "Oando",
+    "sector": "Oil & Gas",
+    "price": "35.5",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#C1272D",
+      "ring": "#f5dcdd",
+      "ink": "#FFFFFF",
+      "label": "OA"
+    },
+    "about": null
+  },
+  {
+    "id": "OMATEK",
+    "name": "Omatek Ventures",
+    "sector": "ICT & Telecoms",
+    "price": "1.5",
+    "chg": 1.35,
+    "type": "stock",
+    "badge": {
+      "color": "#3c2489",
+      "ring": "#e0dcec",
+      "ink": "#FFFFFF",
+      "label": "OV"
+    },
+    "about": null
+  },
+  {
+    "id": "PHARMDEKO",
+    "name": "Pharma-Deko",
+    "sector": "Healthcare",
+    "price": "1.83",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#247d89",
+      "ring": "#dceaec",
+      "ink": "#FFFFFF",
+      "label": "PD"
+    },
+    "about": null
+  },
+  {
+    "id": "PREMPAINTS",
+    "name": "Premier Paints",
+    "sector": "Industrial",
+    "price": "27.4",
+    "chg": -9.87,
+    "type": "stock",
+    "badge": {
+      "color": "#892624",
+      "ring": "#ecdcdc",
+      "ink": "#FFFFFF",
+      "label": "PP"
+    },
+    "about": null
+  },
+  {
+    "id": "PRESTIGE",
+    "name": "Prestige Assurance",
+    "sector": "Insurance",
+    "price": "1.4",
+    "chg": 1.45,
+    "type": "stock",
+    "badge": {
+      "color": "#89242b",
+      "ring": "#ecdcdd",
+      "ink": "#FFFFFF",
+      "label": "PR"
+    },
+    "about": null
+  },
+  {
+    "id": "PZ",
+    "name": "PZ Cussons Nigeria",
+    "sector": "Consumer",
+    "price": "74",
+    "chg": 0.27,
+    "type": "stock",
+    "badge": {
+      "color": "#0E5AA7",
+      "ring": "#d8e5f1",
+      "ink": "#FFFFFF",
+      "label": "PZ"
+    },
+    "about": null
+  },
+  {
+    "id": "REDSTAREX",
+    "name": "Red Star Express",
+    "sector": "Services",
+    "price": "13.35",
+    "chg": -9.49,
+    "type": "stock",
+    "badge": {
+      "color": "#892481",
+      "ring": "#ecdceb",
+      "ink": "#FFFFFF",
+      "label": "RS"
+    },
+    "about": null
+  },
+  {
+    "id": "REGALINS",
+    "name": "Regency Alliance Insurance",
+    "sector": "Insurance",
+    "price": "0.72",
+    "chg": 1.41,
+    "type": "stock",
+    "badge": {
+      "color": "#892432",
+      "ring": "#ecdcde",
+      "ink": "#FFFFFF",
+      "label": "RA"
+    },
+    "about": null
+  },
+  {
+    "id": "ROYALEX",
+    "name": "Royal Exchange",
+    "sector": "Financial",
+    "price": "1.07",
+    "chg": -0.93,
+    "type": "stock",
+    "badge": {
+      "color": "#243089",
+      "ring": "#dcdeec",
+      "ink": "#FFFFFF",
+      "label": "RE"
+    },
+    "about": null
+  },
+  {
+    "id": "RTBRISCOE",
+    "name": "R. T. Briscoe (Nigeria)",
+    "sector": "Services",
+    "price": "10.7",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#672489",
+      "ring": "#e7dcec",
+      "ink": "#FFFFFF",
+      "label": "RT"
+    },
+    "about": null
+  },
+  {
+    "id": "SCOA",
+    "name": "SCOA Nigeria",
+    "sector": "Conglomerate",
+    "price": "29.75",
+    "chg": -9.98,
+    "type": "stock",
+    "badge": {
+      "color": "#244889",
+      "ring": "#dce2ec",
+      "ink": "#FFFFFF",
+      "label": "SCO"
+    },
+    "about": null
+  },
+  {
+    "id": "SFSREIT",
+    "name": "SFS Real Estate Investment Trust",
+    "sector": "Real estate",
+    "price": "459.7",
+    "chg": 9.78,
+    "type": "stock",
+    "badge": {
+      "color": "#896e24",
+      "ring": "#ece8dc",
+      "ink": "#FFFFFF",
+      "label": "SFS"
+    },
+    "about": null
+  },
+  {
+    "id": "SKYAVN",
+    "name": "Skyway Aviation Handling Company",
+    "sector": "Services",
+    "price": "154.1",
+    "chg": -9.99,
+    "type": "stock",
+    "badge": {
+      "color": "#692489",
+      "ring": "#e7dcec",
+      "ink": "#FFFFFF",
+      "label": "SA"
+    },
+    "about": null
+  },
+  {
+    "id": "SOVRENINS",
+    "name": "Sovereign Trust Insurance",
+    "sector": "Insurance",
+    "price": "2.4",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#89244d",
+      "ring": "#ecdce3",
+      "ink": "#FFFFFF",
+      "label": "ST"
+    },
+    "about": null
+  },
+  {
+    "id": "STERLINGNG",
+    "name": "Sterling Financial Holdings",
+    "sector": "Banking",
+    "price": "7.7",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#C7262F",
+      "ring": "#f6dcde",
+      "ink": "#FFFFFF",
+      "label": "SF"
+    },
+    "about": null
+  },
+  {
+    "id": "SUNUASSUR",
+    "name": "Sunu Assurances Nigeria",
+    "sector": "Insurance",
+    "price": "2.88",
+    "chg": -4,
+    "type": "stock",
+    "badge": {
+      "color": "#89243f",
+      "ring": "#ecdce0",
+      "ink": "#FFFFFF",
+      "label": "SA"
+    },
+    "about": null
+  },
+  {
+    "id": "TANTALIZER",
+    "name": "Tantalizers",
+    "sector": "Services",
+    "price": "3.97",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#7a2489",
+      "ring": "#eadcec",
+      "ink": "#FFFFFF",
+      "label": "TA"
+    },
+    "about": null
+  },
+  {
+    "id": "THOMASWY",
+    "name": "Thomas Wyatt Nigeria",
+    "sector": "Natural resources",
+    "price": "2.95",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#7f8924",
+      "ring": "#ebecdc",
+      "ink": "#FFFFFF",
+      "label": "TW"
+    },
+    "about": null
+  },
+  {
+    "id": "TOTAL",
+    "name": "TotalEnergies Marketing Nigeria",
+    "sector": "Oil & Gas",
+    "price": "518.4",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#C8102E",
+      "ring": "#f6d9de",
+      "ink": "#FFFFFF",
+      "label": "TM"
+    },
+    "about": null
+  },
+  {
+    "id": "TRANSCOHOT",
+    "name": "Transcorp Hotels",
+    "sector": "Services",
+    "price": "262.4",
+    "chg": -1.17,
+    "type": "stock",
+    "badge": {
+      "color": "#642489",
+      "ring": "#e6dcec",
+      "ink": "#FFFFFF",
+      "label": "TH"
+    },
+    "about": null
+  },
+  {
+    "id": "TRANSCORP",
+    "name": "Transnational Corporation",
+    "sector": "Conglomerate",
+    "price": "36.1",
+    "chg": -2.43,
+    "type": "stock",
+    "badge": {
+      "color": "#123C69",
+      "ring": "#d9e0e7",
+      "ink": "#FFFFFF",
+      "label": "TC"
+    },
+    "about": null
+  },
+  {
+    "id": "TRANSEXPR",
+    "name": "Trans-Nationwide Express",
+    "sector": "Services",
+    "price": "2.88",
+    "chg": -2.37,
+    "type": "stock",
+    "badge": {
+      "color": "#822489",
+      "ring": "#ebdcec",
+      "ink": "#FFFFFF",
+      "label": "TN"
+    },
+    "about": null
+  },
+  {
+    "id": "TRIPPLEG",
+    "name": "Tripple Gee and Company",
+    "sector": "Industrial",
+    "price": "2.32",
+    "chg": -0.43,
+    "type": "stock",
+    "badge": {
+      "color": "#893e24",
+      "ring": "#ece0dc",
+      "ink": "#FFFFFF",
+      "label": "TG"
+    },
+    "about": null
+  },
+  {
+    "id": "UACN",
+    "name": "UAC of Nigeria",
+    "sector": "Conglomerate",
+    "price": "176.55",
+    "chg": 0.66,
+    "type": "stock",
+    "badge": {
+      "color": "#243589",
+      "ring": "#dcdfec",
+      "ink": "#FFFFFF",
+      "label": "UAC"
+    },
+    "about": null
+  },
+  {
+    "id": "UCAP",
+    "name": "United Capital",
+    "sector": "Financial",
+    "price": "17.1",
+    "chg": 0.29,
+    "type": "stock",
+    "badge": {
+      "color": "#7A1E2C",
+      "ring": "#eadbdd",
+      "ink": "#FFFFFF",
+      "label": "UC"
+    },
+    "about": null
+  },
+  {
+    "id": "UHOMREIT",
+    "name": "UH Real Estate Investment Trust",
+    "sector": "Real estate",
+    "price": "70.15",
+    "chg": 0.21,
+    "type": "stock",
+    "badge": {
+      "color": "#893724",
+      "ring": "#ecdfdc",
+      "ink": "#FFFFFF",
+      "label": "UH"
+    },
+    "about": null
+  },
+  {
+    "id": "UNILEVER",
+    "name": "Unilever Nigeria",
+    "sector": "Consumer",
+    "price": "100.5",
+    "chg": -8.59,
+    "type": "stock",
+    "badge": {
+      "color": "#1F36C7",
+      "ring": "#dbdff6",
+      "ink": "#FFFFFF",
+      "label": "UN"
+    },
+    "about": null
+  },
+  {
+    "id": "UNIONDICON",
+    "name": "Union Dicon Salt",
+    "sector": "Consumer",
+    "price": "21.4",
+    "chg": -9.89,
+    "type": "stock",
+    "badge": {
+      "color": "#24895c",
+      "ring": "#dcece5",
+      "ink": "#FFFFFF",
+      "label": "UD"
+    },
+    "about": null
+  },
+  {
+    "id": "UNITYBNK",
+    "name": "Unity Bank",
+    "sector": "Banking",
+    "price": "3.18",
+    "chg": 110.6,
+    "type": "stock",
+    "badge": {
+      "color": "#894b24",
+      "ring": "#ece2dc",
+      "ink": "#FFFFFF",
+      "label": "UN"
+    },
+    "about": null
+  },
+  {
+    "id": "UNIVINSURE",
+    "name": "Universal Insurance",
+    "sector": "Insurance",
+    "price": "0.77",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#89243a",
+      "ring": "#ecdcdf",
+      "ink": "#FFFFFF",
+      "label": "UN"
+    },
+    "about": null
+  },
+  {
+    "id": "UPDC",
+    "name": "UPDC",
+    "sector": "Real estate",
+    "price": "3.85",
+    "chg": 0,
+    "type": "stock",
+    "badge": {
+      "color": "#894624",
+      "ring": "#ece1dc",
+      "ink": "#FFFFFF",
+      "label": "UPD"
+    },
+    "about": null
+  },
+  {
+    "id": "UPDCREIT",
+    "name": "UPDC Real Estate Investment Trust",
+    "sector": "Real estate",
+    "price": "18.95",
+    "chg": 1.07,
+    "type": "stock",
+    "badge": {
+      "color": "#894324",
+      "ring": "#ece1dc",
+      "ink": "#FFFFFF",
+      "label": "UPD"
+    },
+    "about": null
+  },
+  {
+    "id": "UPL",
+    "name": "University Press",
+    "sector": "Services",
+    "price": "5",
+    "chg": 9.89,
+    "type": "stock",
+    "badge": {
+      "color": "#612489",
+      "ring": "#e6dcec",
+      "ink": "#FFFFFF",
+      "label": "UPL"
+    },
+    "about": null
+  },
+  {
+    "id": "VERITASKAP",
+    "name": "Veritas Kapital Assurance",
+    "sector": "Insurance",
+    "price": "1.12",
+    "chg": 0.9,
+    "type": "stock",
+    "badge": {
+      "color": "#892429",
+      "ring": "#ecdcdd",
+      "ink": "#FFFFFF",
+      "label": "VK"
+    },
+    "about": null
+  },
+  {
+    "id": "VFDGROUP",
+    "name": "VFD Group",
+    "sector": "Financial",
+    "price": "11.2",
+    "chg": -1.75,
+    "type": "stock",
+    "badge": {
+      "color": "#247f89",
+      "ring": "#dcebec",
+      "ink": "#FFFFFF",
+      "label": "VFD"
+    },
+    "about": null
+  },
+  {
+    "id": "VITAFOAM",
+    "name": "Vitafoam Nigeria",
+    "sector": "Consumer",
+    "price": "174.6",
+    "chg": -10,
+    "type": "stock",
+    "badge": {
+      "color": "#24894d",
+      "ring": "#dcece3",
+      "ink": "#FFFFFF",
+      "label": "VI"
+    },
+    "about": null
+  },
+  {
+    "id": "WAPIC",
+    "name": "Coronation Insurance",
+    "sector": "Insurance",
+    "price": "2.37",
+    "chg": 2.16,
+    "type": "stock",
+    "badge": {
+      "color": "#89243a",
+      "ring": "#ecdcdf",
+      "ink": "#FFFFFF",
+      "label": "CO"
+    },
+    "about": null
+  },
+  {
+    "id": "WEMABANK",
+    "name": "Wema Bank",
+    "sector": "Banking",
+    "price": "30.6",
+    "chg": -0.49,
+    "type": "stock",
+    "badge": {
+      "color": "#7A1F5C",
+      "ring": "#eadbe5",
+      "ink": "#FFFFFF",
+      "label": "WE"
+    },
+    "about": null
+  },
+  {
+    "id": "BTC",
+    "name": "Bitcoin",
+    "price": "98000000",
+    "chg": 1.2,
+    "type": "crypto",
+    "badge": {
+      "color": "#B35F00",
+      "ring": "#FDEBD3",
+      "ink": "#FFFFFF",
+      "label": "₿"
+    },
+    "about": "Bitcoin is a decentralised digital currency that runs on a public, peer-to-peer network."
+  },
+  {
+    "id": "ETH",
+    "name": "Ethereum",
+    "price": "2650000",
+    "chg": -0.8,
+    "type": "crypto",
+    "badge": {
+      "color": "#3C3F8F",
+      "ring": "#E6E8F7",
+      "ink": "#FFFFFF",
+      "label": "Ξ"
+    },
+    "about": "Ethereum is a programmable blockchain. ETH is its native asset, used to pay network fees."
+  },
+  {
+    "id": "USDT",
+    "name": "Tether USD",
+    "price": "1550",
+    "chg": 0,
+    "type": "crypto",
+    "badge": {
+      "color": "#0E7C61",
+      "ring": "#DDF3EC",
+      "ink": "#FFFFFF",
+      "label": "₮"
+    },
+    "about": "Tether (USDT) is a stablecoin designed to track the US dollar. Jarina uses stablecoins to settle cross-border transfers."
+  },
+  {
+    "id": "BNB",
+    "name": "BNB",
+    "price": "890000",
+    "chg": 0.6,
+    "type": "crypto",
+    "badge": {
+      "color": "#8A6500",
+      "ring": "#FCF1CF",
+      "ink": "#FFFFFF",
+      "label": "◇"
+    },
+    "about": null
+  },
+  {
+    "id": "USDC",
+    "name": "USD Coin",
+    "price": "1549",
+    "chg": 0,
+    "type": "crypto",
+    "badge": {
+      "color": "#1F5BA8",
+      "ring": "#E0ECFA",
+      "ink": "#FFFFFF",
+      "label": "$"
+    },
+    "about": null
+  },
+  {
+    "id": "XRP",
+    "name": "XRP",
+    "price": "3700",
+    "chg": -1.2,
+    "type": "crypto",
+    "badge": {
+      "color": "#23292F",
+      "ring": "#E7E9EC",
+      "ink": "#FFFFFF",
+      "label": "✕"
+    },
+    "about": null
+  },
+  {
+    "id": "SOL",
+    "name": "Solana",
+    "price": "210000",
+    "chg": 2.4,
+    "type": "crypto",
+    "badge": {
+      "color": "#6A2FB8",
+      "ring": "#EFE4FB",
+      "ink": "#FFFFFF",
+      "label": "◎"
+    },
+    "about": null
+  },
+  {
+    "id": "TRX",
+    "name": "TRON",
+    "price": "480",
+    "chg": 0.4,
+    "type": "crypto",
+    "badge": {
+      "color": "#B21F2A",
+      "ring": "#FBE3E3",
+      "ink": "#FFFFFF",
+      "label": "▽"
+    },
+    "about": null
+  },
+  {
+    "id": "HYPE",
+    "name": "Hyperliquid",
+    "price": "52000",
+    "chg": 3.1,
+    "type": "crypto",
+    "badge": {
+      "color": "#11786A",
+      "ring": "#DDF4F0",
+      "ink": "#FFFFFF",
+      "label": "H"
+    },
+    "about": null
+  },
+  {
+    "id": "DOGE",
+    "name": "Dogecoin",
+    "price": "280",
+    "chg": -2.2,
+    "type": "crypto",
+    "badge": {
+      "color": "#8C6B12",
+      "ring": "#F8EFD6",
+      "ink": "#FFFFFF",
+      "label": "Ð"
+    },
+    "about": null
+  },
+  {
+    "id": "ADA",
+    "name": "Cardano",
+    "price": "950",
+    "chg": -0.8,
+    "type": "crypto",
+    "badge": {
+      "color": "#1E3F8F",
+      "ring": "#E2E9F8",
+      "ink": "#FFFFFF",
+      "label": "₳"
+    },
+    "about": null
+  },
+  {
+    "id": "TON",
+    "name": "Toncoin",
+    "price": "4300",
+    "chg": -1.5,
+    "type": "crypto",
+    "badge": {
+      "color": "#0A6CA8",
+      "ring": "#DDEFFB",
+      "ink": "#FFFFFF",
+      "label": "◆"
+    },
+    "about": null
+  },
+  {
+    "id": "LINK",
+    "name": "Chainlink",
+    "price": "24000",
+    "chg": 1.1,
+    "type": "crypto",
+    "badge": {
+      "color": "#2A4FB5",
+      "ring": "#E1E8FA",
+      "ink": "#FFFFFF",
+      "label": "⬡"
+    },
+    "about": null
+  },
+  {
+    "id": "AVAX",
+    "name": "Avalanche",
+    "price": "31000",
+    "chg": 0.9,
+    "type": "crypto",
+    "badge": {
+      "color": "#B3222A",
+      "ring": "#FBE2E2",
+      "ink": "#FFFFFF",
+      "label": "▲"
+    },
+    "about": null
+  },
+  {
+    "id": "SUI",
+    "name": "Sui",
+    "price": "5200",
+    "chg": 2.7,
+    "type": "crypto",
+    "badge": {
+      "color": "#2C7FBF",
+      "ring": "#E0F0FB",
+      "ink": "#FFFFFF",
+      "label": "◈"
+    },
+    "about": null
+  },
+  {
+    "id": "XLM",
+    "name": "Stellar",
+    "price": "560",
+    "chg": -0.6,
+    "type": "crypto",
+    "badge": {
+      "color": "#222222",
+      "ring": "#E8E8E8",
+      "ink": "#FFFFFF",
+      "label": "✦"
+    },
+    "about": null
+  },
+  {
+    "id": "DOT",
+    "name": "Polkadot",
+    "price": "6100",
+    "chg": -1,
+    "type": "crypto",
+    "badge": {
+      "color": "#B0115E",
+      "ring": "#FCE3EF",
+      "ink": "#FFFFFF",
+      "label": "●"
+    },
+    "about": null
+  },
+  {
+    "id": "LTC",
+    "name": "Litecoin",
+    "price": "130000",
+    "chg": 0.3,
+    "type": "crypto",
+    "badge": {
+      "color": "#3A4C74",
+      "ring": "#E9ECF2",
+      "ink": "#FFFFFF",
+      "label": "Ł"
+    },
+    "about": null
+  }
+]

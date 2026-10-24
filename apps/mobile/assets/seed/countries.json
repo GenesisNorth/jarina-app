@@ -1,0 +1,179 @@
+[
+  {
+    "iso": "NG",
+    "name": "Nigeria",
+    "native": "Najeriya · Nigeria",
+    "code": "+234",
+    "sample": "0801 234 5678",
+    "len": 11,
+    "langs": [
+      "en",
+      "ha"
+    ],
+    "regionWord": "State",
+    "regions": [
+      "Abia",
+      "Adamawa",
+      "Akwa Ibom",
+      "Anambra",
+      "Bauchi",
+      "Bayelsa",
+      "Benue",
+      "Borno",
+      "Cross River",
+      "Delta",
+      "Ebonyi",
+      "Edo",
+      "Ekiti",
+      "Enugu",
+      "FCT – Abuja",
+      "Gombe",
+      "Imo",
+      "Jigawa",
+      "Kaduna",
+      "Kano",
+      "Katsina",
+      "Kebbi",
+      "Kogi",
+      "Kwara",
+      "Lagos",
+      "Nasarawa",
+      "Niger",
+      "Ogun",
+      "Ondo",
+      "Osun",
+      "Oyo",
+      "Plateau",
+      "Rivers",
+      "Sokoto",
+      "Taraba",
+      "Yobe",
+      "Zamfara"
+    ]
+  },
+  {
+    "iso": "NE",
+    "name": "Niger",
+    "native": "Nijar · Niger",
+    "code": "+227",
+    "sample": "90 12 34 56",
+    "len": 8,
+    "langs": [
+      "fr",
+      "ha"
+    ],
+    "regionWord": "Region",
+    "regions": [
+      "Agadez",
+      "Diffa",
+      "Dosso",
+      "Maradi",
+      "Niamey",
+      "Tahoua",
+      "Tillabéri",
+      "Zinder"
+    ]
+  },
+  {
+    "iso": "GH",
+    "name": "Ghana",
+    "native": "Ghana",
+    "code": "+233",
+    "sample": "024 123 4567",
+    "len": 10,
+    "langs": [
+      "en"
+    ],
+    "regionWord": "Region",
+    "regions": [
+      "Ahafo",
+      "Ashanti",
+      "Bono",
+      "Bono East",
+      "Central",
+      "Eastern",
+      "Greater Accra",
+      "North East",
+      "Northern",
+      "Oti",
+      "Savannah",
+      "Upper East",
+      "Upper West",
+      "Volta",
+      "Western",
+      "Western North"
+    ]
+  },
+  {
+    "iso": "CM",
+    "name": "Cameroon",
+    "native": "Kamaru · Cameroun",
+    "code": "+237",
+    "sample": "6 71 23 45 67",
+    "len": 9,
+    "langs": [
+      "fr",
+      "ha"
+    ],
+    "regionWord": "Region",
+    "regions": [
+      "Adamaoua",
+      "Centre",
+      "East",
+      "Far North",
+      "Littoral",
+      "North",
+      "North-West",
+      "South",
+      "South-West",
+      "West"
+    ]
+  },
+  {
+    "iso": "BJ",
+    "name": "Benin Republic",
+    "native": "Benin · Bénin",
+    "code": "+229",
+    "sample": "01 90 12 34 56",
+    "len": 10,
+    "langs": [
+      "fr",
+      "ha"
+    ],
+    "regionWord": "Department",
+    "regions": [
+      "Alibori",
+      "Atacora",
+      "Atlantique",
+      "Borgou",
+      "Collines",
+      "Couffo",
+      "Donga",
+      "Littoral",
+      "Mono",
+      "Ouémé",
+      "Plateau",
+      "Zou"
+    ]
+  },
+  {
+    "iso": "TG",
+    "name": "Togo",
+    "native": "Togo",
+    "code": "+228",
+    "sample": "90 12 34 56",
+    "len": 8,
+    "langs": [
+      "fr",
+      "ha"
+    ],
+    "regionWord": "Region",
+    "regions": [
+      "Centrale",
+      "Kara",
+      "Maritime",
+      "Plateaux",
+      "Savanes"
+    ]
+  }
+]

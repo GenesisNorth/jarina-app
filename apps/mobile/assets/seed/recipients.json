@@ -1,0 +1,127 @@
+[
+  {
+    "id": "r1",
+    "ini": "HI",
+    "name": "Halima Issoufou",
+    "tag": "Maradi, Niger",
+    "sub": "Maradi, Niger · Mobile money",
+    "cur": "XOF",
+    "kind": "xb",
+    "av": {
+      "bg": "#DCE8FB",
+      "skin": "#8D5524",
+      "style": "hijab",
+      "cloth": "#0E6E68"
+    }
+  },
+  {
+    "id": "r5",
+    "ini": "ZY",
+    "name": "Zainab Yusuf",
+    "tag": "@zainab",
+    "sub": "Jarina user · @zainab",
+    "cur": "NGN",
+    "kind": "jarina",
+    "av": {
+      "bg": "#FBE9DC",
+      "skin": "#9C6B43",
+      "style": "hijab",
+      "cloth": "#7A2E4A"
+    }
+  },
+  {
+    "id": "r6",
+    "ini": "MD",
+    "name": "Musa Danjuma",
+    "tag": "@musa_dj",
+    "sub": "Jarina user · @musa_dj",
+    "cur": "NGN",
+    "kind": "jarina",
+    "av": {
+      "bg": "#E3F1E8",
+      "skin": "#5A3A22",
+      "style": "cap",
+      "cloth": "#2F4858",
+      "cap": "#F2F2F2",
+      "beard": true
+    }
+  },
+  {
+    "id": "r2",
+    "ini": "AM",
+    "name": "Abdoulaye Mahamat",
+    "tag": "N'Djamena, Chad",
+    "sub": "N'Djamena, Chad · Mobile money",
+    "cur": "XAF",
+    "kind": "xb",
+    "av": {
+      "bg": "#EFE7FA",
+      "skin": "#6B4423",
+      "style": "cap",
+      "cloth": "#5B4636",
+      "cap": "#B8323A",
+      "beard": true
+    }
+  },
+  {
+    "id": "r7",
+    "ini": "FB",
+    "name": "Fatima Bello",
+    "tag": "@fatimab",
+    "sub": "Jarina user · @fatimab",
+    "cur": "NGN",
+    "kind": "jarina",
+    "av": {
+      "bg": "#FFF2D6",
+      "skin": "#B07A4F",
+      "style": "hijab",
+      "cloth": "#1F3F8F"
+    }
+  },
+  {
+    "id": "r3",
+    "ini": "IM",
+    "name": "Ibrahim Musa",
+    "tag": "Bank ••4821",
+    "sub": "Bank account ••4821",
+    "cur": "NGN",
+    "kind": "bank",
+    "av": {
+      "bg": "#E4ECF7",
+      "skin": "#7A4A2A",
+      "style": "hair",
+      "cloth": "#3A4A6B"
+    }
+  },
+  {
+    "id": "r4",
+    "ini": "AB",
+    "name": "Aïssatou Bouba",
+    "tag": "Garoua, Cameroon",
+    "sub": "Garoua, Cameroon · Mobile money",
+    "cur": "XAF",
+    "kind": "xb",
+    "av": {
+      "bg": "#FDE3E0",
+      "skin": "#A0663C",
+      "style": "wrap",
+      "cloth": "#C2571A"
+    }
+  },
+  {
+    "id": "r8",
+    "ini": "MT",
+    "name": "Moussa Traoré",
+    "tag": "Bamako, Mali",
+    "sub": "Bamako, Mali · Mobile money",
+    "cur": "XOF",
+    "kind": "xb",
+    "av": {
+      "bg": "#E0F0F4",
+      "skin": "#4B2E1C",
+      "style": "hair",
+      "cloth": "#1E5F74",
+      "beard": true
+    }
+  }
+]

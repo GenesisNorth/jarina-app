@@ -1,0 +1,15 @@
+name: jarina_core
+description: Pure-Dart foundations for Jarina (money, results, failures, formatters).
+version: 0.1.0
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: ^3.13.2
+dependencies:
+  crypto: ^3.0.7
+  decimal: ^3.2.6
+  intl: ^0.20.3
+  meta: ^1.19.0
+dev_dependencies:
+  test: ^1.31.1

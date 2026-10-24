@@ -1,0 +1,9 @@
+name: jarina_tools
+description: Code generators that turn the prototype spec into Dart sources.
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: ^3.13.2
+dependencies:
+  path: ^1.9.1

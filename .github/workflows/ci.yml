@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.47.2
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - name: Generated code is up to date
+        run: |
+          (cd apps/mobile && dart run build_runner build && flutter gen-l10n)
+          git diff --exit-code -- '*.g.dart' 'apps/mobile/lib/l10n/gen'
+      - name: Format
+        run: dart format --output=none --set-exit-if-changed $(git ls-files '*.dart' | grep -v -E '\.g\.dart$|/l10n/gen/')
+      - name: Analyze
+        run: dart analyze --fatal-infos
+      - name: Test core
+        run: (cd packages/jarina_core && dart test)
+      - name: Test app
+        run: (cd apps/mobile && flutter test)
