@@ -5685,11 +5685,11 @@ abstract class AppLocalizations {
   /// **'fee ₦300'**
   String get fee300;
 
-  /// No description provided for @free22.
+  /// No description provided for @free3.
   ///
   /// In en, this message translates to:
   /// **'free'**
-  String get free22;
+  String get free3;
 
   /// No description provided for @halimaGetsXof1950.
   ///
@@ -7994,6 +7994,348 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Auto-swap on · to {target}'**
   String autoSwapOn(String target);
+
+  /// No description provided for @enterAmountToSendOrRequest.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter amount to send or request'**
+  String get enterAmountToSendOrRequest;
+
+  /// No description provided for @transferTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Transfer to'**
+  String get transferTo;
+
+  /// No description provided for @bankAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank account'**
+  String get bankAccount;
+
+  /// No description provided for @askToBePaid.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask to be paid'**
+  String get askToBePaid;
+
+  /// No description provided for @beneficiaries.
+  ///
+  /// In en, this message translates to:
+  /// **'Beneficiaries'**
+  String get beneficiaries;
+
+  /// No description provided for @lastSent.
+  ///
+  /// In en, this message translates to:
+  /// **'Last sent'**
+  String get lastSent;
+
+  /// No description provided for @onJarinaFree.
+  ///
+  /// In en, this message translates to:
+  /// **'On Jarina · free & instant'**
+  String get onJarinaFree;
+
+  /// No description provided for @crossBorderMinutes.
+  ///
+  /// In en, this message translates to:
+  /// **'Cross-border · arrives in minutes'**
+  String get crossBorderMinutes;
+
+  /// No description provided for @sendToJarinaUser.
+  ///
+  /// In en, this message translates to:
+  /// **'Send to a Jarina user'**
+  String get sendToJarinaUser;
+
+  /// No description provided for @jarinaP2p.
+  ///
+  /// In en, this message translates to:
+  /// **'Jarina P2P'**
+  String get jarinaP2p;
+
+  /// No description provided for @p2pHeaderSub.
+  ///
+  /// In en, this message translates to:
+  /// **'Send or request from any Jarina user · you are @{handle}'**
+  String p2pHeaderSub(String handle);
+
+  /// No description provided for @instant.
+  ///
+  /// In en, this message translates to:
+  /// **'Instant'**
+  String get instant;
+
+  /// No description provided for @zeroFees.
+  ///
+  /// In en, this message translates to:
+  /// **'0 fees'**
+  String get zeroFees;
+
+  /// No description provided for @cashCryptoStocks.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash, crypto & stocks'**
+  String get cashCryptoStocks;
+
+  /// No description provided for @sendTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Send to'**
+  String get sendTo;
+
+  /// No description provided for @requestFrom.
+  ///
+  /// In en, this message translates to:
+  /// **'Request from'**
+  String get requestFrom;
+
+  /// No description provided for @jarinaUsername.
+  ///
+  /// In en, this message translates to:
+  /// **'Jarina username'**
+  String get jarinaUsername;
+
+  /// No description provided for @youSend.
+  ///
+  /// In en, this message translates to:
+  /// **'You send'**
+  String get youSend;
+
+  /// No description provided for @youRequest.
+  ///
+  /// In en, this message translates to:
+  /// **'You request'**
+  String get youRequest;
+
+  /// No description provided for @sameAsset.
+  ///
+  /// In en, this message translates to:
+  /// **'Same asset'**
+  String get sameAsset;
+
+  /// No description provided for @addANoteOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Add a note (optional)'**
+  String get addANoteOptional;
+
+  /// No description provided for @chooseJarinaUser.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a Jarina user'**
+  String get chooseJarinaUser;
+
+  /// No description provided for @requestSent.
+  ///
+  /// In en, this message translates to:
+  /// **'Request sent'**
+  String get requestSent;
+
+  /// No description provided for @p2pNote.
+  ///
+  /// In en, this message translates to:
+  /// **'P2P transfers between Jarina users are free and arrive instantly. You\'\'ll confirm with your PIN. Stock transfers move shares between Jarina accounts with our partner broker.'**
+  String get p2pNote;
+
+  /// No description provided for @slideToSendAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Slide to send {amount}'**
+  String slideToSendAmount(String amount);
+
+  /// No description provided for @slideToRequestAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Slide to request {amount}'**
+  String slideToRequestAmount(String amount);
+
+  /// No description provided for @sendAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Send {amount}'**
+  String sendAmount(String amount);
+
+  /// No description provided for @toSearchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Name, @tag, phone or account number'**
+  String get toSearchHint;
+
+  /// No description provided for @toLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'To'**
+  String get toLabel;
+
+  /// No description provided for @fromWalletFee.
+  ///
+  /// In en, this message translates to:
+  /// **'From {wallet} · fee {fee}'**
+  String fromWalletFee(String wallet, String fee);
+
+  /// No description provided for @recipientGetsFx.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} gets {amount} · rate 1 NGN = {rate} {currency}'**
+  String recipientGetsFx(String name, String amount, String rate, String currency);
+
+  /// No description provided for @rateLocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Rate locked for 10 minutes'**
+  String get rateLocked;
+
+  /// No description provided for @sentTo.
+  ///
+  /// In en, this message translates to:
+  /// **'{amount} sent to {name}'**
+  String sentTo(String amount, String name);
+
+  /// No description provided for @sentToSub.
+  ///
+  /// In en, this message translates to:
+  /// **'It\'\'s on its way. We\'\'ll notify you when it\'\'s delivered.'**
+  String get sentToSub;
+
+  /// No description provided for @sentInstantSub.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivered instantly. Free.'**
+  String get sentInstantSub;
+
+  /// No description provided for @requestSentTo.
+  ///
+  /// In en, this message translates to:
+  /// **'You asked @{handle} for {amount}'**
+  String requestSentTo(String handle, String amount);
+
+  /// No description provided for @selectBank.
+  ///
+  /// In en, this message translates to:
+  /// **'Select bank'**
+  String get selectBank;
+
+  /// No description provided for @addBankRecipient.
+  ///
+  /// In en, this message translates to:
+  /// **'Send to a bank account'**
+  String get addBankRecipient;
+
+  /// No description provided for @nipFee.
+  ///
+  /// In en, this message translates to:
+  /// **'NIP · {fee} fee'**
+  String nipFee(String fee);
+
+  /// No description provided for @countriesCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{n} countries'**
+  String countriesCount(String n);
+
+  /// No description provided for @p2pFreeInstant.
+  ///
+  /// In en, this message translates to:
+  /// **'P2P · free · instant'**
+  String get p2pFreeInstant;
+
+  /// No description provided for @jarinaUserTag.
+  ///
+  /// In en, this message translates to:
+  /// **'Jarina user · @{handle}'**
+  String jarinaUserTag(String handle);
+
+  /// No description provided for @bankAccountMasked.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank account ••{last4}'**
+  String bankAccountMasked(String last4);
+
+  /// No description provided for @verifying.
+  ///
+  /// In en, this message translates to:
+  /// **'Verifying…'**
+  String get verifying;
+
+  /// No description provided for @customerName.
+  ///
+  /// In en, this message translates to:
+  /// **'Customer: {name}'**
+  String customerName(String name);
+
+  /// No description provided for @errPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter an 11-digit phone number'**
+  String get errPhone;
+
+  /// No description provided for @errMeter.
+  ///
+  /// In en, this message translates to:
+  /// **'Check the number and try again'**
+  String get errMeter;
+
+  /// No description provided for @billMinMax.
+  ///
+  /// In en, this message translates to:
+  /// **'Between {min} and {max}'**
+  String billMinMax(String min, String max);
+
+  /// No description provided for @payBill.
+  ///
+  /// In en, this message translates to:
+  /// **'Pay {amount}'**
+  String payBill(String amount);
+
+  /// No description provided for @electricityToken.
+  ///
+  /// In en, this message translates to:
+  /// **'Electricity token'**
+  String get electricityToken;
+
+  /// No description provided for @tokenCopied.
+  ///
+  /// In en, this message translates to:
+  /// **'Token copied'**
+  String get tokenCopied;
+
+  /// No description provided for @billPaid.
+  ///
+  /// In en, this message translates to:
+  /// **'Bill paid'**
+  String get billPaid;
+
+  /// No description provided for @sending.
+  ///
+  /// In en, this message translates to:
+  /// **'Sending…'**
+  String get sending;
+
+  /// No description provided for @receiveMoneySub.
+  ///
+  /// In en, this message translates to:
+  /// **'Your @username, QR and account details'**
+  String get receiveMoneySub;
+
+  /// No description provided for @noRecipients.
+  ///
+  /// In en, this message translates to:
+  /// **'No one matches. Check the @username, phone or account number.'**
+  String get noRecipients;
+
+  /// No description provided for @lookingUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Looking up @{handle}…'**
+  String lookingUp(String handle);
+
+  /// No description provided for @userFound.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} · @{handle}'**
+  String userFound(String name, String handle);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

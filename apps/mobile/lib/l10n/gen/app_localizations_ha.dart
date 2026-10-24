@@ -2881,7 +2881,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get fee300 => 'kuɗin aiki ₦300';
 
   @override
-  String get free22 => 'kyauta';
+  String get free3 => 'kyauta';
 
   @override
   String get halimaGetsXof1950 => 'Halima za ta samu XOF 1,950';
@@ -4191,5 +4191,211 @@ class AppLocalizationsHa extends AppLocalizations {
   @override
   String autoSwapOn(String target) {
     return 'Musanya kai tsaye a kunne · zuwa $target';
+  }
+
+  @override
+  String get enterAmountToSendOrRequest => 'Shigar da adadin da za a aika ko a nema';
+
+  @override
+  String get transferTo => 'Tura zuwa';
+
+  @override
+  String get bankAccount => 'Asusun banki';
+
+  @override
+  String get askToBePaid => 'Nemi a biya ka';
+
+  @override
+  String get beneficiaries => 'Masu karɓa';
+
+  @override
+  String get lastSent => 'Na ƙarshe';
+
+  @override
+  String get onJarinaFree => 'A Jarina · kyauta & nan take';
+
+  @override
+  String get crossBorderMinutes => 'Ƙetare iyaka · yana isa cikin mintuna';
+
+  @override
+  String get sendToJarinaUser => 'Aika zuwa mai amfani da Jarina';
+
+  @override
+  String get jarinaP2p => 'Jarina P2P';
+
+  @override
+  String p2pHeaderSub(String handle) {
+    return 'Aika ko nema daga kowane mai amfani da Jarina · kai ne @$handle';
+  }
+
+  @override
+  String get instant => 'Nan take';
+
+  @override
+  String get zeroFees => 'Babu kuɗin sabis';
+
+  @override
+  String get cashCryptoStocks => 'Kuɗi, kirifto & hannun jari';
+
+  @override
+  String get sendTo => 'Aika zuwa';
+
+  @override
+  String get requestFrom => 'Nema daga';
+
+  @override
+  String get jarinaUsername => 'Sunan Jarina';
+
+  @override
+  String get youSend => 'Za ka aika';
+
+  @override
+  String get youRequest => 'Za ka nema';
+
+  @override
+  String get sameAsset => 'Iri ɗaya';
+
+  @override
+  String get addANoteOptional => 'Ƙara bayani (zaɓi)';
+
+  @override
+  String get chooseJarinaUser => 'Zaɓi mai amfani da Jarina';
+
+  @override
+  String get requestSent => 'An aika buƙata';
+
+  @override
+  String get p2pNote =>
+      'Tura P2P tsakanin masu amfani da Jarina kyauta ne kuma nan take. Za ka tabbatar da PIN. Tura hannun jari yana motsa su tsakanin asusun Jarina ta dillalinmu.';
+
+  @override
+  String slideToSendAmount(String amount) {
+    return 'Ja don aika $amount';
+  }
+
+  @override
+  String slideToRequestAmount(String amount) {
+    return 'Ja don nema $amount';
+  }
+
+  @override
+  String sendAmount(String amount) {
+    return 'Aika $amount';
+  }
+
+  @override
+  String get toSearchHint => 'Suna, @alama, waya ko lambar asusu';
+
+  @override
+  String get toLabel => 'Zuwa';
+
+  @override
+  String fromWalletFee(String wallet, String fee) {
+    return 'Daga $wallet · kuɗin sabis $fee';
+  }
+
+  @override
+  String recipientGetsFx(String name, String amount, String rate, String currency) {
+    return '$name zai samu $amount · farashi 1 NGN = $rate $currency';
+  }
+
+  @override
+  String get rateLocked => 'An kulle farashi na mintuna 10';
+
+  @override
+  String sentTo(String amount, String name) {
+    return 'An aika $amount zuwa $name';
+  }
+
+  @override
+  String get sentToSub => 'Yana kan hanya. Za mu sanar da kai idan ya isa.';
+
+  @override
+  String get sentInstantSub => 'An isar nan take. Kyauta.';
+
+  @override
+  String requestSentTo(String handle, String amount) {
+    return 'Ka nemi $amount daga @$handle';
+  }
+
+  @override
+  String get selectBank => 'Zaɓi banki';
+
+  @override
+  String get addBankRecipient => 'Aika zuwa asusun banki';
+
+  @override
+  String nipFee(String fee) {
+    return 'NIP · kuɗin sabis $fee';
+  }
+
+  @override
+  String countriesCount(String n) {
+    return 'ƙasashe $n';
+  }
+
+  @override
+  String get p2pFreeInstant => 'P2P · kyauta · nan take';
+
+  @override
+  String jarinaUserTag(String handle) {
+    return 'Mai amfani da Jarina · @$handle';
+  }
+
+  @override
+  String bankAccountMasked(String last4) {
+    return 'Asusun banki ••$last4';
+  }
+
+  @override
+  String get verifying => 'Ana tabbatarwa…';
+
+  @override
+  String customerName(String name) {
+    return 'Abokin ciniki: $name';
+  }
+
+  @override
+  String get errPhone => 'Shigar da lambar waya mai lambobi 11';
+
+  @override
+  String get errMeter => 'Duba lambar ka sake gwadawa';
+
+  @override
+  String billMinMax(String min, String max) {
+    return 'Tsakanin $min da $max';
+  }
+
+  @override
+  String payBill(String amount) {
+    return 'Biya $amount';
+  }
+
+  @override
+  String get electricityToken => 'Alamar wutar lantarki';
+
+  @override
+  String get tokenCopied => 'An kwafi alama';
+
+  @override
+  String get billPaid => 'An biya';
+
+  @override
+  String get sending => 'Ana aikawa…';
+
+  @override
+  String get receiveMoneySub => '@username ɗinka, QR da bayanan asusu';
+
+  @override
+  String get noRecipients => 'Babu wanda ya dace. Duba @username, waya ko lambar asusu.';
+
+  @override
+  String lookingUp(String handle) {
+    return 'Ana neman @$handle…';
+  }
+
+  @override
+  String userFound(String name, String handle) {
+    return '$name · @$handle';
   }
 }

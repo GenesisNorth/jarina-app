@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/services.dart';
+import 'package:jarina/core/fake/fake_directory.dart';
 import 'package:jarina/features/activity/domain/transaction.dart';
 import 'package:jarina/features/crypto/domain/crypto.dart';
 import 'package:jarina/features/markets/domain/market.dart';
@@ -512,7 +513,6 @@ class FakeLedger
 
   // ── Crypto ──────────────────────────────────────────────────────────────
 
-  static const _users = {'zainab', 'musa_dj', 'fatimab', 'aminu', 'halima', 'kwame'};
   static const _bankNames = [
     'Access Bank', 'Ecobank', 'Fidelity Bank', 'First Bank', 'FCMB', 'GTBank', 'Kuda', 'Moniepoint', //
     'OPay', 'PalmPay', 'Stanbic IBTC', 'Sterling Bank', 'UBA', 'Union Bank', 'Wema Bank', 'Zenith Bank',
@@ -837,7 +837,7 @@ class FakeLedger
   }) async {
     await _wait();
     final handle = UsernameRules.normalize(username);
-    if (!_users.contains(handle)) return const Err(UserNotFoundFailure());
+    if (!fakeUsers.containsKey(handle)) return const Err(UserNotFoundFailure());
     if (amount <= Decimal.zero) return const Err(ValidationFailure('Invalid amount'));
     if (amount > _available(coin).amount) return const Err(InsufficientFundsFailure());
     _adjust(coin, -amount);
@@ -1087,6 +1087,18 @@ class FakeLedger
     await _wait();
     _autoSwap.value = target;
   }
+
+  // ── Hooks for the other fakes (payments, bills) ──────────────────────────
+
+  Future<void> get ready => _ready;
+  DateTime now() => _now();
+  String newTxId() => _txId();
+  FxRates get fx => _rates;
+  Decimal priceOf(String code) => _priceOf(code);
+  Currency unitOf(String code) => _unit(code);
+  Money availableOf(String code) => _available(code);
+  void adjust(String code, Decimal delta) => _adjust(code, delta);
+  void record(Transaction t) => _record(t);
 
   // ── Activity ────────────────────────────────────────────────────────────
 

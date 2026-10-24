@@ -1,5 +1,6 @@
 import 'package:jarina/core/fake/fake_backend.dart';
 import 'package:jarina/core/fake/fake_ledger.dart';
+import 'package:jarina/core/fake/fake_payments.dart';
 import 'package:jarina/core/providers.dart';
 import 'package:jarina/features/account/domain/profile.dart';
 import 'package:jarina/features/activity/domain/transaction.dart';
@@ -7,6 +8,7 @@ import 'package:jarina/features/auth/domain/auth_repository.dart';
 import 'package:jarina/features/crypto/domain/crypto.dart';
 import 'package:jarina/features/kyc/domain/kyc_repository.dart';
 import 'package:jarina/features/markets/domain/market.dart';
+import 'package:jarina/features/payments/domain/payments.dart';
 import 'package:jarina/features/security/domain/security_repository.dart';
 import 'package:jarina/features/trading/domain/trading.dart';
 import 'package:jarina/features/wallets/domain/wallets.dart';
@@ -65,5 +67,17 @@ TradingRepository tradingRepository(Ref ref) =>
 @Riverpod(keepAlive: true)
 CryptoRepository cryptoRepository(Ref ref) =>
     ref.watch(envProvider).useFakeData ? ref.watch(fakeLedgerProvider) : throw _notYet('CryptoRepository');
+
+@Riverpod(keepAlive: true)
+FakePayments fakePayments(Ref ref) =>
+    FakePayments(ref.watch(fakeLedgerProvider), latency: ref.watch(fakeLedgerProvider).latency);
+
+@Riverpod(keepAlive: true)
+PaymentsRepository paymentsRepository(Ref ref) =>
+    ref.watch(envProvider).useFakeData ? ref.watch(fakePaymentsProvider) : throw _notYet('PaymentsRepository');
+
+@Riverpod(keepAlive: true)
+BillsRepository billsRepository(Ref ref) =>
+    ref.watch(envProvider).useFakeData ? ref.watch(fakePaymentsProvider) : throw _notYet('BillsRepository');
 
 StateError _notYet(String name) => StateError('$name has no API implementation yet (backend phase).');

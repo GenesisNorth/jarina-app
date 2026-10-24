@@ -33,7 +33,17 @@ void main() {
 
       // These need state from the previous step (a pending code, quote or
       // order) and send the user back when opened directly.
-      if (const {AppRoute.otp, AppRoute.twofa, AppRoute.review, AppRoute.done}.contains(r)) continue;
+      const needsState = {
+        AppRoute.otp,
+        AppRoute.twofa,
+        AppRoute.review,
+        AppRoute.done,
+        AppRoute.payconfirm,
+        AppRoute.sending,
+        AppRoute.celebrate,
+        AppRoute.p2pdone,
+      };
+      if (needsState.contains(r)) continue;
       final path = router.routerDelegate.currentConfiguration.uri.path;
       expect(path, r.path.replaceAllMapped(RegExp(r':(\w+)'), (m) => r.sampleParams[m[1]]!), reason: r.name);
     }

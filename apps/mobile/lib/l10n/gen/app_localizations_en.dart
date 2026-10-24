@@ -2875,7 +2875,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get fee300 => 'fee ₦300';
 
   @override
-  String get free22 => 'free';
+  String get free3 => 'free';
 
   @override
   String get halimaGetsXof1950 => 'Halima gets XOF 1,950';
@@ -4182,5 +4182,211 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String autoSwapOn(String target) {
     return 'Auto-swap on · to $target';
+  }
+
+  @override
+  String get enterAmountToSendOrRequest => 'Enter amount to send or request';
+
+  @override
+  String get transferTo => 'Transfer to';
+
+  @override
+  String get bankAccount => 'Bank account';
+
+  @override
+  String get askToBePaid => 'Ask to be paid';
+
+  @override
+  String get beneficiaries => 'Beneficiaries';
+
+  @override
+  String get lastSent => 'Last sent';
+
+  @override
+  String get onJarinaFree => 'On Jarina · free & instant';
+
+  @override
+  String get crossBorderMinutes => 'Cross-border · arrives in minutes';
+
+  @override
+  String get sendToJarinaUser => 'Send to a Jarina user';
+
+  @override
+  String get jarinaP2p => 'Jarina P2P';
+
+  @override
+  String p2pHeaderSub(String handle) {
+    return 'Send or request from any Jarina user · you are @$handle';
+  }
+
+  @override
+  String get instant => 'Instant';
+
+  @override
+  String get zeroFees => '0 fees';
+
+  @override
+  String get cashCryptoStocks => 'Cash, crypto & stocks';
+
+  @override
+  String get sendTo => 'Send to';
+
+  @override
+  String get requestFrom => 'Request from';
+
+  @override
+  String get jarinaUsername => 'Jarina username';
+
+  @override
+  String get youSend => 'You send';
+
+  @override
+  String get youRequest => 'You request';
+
+  @override
+  String get sameAsset => 'Same asset';
+
+  @override
+  String get addANoteOptional => 'Add a note (optional)';
+
+  @override
+  String get chooseJarinaUser => 'Choose a Jarina user';
+
+  @override
+  String get requestSent => 'Request sent';
+
+  @override
+  String get p2pNote =>
+      'P2P transfers between Jarina users are free and arrive instantly. You\'ll confirm with your PIN. Stock transfers move shares between Jarina accounts with our partner broker.';
+
+  @override
+  String slideToSendAmount(String amount) {
+    return 'Slide to send $amount';
+  }
+
+  @override
+  String slideToRequestAmount(String amount) {
+    return 'Slide to request $amount';
+  }
+
+  @override
+  String sendAmount(String amount) {
+    return 'Send $amount';
+  }
+
+  @override
+  String get toSearchHint => 'Name, @tag, phone or account number';
+
+  @override
+  String get toLabel => 'To';
+
+  @override
+  String fromWalletFee(String wallet, String fee) {
+    return 'From $wallet · fee $fee';
+  }
+
+  @override
+  String recipientGetsFx(String name, String amount, String rate, String currency) {
+    return '$name gets $amount · rate 1 NGN = $rate $currency';
+  }
+
+  @override
+  String get rateLocked => 'Rate locked for 10 minutes';
+
+  @override
+  String sentTo(String amount, String name) {
+    return '$amount sent to $name';
+  }
+
+  @override
+  String get sentToSub => 'It\'s on its way. We\'ll notify you when it\'s delivered.';
+
+  @override
+  String get sentInstantSub => 'Delivered instantly. Free.';
+
+  @override
+  String requestSentTo(String handle, String amount) {
+    return 'You asked @$handle for $amount';
+  }
+
+  @override
+  String get selectBank => 'Select bank';
+
+  @override
+  String get addBankRecipient => 'Send to a bank account';
+
+  @override
+  String nipFee(String fee) {
+    return 'NIP · $fee fee';
+  }
+
+  @override
+  String countriesCount(String n) {
+    return '$n countries';
+  }
+
+  @override
+  String get p2pFreeInstant => 'P2P · free · instant';
+
+  @override
+  String jarinaUserTag(String handle) {
+    return 'Jarina user · @$handle';
+  }
+
+  @override
+  String bankAccountMasked(String last4) {
+    return 'Bank account ••$last4';
+  }
+
+  @override
+  String get verifying => 'Verifying…';
+
+  @override
+  String customerName(String name) {
+    return 'Customer: $name';
+  }
+
+  @override
+  String get errPhone => 'Enter an 11-digit phone number';
+
+  @override
+  String get errMeter => 'Check the number and try again';
+
+  @override
+  String billMinMax(String min, String max) {
+    return 'Between $min and $max';
+  }
+
+  @override
+  String payBill(String amount) {
+    return 'Pay $amount';
+  }
+
+  @override
+  String get electricityToken => 'Electricity token';
+
+  @override
+  String get tokenCopied => 'Token copied';
+
+  @override
+  String get billPaid => 'Bill paid';
+
+  @override
+  String get sending => 'Sending…';
+
+  @override
+  String get receiveMoneySub => 'Your @username, QR and account details';
+
+  @override
+  String get noRecipients => 'No one matches. Check the @username, phone or account number.';
+
+  @override
+  String lookingUp(String handle) {
+    return 'Looking up @$handle…';
+  }
+
+  @override
+  String userFound(String name, String handle) {
+    return '$name · @$handle';
   }
 }

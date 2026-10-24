@@ -3,7 +3,7 @@ import 'package:jarina_core/jarina_core.dart';
 
 enum TxCategory { stocks, crypto, transfers, bills }
 
-enum TxKind { stockTrade, cryptoTrade, crossBorder, p2p, deposit, conversion, bill, withdrawal, loan }
+enum TxKind { stockTrade, cryptoTrade, crossBorder, p2p, bankTransfer, deposit, conversion, bill, withdrawal, loan }
 
 enum TxStatus { successful, pending, failed }
 

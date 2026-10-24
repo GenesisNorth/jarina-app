@@ -932,7 +932,7 @@
   "request5000": "Request ₦5,000",
   "maradi": "Maradi",
   "fee300": "fee ₦300",
-  "free22": "free",
+  "free3": "free",
   "halimaGetsXof1950": "Halima gets XOF 1,950",
   "rate1Ngn039Xof": "rate 1 NGN = 0.39 XOF",
   "whatSItFor": "What''s it for?",
@@ -1848,6 +1848,206 @@
   "@autoSwapOn": {
     "placeholders": {
       "target": {
+        "type": "String"
+      }
+    }
+  },
+  "enterAmountToSendOrRequest": "Enter amount to send or request",
+  "transferTo": "Transfer to",
+  "bankAccount": "Bank account",
+  "askToBePaid": "Ask to be paid",
+  "beneficiaries": "Beneficiaries",
+  "lastSent": "Last sent",
+  "onJarinaFree": "On Jarina · free & instant",
+  "crossBorderMinutes": "Cross-border · arrives in minutes",
+  "sendToJarinaUser": "Send to a Jarina user",
+  "jarinaP2p": "Jarina P2P",
+  "p2pHeaderSub": "Send or request from any Jarina user · you are @{handle}",
+  "@p2pHeaderSub": {
+    "placeholders": {
+      "handle": {
+        "type": "String"
+      }
+    }
+  },
+  "instant": "Instant",
+  "zeroFees": "0 fees",
+  "cashCryptoStocks": "Cash, crypto & stocks",
+  "sendTo": "Send to",
+  "requestFrom": "Request from",
+  "jarinaUsername": "Jarina username",
+  "youSend": "You send",
+  "youRequest": "You request",
+  "sameAsset": "Same asset",
+  "addANoteOptional": "Add a note (optional)",
+  "chooseJarinaUser": "Choose a Jarina user",
+  "requestSent": "Request sent",
+  "p2pNote": "P2P transfers between Jarina users are free and arrive instantly. You''ll confirm with your PIN. Stock transfers move shares between Jarina accounts with our partner broker.",
+  "slideToSendAmount": "Slide to send {amount}",
+  "@slideToSendAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "slideToRequestAmount": "Slide to request {amount}",
+  "@slideToRequestAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "sendAmount": "Send {amount}",
+  "@sendAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "toSearchHint": "Name, @tag, phone or account number",
+  "toLabel": "To",
+  "fromWalletFee": "From {wallet} · fee {fee}",
+  "@fromWalletFee": {
+    "placeholders": {
+      "wallet": {
+        "type": "String"
+      },
+      "fee": {
+        "type": "String"
+      }
+    }
+  },
+  "recipientGetsFx": "{name} gets {amount} · rate 1 NGN = {rate} {currency}",
+  "@recipientGetsFx": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "rate": {
+        "type": "String"
+      },
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "rateLocked": "Rate locked for 10 minutes",
+  "sentTo": "{amount} sent to {name}",
+  "@sentTo": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "sentToSub": "It''s on its way. We''ll notify you when it''s delivered.",
+  "sentInstantSub": "Delivered instantly. Free.",
+  "requestSentTo": "You asked @{handle} for {amount}",
+  "@requestSentTo": {
+    "placeholders": {
+      "handle": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "selectBank": "Select bank",
+  "addBankRecipient": "Send to a bank account",
+  "nipFee": "NIP · {fee} fee",
+  "@nipFee": {
+    "placeholders": {
+      "fee": {
+        "type": "String"
+      }
+    }
+  },
+  "countriesCount": "{n} countries",
+  "@countriesCount": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "p2pFreeInstant": "P2P · free · instant",
+  "jarinaUserTag": "Jarina user · @{handle}",
+  "@jarinaUserTag": {
+    "placeholders": {
+      "handle": {
+        "type": "String"
+      }
+    }
+  },
+  "bankAccountMasked": "Bank account ••{last4}",
+  "@bankAccountMasked": {
+    "placeholders": {
+      "last4": {
+        "type": "String"
+      }
+    }
+  },
+  "verifying": "Verifying…",
+  "customerName": "Customer: {name}",
+  "@customerName": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "errPhone": "Enter an 11-digit phone number",
+  "errMeter": "Check the number and try again",
+  "billMinMax": "Between {min} and {max}",
+  "@billMinMax": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "payBill": "Pay {amount}",
+  "@payBill": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "electricityToken": "Electricity token",
+  "tokenCopied": "Token copied",
+  "billPaid": "Bill paid",
+  "sending": "Sending…",
+  "receiveMoneySub": "Your @username, QR and account details",
+  "noRecipients": "No one matches. Check the @username, phone or account number.",
+  "lookingUp": "Looking up @{handle}…",
+  "@lookingUp": {
+    "placeholders": {
+      "handle": {
+        "type": "String"
+      }
+    }
+  },
+  "userFound": "{name} · @{handle}",
+  "@userFound": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "handle": {
         "type": "String"
       }
     }

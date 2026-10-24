@@ -121,6 +121,7 @@ class _ReceiptCard extends StatelessWidget {
       TxKind.cryptoTrade => l.cryptoTrade,
       TxKind.crossBorder => l.crossBorderTransfer,
       TxKind.p2p => l.p2pPayment,
+      TxKind.bankTransfer => l.transfer,
       TxKind.deposit => l.deposit,
       TxKind.conversion => l.currencyConversion,
       TxKind.bill => l.billPayment,

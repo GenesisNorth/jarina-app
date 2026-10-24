@@ -495,3 +495,123 @@ final class CryptoRepositoryProvider extends $FunctionalProvider<CryptoRepositor
 }
 
 String _$cryptoRepositoryHash() => r'e7e2f90c5ecfd2637b03bc7911976f6f26f462b2';
+
+@ProviderFor(fakePayments)
+final fakePaymentsProvider = FakePaymentsProvider._();
+
+final class FakePaymentsProvider extends $FunctionalProvider<FakePayments, FakePayments, FakePayments>
+    with $Provider<FakePayments> {
+  FakePaymentsProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'fakePaymentsProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$fakePaymentsHash();
+
+  @$internal
+  @override
+  $ProviderElement<FakePayments> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+
+  @override
+  FakePayments create(Ref ref) {
+    return fakePayments(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(FakePayments value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<FakePayments>(value),
+    );
+  }
+}
+
+String _$fakePaymentsHash() => r'f4f319809114880206a777746a9e505e4c1286f3';
+
+@ProviderFor(paymentsRepository)
+final paymentsRepositoryProvider = PaymentsRepositoryProvider._();
+
+final class PaymentsRepositoryProvider
+    extends $FunctionalProvider<PaymentsRepository, PaymentsRepository, PaymentsRepository>
+    with $Provider<PaymentsRepository> {
+  PaymentsRepositoryProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'paymentsRepositoryProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$paymentsRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<PaymentsRepository> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  PaymentsRepository create(Ref ref) {
+    return paymentsRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(PaymentsRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<PaymentsRepository>(value),
+    );
+  }
+}
+
+String _$paymentsRepositoryHash() => r'84d641306f9c6a0cc1c43d2d5c1434a2e3edc7d4';
+
+@ProviderFor(billsRepository)
+final billsRepositoryProvider = BillsRepositoryProvider._();
+
+final class BillsRepositoryProvider extends $FunctionalProvider<BillsRepository, BillsRepository, BillsRepository>
+    with $Provider<BillsRepository> {
+  BillsRepositoryProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'billsRepositoryProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$billsRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<BillsRepository> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+
+  @override
+  BillsRepository create(Ref ref) {
+    return billsRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(BillsRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<BillsRepository>(value),
+    );
+  }
+}
+
+String _$billsRepositoryHash() => r'506cd6e490c09370aaa739b8ba9951301b178ef4';

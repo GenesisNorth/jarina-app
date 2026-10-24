@@ -29,6 +29,12 @@ import 'package:jarina/features/onboarding/presentation/login_twofa_screen.dart'
 import 'package:jarina/features/onboarding/presentation/otp_screen.dart';
 import 'package:jarina/features/onboarding/presentation/phone_screen.dart';
 import 'package:jarina/features/onboarding/presentation/welcome_screen.dart';
+import 'package:jarina/features/payments/presentation/bill_screen.dart';
+import 'package:jarina/features/payments/presentation/p2p_screen.dart';
+import 'package:jarina/features/payments/presentation/pay_confirm_screen.dart';
+import 'package:jarina/features/payments/presentation/payment_result_screens.dart';
+import 'package:jarina/features/payments/presentation/people_screen.dart';
+import 'package:jarina/features/payments/presentation/transfer_screen.dart';
 import 'package:jarina/features/trading/domain/trading.dart';
 import 'package:jarina/features/trading/presentation/asset_screen.dart';
 import 'package:jarina/features/trading/presentation/order_done_screen.dart';
@@ -114,6 +120,20 @@ Widget? screenFor(AppRoute route, GoRouterState state) => switch (route) {
   AppRoute.qauto => const AutoSwapScreen(),
   AppRoute.qloan => const LoanScreen(),
   AppRoute.qnotif => const NotificationsScreen(),
+  AppRoute.transfer => const TransferScreen(),
+  AppRoute.people => PeopleScreen(openBank: state.uri.queryParameters['bank'] == '1'),
+  AppRoute.payconfirm => const PayConfirmScreen(),
+  AppRoute.sending => const SendingScreen(),
+  AppRoute.celebrate => const CelebrateScreen(),
+  AppRoute.p2p => P2pScreen(
+    key: ValueKey(state.uri),
+    request: state.uri.queryParameters['mode'] == 'request',
+    amount: state.uri.queryParameters['amount'],
+    to: state.uri.queryParameters['to'],
+  ),
+  AppRoute.p2pdone => const P2pDoneScreen(),
+  AppRoute.bill => BillScreen(key: ValueKey(state.uri), kind: BillScreen.kindOf(state.pathParameters['kind'])),
+  AppRoute.withdraw => const WithdrawScreen(coin: 'USDT'),
   _ => null,
 };
 
