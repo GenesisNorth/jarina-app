@@ -45,8 +45,8 @@
   "stockRulesArePaidFromYour4": "Stock rules are paid from your CFA · XAF wallet, converted to Naira at the live rate when the rule triggers.",
   "s020VsPreviousCandleVol": "▲ +0.20% vs previous candle · Vol 64",
   "s020VsPreviousCandleVol2": "▼ −0.20% vs previous candle · Vol 64",
-  "fromNairaWallet": "From Naira wallet",
-  "toNairaWallet": "To Naira wallet",
+  "fromNairaWallet2": "From Naira wallet",
+  "toNairaWallet2": "To Naira wallet",
   "fromUsdtWallet": "From USDT wallet",
   "toUsdtWallet": "To USDT wallet",
   "fromCediWallet": "From Cedi wallet",
@@ -786,15 +786,15 @@
   "autoSell": "Auto-sell",
   "s25Away": "2.5% away",
   "conditionMet": "Condition met",
-  "runsOnce": "Runs once",
-  "repeatsEveryTime": "Repeats every time",
+  "runsOnce2": "Runs once",
+  "repeatsEveryTime2": "Repeats every time",
   "expiresIn30Days": "Expires in 30 days",
   "expiresIn7Days": "Expires in 7 days",
   "untilCancelled": "Until cancelled",
   "now1067": "Now ₦1,067",
   "autopilotPlacesOrdersAtMarketConditions": "Autopilot places orders at market conditions you set. Prices can gap past your range, so fills may differ slightly. Investments can go down as well as up.",
-  "ruleOn": "Rule on",
-  "deleteRule": "Delete rule",
+  "ruleOn2": "Rule on",
+  "deleteRule2": "Delete rule",
   "rulePaused": "Rule paused",
   "ruleResumed": "Rule resumed",
   "ruleDeleted": "Rule deleted",
@@ -810,9 +810,9 @@
   "btcFell3In1Hour": "BTC fell 3% in 1 hour",
   "autopilotBought25DangcemAt480": "Autopilot bought 25 DANGCEM at ₦480.00",
   "s22Sep": "22 Sep",
-  "alertOn": "Alert on",
+  "alertOn2": "Alert on",
   "alertSet": "Alert set",
-  "noAlertsYet": "No alerts yet",
+  "noAlertsYet2": "No alerts yet",
   "stablecoin": "stablecoin",
   "networks": "Networks",
   "withdrawalFee1Usdt": "Withdrawal fee 1 USDT",
@@ -966,7 +966,7 @@
   "onlySendUsdtOnTronTrc": "Only send USDT on TRON (TRC-20) to this address. Other coins or networks will be lost.",
   "onlySendBtcOnBitcoinTo": "Only send BTC on Bitcoin to this address. Other coins or networks will be lost.",
   "autopilotRule": "Autopilot rule",
-  "whenThePrice": "When the price…",
+  "whenThePrice2": "When the price…",
   "fallsIntoARange": "Falls into a range",
   "fallsBelow": "Falls below",
   "from2": "From (₦)",
@@ -2051,5 +2051,361 @@
         "type": "String"
       }
     }
-  }
+  },
+  "whenThePrice": "When the price",
+  "thenBuyWith": "Then buy with",
+  "thenSell": "Then sell",
+  "atTriggerFeeIncluded": "At your trigger price · {fee} fee included",
+  "@atTriggerFeeIncluded": {
+    "placeholders": {
+      "fee": {
+        "type": "String"
+      }
+    }
+  },
+  "watching": "Watching",
+  "never": "Never",
+  "enterTriggerAndAmount": "Enter a trigger price and amount.",
+  "enterPriceAndAmount": "Enter a price and amount",
+  "yourShares": "Your shares",
+  "ruleWhenRange": "When {asset} trades between {low} and {high}",
+  "@ruleWhenRange": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      },
+      "low": {
+        "type": "String"
+      },
+      "high": {
+        "type": "String"
+      }
+    }
+  },
+  "ruleWhenBelow": "When {asset} falls below {price}",
+  "@ruleWhenBelow": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "ruleWhenAbove": "When {asset} rises above {price}",
+  "@ruleWhenAbove": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "ruleSentenceBuy": "{when}, buy {amount}.",
+  "@ruleSentenceBuy": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "ruleSentenceSell": "{when}, sell {amount}.",
+  "@ruleSentenceSell": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "amountWorth": "{amount} worth",
+  "@amountWorth": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "percentOfMy": "{pct}% of my {unit}",
+  "@percentOfMy": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "runsOnce": "Runs once",
+  "repeatsEveryTime": "Repeats every time",
+  "expiresIn": "Expires in {period}",
+  "@expiresIn": {
+    "placeholders": {
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "nowPrice": "Now {price}",
+  "@nowPrice": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "fromNairaWallet": "From Naira wallet",
+  "toNairaWallet": "To Naira wallet",
+  "percentAway": "{pct}% away",
+  "@percentAway": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "vsNow": "{pct} vs now",
+  "@vsNow": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "moreThanYouHaveRule": "More than you have today. The rule will be skipped if there isn''t enough when it triggers.",
+  "proceedsGoToNaira": "Proceeds go to your Naira wallet. If you hold fewer than set, we sell what you have.",
+  "slideToSaveBuyRule": "Slide to save auto-buy rule",
+  "slideToSaveSellRule": "Slide to save auto-sell rule",
+  "authoriseAutopilot": "Authorise Autopilot to trade for you when your conditions are met",
+  "switchBuySell": "Switch auto-buy / auto-sell",
+  "alertTitleAbove": "{asset} above {price}",
+  "@alertTitleAbove": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "alertTitleBelow": "{asset} below {price}",
+  "@alertTitleBelow": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "alertSummaryAbove": "We''ll notify you by {channels} when {asset} goes above {price}.",
+  "@alertSummaryAbove": {
+    "placeholders": {
+      "channels": {
+        "type": "String"
+      },
+      "asset": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "alertSummaryBelow": "We''ll notify you by {channels} when {asset} goes below {price}.",
+  "@alertSummaryBelow": {
+    "placeholders": {
+      "channels": {
+        "type": "String"
+      },
+      "asset": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "pickPriceAndChannel": "Pick a price and at least one channel.",
+  "fromCurrentPrice": "{pct} from the current price",
+  "@fromCurrentPrice": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "alertNotifyBody": "Get notified on all your devices when {asset} reaches your price.",
+  "@alertNotifyBody": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      }
+    }
+  },
+  "noAlertsYet": "No alerts yet",
+  "alertOn": "Alert on",
+  "ruleOn": "Rule on",
+  "deleteRule": "Delete rule",
+  "deleteAlert": "Delete alert",
+  "alertDeleted": "Alert deleted",
+  "eventRoseAbove": "{asset} rose above {price}",
+  "@eventRoseAbove": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "eventFellBelow": "{asset} fell below {price}",
+  "@eventFellBelow": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "eventAutopilotBought": "Autopilot bought {qty} {asset} at {price}",
+  "@eventAutopilotBought": {
+    "placeholders": {
+      "qty": {
+        "type": "String"
+      },
+      "asset": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "eventAutopilotSold": "Autopilot sold {qty} {asset} at {price}",
+  "@eventAutopilotSold": {
+    "placeholders": {
+      "qty": {
+        "type": "String"
+      },
+      "asset": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "eventAutopilotSkipped": "Autopilot skipped {asset}: not enough balance",
+  "@eventAutopilotSkipped": {
+    "placeholders": {
+      "asset": {
+        "type": "String"
+      }
+    }
+  },
+  "noNotificationsYet": "No notifications yet",
+  "transactionsCount": "{count} transactions",
+  "@transactionsCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "walletsCount": "{count} wallets",
+  "@walletsCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "p2pRowTitle": "P2P · Send to a Jarina user",
+  "p2pRowSub": "Cash, crypto or stocks by @username · free & instant",
+  "accountWithPhone": "Account · {phone}",
+  "@accountWithPhone": {
+    "placeholders": {
+      "phone": {
+        "type": "String"
+      }
+    }
+  },
+  "verifiedTier": "Verified · Tier {tier}",
+  "@verifiedTier": {
+    "placeholders": {
+      "tier": {
+        "type": "String"
+      }
+    }
+  },
+  "logOutQuestion": "Log out?",
+  "logOutBody": "You''ll need your WhatsApp number and 2FA code to log in again.",
+  "twofaRequiredSub": "Authenticator app · required for new devices, sells and withdrawals",
+  "backupLeft": "{count} left",
+  "@backupLeft": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "enterCurrentPin": "Enter your current PIN",
+  "createNewPin": "Create a new PIN",
+  "confirmNewPin": "Confirm your new PIN",
+  "pinChanged": "PIN changed",
+  "backupCodesBody": "Each code works once if you lose your authenticator. Keep them somewhere safe, offline.",
+  "generateNewCodes": "Generate new codes",
+  "newCodesReplaceOld": "New codes replace your old ones.",
+  "copyAll": "Copy all",
+  "thisPhone": "This phone",
+  "lastActive": "Last active {date}",
+  "@lastActive": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "deviceRemoved": "Device signed out",
+  "devicesBody": "Phones signed in to your account. Remove any you don''t recognise.",
+  "tier3Body": "Upload a utility bill or bank statement from the last 3 months to raise your limits. Tier 3 opens soon.",
+  "perDayTier": "{amount} per day · Tier {tier}",
+  "@perDayTier": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "tier": {
+        "type": "String"
+      }
+    }
+  },
+  "faceIdOnDevice": "Uses this phone''s face or fingerprint unlock",
+  "attachScreenshot": "Attach a screenshot or receipt",
+  "messageLabel": "Message",
+  "sendMessage": "Send",
+  "agentTyping": "Agent is typing",
+  "unlockSub": "Enter your PIN to unlock Jarina",
+  "notYouLogOut": "Not you? Log out",
+  "lockedOutLogInAgain": "Too many wrong PINs. Log in again with WhatsApp.",
+  "compromisedTitle": "This phone may be rooted or jailbroken",
+  "compromisedBody": "Apps on a modified phone can read what''s on your screen. You can keep using Jarina, but we may limit withdrawals to protect your money.",
+  "understood": "I understand",
+  "errorScreenTitle": "This screen couldn''t load",
+  "goHome": "Go to Home"
 }

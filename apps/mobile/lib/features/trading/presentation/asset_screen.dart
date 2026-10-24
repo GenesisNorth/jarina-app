@@ -8,6 +8,9 @@ import 'package:jarina/app/router/routes.dart';
 import 'package:jarina/app/widgets/asset_widgets.dart';
 import 'package:jarina/app/widgets/chart_widgets.dart';
 import 'package:jarina/app/widgets/money_widgets.dart';
+import 'package:jarina/features/automation/application/automation_state.dart';
+import 'package:jarina/features/automation/domain/automation.dart';
+import 'package:jarina/features/automation/presentation/automation_text.dart';
 import 'package:jarina/features/markets/domain/market.dart';
 import 'package:jarina/features/trading/application/trading_state.dart';
 import 'package:jarina/features/trading/presentation/market_status.dart';
@@ -143,6 +146,7 @@ class _AssetScreenState extends ConsumerState<AssetScreen> {
               ),
             ],
           ),
+          _AssetAutomation(asset: asset),
           const SizedBox(height: 10),
           JAreaChart(values: history, color: lineUp ? c.goldDeep : c.down, height: 190),
           const SizedBox(height: 10),
@@ -201,6 +205,57 @@ class _AssetScreenState extends ConsumerState<AssetScreen> {
             Expanded(
               child: JButton(label: l.buy, onPressed: () => trade('buy')),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// This asset's Autopilot rules and alerts, if any.
+class _AssetAutomation extends ConsumerWidget {
+  const _AssetAutomation({required this.asset});
+
+  final AssetInfo asset;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l = AppLocalizations.of(context);
+    final c = context.colors;
+    final t = context.text;
+    final rules = (ref.watch(autopilotRulesProvider).value ?? const <AutopilotRule>[])
+        .where((r) => r.assetId == asset.id)
+        .toList();
+    final alerts = (ref.watch(priceAlertsProvider).value ?? const <PriceAlert>[])
+        .where((a) => a.assetId == asset.id)
+        .toList();
+    if (rules.isEmpty && alerts.isEmpty) return const SizedBox.shrink();
+    Widget row(JIcon icon, String text, {required bool on}) => Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Row(
+        children: [
+          JarinaIcon(icon, size: 16, color: c.goldDeep),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(text, style: t.caption.copyWith(color: c.ink, height: 1.4)),
+          ),
+          const SizedBox(width: 8),
+          Text(
+            on ? l.onLabel : l.paused,
+            style: t.caption.copyWith(color: on ? c.up : c.muted, fontWeight: FontWeight.w700),
+          ),
+        ],
+      ),
+    );
+    return Padding(
+      padding: const EdgeInsets.only(top: 6),
+      child: JCard(
+        color: c.fill,
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+        child: Column(
+          children: [
+            for (final r in rules) row(JIcon.auto, ruleText(l, r, asset), on: r.enabled),
+            for (final a in alerts) row(JIcon.bell, alertTitle(l, a), on: a.enabled),
           ],
         ),
       ),

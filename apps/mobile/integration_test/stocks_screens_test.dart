@@ -8,6 +8,7 @@ import 'package:jarina/app/env.dart';
 import 'package:jarina/app/router/app_router.dart';
 import 'package:jarina/core/fake/fake_ledger.dart';
 import 'package:jarina/core/providers.dart';
+import 'package:jarina/core/security/app_security.dart';
 import 'package:jarina/core/repositories.dart';
 import 'package:jarina/core/session/session_controller.dart';
 import 'package:jarina_ui/jarina_ui.dart';
@@ -31,6 +32,7 @@ void main() {
     final container = ProviderContainer(
       overrides: [
         envProvider.overrideWithValue(Env.staging),
+        lockOnLaunchProvider.overrideWithValue(false),
         sharedPreferencesProvider.overrideWithValue(await SharedPreferences.getInstance()),
         initialSessionProvider.overrideWithValue(
           const SessionState(signedIn: true, onboarded: true, twofaEnabled: true),

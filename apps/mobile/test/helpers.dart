@@ -7,6 +7,7 @@ import 'package:jarina/app/env.dart';
 import 'package:jarina/core/fake/fake_backend.dart';
 import 'package:jarina/core/fake/fake_ledger.dart';
 import 'package:jarina/core/providers.dart';
+import 'package:jarina/core/security/app_security.dart';
 import 'package:jarina/core/repositories.dart';
 import 'package:jarina/core/session/session_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -35,6 +36,7 @@ Future<ProviderContainer> pumpApp(
   final container = ProviderContainer(
     overrides: [
       envProvider.overrideWithValue(Env.dev),
+      lockOnLaunchProvider.overrideWithValue(false),
       if (clock != null) clockProvider.overrideWithValue(clock),
       sharedPreferencesProvider.overrideWithValue(await SharedPreferences.getInstance()),
       sessionStoreProvider.overrideWithValue(SessionStore()),

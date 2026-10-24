@@ -40,3 +40,18 @@ class LocaleSetting extends _$LocaleSetting {
     await ref.read(sharedPreferencesProvider).setString(_key, locale.languageCode);
   }
 }
+
+/// Approve small payments with Face ID / fingerprint instead of the PIN.
+/// Stored on the device; the server still enforces its own limits.
+@Riverpod(keepAlive: true)
+class BiometricsSetting extends _$BiometricsSetting {
+  static const _key = 'biometrics';
+
+  @override
+  bool build() => ref.watch(sharedPreferencesProvider).getBool(_key) ?? true;
+
+  Future<void> set({required bool enabled}) async {
+    state = enabled;
+    await ref.read(sharedPreferencesProvider).setBool(_key, enabled);
+  }
+}

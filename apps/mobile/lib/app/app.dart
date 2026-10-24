@@ -4,6 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jarina/app/router/app_router.dart';
 import 'package:jarina/app/router/routes.dart';
+import 'package:jarina/app/shell/security_shell.dart';
 import 'package:jarina/core/preferences/app_preferences.dart';
 import 'package:jarina/core/providers.dart';
 import 'package:jarina/l10n/fallback_localizations.dart';
@@ -34,14 +35,16 @@ class JarinaApp extends ConsumerWidget {
         GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      builder: (context, child) => showDev
-          ? Stack(
-              children: [
-                child!,
-                _DevButton(onTap: () => router.pushNamed(AppRoute.dev.name)),
-              ],
-            )
-          : child!,
+      builder: (context, child) => SecurityShell(
+        child: showDev
+            ? Stack(
+                children: [
+                  child!,
+                  _DevButton(onTap: () => router.pushNamed(AppRoute.dev.name)),
+                ],
+              )
+            : child!,
+      ),
     );
   }
 }

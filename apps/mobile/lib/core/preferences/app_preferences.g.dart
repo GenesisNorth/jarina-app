@@ -97,3 +97,57 @@ abstract class _$LocaleSetting extends $Notifier<Locale?> {
     return element.handleCreate(ref, build);
   }
 }
+
+/// Approve small payments with Face ID / fingerprint instead of the PIN.
+/// Stored on the device; the server still enforces its own limits.
+
+@ProviderFor(BiometricsSetting)
+final biometricsSettingProvider = BiometricsSettingProvider._();
+
+/// Approve small payments with Face ID / fingerprint instead of the PIN.
+/// Stored on the device; the server still enforces its own limits.
+final class BiometricsSettingProvider extends $NotifierProvider<BiometricsSetting, bool> {
+  /// Approve small payments with Face ID / fingerprint instead of the PIN.
+  /// Stored on the device; the server still enforces its own limits.
+  BiometricsSettingProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'biometricsSettingProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$biometricsSettingHash();
+
+  @$internal
+  @override
+  BiometricsSetting create() => BiometricsSetting();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(bool value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<bool>(value),
+    );
+  }
+}
+
+String _$biometricsSettingHash() => r'54371c0776c3e211c58d10be82d7f37b8234244a';
+
+/// Approve small payments with Face ID / fingerprint instead of the PIN.
+/// Stored on the device; the server still enforces its own limits.
+
+abstract class _$BiometricsSetting extends $Notifier<bool> {
+  bool build();
+  @$mustCallSuper
+  @override
+  WhenComplete runBuild() {
+    final ref = this.ref as $Ref<bool, bool>;
+    final element = ref.element as $ClassProviderElement<AnyNotifier<bool, bool>, bool, Object?, Object?>;
+    return element.handleCreate(ref, build);
+  }
+}

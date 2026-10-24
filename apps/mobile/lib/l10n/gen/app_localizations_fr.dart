@@ -151,10 +151,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get s020VsPreviousCandleVol2 => '▼ −0.20% vs bougie précédente · Vol 64';
 
   @override
-  String get fromNairaWallet => 'Depuis le portefeuille Naira';
+  String get fromNairaWallet2 => 'Depuis le portefeuille Naira';
 
   @override
-  String get toNairaWallet => 'Vers le portefeuille naira';
+  String get toNairaWallet2 => 'Vers le portefeuille naira';
 
   @override
   String get fromUsdtWallet => 'Depuis le portefeuille USDT';
@@ -2439,10 +2439,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get conditionMet => 'Condition remplie';
 
   @override
-  String get runsOnce => 'S\'exécute une fois';
+  String get runsOnce2 => 'S\'exécute une fois';
 
   @override
-  String get repeatsEveryTime => 'Se répète à chaque fois';
+  String get repeatsEveryTime2 => 'Se répète à chaque fois';
 
   @override
   String get expiresIn30Days => 'Expire dans 30 jours';
@@ -2461,10 +2461,10 @@ class AppLocalizationsFr extends AppLocalizations {
       'Le pilote automatique passe des ordres selon vos conditions. Les prix peuvent sauter votre fourchette, l\'exécution peut donc légèrement différer. Un investissement peut baisser comme monter.';
 
   @override
-  String get ruleOn => 'Règle activée';
+  String get ruleOn2 => 'Règle activée';
 
   @override
-  String get deleteRule => 'Supprimer la règle';
+  String get deleteRule2 => 'Supprimer la règle';
 
   @override
   String get rulePaused => 'Règle en pause';
@@ -2512,13 +2512,13 @@ class AppLocalizationsFr extends AppLocalizations {
   String get s22Sep => '22 sept.';
 
   @override
-  String get alertOn => 'Alerte activée';
+  String get alertOn2 => 'Alerte activée';
 
   @override
   String get alertSet => 'Alerte créée';
 
   @override
-  String get noAlertsYet => 'Aucune alerte';
+  String get noAlertsYet2 => 'Aucune alerte';
 
   @override
   String get stablecoin => 'stablecoin';
@@ -2991,7 +2991,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get autopilotRule => 'Règle du pilote automatique';
 
   @override
-  String get whenThePrice => 'Quand le prix…';
+  String get whenThePrice2 => 'Quand le prix…';
 
   @override
   String get fallsIntoARange => 'Entre dans une fourchette';
@@ -4405,4 +4405,328 @@ class AppLocalizationsFr extends AppLocalizations {
   String userFound(String name, String handle) {
     return '$name · @$handle';
   }
+
+  @override
+  String get whenThePrice => 'Quand le prix';
+
+  @override
+  String get thenBuyWith => 'Puis acheter avec';
+
+  @override
+  String get thenSell => 'Puis vendre';
+
+  @override
+  String atTriggerFeeIncluded(String fee) {
+    return 'À votre prix de déclenchement · frais de $fee inclus';
+  }
+
+  @override
+  String get watching => 'En veille';
+
+  @override
+  String get never => 'Jamais';
+
+  @override
+  String get enterTriggerAndAmount => 'Saisissez un prix de déclenchement et un montant.';
+
+  @override
+  String get enterPriceAndAmount => 'Saisissez un prix et un montant';
+
+  @override
+  String get yourShares => 'Vos actions';
+
+  @override
+  String ruleWhenRange(String asset, String low, String high) {
+    return 'Quand $asset se négocie entre $low et $high';
+  }
+
+  @override
+  String ruleWhenBelow(String asset, String price) {
+    return 'Quand $asset passe sous $price';
+  }
+
+  @override
+  String ruleWhenAbove(String asset, String price) {
+    return 'Quand $asset dépasse $price';
+  }
+
+  @override
+  String ruleSentenceBuy(String when, String amount) {
+    return '$when, acheter $amount.';
+  }
+
+  @override
+  String ruleSentenceSell(String when, String amount) {
+    return '$when, vendre $amount.';
+  }
+
+  @override
+  String amountWorth(String amount) {
+    return 'pour $amount';
+  }
+
+  @override
+  String percentOfMy(String pct, String unit) {
+    return '$pct % de mes $unit';
+  }
+
+  @override
+  String get runsOnce => 'Une seule fois';
+
+  @override
+  String get repeatsEveryTime => 'Se répète à chaque fois';
+
+  @override
+  String expiresIn(String period) {
+    return 'Expire dans $period';
+  }
+
+  @override
+  String nowPrice(String price) {
+    return 'Actuel $price';
+  }
+
+  @override
+  String get fromNairaWallet => 'Depuis le portefeuille naira';
+
+  @override
+  String get toNairaWallet => 'Vers le portefeuille naira';
+
+  @override
+  String percentAway(String pct) {
+    return 'à $pct %';
+  }
+
+  @override
+  String vsNow(String pct) {
+    return '$pct vs actuel';
+  }
+
+  @override
+  String get moreThanYouHaveRule =>
+      'Plus que ce que vous avez aujourd\'hui. La règle sera ignorée s\'il n\'y a pas assez au déclenchement.';
+
+  @override
+  String get proceedsGoToNaira =>
+      'Le produit va sur votre portefeuille naira. Si vous détenez moins que prévu, nous vendons ce que vous avez.';
+
+  @override
+  String get slideToSaveBuyRule => 'Glissez pour enregistrer l\'achat auto';
+
+  @override
+  String get slideToSaveSellRule => 'Glissez pour enregistrer la vente auto';
+
+  @override
+  String get authoriseAutopilot => 'Autorisez Autopilot à négocier pour vous quand vos conditions sont remplies';
+
+  @override
+  String get switchBuySell => 'Basculer achat / vente auto';
+
+  @override
+  String alertTitleAbove(String asset, String price) {
+    return '$asset au-dessus de $price';
+  }
+
+  @override
+  String alertTitleBelow(String asset, String price) {
+    return '$asset en dessous de $price';
+  }
+
+  @override
+  String alertSummaryAbove(String channels, String asset, String price) {
+    return 'Nous vous préviendrons par $channels quand $asset dépassera $price.';
+  }
+
+  @override
+  String alertSummaryBelow(String channels, String asset, String price) {
+    return 'Nous vous préviendrons par $channels quand $asset passera sous $price.';
+  }
+
+  @override
+  String get pickPriceAndChannel => 'Choisissez un prix et au moins un canal.';
+
+  @override
+  String fromCurrentPrice(String pct) {
+    return '$pct par rapport au prix actuel';
+  }
+
+  @override
+  String alertNotifyBody(String asset) {
+    return 'Soyez prévenu sur tous vos appareils quand $asset atteint votre prix.';
+  }
+
+  @override
+  String get noAlertsYet => 'Aucune alerte';
+
+  @override
+  String get alertOn => 'Alerte activée';
+
+  @override
+  String get ruleOn => 'Règle activée';
+
+  @override
+  String get deleteRule => 'Supprimer la règle';
+
+  @override
+  String get deleteAlert => 'Supprimer l\'alerte';
+
+  @override
+  String get alertDeleted => 'Alerte supprimée';
+
+  @override
+  String eventRoseAbove(String asset, String price) {
+    return '$asset est passé au-dessus de $price';
+  }
+
+  @override
+  String eventFellBelow(String asset, String price) {
+    return '$asset est passé sous $price';
+  }
+
+  @override
+  String eventAutopilotBought(String qty, String asset, String price) {
+    return 'Autopilot a acheté $qty $asset à $price';
+  }
+
+  @override
+  String eventAutopilotSold(String qty, String asset, String price) {
+    return 'Autopilot a vendu $qty $asset à $price';
+  }
+
+  @override
+  String eventAutopilotSkipped(String asset) {
+    return 'Autopilot a ignoré $asset : solde insuffisant';
+  }
+
+  @override
+  String get noNotificationsYet => 'Aucune notification';
+
+  @override
+  String transactionsCount(String count) {
+    return '$count transactions';
+  }
+
+  @override
+  String walletsCount(String count) {
+    return '$count portefeuilles';
+  }
+
+  @override
+  String get p2pRowTitle => 'P2P · Envoyer à un utilisateur Jarina';
+
+  @override
+  String get p2pRowSub => 'Espèces, crypto ou actions par @username · gratuit et instantané';
+
+  @override
+  String accountWithPhone(String phone) {
+    return 'Compte · $phone';
+  }
+
+  @override
+  String verifiedTier(String tier) {
+    return 'Vérifié · Niveau $tier';
+  }
+
+  @override
+  String get logOutQuestion => 'Se déconnecter ?';
+
+  @override
+  String get logOutBody => 'Il vous faudra votre numéro WhatsApp et votre code 2FA pour vous reconnecter.';
+
+  @override
+  String get twofaRequiredSub =>
+      'Application d\'authentification · requise pour les nouveaux appareils, ventes et retraits';
+
+  @override
+  String backupLeft(String count) {
+    return '$count restants';
+  }
+
+  @override
+  String get enterCurrentPin => 'Saisissez votre PIN actuel';
+
+  @override
+  String get createNewPin => 'Créez un nouveau PIN';
+
+  @override
+  String get confirmNewPin => 'Confirmez votre nouveau PIN';
+
+  @override
+  String get pinChanged => 'PIN modifié';
+
+  @override
+  String get backupCodesBody =>
+      'Chaque code fonctionne une fois si vous perdez votre application 2FA. Gardez-les en lieu sûr, hors ligne.';
+
+  @override
+  String get generateNewCodes => 'Générer de nouveaux codes';
+
+  @override
+  String get newCodesReplaceOld => 'Les nouveaux codes remplacent les anciens.';
+
+  @override
+  String get copyAll => 'Tout copier';
+
+  @override
+  String get thisPhone => 'Ce téléphone';
+
+  @override
+  String lastActive(String date) {
+    return 'Dernière activité $date';
+  }
+
+  @override
+  String get deviceRemoved => 'Appareil déconnecté';
+
+  @override
+  String get devicesBody => 'Téléphones connectés à votre compte. Retirez ceux que vous ne reconnaissez pas.';
+
+  @override
+  String get tier3Body =>
+      'Téléversez une facture ou un relevé bancaire de moins de 3 mois pour relever vos plafonds. Le niveau 3 ouvre bientôt.';
+
+  @override
+  String perDayTier(String amount, String tier) {
+    return '$amount par jour · Niveau $tier';
+  }
+
+  @override
+  String get faceIdOnDevice => 'Utilise le déverrouillage facial ou par empreinte de ce téléphone';
+
+  @override
+  String get attachScreenshot => 'Joindre une capture ou un reçu';
+
+  @override
+  String get messageLabel => 'Message';
+
+  @override
+  String get sendMessage => 'Envoyer';
+
+  @override
+  String get agentTyping => 'L\'agent écrit';
+
+  @override
+  String get unlockSub => 'Saisissez votre PIN pour déverrouiller Jarina';
+
+  @override
+  String get notYouLogOut => 'Ce n\'est pas vous ? Se déconnecter';
+
+  @override
+  String get lockedOutLogInAgain => 'Trop de PIN erronés. Reconnectez-vous avec WhatsApp.';
+
+  @override
+  String get compromisedTitle => 'Ce téléphone semble rooté ou jailbreaké';
+
+  @override
+  String get compromisedBody =>
+      'Les applications d\'un téléphone modifié peuvent lire votre écran. Vous pouvez continuer à utiliser Jarina, mais nous pourrons limiter les retraits pour protéger votre argent.';
+
+  @override
+  String get understood => 'J\'ai compris';
+
+  @override
+  String get errorScreenTitle => 'Cet écran n\'a pas pu s\'afficher';
+
+  @override
+  String get goHome => 'Aller à l\'accueil';
 }

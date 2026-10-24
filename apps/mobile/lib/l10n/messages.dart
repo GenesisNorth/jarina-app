@@ -29,6 +29,15 @@ extension FailureMessages on AppLocalizations {
     FieldError.mismatch => errPinMismatch,
   };
 
+  String languagesInCountry(String iso) => switch (iso) {
+    'NE' => languagesInNiger,
+    'GH' => languagesInGhana,
+    'CM' => languagesInCameroon,
+    'BJ' => languagesInBeninRepublic,
+    'TG' => languagesInTogo,
+    _ => languagesInNigeria,
+  };
+
   String countryName(String iso) => switch (iso) {
     'NG' => countryNG,
     'NE' => countryNE,

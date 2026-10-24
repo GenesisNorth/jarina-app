@@ -151,10 +151,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get s020VsPreviousCandleVol2 => '▼ −0.20% idan aka kwatanta da kyandir na baya · Yawa 64';
 
   @override
-  String get fromNairaWallet => 'Daga walat ɗin Naira';
+  String get fromNairaWallet2 => 'Daga walat ɗin Naira';
 
   @override
-  String get toNairaWallet => 'Zuwa walat ɗin Naira';
+  String get toNairaWallet2 => 'Zuwa walat ɗin Naira';
 
   @override
   String get fromUsdtWallet => 'Daga walat ɗin USDT';
@@ -2434,10 +2434,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get conditionMet => 'Sharaɗi ya cika';
 
   @override
-  String get runsOnce => 'Sau ɗaya kawai';
+  String get runsOnce2 => 'Sau ɗaya kawai';
 
   @override
-  String get repeatsEveryTime => 'Yana maimaitawa kowane lokaci';
+  String get repeatsEveryTime2 => 'Yana maimaitawa kowane lokaci';
 
   @override
   String get expiresIn30Days => 'Zai ƙare cikin kwana 30';
@@ -2456,10 +2456,10 @@ class AppLocalizationsHa extends AppLocalizations {
       'Autopilot yana tura oda bisa sharuɗɗan da ka saita. Farashi na iya tsallake iyakarka, don haka cikar oda na iya bambanta kaɗan. Jari na iya sauka ko hawa.';
 
   @override
-  String get ruleOn => 'Ƙa\'ida a kunne';
+  String get ruleOn2 => 'Ƙa\'ida a kunne';
 
   @override
-  String get deleteRule => 'Goge ƙa\'ida';
+  String get deleteRule2 => 'Goge ƙa\'ida';
 
   @override
   String get rulePaused => 'An dakatar da ƙa\'ida';
@@ -2507,13 +2507,13 @@ class AppLocalizationsHa extends AppLocalizations {
   String get s22Sep => '22 Satumba';
 
   @override
-  String get alertOn => 'Faɗakarwa a kunne';
+  String get alertOn2 => 'Faɗakarwa a kunne';
 
   @override
   String get alertSet => 'An saita faɗakarwa';
 
   @override
-  String get noAlertsYet => 'Babu faɗakarwa tukuna';
+  String get noAlertsYet2 => 'Babu faɗakarwa tukuna';
 
   @override
   String get stablecoin => 'stablecoin';
@@ -2986,7 +2986,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get autopilotRule => 'Ƙa\'idar Autopilot';
 
   @override
-  String get whenThePrice => 'Idan farashi…';
+  String get whenThePrice2 => 'Idan farashi…';
 
   @override
   String get fallsIntoARange => 'Ya shiga tsakanin iyaka';
@@ -4398,4 +4398,327 @@ class AppLocalizationsHa extends AppLocalizations {
   String userFound(String name, String handle) {
     return '$name · @$handle';
   }
+
+  @override
+  String get whenThePrice => 'Idan farashin';
+
+  @override
+  String get thenBuyWith => 'Sai ka saya da';
+
+  @override
+  String get thenSell => 'Sai ka sayar';
+
+  @override
+  String atTriggerFeeIncluded(String fee) {
+    return 'A farashin da ka saita · an haɗa kuɗin $fee';
+  }
+
+  @override
+  String get watching => 'Ana kallo';
+
+  @override
+  String get never => 'Ba ya ƙarewa';
+
+  @override
+  String get enterTriggerAndAmount => 'Shigar da farashin farawa da adadi.';
+
+  @override
+  String get enterPriceAndAmount => 'Shigar da farashi da adadi';
+
+  @override
+  String get yourShares => 'Hannun jarinka';
+
+  @override
+  String ruleWhenRange(String asset, String low, String high) {
+    return 'Idan $asset ya kasance tsakanin $low da $high';
+  }
+
+  @override
+  String ruleWhenBelow(String asset, String price) {
+    return 'Idan $asset ya faɗi ƙasa da $price';
+  }
+
+  @override
+  String ruleWhenAbove(String asset, String price) {
+    return 'Idan $asset ya haura sama da $price';
+  }
+
+  @override
+  String ruleSentenceBuy(String when, String amount) {
+    return '$when, saya $amount.';
+  }
+
+  @override
+  String ruleSentenceSell(String when, String amount) {
+    return '$when, sayar da $amount.';
+  }
+
+  @override
+  String amountWorth(String amount) {
+    return 'na $amount';
+  }
+
+  @override
+  String percentOfMy(String pct, String unit) {
+    return '$pct% na $unit nawa';
+  }
+
+  @override
+  String get runsOnce => 'Sau ɗaya kawai';
+
+  @override
+  String get repeatsEveryTime => 'Yana maimaitawa koyaushe';
+
+  @override
+  String expiresIn(String period) {
+    return 'Zai ƙare cikin $period';
+  }
+
+  @override
+  String nowPrice(String price) {
+    return 'Yanzu $price';
+  }
+
+  @override
+  String get fromNairaWallet => 'Daga walat ɗin Naira';
+
+  @override
+  String get toNairaWallet => 'Zuwa walat ɗin Naira';
+
+  @override
+  String percentAway(String pct) {
+    return 'saura $pct%';
+  }
+
+  @override
+  String vsNow(String pct) {
+    return '$pct da na yanzu';
+  }
+
+  @override
+  String get moreThanYouHaveRule =>
+      'Ya fi abin da kake da shi yau. Za a tsallake ƙa\'idar idan bai isa ba lokacin da ta fara aiki.';
+
+  @override
+  String get proceedsGoToNaira =>
+      'Kuɗin zai shiga walat ɗin Naira. Idan abin da kake da shi bai kai abin da ka saita ba, za mu sayar da abin da kake da shi.';
+
+  @override
+  String get slideToSaveBuyRule => 'Zamar don adana ƙa\'idar saya kai-tsaye';
+
+  @override
+  String get slideToSaveSellRule => 'Zamar don adana ƙa\'idar sayarwa kai-tsaye';
+
+  @override
+  String get authoriseAutopilot => 'Ba Autopilot izinin yin ciniki a madadinka idan sharuɗɗanka sun cika';
+
+  @override
+  String get switchBuySell => 'Sauya saya / sayarwa kai-tsaye';
+
+  @override
+  String alertTitleAbove(String asset, String price) {
+    return '$asset sama da $price';
+  }
+
+  @override
+  String alertTitleBelow(String asset, String price) {
+    return '$asset ƙasa da $price';
+  }
+
+  @override
+  String alertSummaryAbove(String channels, String asset, String price) {
+    return 'Za mu sanar da kai ta $channels idan $asset ya haura sama da $price.';
+  }
+
+  @override
+  String alertSummaryBelow(String channels, String asset, String price) {
+    return 'Za mu sanar da kai ta $channels idan $asset ya faɗi ƙasa da $price.';
+  }
+
+  @override
+  String get pickPriceAndChannel => 'Zaɓi farashi da hanya ɗaya aƙalla.';
+
+  @override
+  String fromCurrentPrice(String pct) {
+    return '$pct daga farashin yanzu';
+  }
+
+  @override
+  String alertNotifyBody(String asset) {
+    return 'Samu sanarwa a duk na\'urorinka idan $asset ya kai farashinka.';
+  }
+
+  @override
+  String get noAlertsYet => 'Babu faɗakarwa tukuna';
+
+  @override
+  String get alertOn => 'Faɗakarwa a kunne';
+
+  @override
+  String get ruleOn => 'Ƙa\'ida a kunne';
+
+  @override
+  String get deleteRule => 'Goge ƙa\'ida';
+
+  @override
+  String get deleteAlert => 'Goge faɗakarwa';
+
+  @override
+  String get alertDeleted => 'An goge faɗakarwa';
+
+  @override
+  String eventRoseAbove(String asset, String price) {
+    return '$asset ya haura sama da $price';
+  }
+
+  @override
+  String eventFellBelow(String asset, String price) {
+    return '$asset ya faɗi ƙasa da $price';
+  }
+
+  @override
+  String eventAutopilotBought(String qty, String asset, String price) {
+    return 'Autopilot ya saya $qty $asset a $price';
+  }
+
+  @override
+  String eventAutopilotSold(String qty, String asset, String price) {
+    return 'Autopilot ya sayar da $qty $asset a $price';
+  }
+
+  @override
+  String eventAutopilotSkipped(String asset) {
+    return 'Autopilot ya tsallake $asset: kuɗi bai isa ba';
+  }
+
+  @override
+  String get noNotificationsYet => 'Babu sanarwa tukuna';
+
+  @override
+  String transactionsCount(String count) {
+    return 'ma\'amaloli $count';
+  }
+
+  @override
+  String walletsCount(String count) {
+    return 'walat $count';
+  }
+
+  @override
+  String get p2pRowTitle => 'P2P · Tura wa mai amfani da Jarina';
+
+  @override
+  String get p2pRowSub => 'Kuɗi, kirifto ko hannun jari ta @username · kyauta & nan take';
+
+  @override
+  String accountWithPhone(String phone) {
+    return 'Asusu · $phone';
+  }
+
+  @override
+  String verifiedTier(String tier) {
+    return 'An tantance · Mataki $tier';
+  }
+
+  @override
+  String get logOutQuestion => 'Fita?';
+
+  @override
+  String get logOutBody => 'Za ka buƙaci lambar WhatsApp da lambar 2FA don sake shiga.';
+
+  @override
+  String get twofaRequiredSub => 'Manhajar tantancewa · ana buƙata don sababbin na\'urori, sayarwa da cirewa';
+
+  @override
+  String backupLeft(String count) {
+    return 'saura $count';
+  }
+
+  @override
+  String get enterCurrentPin => 'Shigar da PIN ɗinka na yanzu';
+
+  @override
+  String get createNewPin => 'Ƙirƙiri sabon PIN';
+
+  @override
+  String get confirmNewPin => 'Tabbatar da sabon PIN ɗinka';
+
+  @override
+  String get pinChanged => 'An canza PIN';
+
+  @override
+  String get backupCodesBody =>
+      'Kowace lamba tana aiki sau ɗaya idan ka rasa manhajar tantancewa. Ajiye su a wuri mai aminci, ba a intanet ba.';
+
+  @override
+  String get generateNewCodes => 'Samar da sababbin lambobi';
+
+  @override
+  String get newCodesReplaceOld => 'Sababbin lambobi za su maye gurbin tsofaffi.';
+
+  @override
+  String get copyAll => 'Kwafi duka';
+
+  @override
+  String get thisPhone => 'Wannan wayar';
+
+  @override
+  String lastActive(String date) {
+    return 'Aiki na ƙarshe $date';
+  }
+
+  @override
+  String get deviceRemoved => 'An fitar da na\'ura';
+
+  @override
+  String get devicesBody => 'Wayoyin da suka shiga asusunka. Cire duk wadda ba ka sani ba.';
+
+  @override
+  String get tier3Body =>
+      'Ɗora takardar kuɗin wuta ko bayanin banki na watanni 3 da suka wuce don ƙara iyakokinka. Mataki na 3 zai buɗe nan ba da jimawa ba.';
+
+  @override
+  String perDayTier(String amount, String tier) {
+    return '$amount a rana · Mataki $tier';
+  }
+
+  @override
+  String get faceIdOnDevice => 'Yana amfani da buɗewar fuska ko yatsa na wannan wayar';
+
+  @override
+  String get attachScreenshot => 'Haɗa hoton allo ko rasit';
+
+  @override
+  String get messageLabel => 'Saƙo';
+
+  @override
+  String get sendMessage => 'Aika';
+
+  @override
+  String get agentTyping => 'Ma\'aikaci yana rubutu';
+
+  @override
+  String get unlockSub => 'Shigar da PIN ɗinka don buɗe Jarina';
+
+  @override
+  String get notYouLogOut => 'Ba kai ba ne? Fita';
+
+  @override
+  String get lockedOutLogInAgain => 'PIN mara kyau sau da yawa. Sake shiga da WhatsApp.';
+
+  @override
+  String get compromisedTitle => 'Wataƙila an canza tsarin wannan wayar (root/jailbreak)';
+
+  @override
+  String get compromisedBody =>
+      'Manhajoji a wayar da aka canza za su iya karanta abin da ke allonka. Za ka iya ci gaba da amfani da Jarina, amma za mu iya taƙaita cirewa don kare kuɗinka.';
+
+  @override
+  String get understood => 'Na fahimta';
+
+  @override
+  String get errorScreenTitle => 'Ba a iya buɗe wannan shafin ba';
+
+  @override
+  String get goHome => 'Je zuwa Gida';
 }

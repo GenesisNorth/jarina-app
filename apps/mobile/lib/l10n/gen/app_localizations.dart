@@ -363,17 +363,17 @@ abstract class AppLocalizations {
   /// **'▼ −0.20% vs previous candle · Vol 64'**
   String get s020VsPreviousCandleVol2;
 
-  /// No description provided for @fromNairaWallet.
+  /// No description provided for @fromNairaWallet2.
   ///
   /// In en, this message translates to:
   /// **'From Naira wallet'**
-  String get fromNairaWallet;
+  String get fromNairaWallet2;
 
-  /// No description provided for @toNairaWallet.
+  /// No description provided for @toNairaWallet2.
   ///
   /// In en, this message translates to:
   /// **'To Naira wallet'**
-  String get toNairaWallet;
+  String get toNairaWallet2;
 
   /// No description provided for @fromUsdtWallet.
   ///
@@ -4809,17 +4809,17 @@ abstract class AppLocalizations {
   /// **'Condition met'**
   String get conditionMet;
 
-  /// No description provided for @runsOnce.
+  /// No description provided for @runsOnce2.
   ///
   /// In en, this message translates to:
   /// **'Runs once'**
-  String get runsOnce;
+  String get runsOnce2;
 
-  /// No description provided for @repeatsEveryTime.
+  /// No description provided for @repeatsEveryTime2.
   ///
   /// In en, this message translates to:
   /// **'Repeats every time'**
-  String get repeatsEveryTime;
+  String get repeatsEveryTime2;
 
   /// No description provided for @expiresIn30Days.
   ///
@@ -4851,17 +4851,17 @@ abstract class AppLocalizations {
   /// **'Autopilot places orders at market conditions you set. Prices can gap past your range, so fills may differ slightly. Investments can go down as well as up.'**
   String get autopilotPlacesOrdersAtMarketConditions;
 
-  /// No description provided for @ruleOn.
+  /// No description provided for @ruleOn2.
   ///
   /// In en, this message translates to:
   /// **'Rule on'**
-  String get ruleOn;
+  String get ruleOn2;
 
-  /// No description provided for @deleteRule.
+  /// No description provided for @deleteRule2.
   ///
   /// In en, this message translates to:
   /// **'Delete rule'**
-  String get deleteRule;
+  String get deleteRule2;
 
   /// No description provided for @rulePaused.
   ///
@@ -4953,11 +4953,11 @@ abstract class AppLocalizations {
   /// **'22 Sep'**
   String get s22Sep;
 
-  /// No description provided for @alertOn.
+  /// No description provided for @alertOn2.
   ///
   /// In en, this message translates to:
   /// **'Alert on'**
-  String get alertOn;
+  String get alertOn2;
 
   /// No description provided for @alertSet.
   ///
@@ -4965,11 +4965,11 @@ abstract class AppLocalizations {
   /// **'Alert set'**
   String get alertSet;
 
-  /// No description provided for @noAlertsYet.
+  /// No description provided for @noAlertsYet2.
   ///
   /// In en, this message translates to:
   /// **'No alerts yet'**
-  String get noAlertsYet;
+  String get noAlertsYet2;
 
   /// No description provided for @stablecoin.
   ///
@@ -5889,11 +5889,11 @@ abstract class AppLocalizations {
   /// **'Autopilot rule'**
   String get autopilotRule;
 
-  /// No description provided for @whenThePrice.
+  /// No description provided for @whenThePrice2.
   ///
   /// In en, this message translates to:
   /// **'When the price…'**
-  String get whenThePrice;
+  String get whenThePrice2;
 
   /// No description provided for @fallsIntoARange.
   ///
@@ -8336,6 +8336,522 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{name} · @{handle}'**
   String userFound(String name, String handle);
+
+  /// No description provided for @whenThePrice.
+  ///
+  /// In en, this message translates to:
+  /// **'When the price'**
+  String get whenThePrice;
+
+  /// No description provided for @thenBuyWith.
+  ///
+  /// In en, this message translates to:
+  /// **'Then buy with'**
+  String get thenBuyWith;
+
+  /// No description provided for @thenSell.
+  ///
+  /// In en, this message translates to:
+  /// **'Then sell'**
+  String get thenSell;
+
+  /// No description provided for @atTriggerFeeIncluded.
+  ///
+  /// In en, this message translates to:
+  /// **'At your trigger price · {fee} fee included'**
+  String atTriggerFeeIncluded(String fee);
+
+  /// No description provided for @watching.
+  ///
+  /// In en, this message translates to:
+  /// **'Watching'**
+  String get watching;
+
+  /// No description provided for @never.
+  ///
+  /// In en, this message translates to:
+  /// **'Never'**
+  String get never;
+
+  /// No description provided for @enterTriggerAndAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a trigger price and amount.'**
+  String get enterTriggerAndAmount;
+
+  /// No description provided for @enterPriceAndAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a price and amount'**
+  String get enterPriceAndAmount;
+
+  /// No description provided for @yourShares.
+  ///
+  /// In en, this message translates to:
+  /// **'Your shares'**
+  String get yourShares;
+
+  /// No description provided for @ruleWhenRange.
+  ///
+  /// In en, this message translates to:
+  /// **'When {asset} trades between {low} and {high}'**
+  String ruleWhenRange(String asset, String low, String high);
+
+  /// No description provided for @ruleWhenBelow.
+  ///
+  /// In en, this message translates to:
+  /// **'When {asset} falls below {price}'**
+  String ruleWhenBelow(String asset, String price);
+
+  /// No description provided for @ruleWhenAbove.
+  ///
+  /// In en, this message translates to:
+  /// **'When {asset} rises above {price}'**
+  String ruleWhenAbove(String asset, String price);
+
+  /// No description provided for @ruleSentenceBuy.
+  ///
+  /// In en, this message translates to:
+  /// **'{when}, buy {amount}.'**
+  String ruleSentenceBuy(String when, String amount);
+
+  /// No description provided for @ruleSentenceSell.
+  ///
+  /// In en, this message translates to:
+  /// **'{when}, sell {amount}.'**
+  String ruleSentenceSell(String when, String amount);
+
+  /// No description provided for @amountWorth.
+  ///
+  /// In en, this message translates to:
+  /// **'{amount} worth'**
+  String amountWorth(String amount);
+
+  /// No description provided for @percentOfMy.
+  ///
+  /// In en, this message translates to:
+  /// **'{pct}% of my {unit}'**
+  String percentOfMy(String pct, String unit);
+
+  /// No description provided for @runsOnce.
+  ///
+  /// In en, this message translates to:
+  /// **'Runs once'**
+  String get runsOnce;
+
+  /// No description provided for @repeatsEveryTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Repeats every time'**
+  String get repeatsEveryTime;
+
+  /// No description provided for @expiresIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Expires in {period}'**
+  String expiresIn(String period);
+
+  /// No description provided for @nowPrice.
+  ///
+  /// In en, this message translates to:
+  /// **'Now {price}'**
+  String nowPrice(String price);
+
+  /// No description provided for @fromNairaWallet.
+  ///
+  /// In en, this message translates to:
+  /// **'From Naira wallet'**
+  String get fromNairaWallet;
+
+  /// No description provided for @toNairaWallet.
+  ///
+  /// In en, this message translates to:
+  /// **'To Naira wallet'**
+  String get toNairaWallet;
+
+  /// No description provided for @percentAway.
+  ///
+  /// In en, this message translates to:
+  /// **'{pct}% away'**
+  String percentAway(String pct);
+
+  /// No description provided for @vsNow.
+  ///
+  /// In en, this message translates to:
+  /// **'{pct} vs now'**
+  String vsNow(String pct);
+
+  /// No description provided for @moreThanYouHaveRule.
+  ///
+  /// In en, this message translates to:
+  /// **'More than you have today. The rule will be skipped if there isn\'\'t enough when it triggers.'**
+  String get moreThanYouHaveRule;
+
+  /// No description provided for @proceedsGoToNaira.
+  ///
+  /// In en, this message translates to:
+  /// **'Proceeds go to your Naira wallet. If you hold fewer than set, we sell what you have.'**
+  String get proceedsGoToNaira;
+
+  /// No description provided for @slideToSaveBuyRule.
+  ///
+  /// In en, this message translates to:
+  /// **'Slide to save auto-buy rule'**
+  String get slideToSaveBuyRule;
+
+  /// No description provided for @slideToSaveSellRule.
+  ///
+  /// In en, this message translates to:
+  /// **'Slide to save auto-sell rule'**
+  String get slideToSaveSellRule;
+
+  /// No description provided for @authoriseAutopilot.
+  ///
+  /// In en, this message translates to:
+  /// **'Authorise Autopilot to trade for you when your conditions are met'**
+  String get authoriseAutopilot;
+
+  /// No description provided for @switchBuySell.
+  ///
+  /// In en, this message translates to:
+  /// **'Switch auto-buy / auto-sell'**
+  String get switchBuySell;
+
+  /// No description provided for @alertTitleAbove.
+  ///
+  /// In en, this message translates to:
+  /// **'{asset} above {price}'**
+  String alertTitleAbove(String asset, String price);
+
+  /// No description provided for @alertTitleBelow.
+  ///
+  /// In en, this message translates to:
+  /// **'{asset} below {price}'**
+  String alertTitleBelow(String asset, String price);
+
+  /// No description provided for @alertSummaryAbove.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'\'ll notify you by {channels} when {asset} goes above {price}.'**
+  String alertSummaryAbove(String channels, String asset, String price);
+
+  /// No description provided for @alertSummaryBelow.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'\'ll notify you by {channels} when {asset} goes below {price}.'**
+  String alertSummaryBelow(String channels, String asset, String price);
+
+  /// No description provided for @pickPriceAndChannel.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick a price and at least one channel.'**
+  String get pickPriceAndChannel;
+
+  /// No description provided for @fromCurrentPrice.
+  ///
+  /// In en, this message translates to:
+  /// **'{pct} from the current price'**
+  String fromCurrentPrice(String pct);
+
+  /// No description provided for @alertNotifyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Get notified on all your devices when {asset} reaches your price.'**
+  String alertNotifyBody(String asset);
+
+  /// No description provided for @noAlertsYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No alerts yet'**
+  String get noAlertsYet;
+
+  /// No description provided for @alertOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Alert on'**
+  String get alertOn;
+
+  /// No description provided for @ruleOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Rule on'**
+  String get ruleOn;
+
+  /// No description provided for @deleteRule.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete rule'**
+  String get deleteRule;
+
+  /// No description provided for @deleteAlert.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete alert'**
+  String get deleteAlert;
+
+  /// No description provided for @alertDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Alert deleted'**
+  String get alertDeleted;
+
+  /// No description provided for @eventRoseAbove.
+  ///
+  /// In en, this message translates to:
+  /// **'{asset} rose above {price}'**
+  String eventRoseAbove(String asset, String price);
+
+  /// No description provided for @eventFellBelow.
+  ///
+  /// In en, this message translates to:
+  /// **'{asset} fell below {price}'**
+  String eventFellBelow(String asset, String price);
+
+  /// No description provided for @eventAutopilotBought.
+  ///
+  /// In en, this message translates to:
+  /// **'Autopilot bought {qty} {asset} at {price}'**
+  String eventAutopilotBought(String qty, String asset, String price);
+
+  /// No description provided for @eventAutopilotSold.
+  ///
+  /// In en, this message translates to:
+  /// **'Autopilot sold {qty} {asset} at {price}'**
+  String eventAutopilotSold(String qty, String asset, String price);
+
+  /// No description provided for @eventAutopilotSkipped.
+  ///
+  /// In en, this message translates to:
+  /// **'Autopilot skipped {asset}: not enough balance'**
+  String eventAutopilotSkipped(String asset);
+
+  /// No description provided for @noNotificationsYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No notifications yet'**
+  String get noNotificationsYet;
+
+  /// No description provided for @transactionsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} transactions'**
+  String transactionsCount(String count);
+
+  /// No description provided for @walletsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} wallets'**
+  String walletsCount(String count);
+
+  /// No description provided for @p2pRowTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'P2P · Send to a Jarina user'**
+  String get p2pRowTitle;
+
+  /// No description provided for @p2pRowSub.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash, crypto or stocks by @username · free & instant'**
+  String get p2pRowSub;
+
+  /// No description provided for @accountWithPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Account · {phone}'**
+  String accountWithPhone(String phone);
+
+  /// No description provided for @verifiedTier.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified · Tier {tier}'**
+  String verifiedTier(String tier);
+
+  /// No description provided for @logOutQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Log out?'**
+  String get logOutQuestion;
+
+  /// No description provided for @logOutBody.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'\'ll need your WhatsApp number and 2FA code to log in again.'**
+  String get logOutBody;
+
+  /// No description provided for @twofaRequiredSub.
+  ///
+  /// In en, this message translates to:
+  /// **'Authenticator app · required for new devices, sells and withdrawals'**
+  String get twofaRequiredSub;
+
+  /// No description provided for @backupLeft.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} left'**
+  String backupLeft(String count);
+
+  /// No description provided for @enterCurrentPin.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your current PIN'**
+  String get enterCurrentPin;
+
+  /// No description provided for @createNewPin.
+  ///
+  /// In en, this message translates to:
+  /// **'Create a new PIN'**
+  String get createNewPin;
+
+  /// No description provided for @confirmNewPin.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm your new PIN'**
+  String get confirmNewPin;
+
+  /// No description provided for @pinChanged.
+  ///
+  /// In en, this message translates to:
+  /// **'PIN changed'**
+  String get pinChanged;
+
+  /// No description provided for @backupCodesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Each code works once if you lose your authenticator. Keep them somewhere safe, offline.'**
+  String get backupCodesBody;
+
+  /// No description provided for @generateNewCodes.
+  ///
+  /// In en, this message translates to:
+  /// **'Generate new codes'**
+  String get generateNewCodes;
+
+  /// No description provided for @newCodesReplaceOld.
+  ///
+  /// In en, this message translates to:
+  /// **'New codes replace your old ones.'**
+  String get newCodesReplaceOld;
+
+  /// No description provided for @copyAll.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy all'**
+  String get copyAll;
+
+  /// No description provided for @thisPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'This phone'**
+  String get thisPhone;
+
+  /// No description provided for @lastActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Last active {date}'**
+  String lastActive(String date);
+
+  /// No description provided for @deviceRemoved.
+  ///
+  /// In en, this message translates to:
+  /// **'Device signed out'**
+  String get deviceRemoved;
+
+  /// No description provided for @devicesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Phones signed in to your account. Remove any you don\'\'t recognise.'**
+  String get devicesBody;
+
+  /// No description provided for @tier3Body.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload a utility bill or bank statement from the last 3 months to raise your limits. Tier 3 opens soon.'**
+  String get tier3Body;
+
+  /// No description provided for @perDayTier.
+  ///
+  /// In en, this message translates to:
+  /// **'{amount} per day · Tier {tier}'**
+  String perDayTier(String amount, String tier);
+
+  /// No description provided for @faceIdOnDevice.
+  ///
+  /// In en, this message translates to:
+  /// **'Uses this phone\'\'s face or fingerprint unlock'**
+  String get faceIdOnDevice;
+
+  /// No description provided for @attachScreenshot.
+  ///
+  /// In en, this message translates to:
+  /// **'Attach a screenshot or receipt'**
+  String get attachScreenshot;
+
+  /// No description provided for @messageLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get messageLabel;
+
+  /// No description provided for @sendMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get sendMessage;
+
+  /// No description provided for @agentTyping.
+  ///
+  /// In en, this message translates to:
+  /// **'Agent is typing'**
+  String get agentTyping;
+
+  /// No description provided for @unlockSub.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your PIN to unlock Jarina'**
+  String get unlockSub;
+
+  /// No description provided for @notYouLogOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Not you? Log out'**
+  String get notYouLogOut;
+
+  /// No description provided for @lockedOutLogInAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Too many wrong PINs. Log in again with WhatsApp.'**
+  String get lockedOutLogInAgain;
+
+  /// No description provided for @compromisedTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'This phone may be rooted or jailbroken'**
+  String get compromisedTitle;
+
+  /// No description provided for @compromisedBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Apps on a modified phone can read what\'\'s on your screen. You can keep using Jarina, but we may limit withdrawals to protect your money.'**
+  String get compromisedBody;
+
+  /// No description provided for @understood.
+  ///
+  /// In en, this message translates to:
+  /// **'I understand'**
+  String get understood;
+
+  /// No description provided for @errorScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'This screen couldn\'\'t load'**
+  String get errorScreenTitle;
+
+  /// No description provided for @goHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to Home'**
+  String get goHome;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

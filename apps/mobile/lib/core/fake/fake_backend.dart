@@ -41,7 +41,20 @@ class FakeBackend implements AuthRepository, KycRepository, SecurityRepository, 
   String? _pin;
 
   /// Demo user from the prototype until onboarding supplies real details.
-  var _profile = const UserProfile(firstName: 'Aminu', lastName: 'Bello', username: 'aminu', tier: 2);
+  var _profile = UserProfile(
+    firstName: 'Aminu',
+    lastName: 'Bello',
+    username: 'aminu',
+    tier: 2,
+    phoneE164: '+2348012345678',
+    email: 'aminu@example.com',
+    custodyAccountId: 'QDX-SA-4821-7730',
+    dailyWithdrawalLimit: Money.parse('10000000', Currency.ngn),
+  );
+  late List<TrustedDevice> _devices = [
+    TrustedDevice(id: 'this', name: 'This phone', lastSeen: _now(), current: true),
+    TrustedDevice(id: 'd2', name: 'Samsung Galaxy A14 · Kano', lastSeen: _now().subtract(const Duration(days: 3))),
+  ];
   int _wrongPins = 0;
   static const maxPinAttempts = 5;
 
@@ -126,12 +139,7 @@ class FakeBackend implements AuthRepository, KycRepository, SecurityRepository, 
   @override
   Future<Result<void>> submitPersonalDetails(PersonalDetails details) async {
     await _wait();
-    _profile = UserProfile(
-      firstName: details.firstName,
-      lastName: details.lastName,
-      username: _profile.username,
-      tier: 2,
-    );
+    _profile = _profile.copyWith(firstName: details.firstName, lastName: details.lastName);
     return const Ok(null);
   }
 
@@ -147,12 +155,7 @@ class FakeBackend implements AuthRepository, KycRepository, SecurityRepository, 
     final h = UsernameRules.normalize(handle);
     if (UsernameRules.validate(h) != null) return const Err(ValidationFailure('Invalid username'));
     if (!_takenUsernames.add(h)) return const Err(UsernameTakenFailure());
-    _profile = UserProfile(
-      firstName: _profile.firstName,
-      lastName: _profile.lastName,
-      username: h,
-      tier: _profile.tier,
-    );
+    _profile = _profile.copyWith(username: h);
     return const Ok(null);
   }
 
@@ -248,6 +251,50 @@ class FakeBackend implements AuthRepository, KycRepository, SecurityRepository, 
     final secret = _totpSecret;
     final ok = code == demoCode || (secret != null && Totp.verify(secret, code, _now()));
     return ok ? Ok('2fa-token-${_id()}') : const Err(WrongCodeFailure());
+  }
+
+  @override
+  Future<Result<void>> changePin({required String currentPin, required String newPin}) async {
+    final check = await verifyPin(currentPin);
+    if (check case Err(:final failure)) return Err(failure);
+    if (PinRules.validate(newPin) != null) return const Err(ValidationFailure('Choose a stronger PIN'));
+    if (newPin == currentPin) return const Err(ValidationFailure('Choose a new PIN'));
+    _pin = newPin;
+    return const Ok(null);
+  }
+
+  List<String> _newBackupCodes() {
+    const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    return List.generate(8, (_) => List.generate(8, (_) => alphabet[_random.nextInt(alphabet.length)]).join());
+  }
+
+  @override
+  Future<int> backupCodesLeft() async {
+    await _wait();
+    // After a restart the in-memory codes are gone; the demo starts with a full set.
+    if (_backupCodes.isEmpty) _backupCodes = _newBackupCodes();
+    return _backupCodes.length;
+  }
+
+  @override
+  Future<Result<List<String>>> regenerateBackupCodes({required String twofaToken}) async {
+    await _wait();
+    _backupCodes = _newBackupCodes();
+    return Ok(List.unmodifiable(_backupCodes));
+  }
+
+  @override
+  Future<List<TrustedDevice>> trustedDevices() async {
+    await _wait();
+    return List.unmodifiable(_devices);
+  }
+
+  @override
+  Future<Result<void>> removeDevice(String id, {required String pinToken}) async {
+    await _wait();
+    if (_devices.any((d) => d.id == id && d.current)) return const Err(ValidationFailure('Log out on this phone'));
+    _devices = [..._devices.where((d) => d.id != id)];
+    return const Ok(null);
   }
 }
 

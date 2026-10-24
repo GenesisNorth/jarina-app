@@ -8,6 +8,7 @@ import 'package:jarina/app/app.dart';
 import 'package:jarina/app/env.dart';
 import 'package:jarina/core/fake/fake_backend.dart';
 import 'package:jarina/core/providers.dart';
+import 'package:jarina/core/security/app_security.dart';
 import 'package:jarina_ui/jarina_ui.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -28,6 +29,7 @@ void main() {
       ProviderScope(
         overrides: [
           envProvider.overrideWithValue(Env.staging),
+          lockOnLaunchProvider.overrideWithValue(false),
           sharedPreferencesProvider.overrideWithValue(await SharedPreferences.getInstance()),
         ],
         child: const JarinaApp(),

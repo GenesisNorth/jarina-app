@@ -615,3 +615,126 @@ final class BillsRepositoryProvider extends $FunctionalProvider<BillsRepository,
 }
 
 String _$billsRepositoryHash() => r'506cd6e490c09370aaa739b8ba9951301b178ef4';
+
+@ProviderFor(fakeAutomation)
+final fakeAutomationProvider = FakeAutomationProvider._();
+
+final class FakeAutomationProvider extends $FunctionalProvider<FakeAutomation, FakeAutomation, FakeAutomation>
+    with $Provider<FakeAutomation> {
+  FakeAutomationProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'fakeAutomationProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$fakeAutomationHash();
+
+  @$internal
+  @override
+  $ProviderElement<FakeAutomation> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+
+  @override
+  FakeAutomation create(Ref ref) {
+    return fakeAutomation(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(FakeAutomation value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<FakeAutomation>(value),
+    );
+  }
+}
+
+String _$fakeAutomationHash() => r'0587d5f883f054816a43c66e817edb45559680d0';
+
+@ProviderFor(automationRepository)
+final automationRepositoryProvider = AutomationRepositoryProvider._();
+
+final class AutomationRepositoryProvider
+    extends $FunctionalProvider<AutomationRepository, AutomationRepository, AutomationRepository>
+    with $Provider<AutomationRepository> {
+  AutomationRepositoryProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'automationRepositoryProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$automationRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<AutomationRepository> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  AutomationRepository create(Ref ref) {
+    return automationRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(AutomationRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<AutomationRepository>(value),
+    );
+  }
+}
+
+String _$automationRepositoryHash() => r'22b959195b9b3485aa8728d2f6baef40f3558aad';
+
+@ProviderFor(supportRepository)
+final supportRepositoryProvider = SupportRepositoryProvider._();
+
+final class SupportRepositoryProvider
+    extends $FunctionalProvider<SupportRepository, SupportRepository, SupportRepository>
+    with $Provider<SupportRepository> {
+  SupportRepositoryProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'supportRepositoryProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$supportRepositoryHash();
+
+  @$internal
+  @override
+  $ProviderElement<SupportRepository> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  SupportRepository create(Ref ref) {
+    return supportRepository(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(SupportRepository value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<SupportRepository>(value),
+    );
+  }
+}
+
+String _$supportRepositoryHash() => r'3bf04a622186a8fffe32c6ea4326fedac59ce130';

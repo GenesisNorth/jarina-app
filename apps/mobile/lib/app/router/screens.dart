@@ -1,8 +1,14 @@
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:jarina/app/router/routes.dart';
+import 'package:jarina/features/account/presentation/account_screen.dart';
+import 'package:jarina/features/account/presentation/language_settings_screen.dart';
+import 'package:jarina/features/account/presentation/more_screen.dart';
 import 'package:jarina/features/activity/presentation/activity_screen.dart';
 import 'package:jarina/features/activity/presentation/receipt_screen.dart';
+import 'package:jarina/features/automation/presentation/alerts_screens.dart';
+import 'package:jarina/features/automation/presentation/autopilot_screen.dart';
+import 'package:jarina/features/automation/presentation/rule_screen.dart';
 import 'package:jarina/features/crypto/presentation/coin_screen.dart';
 import 'package:jarina/features/crypto/presentation/crypto_lists_screens.dart';
 import 'package:jarina/features/crypto/presentation/crypto_money_screens.dart';
@@ -35,6 +41,7 @@ import 'package:jarina/features/payments/presentation/pay_confirm_screen.dart';
 import 'package:jarina/features/payments/presentation/payment_result_screens.dart';
 import 'package:jarina/features/payments/presentation/people_screen.dart';
 import 'package:jarina/features/payments/presentation/transfer_screen.dart';
+import 'package:jarina/features/support/presentation/chat_screen.dart';
 import 'package:jarina/features/trading/domain/trading.dart';
 import 'package:jarina/features/trading/presentation/asset_screen.dart';
 import 'package:jarina/features/trading/presentation/order_done_screen.dart';
@@ -99,6 +106,11 @@ Widget? screenFor(AppRoute route, GoRouterState state) => switch (route) {
       _ => null,
     },
     side: state.uri.queryParameters['side'] == 'sell' ? TradeSide.sell : TradeSide.buy,
+    purpose: switch (state.uri.queryParameters['for']) {
+      'rule' => PickerPurpose.rule,
+      'alert' => PickerPurpose.alert,
+      _ => PickerPurpose.trade,
+    },
   ),
   AppRoute.review => const ReviewScreen(),
   AppRoute.done => const OrderDoneScreen(),
@@ -134,6 +146,17 @@ Widget? screenFor(AppRoute route, GoRouterState state) => switch (route) {
   AppRoute.p2pdone => const P2pDoneScreen(),
   AppRoute.bill => BillScreen(key: ValueKey(state.uri), kind: BillScreen.kindOf(state.pathParameters['kind'])),
   AppRoute.withdraw => const WithdrawScreen(coin: 'USDT'),
+  AppRoute.more => const MoreScreen(),
+  AppRoute.account => const AccountScreen(),
+  AppRoute.language => const LanguageSettingsScreen(),
+  AppRoute.chat => const ChatScreen(),
+  AppRoute.autopilot => AutopilotScreen(
+    key: ValueKey(state.uri),
+    kind: state.uri.queryParameters['type'] == 'crypto' ? AssetKind.crypto : AssetKind.stock,
+  ),
+  AppRoute.rule => RuleScreen(key: ValueKey(state.uri), assetId: state.uri.queryParameters['asset'] ?? 'DANGCEM'),
+  AppRoute.alerts => const AlertsScreen(),
+  AppRoute.alert => AlertScreen(key: ValueKey(state.uri), assetId: state.uri.queryParameters['asset'] ?? 'MTNN'),
   _ => null,
 };
 

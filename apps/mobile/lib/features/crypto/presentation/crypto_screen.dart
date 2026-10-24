@@ -201,6 +201,12 @@ class CryptoScreen extends ConsumerWidget {
                 link(JIcon.doc, l.openOrders, '$open', () => push(AppRoute.qorders)),
                 link(
                   JIcon.auto,
+                  l.cryptoAutopilot,
+                  null,
+                  () => push(AppRoute.autopilot, query: const {'type': 'crypto'}),
+                ),
+                link(
+                  JIcon.auto,
                   l.autoSwapDeposits,
                   autoSwap == null ? l.offLabel : l.onLabel,
                   () => push(AppRoute.qauto),

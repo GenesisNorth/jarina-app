@@ -10,9 +10,15 @@ import 'package:jarina/l10n/gen/app_localizations.dart';
 import 'package:jarina_core/jarina_core.dart';
 import 'package:jarina_ui/jarina_ui.dart';
 
-/// Pick an asset to trade. Sell mode lists only what the user holds.
+/// What the picked asset is for.
+enum PickerPurpose { trade, rule, alert }
+
+/// Pick an asset to trade, or to set an Autopilot rule or price alert on.
+/// Sell mode lists only what the user holds.
 class PickerScreen extends ConsumerStatefulWidget {
-  const PickerScreen({super.key, this.kind, this.side = TradeSide.buy});
+  const PickerScreen({super.key, this.kind, this.side = TradeSide.buy, this.purpose = PickerPurpose.trade});
+
+  final PickerPurpose purpose;
 
   /// Null shows stocks and crypto.
   final AssetKind? kind;
@@ -42,12 +48,11 @@ class _PickerScreenState extends ConsumerState<PickerScreen> {
         .where((a) => q.isEmpty || a.id.toLowerCase().contains(q) || a.name.toLowerCase().contains(q))
         .toList();
 
-    final title = switch ((widget.kind, sell)) {
-      (AssetKind.stock, false) => l.buyStocks,
-      (AssetKind.stock, true) => l.sellStocks,
-      (AssetKind.crypto, false) => l.buyCrypto,
-      (AssetKind.crypto, true) => l.sellCrypto,
-      (null, _) => sell ? l.sell : l.buy,
+    final title = switch ((widget.purpose, widget.kind, sell)) {
+      (PickerPurpose.rule, AssetKind.crypto, _) => l.newCryptoRule,
+      (PickerPurpose.rule, _, _) => l.newStockRule,
+      (PickerPurpose.alert, _, _) => l.newPriceAlert,
+      (PickerPurpose.trade, final kind, _) => _tradeTitle(l, kind, sell: sell),
     };
 
     return Scaffold(
@@ -65,11 +70,13 @@ class _PickerScreenState extends ConsumerState<PickerScreen> {
             padding: const EdgeInsets.fromLTRB(SpacingTokens.screenGutter, 4, SpacingTokens.screenGutter, 12),
             sliver: SliverList.list(
               children: [
-                Text(
-                  sell ? l.chooseAHoldingToSell : l.chooseWhatYouWantToBuy,
-                  style: t.body.copyWith(color: c.muted, fontWeight: FontWeight.w400),
-                ),
-                const SizedBox(height: 12),
+                if (widget.purpose == PickerPurpose.trade) ...[
+                  Text(
+                    sell ? l.chooseAHoldingToSell : l.chooseWhatYouWantToBuy,
+                    style: t.body.copyWith(color: c.muted, fontWeight: FontWeight.w400),
+                  ),
+                  const SizedBox(height: 12),
+                ],
                 JTextField(
                   hint: l.searchCompanyOrTicker,
                   onChanged: (v) => setState(() => _query = v),
@@ -98,8 +105,15 @@ class _PickerScreenState extends ConsumerState<PickerScreen> {
                         asset: list[i],
                         quote: quotes?[list[i].id],
                         onTap: () => context.pushReplacementNamed(
-                          AppRoute.entry.name,
-                          queryParameters: {'asset': list[i].id, 'side': widget.side.name},
+                          switch (widget.purpose) {
+                            PickerPurpose.trade => AppRoute.entry.name,
+                            PickerPurpose.rule => AppRoute.rule.name,
+                            PickerPurpose.alert => AppRoute.alert.name,
+                          },
+                          queryParameters: {
+                            'asset': list[i].id,
+                            if (widget.purpose == PickerPurpose.trade) 'side': widget.side.name,
+                          },
                         ),
                       ),
                     ),
@@ -110,3 +124,11 @@ class _PickerScreenState extends ConsumerState<PickerScreen> {
     );
   }
 }
+
+String _tradeTitle(AppLocalizations l, AssetKind? kind, {required bool sell}) => switch ((kind, sell)) {
+  (AssetKind.stock, false) => l.buyStocks,
+  (AssetKind.stock, true) => l.sellStocks,
+  (AssetKind.crypto, false) => l.buyCrypto,
+  (AssetKind.crypto, true) => l.sellCrypto,
+  (null, _) => sell ? l.sell : l.buy,
+};

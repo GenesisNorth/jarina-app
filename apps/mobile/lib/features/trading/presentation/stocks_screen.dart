@@ -155,7 +155,8 @@ class _StocksScreenState extends ConsumerState<StocksScreen> {
                         title: l.autopilot,
                         subtitle: l.autoBuyDipsAndAutoSell,
                         dark: true,
-                        onTap: () => context.pushNamed(AppRoute.autopilot.name),
+                        onTap: () =>
+                            context.pushNamed(AppRoute.autopilot.name, queryParameters: const {'type': 'stock'}),
                       ),
                       _ToolRow(
                         icon: JIcon.bell,

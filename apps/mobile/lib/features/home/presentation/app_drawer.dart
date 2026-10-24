@@ -37,12 +37,17 @@ class _AppDrawer extends ConsumerWidget {
     final dark = Theme.of(context).brightness == Brightness.dark;
     const white = Colors.white;
 
-    void open(AppRoute r, {Map<String, String> params = const {}, bool tab = false}) {
+    void open(
+      AppRoute r, {
+      Map<String, String> params = const {},
+      Map<String, String> query = const {},
+      bool tab = false,
+    }) {
       Navigator.of(context).pop();
       if (tab) {
         context.goNamed(r.name);
       } else {
-        unawaited(context.pushNamed(r.name, pathParameters: params));
+        unawaited(context.pushNamed(r.name, pathParameters: params, queryParameters: query));
       }
     }
 
@@ -50,8 +55,8 @@ class _AppDrawer extends ConsumerWidget {
       (l.dashboard, () => open(AppRoute.home, tab: true)),
       (l.stocks, () => open(AppRoute.stocks, tab: true)),
       (l.crypto, () => open(AppRoute.crypto, tab: true)),
-      (l.stockAutopilot, () => open(AppRoute.autopilot)),
-      (l.cryptoAutopilot, () => open(AppRoute.autopilot)),
+      (l.stockAutopilot, () => open(AppRoute.autopilot, query: const {'type': 'stock'})),
+      (l.cryptoAutopilot, () => open(AppRoute.autopilot, query: const {'type': 'crypto'})),
       (l.priceAlerts, () => open(AppRoute.alerts)),
       (l.wallets, () => open(AppRoute.wallets, tab: true)),
       (l.activity, () => open(AppRoute.activity, tab: true)),
