@@ -162,7 +162,7 @@ class _LoginTwofaScreenState extends ConsumerState<LoginTwofaScreen> {
             ),
           ),
         ),
-        if (ref.watch(envProvider).useFakeData && !_useBackup)
+        if (ref.watch(envProvider).fakeAuth && !_useBackup)
           Text(l.demoCodeHint(FakeBackend.demoCode), style: t.caption.copyWith(color: c.muted)),
       ],
     );

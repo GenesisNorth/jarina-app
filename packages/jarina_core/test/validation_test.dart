@@ -10,14 +10,21 @@ void main() {
       expect(PhoneRules.validate('080123456789', nationalLength: 11), FieldError.tooLong);
     });
 
-    test('E.164 drops the trunk zero', () {
-      expect(PhoneRules.toE164('+234', '0801 234 5678'), '+2348012345678');
+    test('E.164 drops only a trunk prefix', () {
+      expect(PhoneRules.toE164('+234', '0801 234 5678', trunkPrefix: '0'), '+2348012345678');
+      expect(PhoneRules.toE164('+233', '024 123 4567', trunkPrefix: '0'), '+233241234567');
       expect(PhoneRules.toE164('+227', '90 12 34 56'), '+22790123456');
+      // Benin's 10-digit numbers start with 01; the 0 is part of the number.
+      expect(PhoneRules.toE164('+229', '01 90 12 34 56'), '+2290190123456');
     });
 
     test('displays E.164 in local format', () {
-      expect(PhoneRules.display('+2348012345678', dialCode: '+234', sample: '0801 234 5678'), '+234 0801 234 5678');
+      expect(
+        PhoneRules.display('+2348012345678', dialCode: '+234', sample: '0801 234 5678', trunkPrefix: '0'),
+        '+234 0801 234 5678',
+      );
       expect(PhoneRules.display('+22790123456', dialCode: '+227', sample: '90 12 34 56'), '+227 90 12 34 56');
+      expect(PhoneRules.display('+2290190123456', dialCode: '+229', sample: '01 90 12 34 56'), '+229 01 90 12 34 56');
     });
 
     test('formats like the sample', () {

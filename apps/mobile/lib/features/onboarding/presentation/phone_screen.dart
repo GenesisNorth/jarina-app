@@ -56,7 +56,7 @@ class _PhoneScreenState extends ConsumerState<PhoneScreen> {
     final r = await ref
         .read(authRepositoryProvider)
         .sendOtp(
-          phoneE164: PhoneRules.toE164(country.dialCode, _phone.text),
+          phoneE164: PhoneRules.toE164(country.dialCode, _phone.text, trunkPrefix: country.trunkPrefix),
           channel: OtpChannel.whatsapp,
           purpose: widget.login ? OtpPurpose.login : OtpPurpose.signup,
         );

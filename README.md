@@ -18,7 +18,10 @@ One pub workspace: run `flutter pub get` once at the root.
 ```bash
 make run                      # dev flavor, fake data
 cd apps/mobile && flutter run -t lib/main_staging.dart
+cd apps/mobile && flutter run -t lib/main_local.dart   # account features against the local API
 ```
+
+`main_local.dart` needs the backend running (`cd ../jarina_backend && make up && make dev`, port 3100). The WhatsApp code is `OTP_DEV_CODE` from its `.env` (123456); 2FA needs a real authenticator app. An Android emulator also needs `--dart-define=JARINA_API_URL=http://10.0.2.2:3100`. Live: sign-up, login, KYC details, username, address, PIN, 2FA, profile, backup codes, devices, and Markets (catalogue, real Quidax prices over the WebSocket, charts; stocks from a sandbox feed). Still fake: the ID and liveness checks (until Smile ID) and money movements (fake trades fill at the live prices). Add `--dart-define=JARINA_LIVE_WALLET=true` for the real naira wallet too (funding account, test deposits, balances, activity); demo trades then don't change those real balances.
 
 In non-prod builds, the gold **DEV** chip opens the route index. There you can open any of the 63 screens, switch the session state (signed in / KYC done / 2FA) to test the router guards, and change theme and language.
 

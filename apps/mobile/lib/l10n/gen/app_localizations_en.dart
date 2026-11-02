@@ -4712,4 +4712,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get goHome => 'Go to Home';
+
+  @override
+  String get errNoAccount => 'No Jarina account uses this number. Sign up instead.';
+
+  @override
+  String get errSessionEnded => 'Session ended. Log in again.';
 }

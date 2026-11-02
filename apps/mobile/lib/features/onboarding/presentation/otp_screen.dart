@@ -123,7 +123,12 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
     final country = ref.watch(selectedCountryProvider).value;
     final phone = country == null
         ? challenge.phoneE164
-        : PhoneRules.display(challenge.phoneE164, dialCode: country.dialCode, sample: country.sample);
+        : PhoneRules.display(
+            challenge.phoneE164,
+            dialCode: country.dialCode,
+            sample: country.sample,
+            trunkPrefix: country.trunkPrefix,
+          );
 
     final login = challenge.purpose == OtpPurpose.login;
     final phonePath = login ? '${AppRoute.phone.path}?mode=login' : AppRoute.phone.path;

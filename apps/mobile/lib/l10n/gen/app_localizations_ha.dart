@@ -4721,4 +4721,10 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get goHome => 'Je zuwa Gida';
+
+  @override
+  String get errNoAccount => 'Babu asusun Jarina da ke amfani da wannan lambar. Yi rajista maimakon haka.';
+
+  @override
+  String get errSessionEnded => 'Zaman ya ƙare. Sake shiga.';
 }

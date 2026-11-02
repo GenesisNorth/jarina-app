@@ -20,6 +20,7 @@ Future<ProviderContainer> pumpApp(
   Size size = const Size(390, 844),
   DateTime Function()? clock,
   bool lockOnLaunch = false,
+  Env env = Env.dev,
 }) async {
   // Phone-sized surface (iPhone 14/15) unless a test asks for another.
   tester.view.physicalSize = size * 3;
@@ -36,7 +37,7 @@ Future<ProviderContainer> pumpApp(
   FlutterSecureStorage.setMockInitialValues({});
   final container = ProviderContainer(
     overrides: [
-      envProvider.overrideWithValue(Env.dev),
+      envProvider.overrideWithValue(env),
       lockOnLaunchProvider.overrideWithValue(lockOnLaunch),
       if (clock != null) clockProvider.overrideWithValue(clock),
       sharedPreferencesProvider.overrideWithValue(await SharedPreferences.getInstance()),

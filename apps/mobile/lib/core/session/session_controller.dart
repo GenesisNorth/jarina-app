@@ -42,6 +42,8 @@ class SessionState {
   int get hashCode => Object.hash(signedIn, onboarded, twofaEnabled, kycStep);
 }
 
+typedef SessionTokens = ({String access, String refresh});
+
 /// Persists the session in Keychain / Android Keystore-backed storage.
 class SessionStore {
   SessionStore([FlutterSecureStorage? storage])
@@ -78,7 +80,23 @@ class SessionStore {
     }
   }
 
+  /// Memory copy of the tokens, so API calls don't read the keystore each time.
+  SessionTokens? _tokens;
+
+  Future<SessionTokens?> readTokens() async {
+    if (_tokens case final t?) return t;
+    try {
+      final access = await _s.read(key: _access);
+      final refresh = await _s.read(key: _refresh);
+      if (access == null || refresh == null) return null;
+      return _tokens = (access: access, refresh: refresh);
+    } on Object {
+      return null;
+    }
+  }
+
   Future<void> saveTokens(AuthSession s) async {
+    _tokens = (access: s.accessToken, refresh: s.refreshToken);
     await _s.write(key: _access, value: s.accessToken);
     await _s.write(key: _refresh, value: s.refreshToken);
   }
@@ -90,6 +108,7 @@ class SessionStore {
   }
 
   Future<void> clear() async {
+    _tokens = null;
     try {
       await _s.deleteAll();
     } on Object {

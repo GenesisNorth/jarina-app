@@ -8852,6 +8852,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Go to Home'**
   String get goHome;
+
+  /// No description provided for @errNoAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'No Jarina account uses this number. Sign up instead.'**
+  String get errNoAccount;
+
+  /// No description provided for @errSessionEnded.
+  ///
+  /// In en, this message translates to:
+  /// **'Session ended. Log in again.'**
+  String get errSessionEnded;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

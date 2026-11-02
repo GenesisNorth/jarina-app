@@ -4729,4 +4729,10 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get goHome => 'Aller à l\'accueil';
+
+  @override
+  String get errNoAccount => 'Aucun compte Jarina n\'utilise ce numéro. Inscrivez-vous plutôt.';
+
+  @override
+  String get errSessionEnded => 'Session terminée. Reconnectez-vous.';
 }

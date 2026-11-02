@@ -53,7 +53,7 @@ class _StocksScreenState extends ConsumerState<StocksScreen> {
     }
     var change = Money.zero(Currency.ngn);
     for (final h in holdings) {
-      change += Money((h.quote.price - h.asset.openPrice) * h.quantity, Currency.ngn).rounded();
+      change += Money((h.quote.price - h.quote.open) * h.quantity, Currency.ngn).rounded();
     }
     final value = portfolio?.stocks ?? Money.zero(Currency.ngn);
     final base = value - change;

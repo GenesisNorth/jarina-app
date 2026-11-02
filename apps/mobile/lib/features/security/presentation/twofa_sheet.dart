@@ -102,7 +102,7 @@ class _TwofaSheetState extends ConsumerState<_TwofaSheet> {
                       ? const SizedBox.square(dimension: 18, child: CircularProgressIndicator(strokeWidth: 2))
                       : Text(_error ?? '', style: t.caption.copyWith(color: c.down)),
                 ),
-                if (ref.watch(envProvider).useFakeData)
+                if (ref.watch(envProvider).fakeAuth)
                   Text(l.demoCodeHint(FakeBackend.demoCode), style: t.caption.copyWith(color: c.muted)),
               ],
             ),

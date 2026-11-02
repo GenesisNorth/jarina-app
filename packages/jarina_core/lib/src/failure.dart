@@ -1,6 +1,7 @@
 /// Expected failures the UI knows how to present. Features add their own
-/// subclasses (e.g. `WrongCodeFailure`) next to their repositories.
-abstract class Failure {
+/// subclasses (e.g. `WrongCodeFailure`) next to their repositories. Reads that
+/// feed a `FutureProvider` throw them, so the screen shows its error state.
+abstract class Failure implements Exception {
   const Failure(this.message);
 
   /// Developer-facing detail. User-facing copy comes from l10n per type.

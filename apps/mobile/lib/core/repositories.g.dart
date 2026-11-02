@@ -85,7 +85,84 @@ final class FakeLedgerProvider extends $FunctionalProvider<FakeLedger, FakeLedge
   }
 }
 
-String _$fakeLedgerHash() => r'b7a27769a396a838764d7f0200f01af2583839c6';
+String _$fakeLedgerHash() => r'f52b6debcee81c5aa5c39c4fc5340f6017511f08';
+
+@ProviderFor(apiClient)
+final apiClientProvider = ApiClientProvider._();
+
+final class ApiClientProvider extends $FunctionalProvider<ApiClient, ApiClient, ApiClient> with $Provider<ApiClient> {
+  ApiClientProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'apiClientProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$apiClientHash();
+
+  @$internal
+  @override
+  $ProviderElement<ApiClient> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+
+  @override
+  ApiClient create(Ref ref) {
+    return apiClient(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(ApiClient value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<ApiClient>(value),
+    );
+  }
+}
+
+String _$apiClientHash() => r'66e88bc353463398fc2f45e4e94430c2ee45a6cc';
+
+@ProviderFor(realtimeClient)
+final realtimeClientProvider = RealtimeClientProvider._();
+
+final class RealtimeClientProvider extends $FunctionalProvider<RealtimeClient, RealtimeClient, RealtimeClient>
+    with $Provider<RealtimeClient> {
+  RealtimeClientProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'realtimeClientProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$realtimeClientHash();
+
+  @$internal
+  @override
+  $ProviderElement<RealtimeClient> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+
+  @override
+  RealtimeClient create(Ref ref) {
+    return realtimeClient(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(RealtimeClient value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<RealtimeClient>(value),
+    );
+  }
+}
+
+String _$realtimeClientHash() => r'f0a38945dcad58405d65f1ada5fc3be0918154a4';
 
 /// Every repository is chosen here, so swapping fakes for the real API in the
 /// backend phase is a change to this file only.
@@ -132,7 +209,7 @@ final class AuthRepositoryProvider extends $FunctionalProvider<AuthRepository, A
   }
 }
 
-String _$authRepositoryHash() => r'873dd83856fc46e72fd2829429721afee63f6f2a';
+String _$authRepositoryHash() => r'62babbf014eb14d700ddfcc88688b076a398720f';
 
 @ProviderFor(kycRepository)
 final kycRepositoryProvider = KycRepositoryProvider._();
@@ -171,7 +248,7 @@ final class KycRepositoryProvider extends $FunctionalProvider<KycRepository, Kyc
   }
 }
 
-String _$kycRepositoryHash() => r'37ff776dd86c142edda8bddb118fe551a73f2ec6';
+String _$kycRepositoryHash() => r'5f2f83efcb69861c0e0fc45f8733101aafa1fb2d';
 
 @ProviderFor(securityRepository)
 final securityRepositoryProvider = SecurityRepositoryProvider._();
@@ -213,7 +290,7 @@ final class SecurityRepositoryProvider
   }
 }
 
-String _$securityRepositoryHash() => r'a4c0e74fd771e8ff6b2c7aaef0694e837ff4b2d3';
+String _$securityRepositoryHash() => r'6c7de51433cf04f96ec11517f23defeb578c7759';
 
 @ProviderFor(marketRepository)
 final marketRepositoryProvider = MarketRepositoryProvider._();
@@ -252,7 +329,7 @@ final class MarketRepositoryProvider extends $FunctionalProvider<MarketRepositor
   }
 }
 
-String _$marketRepositoryHash() => r'0683f0b9da63ef55c9243fa0f24e33e0d8d3e963';
+String _$marketRepositoryHash() => r'707c288d50ef45d1e1bb1893d16b1bffd7c99c8b';
 
 @ProviderFor(walletRepository)
 final walletRepositoryProvider = WalletRepositoryProvider._();
@@ -291,7 +368,7 @@ final class WalletRepositoryProvider extends $FunctionalProvider<WalletRepositor
   }
 }
 
-String _$walletRepositoryHash() => r'ee3df828c628c95b2ec778bf4f824a35329de8b6';
+String _$walletRepositoryHash() => r'874573f4a1130cd239f6636f73da14b12eca9610';
 
 @ProviderFor(activityRepository)
 final activityRepositoryProvider = ActivityRepositoryProvider._();
@@ -333,7 +410,7 @@ final class ActivityRepositoryProvider
   }
 }
 
-String _$activityRepositoryHash() => r'dd75462c2ab5e0647cd0407a905c1cf8ae46aa30';
+String _$activityRepositoryHash() => r'8e7b63a97720a73aaf21f063d6b4dbdbb22b7821';
 
 @ProviderFor(profileRepository)
 final profileRepositoryProvider = ProfileRepositoryProvider._();
@@ -375,7 +452,7 @@ final class ProfileRepositoryProvider
   }
 }
 
-String _$profileRepositoryHash() => r'3f03ca59734927f3f1cec45f604af9bc64efd811';
+String _$profileRepositoryHash() => r'302b39c9d94d1958316535b6dafc49bce10e8d05';
 
 /// Refreshed after onboarding / account edits via `ref.invalidate(profileProvider)`.
 

@@ -67,10 +67,19 @@ class AssetInfo {
 /// Live price of one asset, in NGN.
 @immutable
 class Quote {
-  const Quote({required this.assetId, required this.price, required this.changePct, required this.intraday});
+  const Quote({
+    required this.assetId,
+    required this.price,
+    required this.open,
+    required this.changePct,
+    required this.intraday,
+  });
 
   final String assetId;
   final Decimal price;
+
+  /// What [changePct] is measured from: the day's open (crypto: 24 h ago).
+  final Decimal open;
 
   /// Change since the day's open, in percent.
   final double changePct;

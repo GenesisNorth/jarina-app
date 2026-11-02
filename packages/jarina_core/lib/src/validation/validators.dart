@@ -31,19 +31,19 @@ abstract final class PhoneRules {
     return null;
   }
 
-  /// `+234` + `08012345678` → `+2348012345678` (trunk zero dropped).
-  static String toE164(String dialCode, String input) {
+  /// `+234` + `08012345678` → `+2348012345678`, dropping [trunkPrefix] (`0` in
+  /// Nigeria and Ghana). Countries without one keep every digit: Benin's
+  /// `01 90 12 34 56` is `+2290190123456`.
+  static String toE164(String dialCode, String input, {String trunkPrefix = ''}) {
     var d = digitsOnly(input);
-    if (d.startsWith('0')) d = d.substring(1);
+    if (trunkPrefix.isNotEmpty && d.startsWith(trunkPrefix)) d = d.substring(trunkPrefix.length);
     return '$dialCode$d';
   }
 
-  /// `+2348012345678` → `+234 0801 234 5678`, restoring the trunk zero when the
-  /// local format uses one.
-  static String display(String e164, {required String dialCode, required String sample}) {
+  /// `+2348012345678` → `+234 0801 234 5678`, restoring [trunkPrefix].
+  static String display(String e164, {required String dialCode, required String sample, String trunkPrefix = ''}) {
     if (!e164.startsWith(dialCode)) return e164;
-    var local = e164.substring(dialCode.length);
-    if (sample.startsWith('0')) local = '0$local';
+    final local = '$trunkPrefix${e164.substring(dialCode.length)}';
     return '$dialCode ${format(local, sample)}';
   }
 

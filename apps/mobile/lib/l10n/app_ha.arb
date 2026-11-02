@@ -1459,5 +1459,7 @@
   "compromisedBody": "Manhajoji a wayar da aka canza za su iya karanta abin da ke allonka. Za ka iya ci gaba da amfani da Jarina, amma za mu iya taƙaita cirewa don kare kuɗinka.",
   "understood": "Na fahimta",
   "errorScreenTitle": "Ba a iya buɗe wannan shafin ba",
-  "goHome": "Je zuwa Gida"
+  "goHome": "Je zuwa Gida",
+  "errNoAccount": "Babu asusun Jarina da ke amfani da wannan lambar. Yi rajista maimakon haka.",
+  "errSessionEnded": "Zaman ya ƙare. Sake shiga."
 }

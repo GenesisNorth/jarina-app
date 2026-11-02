@@ -2407,5 +2407,7 @@
   "compromisedBody": "Apps on a modified phone can read what''s on your screen. You can keep using Jarina, but we may limit withdrawals to protect your money.",
   "understood": "I understand",
   "errorScreenTitle": "This screen couldn''t load",
-  "goHome": "Go to Home"
+  "goHome": "Go to Home",
+  "errNoAccount": "No Jarina account uses this number. Sign up instead.",
+  "errSessionEnded": "Session ended. Log in again."
 }

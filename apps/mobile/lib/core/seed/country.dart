@@ -17,6 +17,7 @@ class Country {
     required this.languages,
     required this.regionWord,
     required this.regions,
+    this.trunkPrefix = '',
   });
 
   factory Country.fromJson(Map<String, dynamic> j) => Country(
@@ -24,6 +25,7 @@ class Country {
     dialCode: j['code'] as String,
     sample: j['sample'] as String,
     nationalLength: j['len'] as int,
+    trunkPrefix: j['trunk'] as String? ?? '',
     languages: (j['langs'] as List).cast<String>(),
     regionWord: RegionWord.values.byName((j['regionWord'] as String).toLowerCase()),
     regions: (j['regions'] as List).cast<String>(),
@@ -39,6 +41,9 @@ class Country {
 
   /// Digits in a local number including any trunk zero (Nigeria: 11).
   final int nationalLength;
+
+  /// Dropped from a local number to form E.164: `0` in Nigeria and Ghana, none elsewhere.
+  final String trunkPrefix;
 
   /// Language codes offered in this country, in display order.
   final List<String> languages;

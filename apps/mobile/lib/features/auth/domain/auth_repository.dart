@@ -37,6 +37,15 @@ class AuthSession {
     required this.twofaEnabled,
   });
 
+  /// The API's `Session`.
+  factory AuthSession.fromJson(Map<String, Object?> j) => AuthSession(
+    accessToken: j['accessToken']! as String,
+    refreshToken: j['refreshToken']! as String,
+    userId: j['userId']! as String,
+    onboarded: j['onboarded']! as bool,
+    twofaEnabled: j['twofaEnabled']! as bool,
+  );
+
   final String accessToken;
   final String refreshToken;
   final String userId;
@@ -74,6 +83,11 @@ final class RateLimitedFailure extends Failure {
 
 final class CodeExpiredFailure extends Failure {
   const CodeExpiredFailure() : super('Code expired');
+}
+
+/// Login with a number that has no account (only said after the code is right).
+final class NoAccountFailure extends Failure {
+  const NoAccountFailure() : super('No account');
 }
 
 abstract interface class AuthRepository {

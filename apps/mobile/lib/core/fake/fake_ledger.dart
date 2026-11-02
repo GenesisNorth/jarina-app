@@ -230,6 +230,7 @@ class FakeLedger
       a.id: Quote(
         assetId: a.id,
         price: Decimal.parse(_prices[a.id]!.toStringAsFixed(2)),
+        open: a.openPrice,
         changePct: (_prices[a.id]! / a.openPrice.toDouble() - 1) * 100,
         intraday: List.unmodifiable(_intraday[a.id]!),
       ),
@@ -427,6 +428,15 @@ class FakeLedger
   AssetInfo? _asset(String id) => _catalog.where((a) => a.id == id).firstOrNull;
 
   Decimal _livePrice(String id) => Decimal.parse(_prices[id]!.toStringAsFixed(2));
+
+  /// Local builds against the real market API: fake trades fill at the
+  /// prices the Markets screens show (build the ledger with `tick: Duration.zero`).
+  void useLivePrices(Map<String, Quote> quotes) {
+    for (final q in quotes.values) {
+      _prices[q.assetId] = q.price.toDouble();
+      if (q.intraday.isNotEmpty) _intraday[q.assetId] = q.intraday;
+    }
+  }
 
   bool _isOpen(AssetInfo a) => !a.isStock || NgxSchedule.isOpen(_now());
 

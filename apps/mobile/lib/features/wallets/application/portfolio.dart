@@ -111,7 +111,7 @@ Portfolio computePortfolio(Balances b, Map<String, Quote> quotes, Map<String, As
     } else {
       crypto += value;
     }
-    change += Money((quote.price - asset.openPrice) * e.value, Currency.ngn).rounded();
+    change += Money((quote.price - quote.open) * e.value, Currency.ngn).rounded();
     holdings.add(Holding(asset: asset, quantity: e.value, quote: quote, value: value));
     final q = e.value.toDouble();
     for (var i = 0; i < history.length && i < quote.intraday.length; i++) {

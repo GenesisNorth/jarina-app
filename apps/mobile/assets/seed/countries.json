@@ -6,6 +6,7 @@
     "code": "+234",
     "sample": "0801 234 5678",
     "len": 11,
+    "trunk": "0",
     "langs": [
       "en",
       "ha"
@@ -58,6 +59,7 @@
     "code": "+227",
     "sample": "90 12 34 56",
     "len": 8,
+    "trunk": "",
     "langs": [
       "fr",
       "ha"
@@ -81,6 +83,7 @@
     "code": "+233",
     "sample": "024 123 4567",
     "len": 10,
+    "trunk": "0",
     "langs": [
       "en"
     ],
@@ -111,6 +114,7 @@
     "code": "+237",
     "sample": "6 71 23 45 67",
     "len": 9,
+    "trunk": "",
     "langs": [
       "fr",
       "ha"
@@ -136,6 +140,7 @@
     "code": "+229",
     "sample": "01 90 12 34 56",
     "len": 10,
+    "trunk": "",
     "langs": [
       "fr",
       "ha"
@@ -163,6 +168,7 @@
     "code": "+228",
     "sample": "90 12 34 56",
     "len": 8,
+    "trunk": "",
     "langs": [
       "fr",
       "ha"

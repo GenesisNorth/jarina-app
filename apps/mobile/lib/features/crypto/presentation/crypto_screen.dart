@@ -34,7 +34,7 @@ class CryptoScreen extends ConsumerWidget {
     final spark = <double>[];
     var change = Money.zero(Currency.ngn);
     for (final h in portfolio?.holdings.where((h) => !h.asset.isStock) ?? const <Holding>[]) {
-      change += Money((h.quote.price - h.asset.openPrice) * h.quantity, Currency.ngn).rounded();
+      change += Money((h.quote.price - h.quote.open) * h.quantity, Currency.ngn).rounded();
       final q = h.quantity.toDouble();
       for (var i = 0; i < h.quote.intraday.length; i++) {
         if (spark.length <= i) spark.add(0);

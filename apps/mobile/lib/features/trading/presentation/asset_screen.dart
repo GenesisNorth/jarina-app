@@ -176,7 +176,7 @@ class _AssetScreenState extends ConsumerState<AssetScreen> {
           const SizedBox(height: 16),
           Row(
             children: [
-              stat(l.open, Money(asset.openPrice, Currency.ngn)),
+              stat(l.open, Money(quote.open, Currency.ngn)),
               stat(l.dayHigh, ngn(dayHigh)),
               stat(l.dayLow, ngn(dayLow)),
             ],

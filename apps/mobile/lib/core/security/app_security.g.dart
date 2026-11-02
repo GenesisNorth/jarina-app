@@ -86,7 +86,7 @@ final class AppLockProvider extends $NotifierProvider<AppLock, bool> {
   }
 }
 
-String _$appLockHash() => r'fc9655dd3dc9c8d943e5ed209762d038c97840ad';
+String _$appLockHash() => r'b5a22713207385d618adcf9a318fbbc6f17171bd';
 
 /// Whether the PIN lock screen covers the app.
 

@@ -203,7 +203,7 @@ class _TwofaSetupScreenState extends ConsumerState<TwofaSetupScreen> {
                     onChanged: (_) => setState(() => _error = null),
                     onSubmitted: (_) => _verify(),
                   ),
-                  if (ref.watch(envProvider).useFakeData)
+                  if (ref.watch(envProvider).fakeAuth)
                     Padding(
                       padding: const EdgeInsets.only(top: 8, left: 4),
                       child: Text(l.demoCodeHint(FakeBackend.demoCode), style: t.caption.copyWith(color: c.muted)),

@@ -9,6 +9,8 @@ extension FailureMessages on AppLocalizations {
     NetworkFailure() => errNetwork,
     WrongCodeFailure() => errWrongCode,
     CodeExpiredFailure() => errCodeExpired,
+    NoAccountFailure() => errNoAccount,
+    UnauthorizedFailure() => errSessionEnded,
     RateLimitedFailure(:final retryAfter) =>
       retryAfter.inMinutes >= 1 ? errTooManyAttempts('${retryAfter.inMinutes}') : resendCodeIn(_mmss(retryAfter)),
     IdNotVerifiedFailure() => errIdNotVerified,

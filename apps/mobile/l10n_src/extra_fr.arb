@@ -360,5 +360,7 @@
   "compromisedBody": "Les applications d''un téléphone modifié peuvent lire votre écran. Vous pouvez continuer à utiliser Jarina, mais nous pourrons limiter les retraits pour protéger votre argent.",
   "understood": "J''ai compris",
   "errorScreenTitle": "Cet écran n''a pas pu s''afficher",
-  "goHome": "Aller à l''accueil"
+  "goHome": "Aller à l''accueil",
+  "errNoAccount": "Aucun compte Jarina n''utilise ce numéro. Inscrivez-vous plutôt.",
+  "errSessionEnded": "Session terminée. Reconnectez-vous."
 }

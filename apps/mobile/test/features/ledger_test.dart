@@ -19,7 +19,8 @@ void main() {
     final rates = await ledger.rates();
     // Quotes pinned at the open, as the prototype's static figures are.
     final quotes = {
-      for (final a in catalog.values) a.id: Quote(assetId: a.id, price: a.openPrice, changePct: 0, intraday: const [1]),
+      for (final a in catalog.values)
+        a.id: Quote(assetId: a.id, price: a.openPrice, open: a.openPrice, changePct: 0, intraday: const [1]),
     };
     final p = computePortfolio(balances, quotes, catalog, rates);
 

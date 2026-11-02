@@ -69,8 +69,12 @@ write('assets.json', assets);
 write('networks.json', networks);
 write('recipients.json', d.RECIPIENTS);
 write('me.json', d.ME);
+// Digits dropped from a local number to form E.164. Only Nigeria and Ghana use
+// a trunk 0; Benin's 10-digit numbers start with 01 and keep it.
+const TRUNK_PREFIX = { NG: '0', GH: '0' };
 write('countries.json', d.COUNTRIES.map((c) => ({
   ...c,
+  trunk: TRUNK_PREFIX[c.iso] ?? '',
   regionWord: d.REGION_WORD[c.iso],
   regions: d.REGIONS[c.iso] ?? [],
 })));
